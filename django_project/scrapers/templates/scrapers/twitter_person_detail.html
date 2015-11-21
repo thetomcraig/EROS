@@ -1,0 +1,13 @@
+{% extends 'scrapers/base.html' %}
+{% block main %}
+
+<div style="padding-left:2%; padding-right:2%">
+  {% if uname %}
+    <h2>@{{ uname }}</h2>
+
+    {# {% include "twitter_post_list.html" with table_title='REAL' twitter_posts=twitter_posts %} #}
+    {% include "twitter_post_list.html" with table_title='MARKOV' twitter_posts=twitter_posts_markov %}
+
+  {% endif %}
+</div>
+{% endblock %}

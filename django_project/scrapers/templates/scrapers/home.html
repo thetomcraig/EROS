@@ -1,0 +1,46 @@
+{% extends 'scrapers/base.html' %}
+
+{% block main %}
+ 
+<div class="col-md-2 text-center" >
+
+  {% if user and not user.is_anonymous %}
+    <a class="text-muted">
+      <h3>Hello {{ user.get_full_name|default:user.username }}!</h3>
+    </a>
+    
+    <div class="row small-buffer">
+
+    <form action="#" method="get">
+      <input name="collect_twitter_data" type="submit" class="btn btn-info" value="Synthesize Twitter Data!">
+    </form>
+
+    <div class="row large-buffer">
+    
+    <form action="#" method="get">
+      <input name="collect_fb_data" type="submit" class="btn btn-primary" value="Synthesize My Facebook Data">
+    </form>
+
+    <div class="row large-buffer">
+    
+    <a href="{% url 'auth:logout' %}?next={{ request.path }}">
+      <button type="button" class="btn btn-default navbar-btn">Logout</button>
+    </a>
+
+
+ {% else %}
+  <h1 class="text-center">EROS</h1>
+  
+  <a class="btn btn-block btn-social btn-facebook"
+    href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}"
+    style="width: 100%;">
+    <i class="fa fa-facebook"></i> Sign in with Facebook
+  </a>
+ {% endif %}
+
+</div>
+
+
+{% endblock %}
+
+

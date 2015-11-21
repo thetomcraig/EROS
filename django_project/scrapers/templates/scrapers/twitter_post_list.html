@@ -1,0 +1,35 @@
+{% extends 'scrapers/base.html' %}
+{% block main %}
+ 
+<div style="padding-left:3%; padding-right:3%">
+  {% if twitter_posts %}
+      <h4>{{ table_title }}</h4>
+      <table class="table-striped" style="border-collapse:collapse;">
+        <tbody>
+            {% for twitter_post in twitter_posts %}
+              {% if forloop.counter == 3 %}
+                <tr data-toggle="collapse" data-parent="#wrap" data-target=".accordian-body-markov" class="accordion-toggle">
+                  <td>{{ twitter_post }}<td>
+                </tr>
+              {% elif forloop.counter > 3%}
+                <div id="wrap">
+                    <tr>
+                      <td class="hiddenRow">
+                        <div id="hidden-tweet {{ twitter_post }}" class="accordian-body-markov collapse">
+                          {{ twitter_post }}
+                        </div>
+                      </td>
+                    </tr>
+                </div>
+              {% else %}
+                <tr><td>{{ twitter_post }}</td></tr> 
+              {% endif %}
+            {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+        <p>No twitter_posts to analyze</p>
+    {% endif %}
+</div>
+
+{% endblock %}

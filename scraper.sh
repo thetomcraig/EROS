@@ -1,1 +1,1 @@
-python django_project/manage.py scrape twitter_users:all facebook_users:none
+python manage.py scrape twitter_users:all facebook_users:none

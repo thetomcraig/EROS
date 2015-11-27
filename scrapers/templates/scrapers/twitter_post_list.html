@@ -11,7 +11,11 @@
                 <tr data-toggle="collapse" data-parent="#wrap" data-target=".accordian-body-markov" class="accordion-toggle">
 									<td> 
 										{% for word_and_id in twitter_post %}
-											<th bgcolor={{ colors.word_and_id.1 }}>{{ word_and_id.0 }}</th>
+											{% for c in colors %}
+												{% if forloop.counter0 == word_and_id.1 %} 
+													<font color={{ c }}>{{ word_and_id.0 }}</font>
+												{% endif %}
+											{% endfor %}
 										{% endfor %}
 									<td>
                 </tr>
@@ -20,13 +24,27 @@
                     <tr>
                       <td class="hiddenRow">
                         <div id="hidden-tweet {{ twitter_post }}" class="accordian-body-markov collapse">
-                          {{ twitter_post }}
+													{% for word_and_id in twitter_post %}
+														{% for c in colors %}
+															{% if forloop.counter0 == word_and_id.1 %} 
+																<font color={{ c }}>{{ word_and_id.0 }}</font>
+															{% endif %}
+														{% endfor %}
+													{% endfor %}
                         </div>
                       </td>
                     </tr>
                 </div>
               {% else %}
-                <tr><td>{{ twitter_post }}</td></tr> 
+								<tr><td>
+									{% for word_and_id in twitter_post %}
+										{% for c in colors %}
+											{% if forloop.counter0 == word_and_id.1 %} 
+												<font color={{ c }}>{{ word_and_id.0 }}</font>
+											{% endif %}
+										{% endfor %}
+									{% endfor %}
+								</td></tr> 
               {% endif %}
             {% endfor %}
         </tbody>

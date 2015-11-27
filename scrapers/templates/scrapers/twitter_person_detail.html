@@ -5,8 +5,8 @@
   {% if uname %}
     <h2>@{{ uname }}</h2>
 
-    {# {% include "twitter_post_list.html" with table_title='REAL' twitter_posts=twitter_posts %} #}
-    {% include "twitter_post_list.html" with table_title='MARKOV' twitter_posts=twitter_posts_markov %}
+    {# {% include "twitter_post_list.html" with table_title='REAL' twitter_posts=twitter_posts colors=colors%} #}
+    {% include "twitter_post_list.html" with table_title='MARKOV' twitter_posts=twitter_posts_markov colors=colors%}
 
   {% endif %}
 </div>

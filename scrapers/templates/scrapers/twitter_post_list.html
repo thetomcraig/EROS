@@ -1,9 +1,6 @@
 {% extends 'scrapers/base.html' %}
 {% block main %}
 
-
-
-
 <div style="padding-left:3%; padding-right:3%">
   {% if twitter_posts %}
       <h4>{{ table_title }}</h4>
@@ -14,7 +11,7 @@
                 <tr data-toggle="collapse" data-parent="#wrap" data-target=".accordian-body-markov" class="accordion-toggle">
 									<td> 
 										{% for word_and_id in twitter_post %}
-											<th bgcolor={{ word_and_id.1 }}>{{ word_and_id.0 }}</th>
+											<th bgcolor={{ colors.word_and_id.1 }}>{{ word_and_id.0 }}</th>
 										{% endfor %}
 									<td>
                 </tr>

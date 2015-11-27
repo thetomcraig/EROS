@@ -9,7 +9,8 @@ import facebook
 import requests
 from TweepyScraper import TweepyScraper
 from Markov import Markov 
-MAX_COMPOSITE_TWEETS = 999999999
+
+from constants import *
 
 tweepy_consumer_key = 'ZKx8Yg55evn1U65vRWQ0Zj7Jr'
 tweepy_consumer_secret = '26OYZDNj0hC17ei6JplHuerzoaxokQBpU9X2dsegkLLCShBK2y'
@@ -222,7 +223,7 @@ def apply_markov_chains(self, author, twitter_posts):
 	words = []
 	for twitter_post in twitter_posts:
 		hex_key = hashlib.md5(twitter_post.encode('utf-8').strip()).hexdigest()
-		key = str(int(hex_key, 16) % MAX_COMPOSITE_TWEETS)
+		key = str(int(hex_key, 16) % len(colors))
 		for word in twitter_post.split():
 			words.append((word.encode('utf-8'),key))
 

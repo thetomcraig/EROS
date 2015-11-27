@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 from scrapers.models import TwitterPerson, FacebookPerson
 from .models import FacebookPost, TwitterPost, TwitterPostMarkov, TwitterPostMarkovPart
 
+from constants import *
+
 def home(request):
 	if(request.GET.get('collect_fb_data')):
 		request.user.save_clean_fb_feed()
@@ -49,7 +51,6 @@ def twitter_person_detail(request, twitter_person_username):
 	author = TwitterPerson.objects.filter(username=twitter_person_username)[0]
 
 	#request.user.scrape_twitter_person(twitter_person_username)
-
 	twitter_posts = TwitterPost.objects.filter(author=author)
 	twitter_posts = [t.content for t in twitter_posts] 
 
@@ -69,6 +70,7 @@ def twitter_person_detail(request, twitter_person_username):
 			'uname': twitter_person_username,
 			'twitter_posts' : twitter_posts,
 			'twitter_posts_markov'	: twitter_posts_markov,
+			'colors': colors,
 	})
 
 	return HttpResponse(template.render(context))

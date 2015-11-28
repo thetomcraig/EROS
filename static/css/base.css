@@ -31,3 +31,7 @@ img {
     width: auto;
 }
 
+.invisible-button {
+    background: transparent;
+    border: none !important;
+}​

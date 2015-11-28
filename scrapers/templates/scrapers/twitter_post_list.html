@@ -9,42 +9,20 @@
             {% for twitter_post in twitter_posts %}
               {% if forloop.counter == 3 %}
                 <tr data-toggle="collapse" data-parent="#wrap" data-target=".accordian-body-markov" class="accordion-toggle">
-									<td> 
-										{% for word_and_id in twitter_post %}
-											{% for c in colors %}
-												{% if forloop.counter0 == word_and_id.1 %} 
-													<font color={{ c }}>{{ word_and_id.0 }}</font>
-												{% endif %}
-											{% endfor %}
-										{% endfor %}
-									<td>
+									{% include "twitter_post.html" with twitter_post=twitter_post %}
                 </tr>
               {% elif forloop.counter > 3%}
                 <div id="wrap">
                     <tr>
-                      <td class="hiddenRow">
                         <div id="hidden-tweet {{ twitter_post }}" class="accordian-body-markov collapse">
-													{% for word_and_id in twitter_post %}
-														{% for c in colors %}
-															{% if forloop.counter0 == word_and_id.1 %} 
-																<font color={{ c }}>{{ word_and_id.0 }}</font>
-															{% endif %}
-														{% endfor %}
-													{% endfor %}
+													{% include "twitter_post.html" with twitter_post=twitter_post %}
                         </div>
-                      </td>
                     </tr>
                 </div>
               {% else %}
-								<tr><td>
-									{% for word_and_id in twitter_post %}
-										{% for c in colors %}
-											{% if forloop.counter0 == word_and_id.1 %} 
-												<font color={{ c }}>{{ word_and_id.0 }}</font>
-											{% endif %}
-										{% endfor %}
-									{% endfor %}
-								</td></tr> 
+								<tr>
+									{% include "twitter_post.html" with twitter_post=twitter_post %}
+								</tr> 
               {% endif %}
             {% endfor %}
         </tbody>

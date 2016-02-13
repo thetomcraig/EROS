@@ -125,12 +125,8 @@ STATICFILES_DIRS = (('static/'),('scrapers/static/'),)
 STATIC_ROOT = '/static'
 LOGIN_REDIRECT_URL = '/'
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
-
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
-STATIC_ROOT= os.path.join(PROJECT_DIR,'files/')
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT,'static/'),
-    )
+#Heroku
+DISABLE_COLLECTSTATIC=1
 
 #Defaults to the HEROKU credentials
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = True

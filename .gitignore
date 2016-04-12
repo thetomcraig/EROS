@@ -4,3 +4,5 @@ venv
 db.sqlite3
 *.sw*
 tags
+env
+**/*.DS_Store

@@ -3,8 +3,8 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 from django.contrib.auth.models import User
-from scrapers.models import TwitterPerson, FacebookPerson
-from .models import FacebookPost, TwitterPost, TwitterPostMarkov, TwitterPostMarkovPart
+from scrapers.models.twitter import TwitterPerson, TwitterPost, TwitterPostMarkov, TwitterPostMarkovPart
+from scrapers.models.facebook import FacebookPerson, FacebookPost
 
 from constants import *
 
@@ -16,7 +16,7 @@ def home(request):
 		return render_to_response('scrapers/post_index.html', context_instance=context)
 
 	if(request.GET.get('collect_twitter_data')):
-		#request.user.scrape_top_twitter_people()
+		request.user.scrape_top_twitter_people()
 		twitter_people = TwitterPerson.objects.all()
 		context = RequestContext(request, {'request': request, 'user': request.user, 'twitter_people': twitter_people})
 		return render_to_response('scrapers/twitter_people.html', context_instance=context)
@@ -48,15 +48,19 @@ def twitter_people(request):
 	
 def twitter_person_detail(request, twitter_person_username):
 	template = loader.get_template('scrapers/twitter_person_detail.html')
-	author = TwitterPerson.objects.filter(username=twitter_person_username)[0]
+	author = TwitterPerson.objects.get_or_create(username=twitter_person_username)[0]
 
-	#request.user.scrape_twitter_person(twitter_person_username)
+	author.scrape()
+	author.apply_markov_chains()
+
 	twitter_posts = TwitterPost.objects.filter(author=author)
+	twitter_posts_markov = TwitterPostMarkov.objects.filter(author=author)
+
 	twitter_posts = [t.content for t in twitter_posts] 
 
-	request.user.apply_markov_chains(author, twitter_posts)
-
+	#TODO - this is not returning anything...
 	twitter_posts_markov_objects = TwitterPostMarkov.objects.filter(author=author)
+
 	twitter_posts_markov = []
 	for post in twitter_posts_markov_objects:
 		all_parts = TwitterPostMarkovPart.objects.filter(parent_post__id=post.id)
@@ -65,6 +69,10 @@ def twitter_person_detail(request, twitter_person_username):
 			complete_post.append([part.content, part.original_tweet_id])
 
 		twitter_posts_markov.append(complete_post)
+
+	print twitter_posts
+	print twitter_posts_markov
+	print colors
 
 	context = RequestContext(request, {
 			'uname': twitter_person_username,

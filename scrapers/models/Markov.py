@@ -10,9 +10,10 @@ class Markov(object):
     self.database()
   
   def triples(self):
-    """ Generates triples from the given data string. So if our string were
-        "What a lovely day", we'd generate (What, a, lovely) and then
-        (a, lovely, day).
+    """ 
+    Generates triples from the given data string. So if our string were
+		"What a lovely day", we'd generate (What, a, lovely) and then
+		(a, lovely, day).
     """
     
     if len(self.words) < 3:
@@ -31,6 +32,8 @@ class Markov(object):
 
   def generate_markov_twitter_post(self):
     self.word_size = len(self.words)
+    if self.word_size < 4:
+			return []
     size = 10
     seed = random.randint(0, self.word_size-3)
     seed_word, next_word = self.words[seed], self.words[seed+1]

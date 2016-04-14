@@ -1,6 +1,6 @@
 from django.views.generic.detail import DetailView
 from django.shortcuts import render_to_response
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.template import RequestContext, loader
 from django.contrib.auth.models import User
 from scrapers.models.twitter import TwitterPerson, TwitterPost, TwitterPostMarkov, TwitterPostMarkovPart
@@ -50,9 +50,6 @@ def twitter_person_detail(request, twitter_person_username):
 	template = loader.get_template('scrapers/twitter_person_detail.html')
 	author = TwitterPerson.objects.get_or_create(username=twitter_person_username)[0]
 
-	author.scrape()
-	author.apply_markov_chains()
-
 	twitter_posts = TwitterPost.objects.filter(author=author)
 	twitter_posts_markov = TwitterPostMarkov.objects.filter(author=author)
 
@@ -82,3 +79,34 @@ def twitter_person_detail(request, twitter_person_username):
 	})
 
 	return HttpResponse(template.render(context))
+
+def scrape_top_twitter_people(request):
+	"""
+	API for manually scraping
+	"""
+	tom = User.objects.get_or_create(username='tom')[0]
+	tom.scrape_top_twitter_people()
+
+	all_twitter_people = TwitterPerson.objects.all()
+	for person in all_twitter_people:
+		person.scrape()
+
+	all_twitter_posts = TwitterPost.objects.all()
+	num = len(all_twitter_posts)
+	data = {'total num posts': num}
+	return JsonResponse({'success': data})
+	
+def apply_markov_chains(request):
+	"""
+	API for manually applyin markov chains
+	"""
+	tom = User.objects.get_or_create(username='tom')[0]
+
+	all_twitter_people = TwitterPerson.objects.all()
+	for person in all_twitter_people:
+		person.apply_markov_chains()
+
+	all_markov_posts = TwitterPostMarkov.objects.all()
+	num = len(all_markov_posts)
+	data = {'total num posts': num}
+	return JsonResponse({'success': data})

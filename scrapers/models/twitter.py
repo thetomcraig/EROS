@@ -48,11 +48,12 @@ class TwitterPerson(User, models.Model):
 
 		tweets = t.get_tweets_from_user(self.username, 100)
 		for tweet in tweets:
+			print tweet
 			words = tweet.split()
 
 			if ('RT' in tweet):
 				continue
-			if (words):
+			if (len(words) < 1):
 				continue
 	
 			final_tweet = ""
@@ -60,14 +61,15 @@ class TwitterPerson(User, models.Model):
 				if "@" in word:
 					new_mention = TwitterMention(author=self, content=word)
 					word = "@user"
-				if "http" in words[i][0]:
+				if "http" in words[0]:
 					new_link = TwitterLink(author=self, content=word)
 					word = "link"
-				if "#" in words[i][0]:
+				if "#" in words[0]:
 					new_tag  = TwitterHashtag(author=self, content=word)
 					word = "#tag"
 				final_tweet = final_tweet + word + " "
 			final_tweet = final_tweet[:-1]
+			print final_tweet
 
 			hex_key = hashlib.md5(tweet.encode('utf-8').strip()).hexdigest()
 			key = str(int(hex_key, 16) % len(colors))

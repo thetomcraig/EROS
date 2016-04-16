@@ -63,15 +63,9 @@ class TwitterPerson(User, models.Model):
 				final_tweet = final_tweet + word + " "
 			final_tweet = final_tweet[:-1]
 
-<<<<<<< HEAD
 			post = TwitterPost.objects.get_or_create(author=self, \
 																				content=final_tweet)[0]
 			post.save()
-=======
-			TwitterPost.objects.get_or_create(author=self, \
-																				content=final_tweet)
-			TwitterPost.save()
->>>>>>> 1bcaa646c41495b3e7af694c1d732836252d0b74
 
 	def apply_markov_chains(self):
 		"""

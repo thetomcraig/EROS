@@ -18,19 +18,19 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='twitterhashtag',
             name='author',
-            field=models.ForeignKey(default=datetime.datetime(2016, 4, 11, 4, 29, 40, 248485, tzinfo=utc), on_delete=django.db.models.deletion.CASCADE, to='scrapers.TwitterPerson'),
+            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to='scrapers.TwitterPerson'),
             preserve_default=False,
         ),
         migrations.AddField(
             model_name='twitterlink',
             name='author',
-            field=models.ForeignKey(default=datetime.datetime(2016, 4, 11, 4, 29, 47, 836297, tzinfo=utc), on_delete=django.db.models.deletion.CASCADE, to='scrapers.TwitterPerson'),
+            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to='scrapers.TwitterPerson'),
             preserve_default=False,
         ),
         migrations.AddField(
             model_name='twittermention',
             name='author',
-            field=models.ForeignKey(default=datetime.datetime(2016, 4, 11, 4, 30, 3, 145618, tzinfo=utc), on_delete=django.db.models.deletion.CASCADE, to='scrapers.TwitterPerson'),
+            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to='scrapers.TwitterPerson'),
             preserve_default=False,
         ),
         migrations.AddField(

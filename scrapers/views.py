@@ -51,22 +51,11 @@ def twitter_person_detail(request, twitter_person_username):
 	author = TwitterPerson.objects.get_or_create(username=twitter_person_username)[0]
 
 	twitter_posts = TwitterPost.objects.filter(author=author)
-	twitter_posts_markov = TwitterPostMarkov.objects.filter(author=author)
-
 	twitter_posts = [t.content for t in twitter_posts] 
+	twitter_posts_markov = author.get_full_markov_posts()
 
 	#TODO - this is not returning anything...
-	twitter_posts_markov_objects = TwitterPostMarkov.objects.filter(author=author)
-
-	twitter_posts_markov = []
-	for post in twitter_posts_markov_objects:
-		all_parts = TwitterPostMarkovPart.objects.filter(parent_post__id=post.id)
-		complete_post = []
-		for part in all_parts:
-			complete_post.append([part.content, part.original_tweet_id])
-
-		twitter_posts_markov.append(complete_post)
-
+	print "alpha"
 	print twitter_posts
 	print twitter_posts_markov
 	print colors

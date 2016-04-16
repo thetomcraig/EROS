@@ -34,12 +34,6 @@ class TwitterPerson(User, models.Model):
 		strip out uncommon words (links, hashtags, users)
 		and save them seperately in instances, then
 		replace with dummy words.
-		Create a unique hex key for each post
-		this is just for me being able to tell
-		what original twitter post a composite post
-		was generated from.  Also helps
-		to see how many composite posts are
-		similar to their source material
 		"""
 		t = TweepyScraper(tweepy_consumer_key, 
 			tweepy_consumer_secret,
@@ -48,7 +42,6 @@ class TwitterPerson(User, models.Model):
 
 		tweets = t.get_tweets_from_user(self.username, 100)
 		for tweet in tweets:
-			print tweet
 			words = tweet.split()
 
 			if ('RT' in tweet):
@@ -69,15 +62,10 @@ class TwitterPerson(User, models.Model):
 					word = "#tag"
 				final_tweet = final_tweet + word + " "
 			final_tweet = final_tweet[:-1]
-			print final_tweet
 
-			hex_key = hashlib.md5(tweet.encode('utf-8').strip()).hexdigest()
-			key = str(int(hex_key, 16) % len(colors))
-
-			TwitterPost.objects.get_or_create(author=self, \
-																				content=final_tweet, \
-																				hex_key=hex_key)
-			TwitterPost.save()
+			post = TwitterPost.objects.get_or_create(author=self, \
+																				content=final_tweet)[0]
+			post.save()
 
 	def apply_markov_chains(self):
 		"""
@@ -90,7 +78,7 @@ class TwitterPerson(User, models.Model):
 		#Generates single post
 		words = []
 		for twitter_post in self.twitterpost_set.all():
-			for word in str(twitter_post.content).split():
+			for word in twitter_post.content.split():
 				words.append(word)
 
 		m = Markov() 
@@ -111,16 +99,30 @@ class TwitterPerson(User, models.Model):
 		parent.save()
 		return 
 
+	def get_full_markov_posts(self):
+		"""
+		Look though the markov posts and their corresponding
+		parts and return composite posts for the views
+
+		returns list of strings
+		"""
+		all_composite_parts = []
+	
+		for m_post in self.twitterpostmarkov_set.all():
+			part_string = ""
+			for m_part in m_post.twitterpostmarkovpart_set.all():
+				part_string = part_string + " " + m_part.content
+			all_composite_parts.append(part_string[:-1])
+
+		return all_composite_parts
+			
+
 class TwitterPost(models.Model):
 	author = models.ForeignKey(TwitterPerson, default=None, null=True)
 	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
-	hex_key = models.BigIntegerField()
 		
 	def __str__(self):
-		return_str = \
-				' author: ' + str(self.author) + '\n' + \
-				' content: ' + self.content
-		return return_str
+		return self.content
 
 class TwitterPostMarkov(models.Model):
 	author = models.ForeignKey(TwitterPerson, default=None, null=True)

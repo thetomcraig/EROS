@@ -8,3 +8,4 @@ env/
 env/*
 env/lib/python2.7/*
 **/*.DS_Store
+db.sqlit3

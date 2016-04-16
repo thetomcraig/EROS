@@ -71,12 +71,8 @@ class TwitterPerson(User, models.Model):
 			final_tweet = final_tweet[:-1]
 			print final_tweet
 
-			hex_key = hashlib.md5(tweet.encode('utf-8').strip()).hexdigest()
-			key = str(int(hex_key, 16) % len(colors))
-
 			TwitterPost.objects.get_or_create(author=self, \
-																				content=final_tweet, \
-																				hex_key=hex_key)
+																				content=final_tweet)
 			TwitterPost.save()
 
 	def apply_markov_chains(self):
@@ -114,7 +110,6 @@ class TwitterPerson(User, models.Model):
 class TwitterPost(models.Model):
 	author = models.ForeignKey(TwitterPerson, default=None, null=True)
 	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
-	hex_key = models.BigIntegerField()
 		
 	def __str__(self):
 		return_str = \

@@ -57,6 +57,9 @@ def twitter_person_detail(request, twitter_person_username):
 
 	#TODO - this is not returning anything...
 	twitter_posts_markov_objects = TwitterPostMarkov.objects.filter(author=author)
+	print "alpha"
+	print twitter_posts
+	twitter_posts_markov_objects
 
 	twitter_posts_markov = []
 	for post in twitter_posts_markov_objects:

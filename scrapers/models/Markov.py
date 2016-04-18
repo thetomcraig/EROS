@@ -6,7 +6,6 @@ class Markov(object):
 	def __init__(self):
 		self.cache = {}
 		self.words = []
-		self.word_size = len(self.words)
 		self.database()
 	
 	def triples(self):
@@ -30,26 +29,34 @@ class Markov(object):
 			else:
 				self.cache[key] = [w3]
 
-	def generate_markov_twitter_post(self):
-		self.word_size = len(self.words)
-		if self.word_size < 4:
+	def generate_markov_sentence(self, length=None):
+		"""
+		Generates the markov twitter
+		"""
+		unoriginal_words = 0
+		if not length:
+			length=10
+		
+		word_size = len(self.words)
+		if word_size < 4:
 			return []
-		size = 10
-		seed = random.randint(0, self.word_size-3)
+		seed = random.randint(0, word_size-3)
 		seed_word, next_word = self.words[seed], self.words[seed+1]
-		w1, w2 = seed_word[0], next_word[0]
-		w1_key = seed_word[1]
-		w2_key = next_word[1]
-
+		w1, w2 = seed_word, next_word
 		gen_words = []
 
-		for i in xrange(size):
-			gen_words.append((w1,w1_key))
+		for i in xrange(length):
+			gen_words.append(w1)
 			
 			#search for a tuple but with the words and ignore the keys
-			possible_next_words = self.cache[((w1,w1_key),(w2,w2_key))]
-			#chose RANDOMLY intead of [0]
-			(w1,w1_key), (w2,w2_key) = (w2,w2_key), possible_next_words[0]
-		gen_words.append((w2,w2_key))
+			if len(self.cache[w1, w2]) > 1:
+				unoriginal_words = unoriginal_words + 1
+			w1, w2 = w2, random.choice(self.cache[w1, w2])
+		#add fina word
+		gen_words.append(w2)
 
-		return gen_words
+		if unoriginal_words == 0:
+			randomness = 0
+		else:
+			randomness = float(unoriginal_words)/(length-1)
+		return gen_words, randomness

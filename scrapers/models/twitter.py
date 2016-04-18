@@ -69,7 +69,11 @@ class TwitterPerson(User, models.Model):
 
 	def apply_markov_chains(self):
 		"""
-		Just roll this into the actual calculation and have it make the django objects
+		Takes all the words from all the twittter 
+		posts on the twitterperson.  
+		Sticks them all into a giant 
+		list and gives this to the markov calc.
+		Save this as a new twitterpostmarkov
 		"""
 
 		#Make this take in instance of tpmpart
@@ -84,38 +88,10 @@ class TwitterPerson(User, models.Model):
 		m = Markov() 
 		m.words = words
 		m.database()
-		markov_twitter_post = m.generate_markov_twitter_post()
+		markov_sentence = m.generate_markov_sentence(length=10)
 
-		parent = TwitterPostMarkov.objects.create(author=self)
-		for pair in markov_twitter_post:
-			content = pair[0]
-			id = pair[1]
-			part = TwitterPostMarkovPart.objects.get_or_create(
-								parent_post=parent,
-								content=content, 
-								original_tweet_id=id)
-			part[0].save()
+		self.twitterpostmarkov_set.create(content=markov_sentence)
 
-		parent.save()
-		return 
-
-	def get_full_markov_posts(self):
-		"""
-		Look though the markov posts and their corresponding
-		parts and return composite posts for the views
-
-		returns list of strings
-		"""
-		all_composite_parts = []
-	
-		for m_post in self.twitterpostmarkov_set.all():
-			part_string = ""
-			for m_part in m_post.twitterpostmarkovpart_set.all():
-				part_string = part_string + " " + m_part.content
-			all_composite_parts.append(part_string[:-1])
-
-		return all_composite_parts
-			
 
 class TwitterPost(models.Model):
 	author = models.ForeignKey(TwitterPerson, default=None, null=True)
@@ -126,25 +102,12 @@ class TwitterPost(models.Model):
 
 class TwitterPostMarkov(models.Model):
 	author = models.ForeignKey(TwitterPerson, default=None, null=True)
-
-	def __str__(self):
-		all_parts = TwitterPostMarkovPart.objects.filter(parent_post__id=self.id)
-		content = ''
-		for part in all_parts:
-			content += part.content
-
-		return_str = \
-				' author: ' + str(self.author) + '\n' + \
-				' content: ' + content
-		return return_str
-
-class TwitterPostMarkovPart(models.Model):
-	parent_post = models.ForeignKey(TwitterPostMarkov)
 	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
 	original_tweet_id = models.IntegerField(default=0)
 
 	def __str__(self):
-		return self.content
+		return ' author: ' + str(self.author) + '\n' + \
+						' content: ' + self.content
 
 class TwitterLink(models.Model):
 	author = models.ForeignKey(TwitterPerson)

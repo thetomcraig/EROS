@@ -3,7 +3,7 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponse, JsonResponse
 from django.template import RequestContext, loader
 from django.contrib.auth.models import User
-from scrapers.models.twitter import TwitterPerson, TwitterPost, TwitterPostMarkov, TwitterPostMarkovPart
+from scrapers.models.twitter import TwitterPerson, TwitterPost, TwitterPostMarkov
 from scrapers.models.facebook import FacebookPerson, FacebookPost
 
 from constants import *
@@ -22,7 +22,6 @@ def home(request):
 		return render_to_response('scrapers/twitter_people.html', context_instance=context)
 	
 	context = RequestContext(request, {'request': request,'user': request.user})
-	return render_to_response('scrapers/home.html', context_instance=context)
 
 def post_index(request):
 	"""
@@ -52,17 +51,16 @@ def twitter_person_detail(request, twitter_person_username):
 
 	twitter_posts = TwitterPost.objects.filter(author=author)
 	twitter_posts = [t.content for t in twitter_posts] 
-	twitter_posts_markov = author.get_full_markov_posts()
-
 	print twitter_posts
+
+	twitter_posts_markov = author.twitterpostmarkov_set.all()
+	twitter_posts_markov = [t.content for t in twitter_posts_markov]
 	print twitter_posts_markov
-	print colors
 
 	context = RequestContext(request, {
 			'uname': twitter_person_username,
 			'twitter_posts' : twitter_posts,
 			'twitter_posts_markov'	: twitter_posts_markov,
-			'colors': colors,
 	})
 
 	return HttpResponse(template.render(context))
@@ -95,5 +93,6 @@ def apply_markov_chains(request):
 
 	all_markov_posts = TwitterPostMarkov.objects.all()
 	num = len(all_markov_posts)
+
 	data = {'total num posts': num}
 	return JsonResponse({'success': data})

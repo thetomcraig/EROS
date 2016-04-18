@@ -10,7 +10,7 @@ class Command(BaseCommand):
 		parser.add_argument('facebook_users')
 
 	def handle(self, *args, **options):
-		#Twiter stuff
+		#Twitter stuff
 		if ('all' in options['twitter_users']):
 			tom = User.objects.get_or_create(username='tom')[0]
 			tom.scrape_top_twitter_people()

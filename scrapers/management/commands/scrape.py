@@ -15,10 +15,12 @@ class Command(BaseCommand):
 			tom = User.objects.get_or_create(username='tom')[0]
 			tom.scrape_top_twitter_people()
 
+			"""
 			all_twitter_people = TwitterPerson.objects.all()
 			for person in all_twitter_people:
 				person.scrape()
 				person.apply_markov_chains()
+			"""
 
 			print "Scraped all Twitter people"
 			all_twitter_posts = TwitterPost.objects.all()

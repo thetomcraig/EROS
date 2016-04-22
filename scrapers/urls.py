@@ -7,5 +7,6 @@ urlpatterns = [
 		url(r'^twitter_person_detail/(?P<twitter_person_username>[a-zA-Z0-9]+)/$', views.twitter_person_detail, name='detail'),
 		url(r'^scrape_top_twitter_people', views.scrape_top_twitter_people),
 		url(r'^apply_markov_chains', views.apply_markov_chains),
+		url(r'^sentiment_analyze', views.sentiment_analyze),
 ]
 

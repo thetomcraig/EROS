@@ -41,6 +41,7 @@ class TwitterPerson(User, models.Model):
 			tweepy_access_token_secret)
 
 		tweets = t.get_tweets_from_user(self.username, 100)
+		new_post_ids = []
 		for tweet in tweets:
 			words = tweet.split()
 
@@ -66,6 +67,8 @@ class TwitterPerson(User, models.Model):
 			post = TwitterPost.objects.get_or_create(author=self, \
 																				content=final_tweet)[0]
 			post.save()
+			new_post_ids.append(post.id)
+		return new_post_ids
 
 	def apply_markov_chains(self):
 		"""
@@ -96,9 +99,14 @@ class TwitterPerson(User, models.Model):
 class TwitterPost(models.Model):
 	author = models.ForeignKey(TwitterPerson, default=None, null=True)
 	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
+	happiness = models.FloatField(default=0)
 		
 	def __str__(self):
 		return self.content
+
+	def sentiment_analyze(self):
+		self.happiness = 5
+		
 
 class TwitterPostMarkov(models.Model):
 	author = models.ForeignKey(TwitterPerson, default=None, null=True)

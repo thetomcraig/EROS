@@ -85,14 +85,24 @@ def apply_markov_chains(request):
 	"""
 	API for manually applyin markov chains
 	"""
-	tom = User.objects.get_or_create(username='tom')[0]
-
 	all_twitter_people = TwitterPerson.objects.all()
 	for person in all_twitter_people:
 		person.apply_markov_chains()
 
 	all_markov_posts = TwitterPostMarkov.objects.all()
 	num = len(all_markov_posts)
+
+	data = {'total num posts': num}
+	return JsonResponse({'success': data})
+
+def sentiment_analyze(request):
+	"""
+	API for manually applyin markov chains
+	"""
+	all_twitter_people = TwitterPerson.objects.all()
+	for person in all_twitter_people:
+		for post in person.twitter_post_set.all():
+			post.sentiment_analyze()
 
 	data = {'total num posts': num}
 	return JsonResponse({'success': data})

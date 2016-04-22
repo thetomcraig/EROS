@@ -4,6 +4,7 @@ venv
 db.sqlite3
 *.sw*
 tags
+logs/
 env/
 env/*
 env/lib/python2.7/*

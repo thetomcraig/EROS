@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from scrapers.models.twitter import TwitterPerson, TwitterPost, TwitterPostMarkov
 from scrapers.models.facebook import FacebookPerson, FacebookPost
 from django.core.management import BaseCommand
+from scrapers.models.twitter import TwitterPost 
 
 class Command(BaseCommand):
 	def add_arguments(self, parser):
@@ -18,7 +19,12 @@ class Command(BaseCommand):
 
 			all_twitter_people = TwitterPerson.objects.all()
 			for person in all_twitter_people:
-				person.scrape()
+				new_post_ids = person.scrape()
+				print "Performing sentiment analysis on %d new posts" % len(new_post_ids)
+				for post_id in new_post_ids:
+					post = TwitterPost.objects.filter(pk=post_id)[0]
+					post.sentiment_analyze()
+
 				#person.apply_markov_chains()
 
 			print "Scraped all Twitter people"

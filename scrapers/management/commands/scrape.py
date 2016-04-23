@@ -6,37 +6,63 @@ from django.core.management import BaseCommand
 from scrapers.models.twitter import TwitterPost 
 from datetime import datetime
 
+usage = "python manage scrape " + \
+				"--twitter_users top|existing] " + \
+				"[--sentiment_analyze] " + \
+				"[--apply_markov_chains id=id|all] " + \
+				"[--facebook_users all (stubbed out)]"
+
 class Command(BaseCommand):
 	def add_arguments(self, parser):
-		parser.add_argument('twitter_users')
-		parser.add_argument('facebook_users')
+		parser.add_argument('--twitter_users', default=False)
+		parser.add_argument('--sentiment_analyze', default=False)
+		parser.add_argument('--apply_markov_chains', default=False)
+		parser.add_argument('--facebook_users', default=False)
 
 	def handle(self, *args, **options):
 		#Twitter stuff
-		if ('all' in options['twitter_users']):
-			tom = User.objects.get_or_create(username='tom')[0]
-			#Only do this to refresh the db
-			#tom.scrape_top_twitter_people()
+		if options['twitter_users']:
+			if ('top' in options['twitter_users']):
+				#Only do this to refresh the db
+				#Makes external api call
+				tom = User.objects.get_or_create(username='tom')[0]
 
-			all_twitter_people = TwitterPerson.objects.all()
-			for person in all_twitter_people:
-				new_post_ids = person.scrape()
-				print "Performing sentiment analysis on %d new posts" % len(new_post_ids)
-				for post_id in new_post_ids:
-					post = TwitterPost.objects.filter(pk=post_id)[0]
-					post.sentiment_analyze()
+			elif ('existing' in options['twitter_users']):
+				#Scrapes new posts for all the existing peeps
+				all_twitter_people = TwitterPerson.objects.all()
+				all_new_post_ids = []
 
-				#person.apply_markov_chains()
-			
-			print datetime.now()
-			print "Scraped all Twitter people"
-			all_twitter_posts = TwitterPost.objects.all()
-			num = len(all_twitter_posts)
-			print "There are %d twitter posts in the db" % num
+				for person in all_twitter_people:
+					new_post_ids = person.scrape()
+					all_new_post_ids = all_new_post_ids + new_post_ids
+				print datetime.now()
+
+				print "Scraped all Twitter people"
+				print "There are %d new twitter posts in the db" % len(all_new_post_ids)
+
+				all_twitter_posts = TwitterPost.objects.all()
+				print "%d total" % len(all_twitter_posts)
+
+
+		if (options['sentiment_analyze']):
+			#Analyze any posts updated in the last 24 hours
+			"""
+			new_posts = TwitterPost.objects.filter(created_at__gt(
+			for post in new_posts:
+				post.sentiment_analyze()
+			"""
+
+		if (options['apply_markov_chains']):
+			if ('all' in options['apply_markov_chains']):
+				for person in TwitterPerson.objects.all():
+					person.apply_markov_chains()
+				print "Applied markov chains on all people"
+				
 		
 		#Facebook stuff
-		if ('all' in options['facebook_users']):
-			pass
+		if (options['facebook_users']):
+			if ('all' in options['facebook_users']):
+				pass
 
 
 	 

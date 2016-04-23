@@ -63,11 +63,13 @@ class TwitterPerson(User, models.Model):
 					word = "#tag"
 				final_tweet = final_tweet + word + " "
 			final_tweet = final_tweet[:-1]
+			
+			try:
+				TwitterPost.objects.get(author=self, content=final_tweet)
+			except:
+				post = TwitterPost.objects.create(author=self, content=final_tweet)
+				new_post_ids.append(post.id)
 
-			post = TwitterPost.objects.get_or_create(author=self, \
-																				content=final_tweet)[0]
-			post.save()
-			new_post_ids.append(post.id)
 		return new_post_ids
 
 	def apply_markov_chains(self):

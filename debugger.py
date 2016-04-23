@@ -8,6 +8,7 @@ from scrapers.models.twitter import TwitterPost
 
 posts = TwitterPost.objects.all()
 for post in posts:
+	print post.updated_at
 	if hasattr(post, 'happiness'):
 		if post.happiness != 0.0:
 			print post.happiness

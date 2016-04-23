@@ -40,10 +40,6 @@ class Command(BaseCommand):
 				print "Scraped all Twitter people"
 				print "There are %d new twitter posts in the db" % len(all_new_post_ids)
 
-				all_twitter_posts = TwitterPost.objects.all()
-				print "%d total" % len(all_twitter_posts)
-
-
 		if (options['sentiment_analyze']):
 			#Analyze any posts updated in the last 24 hours
 			"""
@@ -56,7 +52,6 @@ class Command(BaseCommand):
 			if ('all' in options['apply_markov_chains']):
 				for person in TwitterPerson.objects.all():
 					person.apply_markov_chains()
-				print "Applied markov chains on all people"
 				
 		
 		#Facebook stuff

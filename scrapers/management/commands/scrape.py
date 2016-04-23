@@ -4,6 +4,7 @@ from scrapers.models.twitter import TwitterPerson, TwitterPost, TwitterPostMarko
 from scrapers.models.facebook import FacebookPerson, FacebookPost
 from django.core.management import BaseCommand
 from scrapers.models.twitter import TwitterPost 
+from datetime import datetime
 
 class Command(BaseCommand):
 	def add_arguments(self, parser):
@@ -26,7 +27,8 @@ class Command(BaseCommand):
 					post.sentiment_analyze()
 
 				#person.apply_markov_chains()
-
+			
+			print datetime.now()
 			print "Scraped all Twitter people"
 			all_twitter_posts = TwitterPost.objects.all()
 			num = len(all_twitter_posts)

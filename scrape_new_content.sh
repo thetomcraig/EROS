@@ -3,7 +3,7 @@ cd $logs_path
 
 #Remove 'latest' from the last log file
 latest=$(ls *_latest*)
-mv -i $latest `echo $latest | sed -e 's/_latest_//gI' -e 's/-//gI' `
+mv -i $latest `echo $latest | sed -e 's/_latest_//gI' `
 
 #Make new log file
 file_name=$(hostname)-database-output_latest_$(date +"%y-%m-%d-%H-%M-%S").txt

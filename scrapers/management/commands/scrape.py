@@ -51,9 +51,10 @@ class Command(BaseCommand):
 
 		if (options['apply_markov_chains']):
 			if ('all' in options['apply_markov_chains']):
+				print "Markov chains created:"
 				for person in TwitterPerson.objects.all():
 					person.apply_markov_chains()
-				
+					print person.twitterpostmarkov_set.last()
 		
 		#Facebook stuff
 		if (options['facebook_users']):

@@ -8,7 +8,6 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 import requests
 from TweepyScraper import TweepyScraper
-from Markov import Markov 
 
 from scrapers.constants import *
 
@@ -111,7 +110,14 @@ class TwitterPerson(User, models.Model):
 		"""
 		print "Applying markov chains"
 		all_beginning_caches = self.twitterpostcache_set.filter(beginning=True)
-		seed_index = random.randint(0, len(all_beginning_caches)-1)
+
+		if not all_beginning_caches:
+			print "Not enough data, skipping"
+			return
+
+		seed_index = 0
+		if len(all_beginning_caches) != 0:
+			seed_index = random.randint(0, len(all_beginning_caches)-1)
 		seed_cache = all_beginning_caches[seed_index]
 
 		all_caches = self.twitterpostcache_set.all()
@@ -154,6 +160,7 @@ class TwitterPerson(User, models.Model):
 			content = content + word + " "
 		self.twitterpostmarkov_set.create(content=content[:-1], randomness=randomness)
 
+
 	def replace_tokens(self, word_list, token, model_set):
 		"""
 		Takes a lit of words and replaces tokens with the 
@@ -195,7 +202,8 @@ class TwitterPostMarkov(models.Model):
 
 	def __str__(self):
 		return ' author: ' + str(self.author) + '\n' + \
-						' content: ' + self.content
+						' content: ' + self.content.encode('utf-8') + '\n' + \
+						' randomness ' + str(self.randomness) + '\n'
 
 class TwitterLink(models.Model):
 	author = models.ForeignKey(TwitterPerson)

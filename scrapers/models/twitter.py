@@ -17,6 +17,9 @@ tweepy_consumer_secret = '26OYZDNj0hC17ei6JplHuerzoaxokQBpU9X2dsegkLLCShBK2y'
 tweepy_access_token = '14404065-baBGgZmVoCnZEU1L0hCVq6ed6qHDFXVrLSQpAKXcw'
 tweepy_access_token_secret = '3jbRjcgZV82OGLOsxv9Xg8G29h1oc9l9kqKTMXH4vEPNi'
 
+USER_TOKEN = "<<user>>"
+LINK_TOKEN = "<<link>>"
+TAG_TOKEN = "<<tag>>"
 
 #Classes for storing twitter data
 class TwitterPerson(User, models.Model):
@@ -57,14 +60,14 @@ class TwitterPerson(User, models.Model):
 			final_tweet = ""
 			for word in words:
 				if "@" in word:
-					new_mention = TwitterMention(author=self, content=word)
-					word = "<<user>>"
+					self.twittermention_set.create(content=word)
+					word = USER_TOKEN
 				if "http" in word:
-					new_link = TwitterLink(author=self, content=word)
-					word = "<<link>>"
+					self.twitterlink_set.create(content=word)
+					word = LINK_TOKEN
 				if "#" in word:
-					new_tag  = TwitterHashtag(author=self, content=word)
-					word = "<<tag>>"
+					self.twitterhashtag_set.create(content=word)
+					word = TAG_TOKEN
 				final_tweet = final_tweet + word + " "
 			final_tweet = final_tweet[:-1]
 			print "final tweet:"
@@ -119,21 +122,57 @@ class TwitterPerson(User, models.Model):
 		new_markov_post.append(w0)
 		new_markov_post.append(w1)
 
+		#percentage, calculated by the number of random 
+		#choices made to create the markov post
+		randomness = 0
 		while True:
 			try:
 				new_markov_post.append(w2)
-				next_cache = all_caches.filter(word1=w1, word2=w2)[0]
+				all_next_caches = all_caches.filter(word1=w1, word2=w2)
+				next_cache_index = random.randint(0, len(all_next_caches)-1)
+				next_cache = all_next_caches[next_cache_index]
 				w1 = next_cache.word2
 				w2 = next_cache.final_word
+
+				if len(all_next_caches) > 1:
+					randomness = randomness + 1
 					
 			except Exception as e:
 				print e
 				break
 	
 		#Done making the post
-		print new_markov_post
+		#Replace the tokens
+		self.replace_tokens(new_markov_post, USER_TOKEN, self.twittermention_set.all())
+		self.replace_tokens(new_markov_post, LINK_TOKEN, self.twitterlink_set.all()) 
+		self.replace_tokens(new_markov_post, TAG_TOKEN, self.twitterhashtag_set.all())
 
-		#self.twitterpostmarkov_set.create(content=markov_sentence, randomness=randomness)
+		#Determind random level, and save the post
+		randomness = 1.0 - float(randomness)/len(new_markov_post)
+		content = ""
+		for word in new_markov_post:
+			content = content + word + " "
+		self.twitterpostmarkov_set.create(content=content[:-1], randomness=randomness)
+
+	def replace_tokens(self, word_list, token, model_set):
+		"""
+		Takes a lit of words and replaces tokens with the 
+		corresonding models linked to the user
+		"""
+		for word_index in range(len(word_list)):
+			if token in word_list[word_index]:
+				seed_index = 0
+				if len(model_set) > 1:
+					seed_index = random.randint(0, len(model_set)-1)
+				try:
+					word_list[word_index] = (model_set[seed_index]).content
+					print "Replaced " + token
+
+				except IndexError:
+					print "failed to replace token:"
+					print word_list[word_index]
+
+		return word_list
 
 
 class TwitterPost(models.Model):

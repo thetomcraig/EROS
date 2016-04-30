@@ -11,6 +11,7 @@ person = TwitterPerson.objects.all()[0]
 print person
 #person.scrape()
 person.apply_markov_chains()
+print [(x.content, x.randomness) for x in person.twitterpostmarkov_set.all()]
 
 """
 for c in person.twitterpostcache_set.all():

@@ -26,8 +26,9 @@ class Command(BaseCommand):
 				#Only do this to refresh the db
 				#Makes external api call
 				tom = User.objects.get_or_create(username='tom')[0]
+				tom.scrape_top_twitter_people()
 
-			elif ('existing' in options['twitter_users']):
+			elif 'existing' in options['twitter_users']:
 				#Scrapes new posts for all the existing peeps
 				all_twitter_people = TwitterPerson.objects.all()
 				all_new_post_ids = []

@@ -1,6 +1,7 @@
 #at artandlogic.com modles for comment storing)
 
 import hashlib
+import random
 import json
 from django.db import models, IntegrityError
 from django.core.exceptions import ValidationError
@@ -54,13 +55,13 @@ class TwitterPerson(User, models.Model):
 			for word in words:
 				if "@" in word:
 					new_mention = TwitterMention(author=self, content=word)
-					word = "@user"
-				if "http" in words[0]:
+					word = "<<user>>"
+				if "http" in word:
 					new_link = TwitterLink(author=self, content=word)
-					word = "link"
-				if "#" in words[0]:
+					word = "<<link>>"
+				if "#" in word:
 					new_tag  = TwitterHashtag(author=self, content=word)
-					word = "#tag"
+					word = "<<tag>>"
 				final_tweet = final_tweet + word + " "
 			final_tweet = final_tweet[:-1]
 			
@@ -68,9 +69,28 @@ class TwitterPerson(User, models.Model):
 				TwitterPost.objects.get(author=self, content=final_tweet)
 			except:
 				post = TwitterPost.objects.create(author=self, content=final_tweet)
+				self.create_post_cache(post)
 				new_post_ids.append(post.id)
 
 		return new_post_ids
+
+	def create_post_cache(self, post):
+		"""
+		Create the postcache item from the new post
+		to be used to make the markov post
+		"""
+		word_list = post.content.split()
+		for index in range(len(word_list)-2):
+			word1 = word_list[index]
+			word2 = word_list[index+1]
+			final_word = word_list[index+2]
+
+			beginning = False
+			if (index == 0):
+				beginning = True
+			post_cache = TwitterPostCache(author=self, word1=word1, word2=word2, final_word=final_word, beginning=beginning)
+			post_cache.save()
+
 
 	def apply_markov_chains(self):
 		"""
@@ -80,22 +100,40 @@ class TwitterPerson(User, models.Model):
 		list and gives this to the markov calc.
 		Save this as a new twitterpostmarkov
 		"""
+		all_caches = self.twitterpostcache_set.filter(beginning=True)
+		seed_index = random.randint(0, len(all_caches)-1)
+		seed_cache = all_caches[seed_index]
 
-		#Make this take in instance of tpmpart
-		#The markov stuff to keep here
-		#Now to the markov calc
-		#Generates single post
-		words = []
-		for twitter_post in self.twitterpost_set.all():
-			for word in twitter_post.content.split():
-				words.append(word)
+		new_markov_post = []
+		w0 = seed_cache.word1
+		w1 = seed_cache.word2
+		w2 = seed_cache.final_word
+		new_markov_post.append(w0)
+		new_markov_post.append(w1)
+		print [(x.word1, x.word2, x.final_word) for x in all_caches]
+		while True:
+			try:
+				new_markov_post.append(w2)
+				print 'alpha'
+				print w1
+				print w2
 
-		m = Markov() 
-		m.words = words
-		m.database()
-		markov_sentence = m.generate_markov_sentence(length=10)
+				next_cache = all_caches.filter(word1=w1, word2=w2)[0]
+				print 'beta'
+				print next_cache
+				print next_cache.word2
+				print next_cache.final_word
+				w1 = next_cache.word2
+				w2 = next_cache.final_word
+					
+			except Exception as e:
+				print e
+				break
+	
+		#Done making the post
+		print new_markov_post
 
-		self.twitterpostmarkov_set.create(content=markov_sentence)
+		#self.twitterpostmarkov_set.create(content=markov_sentence, randomness=randomness)
 
 
 class TwitterPost(models.Model):
@@ -114,6 +152,7 @@ class TwitterPostMarkov(models.Model):
 	author = models.ForeignKey(TwitterPerson, default=None, null=True)
 	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
 	original_tweet_id = models.IntegerField(default=0)
+	randomness = models.FloatField(default=0.0)
 
 	def __str__(self):
 		return ' author: ' + str(self.author) + '\n' + \
@@ -140,8 +179,22 @@ class TwitterMention(models.Model):
 	def __str__(self):
 		return self.content
 
+class TwitterPostCache(models.Model):
+	"""
+	Used to cache words from the original posts
+	the markov posts uses these
+	"""
+	author = models.ForeignKey(TwitterPerson, default=None, null=True)
+	word1 = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
+	word2 = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
+	final_word = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
+	beginning = models.BooleanField(default=False)
+
+
 def scrape_top_twitter_people(self):
 	"""
+	Fille db with metadata from top 50 users
+	Used to update avatars etc
 	"""
 	t = TweepyScraper(tweepy_consumer_key, 
 		tweepy_consumer_secret,

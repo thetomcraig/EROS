@@ -12,16 +12,19 @@ def home(request):
 	if(request.GET.get('collect_fb_data')):
 		request.user.save_clean_fb_feed()
 		post_list = FacebookPost.objects.all()
-		context = RequestContext(request, {'request': request, 'user': request.user, 'post_list': post_list})
+		context = RequestContext(request, \
+			{'request': request, 'user': request.user, 'post_list': post_list})
 		return render_to_response('scrapers/post_index.html', context_instance=context)
 
 	if(request.GET.get('collect_twitter_data')):
 		request.user.scrape_top_twitter_people()
 		twitter_people = TwitterPerson.objects.all()
-		context = RequestContext(request, {'request': request, 'user': request.user, 'twitter_people': twitter_people})
+		context = RequestContext(request, \
+			{'request': request, 'user': request.user, 'twitter_people': twitter_people})
 		return render_to_response('scrapers/twitter_people.html', context_instance=context)
 	
 	context = RequestContext(request, {'request': request,'user': request.user})
+	return render_to_response('scrapers/home.html', context_instance=context)
 
 def post_index(request):
 	"""

@@ -8,13 +8,23 @@ from scrapers.models.twitter import TwitterPost, TwitterPerson
 
 
 person = TwitterPerson.objects.all()[0]
-
+print person
 #person.scrape()
 person.apply_markov_chains()
 
+"""
+for c in person.twitterpostcache_set.all():
+	if c.beginning:
+		print c.word1
+		print c.word2
+		print c.final_word
+		print "\n"
+		next_cache = person.twitterpostcache_set.filter(word1=c.word2, word2=c.final_word)[0]
+		print next_cache
+
+
 #print person.twitterpostmarkov_set.all().last()
 
-"""
 posts = TwitterPost.objects.all()
 for post in posts:
 	print post.updated_at

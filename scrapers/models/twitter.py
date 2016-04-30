@@ -42,13 +42,16 @@ class TwitterPerson(User, models.Model):
 			tweepy_access_token_secret)
 
 		tweets = t.get_tweets_from_user(self.username, 100)
+		print "scraped %d new tweets" % len(tweets)
 		new_post_ids = []
 		for tweet in tweets:
 			words = tweet.split()
 
 			if ('RT' in tweet):
+				print "skipping retweets"
 				continue
 			if (len(words) < 1):
+				print "skipping short tweets"
 				continue
 	
 			final_tweet = ""
@@ -64,13 +67,12 @@ class TwitterPerson(User, models.Model):
 					word = "<<tag>>"
 				final_tweet = final_tweet + word + " "
 			final_tweet = final_tweet[:-1]
-			
-			try:
-				TwitterPost.objects.get(author=self, content=final_tweet)
-			except:
-				post = TwitterPost.objects.create(author=self, content=final_tweet)
-				self.create_post_cache(post)
-				new_post_ids.append(post.id)
+			print "final tweet:"
+			print final_tweet
+		
+			post = TwitterPost.objects.create(author=self, content=final_tweet)
+			self.create_post_cache(post)
+			new_post_ids.append(post.id)
 
 		return new_post_ids
 
@@ -81,9 +83,13 @@ class TwitterPerson(User, models.Model):
 		"""
 		word_list = post.content.split()
 		for index in range(len(word_list)-2):
+			print "caching:"
 			word1 = word_list[index]
 			word2 = word_list[index+1]
 			final_word = word_list[index+2]
+			print word1
+			print word2
+			print final_word
 
 			beginning = False
 			if (index == 0):
@@ -100,29 +106,23 @@ class TwitterPerson(User, models.Model):
 		list and gives this to the markov calc.
 		Save this as a new twitterpostmarkov
 		"""
-		all_caches = self.twitterpostcache_set.filter(beginning=True)
-		seed_index = random.randint(0, len(all_caches)-1)
-		seed_cache = all_caches[seed_index]
+		print "Applying markov chains"
+		all_beginning_caches = self.twitterpostcache_set.filter(beginning=True)
+		seed_index = random.randint(0, len(all_beginning_caches)-1)
+		seed_cache = all_beginning_caches[seed_index]
 
+		all_caches = self.twitterpostcache_set.all()
 		new_markov_post = []
 		w0 = seed_cache.word1
 		w1 = seed_cache.word2
 		w2 = seed_cache.final_word
 		new_markov_post.append(w0)
 		new_markov_post.append(w1)
-		print [(x.word1, x.word2, x.final_word) for x in all_caches]
+
 		while True:
 			try:
 				new_markov_post.append(w2)
-				print 'alpha'
-				print w1
-				print w2
-
 				next_cache = all_caches.filter(word1=w1, word2=w2)[0]
-				print 'beta'
-				print next_cache
-				print next_cache.word2
-				print next_cache.final_word
 				w1 = next_cache.word2
 				w2 = next_cache.final_word
 					

@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 import facebook
 import requests
 
-from constants import *
+from scrapers.constants import *
 
 #Classes for storing fb data
 class FacebookPerson(User, models.Model):

@@ -10,7 +10,7 @@ import requests
 from TweepyScraper import TweepyScraper
 from Markov import Markov 
 
-from constants import *
+from scrapers.constants import *
 
 tweepy_consumer_key = 'ZKx8Yg55evn1U65vRWQ0Zj7Jr'
 tweepy_consumer_secret = '26OYZDNj0hC17ei6JplHuerzoaxokQBpU9X2dsegkLLCShBK2y'

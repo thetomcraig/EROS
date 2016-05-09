@@ -24,9 +24,7 @@ def home(request):
 		return render_to_response('scrapers/twitter_people.html', context_instance=context)
 
 	if(request.GET.get('scrape_top_twitter_people')):
-		#TODO
-		
-
+		return HttpResponseRedirect('/scrapers/scrape_top_twitter_people/')
 
 	context = RequestContext(request, {'request': request,'user': request.user})
 	return render_to_response('scrapers/home.html', context_instance=context)

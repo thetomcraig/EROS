@@ -1,5 +1,5 @@
 #at artandlogic.com modles for comment storing)
-
+import HTMLParser
 import hashlib
 import random
 import json
@@ -67,11 +67,15 @@ class TwitterPerson(User, models.Model):
 				if "#" in word:
 					self.twitterhashtag_set.create(content=word)
 					word = TAG_TOKEN
+
 				final_tweet = final_tweet + word + " "
 			final_tweet = final_tweet[:-1]
 			print "final tweet:"
 			print final_tweet
-		
+
+			h = HTMLParser.HTMLParser()
+			final_tweet = h.unescape(final_tweet.decode('utf-8'))
+			
 			post = TwitterPost.objects.create(author=self, content=final_tweet)
 			self.create_post_cache(post)
 			new_post_ids.append(post.id)
@@ -153,11 +157,13 @@ class TwitterPerson(User, models.Model):
 		self.replace_tokens(new_markov_post, LINK_TOKEN, self.twitterlink_set.all()) 
 		self.replace_tokens(new_markov_post, TAG_TOKEN, self.twitterhashtag_set.all())
 
+
 		#Determind random level, and save the post
 		randomness = 1.0 - float(randomness)/len(new_markov_post)
 		content = ""
 		for word in new_markov_post:
 			content = content + word + " "
+
 		self.twitterpostmarkov_set.create(content=content[:-1], randomness=randomness)
 
 

@@ -1,35 +1,37 @@
 {% extends 'scrapers/base.html' %}
 
 {% block main %}
-	<div style="padding-left:3%; padding-right:3%">
-		{% if twitter_posts %}
-				<h4>{{ table_title }}</h4>
-				<h4>{{ twitter_posts }}</h4>
-				<table class="table-striped" style="border-collapse:collapse;">
-					<tbody>
-						{% for twitter_post in twitter_posts %}
-							{% if forloop.counter == 3 %}
-								<tr data-toggle="collapse" data-parent="#wrap" data-target=".accordian-body-markov" class="accordion-toggle">
-									{% include "twitter_post.html" with twitter_post=twitter_post %}
-								</tr>
-							{% elif forloop.counter > 3%}
-								<div id="wrap">
-									<tr>
-										<div id="hidden-tweet {{ twitter_post }}" class="accordian-body-markov collapse">
-											{% include "twitter_post.html" with twitter_post=twitter_post %}
-										</div>
+	{% autoescape off %}   
+		<div style="padding-left:3%; padding-right:3%">
+			{% if twitter_posts %}
+					<h4>{{ table_title }}</h4>
+					<h4>{{ twitter_posts }}</h4>
+					<table class="table-striped" style="border-collapse:collapse;">
+						<tbody>
+							{% for twitter_post in twitter_posts %}
+								{% if forloop.counter == 3 %}
+									<tr data-toggle="collapse" data-parent="#wrap" data-target=".accordian-body-markov" class="accordion-toggle">
+										{% twitter_post %}
 									</tr>
-								</div>
-							{% else %}
-								<tr>
-									{% include "twitter_post.html" with twitter_post=twitter_post %}
-								</tr> 
-							{% endif %}
-						{% endfor %}
-					</tbody>
-				</table>
-			{% else %}
-					<p>No twitter_posts to analyze</p>
-			{% endif %}
-	</div>
+								{% elif forloop.counter > 3%}
+									<div id="wrap">
+										<tr>
+											<div id="hidden-tweet {{ twitter_post }}" class="accordian-body-markov collapse">
+												{% twitter_post %}
+											</div>
+										</tr>
+									</div>
+								{% else %}
+									<tr>
+										{% twitter_post %}
+									</tr> 
+								{% endif %}
+							{% endfor %}
+						</tbody>
+					</table>
+				{% else %}
+						<p>No Markov Posts</p>
+				{% endif %}
+		</div>
+	{% endautoescape %}
 {% endblock %}

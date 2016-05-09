@@ -1,4 +1,5 @@
 import os, django
+import HTMLParser
 if __name__ == "__main__":
 	os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_project.settings")
 	django.setup()
@@ -7,9 +8,14 @@ from scrapers import models
 from scrapers.models.twitter import TwitterPost, TwitterPerson
 
 person = TwitterPerson.objects.all()[0]
+all_markov_posts = person.twitterpostmarkov_set.all()
+#all_markov_posts.delete()
 print person
-person.scrape()
-person.apply_markov_chains()
+#person.scrape()
+for i in range(25):
+	person.apply_markov_chains()
+
+#print [(x.content) for x in person.twitterpost_set.all()]
 print [(x.content, x.randomness) for x in person.twitterpostmarkov_set.all()]
 
 """

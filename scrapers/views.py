@@ -54,11 +54,11 @@ def twitter_person_detail(request, twitter_person_username):
 
 	twitter_posts = TwitterPost.objects.filter(author=author)
 	twitter_posts = [t.content for t in twitter_posts] 
-	print twitter_posts
 
 	twitter_posts_markov = author.twitterpostmarkov_set.all()
-	twitter_posts_markov = [t.content for t in twitter_posts_markov]
-	print twitter_posts_markov
+	twitter_posts_markov = \
+		[(t.content.encode('ascii', 'ignore'), \
+		t.randomness) for t in twitter_posts_markov]
 
 	context = RequestContext(request, {
 			'uname': twitter_person_username,

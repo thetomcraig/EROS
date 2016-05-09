@@ -13,5 +13,4 @@ touch $file_name
 
 #Write to the file
 cd ${HOME}/EROS/
-#${HOME}/.virtualenvs/EROS/bin/python manage.py scrape --twitter_users existing --apply_markov_chains all >> $logs_path/$file_name
-${HOME}/.virtualenvs/EROS/bin/python manage.py scrape --apply_markov_chains all >> $logs_path/$file_name
+${HOME}/.virtualenvs/EROS/bin/python manage.py scrape --twitter_users existing --apply_markov_chains all >> $logs_path/$file_name

@@ -1,6 +1,6 @@
 from django.views.generic.detail import DetailView
 from django.shortcuts import render_to_response
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.contrib.auth.models import User
 from scrapers.models.twitter import TwitterPerson, TwitterPost, TwitterPostMarkov
@@ -49,21 +49,34 @@ def twitter_people(request):
 	return HttpResponse(template.render(context))
 	
 def twitter_person_detail(request, twitter_person_username):
+	author = TwitterPerson.objects.get(username=twitter_person_username)
+
+	if(request.GET.get('go_back_to_list')):
+		return HttpResponseRedirect('/scrapers/twitter_people/')
+
+	if(request.GET.get('scrape')):
+		author.scrape()
+		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+author.username)
+
+	if(request.GET.get('apply_markov_chains')):
+		author.apply_markov_chains()
+		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+author.username)
+
 	template = loader.get_template('scrapers/twitter_person_detail.html')
-	author = TwitterPerson.objects.get_or_create(username=twitter_person_username)[0]
 
 	twitter_posts = TwitterPost.objects.filter(author=author)
 	twitter_posts = [t.content for t in twitter_posts] 
 
-	twitter_posts_markov = author.twitterpostmarkov_set.all()
+	twitter_posts_markov = author.twitterpostmarkov_set.all().order_by('-randomness')
 	twitter_posts_markov = \
 		[(t.content.encode('ascii', 'ignore'), \
 		t.randomness) for t in twitter_posts_markov]
 
 	context = RequestContext(request, {
-			'uname': twitter_person_username,
+			'twitter_person': author,
 			'twitter_posts' : twitter_posts,
 			'twitter_posts_markov'	: twitter_posts_markov,
+			'len_twitter_posts_markov'	: len(twitter_posts_markov),
 	})
 
 	return HttpResponse(template.render(context))

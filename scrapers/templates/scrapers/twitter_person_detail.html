@@ -1,13 +1,22 @@
 {% extends 'scrapers/base.html' %}
 {% block main %}
 
-<div style="padding-left:2%; padding-right:2%">
-  {% if uname %}
-    <h2>@{{ uname }}</h2>
+<form action="#" method="get">
+	<input name="go_back_to_list" type="submit" class="btn btn-default" value="User List">
+</form>
 
-    {# {% include "twitter_post_list.html" with table_title='REAL' twitter_posts=twitter_posts colors=colors%} #}
-    {% include "twitter_post_list.html" with table_title='MARKOV' twitter_posts=twitter_posts_markov colors=colors%}
-
-  {% endif %}
+<div align="middle">
+	<div class="image-cropper">
+		<img src={{ twitter_person.avatar }} align="middle"/>
+	</div>
+	<h2>{{ twitter_person.real_name }}</h2>
+	<h6>Markov posts: {{ len_twitter_posts_markov }}</h6>
+	<form action="#" method="get">
+		<input name="scrape" type="submit" class="btn btn-success" value="Scrape">
+		<input name="apply_markov_chains" type="submit" class="btn btn-warning" value="Make New Markov Post">
+	</form>
 </div>
+
+{% include "twitter_post_list.html" with table_title='' twitter_posts=twitter_posts_markov colors=colors%}
+
 {% endblock %}

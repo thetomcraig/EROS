@@ -20,10 +20,13 @@ USER_TOKEN = "<<user>>"
 LINK_TOKEN = "<<link>>"
 TAG_TOKEN = "<<tag>>"
 
-#Classes for storing twitter data
-class TwitterPerson(User, models.Model):
+#SUPER CLASS
+class Person(User, models.Model):
 	real_name = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
 	avatar = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
+
+#TWITTER VERSION
+class TwitterPerson(Person):
 	happiness = models.IntegerField(default=0)
 
 	def __str__(self):
@@ -114,30 +117,46 @@ class TwitterPerson(User, models.Model):
 		"""
 		print "Applying markov chains"
 		all_beginning_caches = self.twitterpostcache_set.filter(beginning=True)
+		all_caches = self.twitterpostcache_set.all()
+		new_markov_post = apply_markov_chains_inner(all_beginning_caches, all_caches)
 
-		if not all_beginning_caches:
+		#Replace the tokens (twitter specific)
+		self.replace_tokens(new_markov_post, USER_TOKEN, self.twittermention_set.all())
+		self.replace_tokens(new_markov_post, LINK_TOKEN, self.twitterlink_set.all()) 
+		self.replace_tokens(new_markov_post, TAG_TOKEN, self.twitterhashtag_set.all())
+
+		content = ""
+		for word in new_markov_post:
+			content = content + word + " "
+
+		self.twitterpostmarkov_set.create(content=content[:-1], randomness=randomness)
+
+	
+	def apply_markov_chains_inner(self, beginning_caches, all_caches):
+		new_markov_chain = []
+		randomness = -0.0
+
+		if not beginning_caches:
 			print "Not enough data, skipping"
-			return
+			return (new_markov_chain, randomness)
 
 		seed_index = 0
-		if len(all_beginning_caches) != 0:
-			seed_index = random.randint(0, len(all_beginning_caches)-1)
-		seed_cache = all_beginning_caches[seed_index]
+		if len(beginning_caches) != 0:
+			seed_index = random.randint(0, len(beginning_caches)-1)
+		seed_cache = beginning_caches[seed_index]
 
-		all_caches = self.twitterpostcache_set.all()
-		new_markov_post = []
 		w0 = seed_cache.word1
 		w1 = seed_cache.word2
 		w2 = seed_cache.final_word
-		new_markov_post.append(w0)
-		new_markov_post.append(w1)
+		new_markov_chain.append(w0)
+		new_markov_chain.append(w1)
 
 		#percentage, calculated by the number of random 
 		#choices made to create the markov post
 		randomness = 0
 		while True:
 			try:
-				new_markov_post.append(w2)
+				new_markov_chain.append(w2)
 				all_next_caches = all_caches.filter(word1=w1, word2=w2)
 				next_cache_index = random.randint(0, len(all_next_caches)-1)
 				next_cache = all_next_caches[next_cache_index]
@@ -151,20 +170,11 @@ class TwitterPerson(User, models.Model):
 				print e
 				break
 	
-		#Done making the post
-		#Replace the tokens
-		self.replace_tokens(new_markov_post, USER_TOKEN, self.twittermention_set.all())
-		self.replace_tokens(new_markov_post, LINK_TOKEN, self.twitterlink_set.all()) 
-		self.replace_tokens(new_markov_post, TAG_TOKEN, self.twitterhashtag_set.all())
-
-
 		#Determind random level, and save the post
-		randomness = 1.0 - float(randomness)/len(new_markov_post)
-		content = ""
-		for word in new_markov_post:
-			content = content + word + " "
+		randomness = 1.0 - float(randomness)/len(new_markov_chain)
+		#Done making the post
 
-		self.twitterpostmarkov_set.create(content=content[:-1], randomness=randomness)
+		return (new_markov_chain, randomness)
 
 
 	def replace_tokens(self, word_list, token, model_set):
@@ -187,29 +197,35 @@ class TwitterPerson(User, models.Model):
 
 		return word_list
 
-
-class TwitterPost(models.Model):
-	author = models.ForeignKey(TwitterPerson, default=None, null=True)
+#SUPER CLASS
+class Sentence(models.Model):
+	author = models.ForeignKey(Person, default=None, null=True)
 	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
-	happiness = models.FloatField(default=0)
-		
+
 	def __str__(self):
 		return self.content
+
+#TWITTER VERSION
+class TwitterPost(Sentence):
+	happiness = models.FloatField(default=0)
 
 	def sentiment_analyze(self):
 		self.happiness = 5
 		
-
-class TwitterPostMarkov(models.Model):
-	author = models.ForeignKey(TwitterPerson, default=None, null=True)
+#SUPER CLASS
+class MarkovChain(models.Model):
+	author = models.ForeignKey(Person, default=None, null=True)
 	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
-	original_tweet_id = models.IntegerField(default=0)
 	randomness = models.FloatField(default=0.0)
 
 	def __str__(self):
 		return ' author: ' + str(self.author) + '\n' + \
 						' content: ' + self.content.encode('utf-8') + '\n' + \
 						' randomness ' + str(self.randomness) + '\n'
+
+#TWITTER VERSION
+class TwitterPostMarkov(MarkovChain):
+	pass
 
 class TwitterLink(models.Model):
 	author = models.ForeignKey(TwitterPerson)

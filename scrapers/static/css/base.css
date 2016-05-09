@@ -2,32 +2,34 @@
 
 .large-buffer { margin-top:80px; }
 
-body{margin:40px;}
+body {
+		margin:40px;
+}
 
 .sub{
-    width:10%; 
-    position:relative; 
-    height:10%; 
-    float:left; 
-    margin:10%;
+		width:10%; 
+		position:relative; 
+		height:10%; 
+		float:left; 
+		margin:10%;
 } 
 
 .image-cropper {
-  height: 100px;
-  width: 100px; 
-  position: relative;
-  overflow: hidden;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
+	height: 100px;
+	width: 100px; 
+	position: relative;
+	overflow: hidden;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
 }
 
 img {
-    display: inline;
-    margin: 0 auto;
-    height: 100%;
-    width: auto;
+		display: inline;
+		margin: 0 auto;
+		height: 100%;
+		width: auto;
 }
 

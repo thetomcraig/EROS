@@ -8,14 +8,13 @@ from scrapers import models
 from scrapers.models.twitter import TwitterPost, TwitterPerson
 
 person = TwitterPerson.objects.all()[0]
-all_markov_posts = person.twitterpostmarkov_set.all()
+print person.username
+#all_markov_posts = person.twitterpostmarkov_set.all()
 #all_markov_posts.delete()
-print person
+#print person
 #person.scrape()
-for i in range(25):
-	person.apply_markov_chains()
 
-#print [(x.content) for x in person.twitterpost_set.all()]
+print [(x.content) for x in person.twitterpost_set.all()]
 print [(x.content, x.randomness) for x in person.twitterpostmarkov_set.all()]
 
 """

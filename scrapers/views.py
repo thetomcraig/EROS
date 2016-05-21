@@ -16,8 +16,7 @@ def home(request):
 			{'request': request, 'user': request.user, 'post_list': post_list})
 		return render_to_response('scrapers/post_index.html', context_instance=context)
 
-	if(request.GET.get('collect_twitter_data')):
-		request.user.scrape_top_twitter_people()
+	if(request.GET.get('view_twitter_data')):
 		twitter_people = TwitterPerson.objects.all()
 		context = RequestContext(request, \
 			{'request': request, 'user': request.user, 'twitter_people': twitter_people})
@@ -52,18 +51,21 @@ def twitter_people(request):
 	return HttpResponse(template.render(context))
 	
 def twitter_person_detail(request, twitter_person_username):
-	author = TwitterPerson.objects.get(username=twitter_person_username)
+	author = None
+	for person in TwitterPerson.objects.all():
+		if person.username.strip() == twitter_person_username.strip():
+			author = person
 
 	if(request.GET.get('go_back_to_list')):
 		return HttpResponseRedirect('/scrapers/twitter_people/')
 
 	if(request.GET.get('scrape')):
 		author.scrape()
-		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+author.username)
+		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+author.name)
 
 	if(request.GET.get('apply_markov_chains')):
 		author.apply_markov_chains()
-		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+author.username)
+		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+author.name)
 
 	template = loader.get_template('scrapers/twitter_person_detail.html')
 

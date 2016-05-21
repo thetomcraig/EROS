@@ -22,8 +22,9 @@ TAG_TOKEN = "<<tag>>"
 
 #SUPER CLASS
 class Person(User, models.Model):
-	real_name = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
 	avatar = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
+	class Meta:
+		abstract = True
 
 #TWITTER VERSION
 class TwitterPerson(Person):
@@ -96,9 +97,9 @@ class TwitterPerson(Person):
 			word1 = word_list[index]
 			word2 = word_list[index+1]
 			final_word = word_list[index+2]
-			print word1
-			print word2
-			print final_word
+			print word1.encode('utf-8')
+			print word2.encode('utf-8')
+			print final_word.encode('utf-8')
 
 			beginning = False
 			if (index == 0):
@@ -118,15 +119,16 @@ class TwitterPerson(Person):
 		print "Applying markov chains"
 		all_beginning_caches = self.twitterpostcache_set.filter(beginning=True)
 		all_caches = self.twitterpostcache_set.all()
-		new_markov_post = apply_markov_chains_inner(all_beginning_caches, all_caches)
+		new_markov_post = self.apply_markov_chains_inner(all_beginning_caches, all_caches)
 
 		#Replace the tokens (twitter specific)
 		self.replace_tokens(new_markov_post, USER_TOKEN, self.twittermention_set.all())
 		self.replace_tokens(new_markov_post, LINK_TOKEN, self.twitterlink_set.all()) 
 		self.replace_tokens(new_markov_post, TAG_TOKEN, self.twitterhashtag_set.all())
 
+		randomness = new_markov_post[1]
 		content = ""
-		for word in new_markov_post:
+		for word in new_markov_post[0]:
 			content = content + word + " "
 
 		self.twitterpostmarkov_set.create(content=content[:-1], randomness=randomness)
@@ -179,9 +181,10 @@ class TwitterPerson(Person):
 
 	def replace_tokens(self, word_list, token, model_set):
 		"""
-		Takes a lit of words and replaces tokens with the 
+		Takes a list of words and replaces tokens with the 
 		corresonding models linked to the user
 		"""
+		return	
 		for word_index in range(len(word_list)):
 			if token in word_list[word_index]:
 				seed_index = 0
@@ -199,7 +202,6 @@ class TwitterPerson(Person):
 
 #SUPER CLASS
 class Sentence(models.Model):
-	author = models.ForeignKey(Person, default=None, null=True)
 	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
 
 	def __str__(self):
@@ -207,6 +209,7 @@ class Sentence(models.Model):
 
 #TWITTER VERSION
 class TwitterPost(Sentence):
+	author = models.ForeignKey(TwitterPerson, default=None, null=True)
 	happiness = models.FloatField(default=0)
 
 	def sentiment_analyze(self):
@@ -214,7 +217,6 @@ class TwitterPost(Sentence):
 		
 #SUPER CLASS
 class MarkovChain(models.Model):
-	author = models.ForeignKey(Person, default=None, null=True)
 	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
 	randomness = models.FloatField(default=0.0)
 
@@ -225,6 +227,7 @@ class MarkovChain(models.Model):
 
 #TWITTER VERSION
 class TwitterPostMarkov(MarkovChain):
+	author = models.ForeignKey(TwitterPerson, default=None, null=True)
 	pass
 
 class TwitterLink(models.Model):
@@ -270,11 +273,17 @@ def scrape_top_twitter_people(self):
 		tweepy_access_token,
 		tweepy_access_token_secret)
 	names_and_unames = t.scrape_top_users(50)
+
 	for entry in names_and_unames:
-		existing_person = TwitterPerson.objects.get_or_create(username=entry['uname'])[0]
-		existing_person.real_name = entry['name']
-		existing_person.avatar = entry['avatar']
-		existing_person.save()
+		person = None
+		try:
+			person = TwitterPerson.objects.get(username=entry['uname'])[0]
+		except:
+			person = TwitterPerson.objects.create(username=entry['uname'])
+
+		person.username = entry['name']
+		person.avatar = entry['avatar']
+		person.save()
 
 	return names_and_unames
 User.add_to_class('scrape_top_twitter_people', scrape_top_twitter_people)

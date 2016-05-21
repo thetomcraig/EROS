@@ -45,7 +45,8 @@ class TweepyScraper:
 	def get_tweets_from_user(self, screen_name, limit):
 		alltweets = []	
 		outtweets = []
-		new_tweets = self.api.user_timeline(screen_name = screen_name,count=limit)
+
+		new_tweets = self.api.user_timeline(screen_name=screen_name, count=limit)
 		alltweets.extend(new_tweets)
 		outtweets = [tweet.text.encode("utf-8") for tweet in alltweets]
 

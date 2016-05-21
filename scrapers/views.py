@@ -61,11 +61,11 @@ def twitter_person_detail(request, twitter_person_username):
 
 	if(request.GET.get('scrape')):
 		author.scrape()
-		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+author.name)
+		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+twitter_person_username)
 
 	if(request.GET.get('apply_markov_chains')):
 		author.apply_markov_chains()
-		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+author.name)
+		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+twitter_person_username)
 
 	template = loader.get_template('scrapers/twitter_person_detail.html')
 
@@ -81,6 +81,7 @@ def twitter_person_detail(request, twitter_person_username):
 			'twitter_person': author,
 			'twitter_posts' : twitter_posts,
 			'twitter_posts_markov'	: twitter_posts_markov,
+			'len_twitter_posts'	: len(twitter_posts),
 			'len_twitter_posts_markov'	: len(twitter_posts_markov),
 	})
 

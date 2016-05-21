@@ -29,7 +29,7 @@ class Person(User, models.Model):
 #TWITTER VERSION
 class TwitterPerson(Person):
 	happiness = models.IntegerField(default=0)
-	name = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
+	real_name = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
 
 	def __str__(self):
 		return self.username

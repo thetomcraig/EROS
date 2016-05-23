@@ -7,6 +7,13 @@ if __name__ == "__main__":
 from scrapers import models
 from scrapers.models.twitter import TwitterPost, TwitterPerson
 
+
+
+
+
+
+
+"""
 person = TwitterPerson.objects.all()[0]
 print person.username
 #all_markov_posts = person.twitterpostmarkov_set.all()
@@ -17,6 +24,7 @@ print person.username
 print [(x.content) for x in person.twitterpost_set.all()]
 print [(x.content, x.randomness) for x in person.twitterpostmarkov_set.all()]
 
+"""
 """
 for c in person.twitterpostcache_set.all():
 	if c.beginning:

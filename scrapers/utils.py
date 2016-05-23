@@ -1,6 +1,6 @@
 import random
 
-def read_source_into_sentance_list(source_file):
+def read_source_into_sentence_list(source_file):
 	"""
 	Reads a text file and returns its contents as list of sentances
 	Split at punctuations

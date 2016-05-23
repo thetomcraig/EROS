@@ -8,6 +8,7 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 import requests
 from TweepyScraper import TweepyScraper
+import plain_text_classes
 
 from scrapers.constants import *
 
@@ -22,16 +23,9 @@ USER_TOKEN = "<<user>>"
 LINK_TOKEN = "<<link>>"
 TAG_TOKEN = "<<tag>>"
 
-#SUPER CLASS
-class Person(User, models.Model):
-	avatar = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
-	class Meta:
-		abstract = True
-
 #TWITTER VERSION
-class TwitterPerson(Person):
+class TwitterPerson(plain_text_classes.Person):
 	happiness = models.IntegerField(default=0)
-	real_name = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
 
 	def __str__(self):
 		return self.username
@@ -158,34 +152,15 @@ class TwitterPerson(Person):
 
 		return (word_list, word_list_and_randomness[1])
 
-#SUPER CLASS
-class Sentence(models.Model):
-	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
-
-	def __str__(self):
-		return self.content
-
 #TWITTER VERSION
-class TwitterPost(Sentence):
-	author = models.ForeignKey(TwitterPerson, default=None, null=True)
+class TwitterPost(plain_text_classes.Sentence):
 	happiness = models.FloatField(default=0)
 
 	def sentiment_analyze(self):
 		self.happiness = 5
 		
-#SUPER CLASS
-class MarkovChain(models.Model):
-	content = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
-	randomness = models.FloatField(default=0.0)
-
-	def __str__(self):
-		return ' author: ' + str(self.author) + '\n' + \
-						' content: ' + self.content.encode('utf-8') + '\n' + \
-						' randomness ' + str(self.randomness) + '\n'
-
 #TWITTER VERSION
-class TwitterPostMarkov(MarkovChain):
-	author = models.ForeignKey(TwitterPerson, default=None, null=True)
+class TwitterPostMarkov(plain_text_classes.MarkovChain):
 	pass
 
 class TwitterLink(models.Model):

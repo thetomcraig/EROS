@@ -1,2 +1,3 @@
-from twitter import TwitterPerson
-from facebook import FacebookPerson, FacebookPost
+from twitter import * 
+from facebook import * 
+from plain_text_classes import * 

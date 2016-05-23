@@ -11,6 +11,8 @@ from TweepyScraper import TweepyScraper
 
 from scrapers.constants import *
 
+from .. import utils
+
 tweepy_consumer_key = 'ZKx8Yg55evn1U65vRWQ0Zj7Jr'
 tweepy_consumer_secret = '26OYZDNj0hC17ei6JplHuerzoaxokQBpU9X2dsegkLLCShBK2y'
 tweepy_access_token = '14404065-baBGgZmVoCnZEU1L0hCVq6ed6qHDFXVrLSQpAKXcw'
@@ -120,7 +122,7 @@ class TwitterPerson(Person):
 		print "Applying markov chains"
 		all_beginning_caches = self.twitterpostcache_set.filter(beginning=True)
 		all_caches = self.twitterpostcache_set.all()
-		new_markov_post = self.apply_markov_chains_inner(all_beginning_caches, all_caches)
+		new_markov_post = utils.apply_markov_chains_inner(all_beginning_caches, all_caches)
 
 		#Replace the tokens (twitter specific)
 		self.replace_tokens(new_markov_post, USER_TOKEN, self.twittermention_set.all())
@@ -135,51 +137,6 @@ class TwitterPerson(Person):
 		self.twitterpostmarkov_set.create(content=content[:-1], randomness=randomness)
 
 	
-	def apply_markov_chains_inner(self, beginning_caches, all_caches):
-		new_markov_chain = []
-		randomness = -0.0
-
-		if not beginning_caches:
-			print "Not enough data, skipping"
-			return (new_markov_chain, randomness)
-
-		seed_index = 0
-		if len(beginning_caches) != 0:
-			seed_index = random.randint(0, len(beginning_caches)-1)
-		seed_cache = beginning_caches[seed_index]
-
-		w0 = seed_cache.word1
-		w1 = seed_cache.word2
-		w2 = seed_cache.final_word
-		new_markov_chain.append(w0)
-		new_markov_chain.append(w1)
-
-		#percentage, calculated by the number of random 
-		#choices made to create the markov post
-		randomness = 0
-		while True:
-			try:
-				new_markov_chain.append(w2)
-				all_next_caches = all_caches.filter(word1=w1, word2=w2)
-				next_cache_index = random.randint(0, len(all_next_caches)-1)
-				next_cache = all_next_caches[next_cache_index]
-				w1 = next_cache.word2
-				w2 = next_cache.final_word
-
-				if len(all_next_caches) > 1:
-					randomness = randomness + 1
-					
-			except Exception as e:
-				print e
-				break
-	
-		#Determind random level, and save the post
-		randomness = 1.0 - float(randomness)/len(new_markov_chain)
-		#Done making the post
-
-		return (new_markov_chain, randomness)
-
-
 	def replace_tokens(self, word_list_and_randomness, token, model_set):
 		"""
 		Takes a list of words and replaces tokens with the 

@@ -9,6 +9,12 @@ from scrapers.models.facebook import FacebookPerson, FacebookPost
 from constants import *
 
 def home(request):
+	if(request.GET.get('go_to_dash')):
+		favorite_people = [TwitterPerson.objects.all()[0]] 
+		context = RequestContext(request, \
+			{'favorite_people': favorite_people})
+		return render_to_response('scrapers/dashboard.html', context_instance=context)
+
 	if(request.GET.get('collect_fb_data')):
 		request.user.save_clean_fb_feed()
 		post_list = FacebookPost.objects.all()

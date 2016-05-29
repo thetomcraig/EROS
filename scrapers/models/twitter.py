@@ -24,7 +24,7 @@ LINK_TOKEN = "<<link>>"
 TAG_TOKEN = "<<tag>>"
 
 #TWITTER VERSION
-class TwitterPerson(plain_text_classes.Person):
+class TwitterPerson(plain_text_classes.Person, models.Model):
 	happiness = models.IntegerField(default=0)
 
 	def __str__(self):
@@ -116,7 +116,7 @@ class TwitterPerson(plain_text_classes.Person):
 		print "Applying markov chains"
 		all_beginning_caches = self.twitterpostcache_set.filter(beginning=True)
 		all_caches = self.twitterpostcache_set.all()
-		new_markov_post = utils.apply_markov_chains_inner(all_beginning_caches, all_caches)
+		new_markov_post = self.apply_markov_chains_inner(all_beginning_caches, all_caches)
 
 		#Replace the tokens (twitter specific)
 		self.replace_tokens(new_markov_post, USER_TOKEN, self.twittermention_set.all())
@@ -154,14 +154,15 @@ class TwitterPerson(plain_text_classes.Person):
 
 #TWITTER VERSION
 class TwitterPost(plain_text_classes.Sentence):
-	happiness = models.FloatField(default=0)
+	author = models.ForeignKey(TwitterPerson, default=None, null=True)
 
-	def sentiment_analyze(self):
-		self.happiness = 5
-		
+#TWITTER VERSION
+class TwitterPostCache(plain_text_classes.SentenceCache):
+	author = models.ForeignKey(TwitterPerson, default=None, null=True)
+
 #TWITTER VERSION
 class TwitterPostMarkov(plain_text_classes.MarkovChain):
-	pass
+	author = models.ForeignKey(TwitterPerson, default=None)
 
 class TwitterLink(models.Model):
 	author = models.ForeignKey(TwitterPerson)
@@ -183,18 +184,6 @@ class TwitterMention(models.Model):
 
 	def __str__(self):
 		return self.content
-
-class TwitterPostCache(models.Model):
-	"""
-	Used to cache words from the original posts
-	the markov posts uses these
-	"""
-	author = models.ForeignKey(TwitterPerson, default=None, null=True)
-	word1 = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
-	word2 = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
-	final_word = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
-	beginning = models.BooleanField(default=False)
-
 
 def scrape_top_twitter_people(self):
 	"""

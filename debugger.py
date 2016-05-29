@@ -4,8 +4,11 @@ if __name__ == "__main__":
 	os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_project.settings")
 	django.setup()
 
-from scrapers import models
+from scrapers import models, utils
 from scrapers.models.twitter import TwitterPost, TwitterPerson
+from scrapers.models.plain_text_classes import Person
+
+lines = utils.read_source_into_sentence_list("src/pride_and_prejudice.txt")
 
 
 

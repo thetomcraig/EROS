@@ -1,7 +1,7 @@
 import urllib
 from django.contrib.auth.models import User
 from django.core.management import BaseCommand
-from scrapers.models.plain_text_classes import Sentence, Person, MarkovChain
+from scrapers.models.literature import LiteratureSentence, LiteraturePerson, LiteratureSentenceMarkov
 from scrapers import utils
 from datetime import datetime
 
@@ -23,8 +23,9 @@ class Command(BaseCommand):
 		file_name = ""
 		if options['file_name']:
 			file_name = options['file_name']
-			setences = utils.read_source_into_sentence_list(file_name)
-			author = Person.objects.get_or_create(real_name=options['author'])
+			sentences = utils.read_source_into_sentence_list(file_name)
+			author = LiteraturePerson.objects.get_or_create(real_name=options['author'])[0]
 			for sentence in sentences: 
-				Sentence.create(author=author, content=" ".join(sentence))
+				print sentence
+				l = LiteratureSentence(author=author, content=" ".join(sentence))
 			

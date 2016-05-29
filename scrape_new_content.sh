@@ -12,5 +12,5 @@ file_name=$(hostname)-database-output-latest-$(date +"%y-%m-%d-%H-%M-%S").txt
 touch $file_name
 
 #Write to the file
-cd ${HOME}/EROS/
+cd ${HOME}/Dropbox/TomCraig/Projects/EROS/
 ${HOME}/.virtualenvs/EROS/bin/python manage.py scrape --twitter_users existing --apply_markov_chains all >> $logs_path/$file_name

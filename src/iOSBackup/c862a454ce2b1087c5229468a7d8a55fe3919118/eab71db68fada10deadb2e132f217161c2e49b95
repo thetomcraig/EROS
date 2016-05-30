@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-10-26T17:09:06Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2013-10-26T17:09:06Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Lots of changes…..
+
+Okay, well, I’ll go over everything generally in case I run out of time (which I probably will).
+
+Overall I am feeling pretty well.  
+
+I have noticed that recently I have bee vastly less stressed and worried about everything.  I had two midterms last week and the week before.  The physics one I executed to be shitty and it was, and the philosophy one I took yesterday and felt really good about.
+
+For both tests I felt like I prepared as much as I could and I didn’t do so eel on the physics one - 7/14 and the average was 8.8/14.  I could get a C in the class.  Normally this might worry me, but I really don’t care.  Not that I don’t care about my studies, but I realize that I understand the concepts and wold have done well on a fair test, if the professor gives me a shitty one, it really is not a reflection of how well I know he concepts.  This is kind of a depressing outlook, but its very true.  And does how I perform in Physics 3 hold any bearing on how well I do in life?  No.  No it does not.
+
+This is how I have been feeling about a lot of my issues which I think is really good.  I realized that I was prepared for a fair test and any cramming I did for the expectation of a bad test would have made it worse.  
+
+I had to stop expecting it to be perfect.  This is how I have been feeling.  I realize that I have been expecting most everything to be perfect and being aggravate when something proves otherwise.  Currently I have not been expecting things to fit my preconceived notions of perfection.
+
+The downside to this is that I have not been having as strong emotions as I normally do.  My emotions before were magnified, and I cannot tell if the ones I have been having currently are the way they should feel.  They feel lesser than they should be, like I am detached from them…
+
+Overall though I think I am moving in the right direction.  I am not feeling this constant anxiety and depression I have been.  I feel like a weight has been lifted and what’s underneath is very raw.  Or maybe a magnifying glass has been lifted.
+
+I am doing group therapy and liking it so far.
+
+Also it is worth it to note that I am still a little upset that I do not have time to do things that I would like, like working on my project and running.  I have to find a way to work them in to my schedule a tiny bit.
+
+
+OH and Sidney and I got back together last night.  I had kind of made up my mind to not ever try it again, but I think we both feel differently about it compared to last year.
+
+If it doesn’t work out though it is not the end of the world.  I realize I was expecting the relationship to be perfect like everything else last year.  Having said that we are both going to try to act the way we feel and not try to please the other person.  And if it only lasts a month, so be it; we both think it is worth it to try and will try not to regret it if it doesn’t work out.
+
+I am still a bit wary of sex, but she has said she wants to do what she feels like doing, and I am assuming this will be something she does want to do.  Maybe it won’t and I will have learned.  Either way I do not think like I will have wasted my time.
+
+Anyway off to breakfast.
+
+I am grateful for Sidney, she is a good friend, above all else.
+</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409100708299754</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.8534130770044</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>129CDB7BFF69414A9A33FF0D12993846</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>14</string>
+		<key>Description</key>
+		<string>Mist and Fog</string>
+		<key>Fahrenheit</key>
+		<string>57</string>
+		<key>IconName</key>
+		<string>fog.png</string>
+		<key>Pressure MB</key>
+		<integer>1019</integer>
+		<key>Relative Humidity</key>
+		<integer>94</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2013-10-26T14:15:18Z</date>
+		<key>Sunset Date</key>
+		<date>2013-10-27T01:11:11Z</date>
+		<key>Visibility KM</key>
+		<real>3.2186880000000002</real>
+		<key>Wind Bearing</key>
+		<integer>0</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>14</integer>
+		<key>Wind Speed KPH</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

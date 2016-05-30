@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-07-20T01:21:40Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>iPhone/iPhone5,1</string>
+		<key>Generation Date</key>
+		<date>2013-07-20T01:21:40Z</date>
+		<key>Host Name</key>
+		<string>SOLON</string>
+		<key>OS Agent</key>
+		<string>iOS/6.1.4</string>
+		<key>Software Agent</key>
+		<string>Day One (iOS)/1.11</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Pokédex. Can't give this away. 
+Not the best work day. I mean it was fine. Didn't get much done though and had issues with programs.  My computer at work is fucking slow and exacerbates any issues I have. 
+
+But overall not a bad day. Clews up up some stuff for showing the house, and forgot to program... But missing a day is no big deal. I ran which was good - I'm going to try to do 3 days a week. 
+
+I am worried about y happiness as peer yesterday's entry. Thinking of going to a therapist. Hm...
+</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.107331700000003</real>
+		<key>Locality</key>
+		<string>South Pasadena</string>
+		<key>Longitude</key>
+		<real>-118.1461034</real>
+		<key>Place Name</key>
+		<string>1610 Marengo Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>27ACDCF11F274A9CB9B013C894BABC59</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>25</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>77</string>
+		<key>IconName</key>
+		<string>sunny.png</string>
+	</dict>
+</dict>
+</plist>

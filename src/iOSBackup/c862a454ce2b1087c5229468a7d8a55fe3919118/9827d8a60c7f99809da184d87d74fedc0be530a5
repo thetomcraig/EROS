@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-02-04T17:57:37Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2015-02-04T17:57:37Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.2</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>BUSY.
+
+This quarter was supposed to be my relaxing one this year.  This tune out to be wrong.  CS170 - Operating Systems is a total pain in the ass and I’m struggling to get everything else done.  I like the professor and the class but its eating all of my time.  So that sucks.  Just trying to get my shit done so I can get out of here.  Still not depressed though; Zen meditation and yoga have been good for me.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409570194376542</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85068306629758</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>B2F03371412142659C3C4D58E22AD1EF</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>13</string>
+		<key>Description</key>
+		<string>Mist and Fog</string>
+		<key>Fahrenheit</key>
+		<string>55</string>
+		<key>IconName</key>
+		<string>fog.png</string>
+		<key>Pressure MB</key>
+		<integer>1021</integer>
+		<key>Relative Humidity</key>
+		<integer>94</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-02-04T14:53:59Z</date>
+		<key>Sunset Date</key>
+		<date>2015-02-05T01:32:46Z</date>
+		<key>Visibility KM</key>
+		<real>6.4373760000000004</real>
+		<key>Wind Bearing</key>
+		<integer>30</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>13</integer>
+		<key>Wind Speed KPH</key>
+		<integer>9</integer>
+	</dict>
+</dict>
+</plist>

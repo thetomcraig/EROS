@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>single screen country codes</key>
+	<array>
+		<string>CN</string>
+		<string>HR</string>
+		<string>TR</string>
+		<string>VN</string>
+	</array>
+	<key>show flight card country codes</key>
+	<array>
+		<string>AU</string>
+		<string>en_CA</string>
+		<string>GB</string>
+		<string>US</string>
+	</array>
+	<key>omit scene four country codes</key>
+	<array>
+		<string>BE</string>
+		<string>CZ</string>
+		<string>DK</string>
+		<string>FI</string>
+		<string>GR</string>
+		<string>HK</string>
+		<string>IN</string>
+		<string>ID</string>
+		<string>IE</string>
+		<string>IL</string>
+		<string>IT</string>
+		<string>JP</string>
+		<string>KR</string>
+		<string>MY</string>
+		<string>NL</string>
+		<string>NO</string>
+		<string>RO</string>
+		<string>RU</string>
+		<string>SA</string>
+		<string>SK</string>
+		<string>ES</string>
+		<string>SE</string>
+		<string>CH</string>
+		<string>TW</string>
+		<string>TH</string>
+	</array>
+	<key>substitute localizations</key>
+	<dict>
+		<key>AU</key>
+		<dict>
+			<key>departing_city_text</key>
+			<string>Sydney</string>
+			<key>departing_code_text</key>
+			<string>SYD</string>
+			<key>arriving_code_text</key>
+			<string>BNE</string>
+			<key>weather_city_text</key>
+			<string>Sydney</string>
+		</dict>
+		<key>nl_BE</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Brussel</string>
+		</dict>
+		<key>fr_BE</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Bruxelles</string>
+		</dict>
+		<key>BR</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>São Paulo</string>
+		</dict>
+		<key>en_CA</key>
+		<dict>
+			<key>departing_city_text</key>
+			<string>Toronto</string>
+			<key>departing_code_text</key>
+			<string>YYZ</string>
+			<key>arriving_code_text</key>
+			<string>YOW</string>
+			<key>weather_city_text</key>
+			<string>Toronto</string>
+		</dict>
+		<key>fr_CA</key>
+		<dict>
+			<key>departing_city_text</key>
+			<string>Montréal</string>
+			<key>departing_code_text</key>
+			<string>YUL</string>
+			<key>arriving_code_text</key>
+			<string>YVR</string>
+			<key>weather_city_text</key>
+			<string>Montréal</string>
+		</dict>
+		<key>CZ</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Praha</string>
+		</dict>
+		<key>DK</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>København</string>
+		</dict>
+		<key>FI</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Helsinki</string>
+		</dict>
+		<key>FR</key>
+		<dict>
+			<key>departing_city_text</key>
+			<string>Paris</string>
+			<key>departing_code_text</key>
+			<string>CDG</string>
+			<key>arriving_code_text</key>
+			<string>MRS</string>
+			<key>weather_city_text</key>
+			<string>Toulouse</string>
+		</dict>
+		<key>DE</key>
+		<dict>
+			<key>departing_city_text</key>
+			<string>Berlin</string>
+			<key>departing_code_text</key>
+			<string>TXL</string>
+			<key>arriving_code_text</key>
+			<string>MUC</string>
+			<key>weather_city_text</key>
+			<string>Köln</string>
+		</dict>
+		<key>GR</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Αθήνα</string>
+		</dict>
+		<key>HK</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>香港</string>
+		</dict>
+		<key>HU</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Budapest</string>
+		</dict>
+		<key>IN</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>नई दिल्ली</string>
+		</dict>
+		<key>ID</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Jakarta</string>
+		</dict>
+		<key>IE</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Dublin</string>
+		</dict>
+		<key>IL</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>תל אביב</string>
+		</dict>
+		<key>IT</key>
+		<dict>
+			<key>departing_city_text</key>
+			<string>Milano</string>
+			<key>departing_code_text</key>
+			<string>MXP</string>
+			<key>arriving_code_text</key>
+			<string>CIA</string>
+			<key>weather_city_text</key>
+			<string>Roma</string>
+		</dict>
+		<key>JP</key>
+		<dict>
+			<key>departing_city_text</key>
+			<string>東京</string>
+			<key>departing_code_text</key>
+			<string>HND</string>
+			<key>arriving_code_text</key>
+			<string>ITM</string>
+			<key>weather_city_text</key>
+			<string>東京</string>
+		</dict>
+		<key>KR</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>서울</string>
+		</dict>
+		<key>MY</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Kuala Lumpur</string>
+		</dict>
+		<key>MX</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Ciudad de México</string>
+		</dict>
+		<key>NL</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Amsterdam</string>
+		</dict>
+		<key>NO</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Oslo</string>
+		</dict>
+		<key>PT</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Lisboa</string>
+		</dict>
+		<key>RO</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>București</string>
+		</dict>
+		<key>RU</key>
+		<dict>
+			<key>departing_city_text</key>
+			<string>Москва</string>
+			<key>departing_code_text</key>
+			<string>DME</string>
+			<key>arriving_code_text</key>
+			<string>PIE</string>
+			<key>weather_city_text</key>
+			<string>Анапа</string>
+		</dict>
+		<key>SA</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>الرياض</string>
+		</dict>
+		<key>SK</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Bratislava</string>
+		</dict>
+		<key>ES</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Madrid</string>
+		</dict>
+		<key>SE</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Stockholm</string>
+		</dict>
+		<key>en_CH</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Zurich</string>
+		</dict>
+		<key>fr_CH</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Zurich</string>
+		</dict>
+		<key>de_CH</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Zürich</string>
+		</dict>
+		<key>it_CH</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>Zurigo</string>
+		</dict>
+		<key>TW</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>台北</string>
+		</dict>
+		<key>TH</key>
+		<dict>
+			<key>weather_city_text</key>
+			<string>กรุงเทพฯ</string>
+		</dict>
+		<key>GB</key>
+		<dict>
+			<key>departing_city_text</key>
+			<string>London</string>
+			<key>departing_code_text</key>
+			<string>LHR</string>
+			<key>arriving_code_text</key>
+			<string>DUB</string>
+			<key>weather_city_text</key>
+			<string>London</string>
+		</dict>
+		<key>US</key>
+		<dict>
+			<key>departing_city_text</key>
+			<string>San Francisco</string>
+			<key>departing_code_text</key>
+			<string>SFO</string>
+			<key>arriving_code_text</key>
+			<string>JFK</string>
+			<key>weather_city_text</key>
+			<string>San Francisco</string>
+		</dict>
+	</dict>
+	<key>single subject flows</key>
+	<array>
+		<dict>
+			<key>identifier</key>
+			<string>talk flow</string>
+			<key>configurations</key>
+			<array>
+				<dict/>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Flash-Talk/QSSO-Flash-Talk_intro</string>
+						<string>QSSO-Flash-Talk/QSSO-Flash-Talk_outro</string>
+						<string>QSSO-SignIn/QSSO-SignIn</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SS_Talk_intro</string>
+						<string>SS_Talk_outro</string>
+						<string>Sign In</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOTalk</string>
+						<string>QSSOTalk</string>
+						<string>QSSOSignIn</string>
+					</array>
+				</dict>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Tout-Talk/QSSO-Tout-Talk_intro</string>
+						<string>QSSO-Tout-Talk/QSSO-Tout-Talk</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SSOnboarding-Tout-Talk_intro</string>
+						<string>SSOnboarding-Tout-Talk</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOTalk</string>
+						<string>QSSOTalk</string>
+					</array>
+				</dict>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Tout-Talk/QSSO-Tout-Talk_outro</string>
+						<string>QSSO-SignIn/QSSO-SignIn</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SSOnboarding-Tout-Talk_outro</string>
+						<string>Sign In</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOTalk</string>
+						<string>QSSOSignIn</string>
+					</array>
+				</dict>
+			</array>
+			<key>flags</key>
+			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>identifier</key>
+			<string>map flow</string>
+			<key>configurations</key>
+			<array>
+				<dict/>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Flash-Map/QSSO-Flash-Map_intro</string>
+						<string>QSSO-Flash-Map/QSSO-Flash-Map_outro</string>
+						<string>QSSO-SignIn/QSSO-SignIn</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SS_Map_intro</string>
+						<string>SS_Map_outro</string>
+						<string>Sign In</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOMap</string>
+						<string>QSSOMap</string>
+						<string>QSSOSignIn</string>
+					</array>
+				</dict>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Tout-Map/QSSO-Tout-Map_intro</string>
+						<string>QSSO-Tout-Map/QSSO-Tout-Map</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SSOnboarding-Tout-Map_intro</string>
+						<string>SSOnboarding-Tout-Map</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOMap</string>
+						<string>QSSOMap</string>
+					</array>
+				</dict>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Tout-Map/QSSO-Tout-Map_outro</string>
+						<string>QSSO-SignIn/QSSO-SignIn</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SSOnboarding-Tout-Map_outro</string>
+						<string>Sign In</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOMap</string>
+						<string>QSSOSignIn</string>
+					</array>
+				</dict>
+			</array>
+			<key>flags</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>identifier</key>
+			<string>flight flow</string>
+			<key>configurations</key>
+			<array>
+				<dict/>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Flash-Flight/QSSO-Flash-Flight_intro</string>
+						<string>QSSO-Flash-Flight/QSSO-Flash-Flight_outro</string>
+						<string>QSSO-SignIn/QSSO-SignIn</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SS_Flight_intro</string>
+						<string>SS_Flight_outro</string>
+						<string>Sign In</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOFlight</string>
+						<string>QSSOFlight</string>
+						<string>QSSOSignIn</string>
+					</array>
+				</dict>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Tout-Flight/QSSO-Tout-Flight_intro</string>
+						<string>QSSO-Tout-Flight/QSSO-Tout-Flight</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SSOnboarding-Tout-Flight_intro</string>
+						<string>SSOnboarding-Tout-Flight</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOFlight</string>
+						<string>QSSOFlight</string>
+					</array>
+				</dict>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Tout-Flight/QSSO-Tout-Flight_outro</string>
+						<string>QSSO-SignIn/QSSO-SignIn</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SSOnboarding-Tout-Flight_outro</string>
+						<string>Sign In</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOFlight</string>
+						<string>QSSOSignIn</string>
+					</array>
+				</dict>
+			</array>
+			<key>flags</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>identifier</key>
+			<string>talk with hotword flow</string>
+			<key>configurations</key>
+			<array>
+				<dict/>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Flash-Talk_OK/QSSO-Flash-Talk_OK_intro</string>
+						<string>QSSO-Flash-Talk_OK/QSSO-Flash-Talk_OK_outro</string>
+						<string>QSSO-SignIn/QSSO-SignIn</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SS_Talk_OK_intro</string>
+						<string>SS_Talk_OK_outro</string>
+						<string>Sign In</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOTalkOK</string>
+						<string>QSSOTalkOK</string>
+						<string>QSSOSignIn</string>
+					</array>
+				</dict>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Tout-Talk_OK/QSSO-Tout-Talk_OK_intro</string>
+						<string>QSSO-Tout-Talk_OK/QSSO-Tout-Talk_OK</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SSOnboarding-Tout-Talk_OK_intro</string>
+						<string>SSOnboarding-Tout-Talk_OK</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOTalkOK</string>
+						<string>QSSOTalkOK</string>
+					</array>
+				</dict>
+				<dict>
+					<key>scene filenames</key>
+					<array>
+						<string>QSSO-Tout-Talk_OK/QSSO-Tout-Talk_OK_outro</string>
+						<string>QSSO-SignIn/QSSO-SignIn</string>
+					</array>
+					<key>scene identifiers</key>
+					<array>
+						<string>SSOnboarding-Tout-Talk_OK_outro</string>
+						<string>Sign In</string>
+					</array>
+					<key>localization table names</key>
+					<array>
+						<string>QSSOTalkOK</string>
+						<string>QSSOSignIn</string>
+					</array>
+				</dict>
+			</array>
+			<key>flags</key>
+			<integer>8</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

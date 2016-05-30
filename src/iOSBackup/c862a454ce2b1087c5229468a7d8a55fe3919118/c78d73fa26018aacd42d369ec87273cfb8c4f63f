@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>identifier</key>
+	<string>Travel</string>
+	<key>settings</key>
+	<dict>
+		<key>details</key>
+		<string>How to get started:</string>
+		<key>icon</key>
+		<string></string>
+		<key>title</key>
+		<string>Keep travel plans all in one place; at your fingertips.</string>
+	</dict>
+	<key>tips</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<string>addEvernoteEmailToContacts:</string>
+			<key>actionTitle</key>
+			<string>Add Evernote email to contacts</string>
+			<key>completed</key>
+			<false/>
+			<key>details</key>
+			<string>Forward hotel and flight confirmations into Evernote.</string>
+			<key>disabled</key>
+			<false/>
+			<key>icon</key>
+			<string>email-to-contacts</string>
+			<key>title</key>
+			<string>Find Emails Fast</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>showPremiumUpsell:</string>
+			<key>actionTitle</key>
+			<string>Learn about Premium</string>
+			<key>completed</key>
+			<false/>
+			<key>details</key>
+			<string>Access your travel plans, even without internet.</string>
+			<key>disabled</key>
+			<false/>
+			<key>icon</key>
+			<string>offline-notes</string>
+			<key>title</key>
+			<string>Take Notes Offline</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>showTodoListNoteEditor:</string>
+			<key>actionTitle</key>
+			<string>Try checklists</string>
+			<key>completed</key>
+			<false/>
+			<key>details</key>
+			<string>Make a list of things to pack and places to go.</string>
+			<key>disabled</key>
+			<false/>
+			<key>icon</key>
+			<string>checklist</string>
+			<key>title</key>
+			<string>Remember the Essentials</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>showWebClipperCrossPromo:</string>
+			<key>actionTitle</key>
+			<string>Email me instructions</string>
+			<key>completed</key>
+			<false/>
+			<key>details</key>
+			<string>Gather trip ideas with the Web Clipper.</string>
+			<key>disabled</key>
+			<false/>
+			<key>icon</key>
+			<string>web-clipper</string>
+			<key>title</key>
+			<string>Save Online Research</string>
+		</dict>
+	</array>
+</dict>
+</plist>

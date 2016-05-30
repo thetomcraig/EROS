@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-10-10T22:33:49Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2013-10-10T22:33:49Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9</string>
+		<key>Software Agent</key>
+		<string>Day One (Mac)/1.8.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>I don't have much time to write in here, but I want to get down how I am feeling right now.  Today has been good as I have been doing errands and getting stuff done.
+
+Ultimately I may not have changed as much as I thought I did.  I was pretty stressed Tuesday night because I had something due Wednesday for computer  science and I had to teach myself how to do it.  It involved wasted hours and a lot of time in office hours; working late into the night.  When that happened, it brought back all the anger, anxiety, disdain, and perfectionism issues I have always struggled with.  But I have bounced back and have been feeling pretty good these last couple days.
+
+So it's not perfect, and I was still stressed and angry about how much shit was piled into me that didn't need to be.  I am going to try to see ad therapist here about all of these things.  But I still think I am making some progress, though it may not be as perfect as I had hoped (sound familiar?).  
+
+I am trying to find a job on campus too, and should here back from one today or  tomorrow.
+
+I will talk more about all this later, I am trying to get out everything I can right now. 
+
+I think I might be over Sidney.  I tried to kiss her again and failed, and it made me remember the frustrations I had had with the relationship last year.  Having thought about it at great length, I do not think it's really worth it honestly.  I just don't think we want the same things.  :/
+
+It wasn't as hard as I thought though.  I imagined getting over her would be hard, but I really just stooped caring.  I still care a lot in the friendship sense and we are close, but romantically, I just don't find myself to be too interested.
+
+Anyway I have to run to class and will write more later.
+
+I am grateful for my living situation this year.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409107891218675</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.853427732879</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>F056F16E0AD8403B95C3920A72D26A31</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>19</string>
+		<key>Description</key>
+		<string>Partly Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>66</string>
+		<key>IconName</key>
+		<string>pcloudy.png</string>
+	</dict>
+</dict>
+</plist>

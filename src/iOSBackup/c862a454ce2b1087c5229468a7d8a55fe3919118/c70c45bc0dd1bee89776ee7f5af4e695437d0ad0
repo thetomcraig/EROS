@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-03-31T05:20:25Z</date>
+	<key>Entry Text</key>
+	<string>Well the break is over; going back tomorrow. I don't want to go back to the shitty routine, but it's kind of boring Adeline here with everyone gone and such. I was nice to work on my project, watch TV, read and all that jazz. 
+
+I'd like to run mor often, and work on reality checks and air would be nice to be able to meditate, when the fuck will I have time to do it though? Well one can dream I suppose...</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.107260266350679</real>
+		<key>Locality</key>
+		<string>South Pasadena</string>
+		<key>Longitude</key>
+		<real>-118.14618039887226</real>
+		<key>Place Name</key>
+		<string>1610 Marengo Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>F3CB6E2FB0624202ACFDA42E869E5C76</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>17</string>
+		<key>Description</key>
+		<string>Clear</string>
+		<key>Fahrenheit</key>
+		<string>63</string>
+		<key>IconName</key>
+		<string>sunnyn.png</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>effectiveWhileUnlocked</key>
+	<false/>
+	<key>overrideStatus</key>
+	<integer>0</integer>
+	<key>overrideStatusLastCalculatedTime</key>
+	<date>2016-05-19T17:01:54Z</date>
+	<key>overrides</key>
+	<array>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGS0xYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoK0HCBEWIi41ODk9QERHVSRudWxs1AkKCwwNDg8QXG92ZXJy
+		aWRlVHlwZV8QEmVmZmVjdGl2ZUludGVydmFsc1xvdmVycmlkZU1vZGVWJGNs
+		YXNzEAGAAhADgAzSEgwTFVpOUy5vYmplY3RzoRSAA4AL1hcMGBkaGxwdHh8g
+		IV5yZXBlYXRJbnRlcnZhbF8QD3N0YXJ0Q29tcG9uZW50c11lbmRDb21wb25l
+		bnRzWGNhbGVuZGFyWmlkZW50aWZpZXIQEIAKgASABoAHgAjYIyQlJgwnKCkq
+		DSsNLCstK1dOUy5ob3VyVk5TLmRheVxOUy5sZWFwTW9udGhaTlMud2Vla2Rh
+		eVlOUy5taW51dGVXTlMueWVhcllOUy5zZWNvbmQQFxAAgAURB9zSLzAxMlok
+		Y2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNEYXRlQ29tcG9uZW50c6IzNF8QEE5T
+		RGF0ZUNvbXBvbmVudHNYTlNPYmplY3TYIyQlJgwnKCk2DSsNLCstKxAHgAVZ
+		Z3JlZ29yaWFu0joMOzxcTlMudXVpZGJ5dGVzTxAQpQkMWf6LTTCVtJ5/OTOK
+		qYAJ0i8wPj9WTlNVVUlEoj400i8wQUJfECNCQkJlaGF2aW9yT3ZlcnJpZGVF
+		ZmZlY3RpdmVJbnRlcnZhbKJDNF8QI0JCQmVoYXZpb3JPdmVycmlkZUVmZmVj
+		dGl2ZUludGVydmFs0i8wRUZXTlNBcnJheaJFNNIvMEhJXxASQkJCZWhhdmlv
+		ck92ZXJyaWRloko0XxASQkJCZWhhdmlvck92ZXJyaWRlXxAPTlNLZXllZEFy
+		Y2hpdmVy0U1OVHJvb3SAAQAIABEAGgAjAC0AMgA3AEUASwBUAGEAdgCDAIoA
+		jACOAJAAkgCXAKIApACmAKgAtQDEANYA5ADtAPgA+gD8AP4BAAECAQQBFQEd
+		ASQBMQE8AUYBTgFYAVoBXAFeAWEBZgFxAXoBjQGQAaMBrAG9Ab8BwQHLAdAB
+		3QHwAfIB9wH+AgECBgIsAi8CVQJaAmICZQJqAn8CggKXAqkCrAKxAAAAAAAA
+		AgEAAAAAAAAATwAAAAAAAAAAAAAAAAAAArM=
+		</data>
+	</array>
+	<key>privilegedAddressBookGroupName</key>
+	<string></string>
+	<key>privilegedAddressBookGroupRecordID</key>
+	<integer>-1</integer>
+	<key>privilegedSenderTypes</key>
+	<integer>9</integer>
+</dict>
+</plist>

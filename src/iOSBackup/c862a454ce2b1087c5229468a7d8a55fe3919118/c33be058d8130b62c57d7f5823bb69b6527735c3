@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-02-16T07:01:49Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2014-02-16T07:01:49Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9.1</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.2</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Home.
+Just cam home last night for the long weekend.  Good to get away.
+
+Well I haven’t written in here for quite a while.  Been very busy, but I am going to get on writing in here more often.
+
+Its weird, I’ve had a few ups and downs over the last couple of weeks.  Overall it’s okay, but I have come to realize something important.  I nee to be writing in here more often because that is one of the things that keeps me in a good mood.  
+
+I have been feeling lately like I felt last year, upset and anxious, unhappy and angry all the time.  And I realized that there were  a quite a few things I did last year that made me feel better and its really a combination of all of those that is the key (at least in part) to my happiness.  
+
+Perfectionism, which is what I have decided to focus on as it caused a lot of my issues, is very much like an addiction.  It’s a type of obsessive personality that can be very addictive.  Things feel really good when they work out perfectly sometimes and it doesn’t feel very good to tell yourself that you are satisfied or even happy with something that doesn’t seem perfect.  
+
+But what I am trying to do, and what I have become better at, is the little things.  Being content with what you have and not sweating the details, trying not to seek out perfection, but instead to appreciate when things work out well.  Really I know all of this, but when I don’t spend the time to reflect, I forget about the things I have and love and whats really important, and I start to become concerned with things that are not honestly that important.  
+
+That is why journaling is important to me.  And I appreciate that I have been making this kind of progress.  
+
+Sidney are I are doing well.  We are moving forward physically, and have not reached sex yet.  But I think it’s a possibility.  Anyway, the other aspects of our relationship are very good right now, and I am very grateful.  She is going to com visit here tomorrow.  Or at least I THINK she will, but she hasn’t gotten back to me about the time….. 
+
+But that’s the perfect example.  Something that I could be upset about but I am trying not to be.  And honesty I am NOT upset about it.  Which is good, I think it means I am making progress.
+
+Anyway I am happy to be home with my family and my cute dog.  I did homework most of today, but i did it with my family, and I made some time to watch a movie and work on one my projects.
+
+As for school, well, its the same shit as always.  I didn’t get into a course I need of next quarter, so here goes the complaining process….  I really need to graduate in 4 years and will do jus about everything I can to make that happen.  So well see what happens when I go back in a few days.
+
+But as I am trying to be more present and aware, I won’t focus on that right now.  Right now I am happy to be home.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>33.536619452667729</real>
+		<key>Locality</key>
+		<string>Laguna Beach</string>
+		<key>Longitude</key>
+		<real>-117.77108343286446</real>
+		<key>Place Name</key>
+		<string>725 Oak St</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>8E298E154FE44F589AC1C3CDA326EB0E</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>16</string>
+		<key>Description</key>
+		<string>Mist and Fog</string>
+		<key>Fahrenheit</key>
+		<string>61</string>
+		<key>IconName</key>
+		<string>fogn.png</string>
+		<key>Pressure MB</key>
+		<integer>1016</integer>
+		<key>Relative Humidity</key>
+		<integer>83</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-02-15T14:34:24Z</date>
+		<key>Sunset Date</key>
+		<date>2014-02-16T01:36:37Z</date>
+		<key>Visibility KM</key>
+		<real>9.6560640000000006</real>
+		<key>Wind Bearing</key>
+		<integer>200</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>16</integer>
+		<key>Wind Speed KPH</key>
+		<integer>6</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-09-02T18:15:55Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2013-09-02T18:15:55Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9</string>
+		<key>Software Agent</key>
+		<string>Day One (Mac)/1.8.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>I am wrong.
+I saw Mark Baker again today.  He says I basically need to have more meaningful, emotional, interactions with people.  Basically I have the expectation, desire for perfection, and striving for perfection has the side effect of making me a hard worker, and a good student.  But this is really just a side effect of an addiction.  It doesn't make me happy.  
+
+The problem is that I think about myself as what I do.  I think that because I do certain things with consistency, people will like me and I will like myself and be happy.  But perfect consistency is impossible.  Mark says that people should like you for you actions and just like you in and of yourself.  He says that I am a fraud that people will not like me (true) and that I believe people do not like me, devoid of my actions.  Because of this, I feel I need to do everything within my power to make people like me through my actions.  For these same reasons I try to judge people on their actions also, and not just because of the way I feel about them.  But still, I like and dislike people for unknown reasons - it's this type of thing that Mark says I should be doing more often.
+
+Especially when it comes to myself, I should not judge myself solely upon my actions.  But this is hard.  It's hard because my identity is built upon my actions.  I think of myself as a hard worker because I work a lot; I think of myself as a nice person because I am often nice to people.  Past my actions, I can't really judge myself at all...  But Mark says actions are only part of the story.  I have been treating actions as 100% of judgement.
+
+For example, when Katya texted me a few days ago, she said she didn't hate me.  I fully expected her to hate me for dumping her, but she didn't.  When she liked about me as a person, outweighed what I DID, my ACTION was not as important to her as her EMOTION towards me.  She loved me.  She even blamed herself when I dumped her.  This upset me at the time - how could she go on liking me when I did that thing to her?  Did not my action outweigh her feelings?  Apparently, no.  
+
+I don't really get how anyone can like me regardless of my actions, but they can, and that is something I need to accept.  Because people DO like me.  Maybe because of my actions, but not always.  
+
+The truth is, I am afraid that people will not like me.  Of course this is true, and I have always known it.  Mark thinks it's stronger than that; he thinks that I think people do not like me, emotionally, and I have to make them like me via my actions.  And this makes sense to me consciously; how could someone NOT like me if I am doing all the right things?  And I am doing all the right things, but I need to realize that this is only part of the story; people can like me and do like me, regardless of my actions.
+
+He said that breaking it off with Sidney was a good idea logically, but that's all it was; I wasn't really thinking about emotion there...
+
+The answer, says he, is developing more, better, emotional relationships.  Happiness comes in a small part from possessions and actions, but the most important factor is the quality of relationships.  This is where I am underdeveloped.  I need to work on that.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.107384601862286</real>
+		<key>Locality</key>
+		<string>South Pasadena</string>
+		<key>Longitude</key>
+		<real>-118.14644617286628</real>
+		<key>Place Name</key>
+		<string>1610 Marengo Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>1AE9ADFF8A444774AE696E24215ECBA8</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>29</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>84</string>
+		<key>IconName</key>
+		<string>sunny.png</string>
+	</dict>
+</dict>
+</plist>

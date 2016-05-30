@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>settings</key>
+	<dict>
+		<key>Other</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>other</string>
+				<key>displayName</key>
+				<string>Reset</string>
+				<key>key</key>
+				<string>reset</string>
+				<key>value</key>
+				<string>0</string>
+				<key>valueType</key>
+				<integer>2</integer>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>other</string>
+				<key>displayName</key>
+				<string>Load "~/Desktop/Camera_Debug_Images"</string>
+				<key>key</key>
+				<string>loadImages</string>
+				<key>value</key>
+				<string>0</string>
+				<key>valueType</key>
+				<integer>2</integer>
+			</dict>
+		</array>
+		<key>auto capture</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>auto capture</string>
+				<key>displayName</key>
+				<string>Delay After Capture</string>
+				<key>key</key>
+				<string>delayAfterCapture</string>
+				<key>value</key>
+				<integer>2</integer>
+				<key>valueType</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>auto capture</string>
+				<key>displayName</key>
+				<string>Delay Before Capture</string>
+				<key>key</key>
+				<string>delayBeforeCapture</string>
+				<key>value</key>
+				<real>1.5</real>
+				<key>valueType</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>auto capture</string>
+				<key>displayName</key>
+				<string>Motion Tolerance Factor</string>
+				<key>key</key>
+				<string>motionToleranceFactor</string>
+				<key>value</key>
+				<real>0.10000000000000001</real>
+				<key>valueType</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>auto capture</string>
+				<key>displayName</key>
+				<string>Minimum Confidence Level</string>
+				<key>key</key>
+				<string>minimumConfidenceLevel</string>
+				<key>value</key>
+				<integer>75</integer>
+				<key>valueType</key>
+				<integer>0</integer>
+			</dict>
+		</array>
+		<key>business card</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>business card</string>
+				<key>displayName</key>
+				<string>Show BC Pre Trial Upsell</string>
+				<key>key</key>
+				<string>shouldShowBCPreTrialUpsell</string>
+				<key>value</key>
+				<false/>
+				<key>valueType</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>business card</string>
+				<key>displayName</key>
+				<string>Show BC Post Trial Upsell</string>
+				<key>key</key>
+				<string>shouldShowBCPostTrialUpsell</string>
+				<key>value</key>
+				<false/>
+				<key>valueType</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>business card</string>
+				<key>displayName</key>
+				<string>Has Scanned First Card with Email</string>
+				<key>key</key>
+				<string>hasScannedFirstCardWithEmail</string>
+				<key>value</key>
+				<false/>
+				<key>valueType</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>business card</string>
+				<key>displayName</key>
+				<string>Can Show LinkedIn Login Prompt</string>
+				<key>key</key>
+				<string>canShowLinkedInLoginPrompt</string>
+				<key>value</key>
+				<false/>
+				<key>valueType</key>
+				<integer>1</integer>
+			</dict>
+		</array>
+		<key>general</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>general</string>
+				<key>displayName</key>
+				<string>Show Debug Panel</string>
+				<key>key</key>
+				<string>shouldShowDebugPanel</string>
+				<key>value</key>
+				<false/>
+				<key>valueType</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>general</string>
+				<key>displayName</key>
+				<string>Show FLE</string>
+				<key>key</key>
+				<string>shouldShowFLE</string>
+				<key>value</key>
+				<false/>
+				<key>valueType</key>
+				<integer>1</integer>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

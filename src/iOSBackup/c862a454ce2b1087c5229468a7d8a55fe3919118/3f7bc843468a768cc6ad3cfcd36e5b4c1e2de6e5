@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2012-12-03T08:04:31Z</date>
+	<key>Entry Text</key>
+	<string>I'm nostalgic for the Hollywood bowl. I didn't love that job, but I had fun doing it. When I listen to kid cudi I think of it. I think it's good to relate some songs songs to events. I think of past years Christmas and the beach house and my speakers when I listen to old lupe fiasco. Stereo Worxxx makes me think of last year and reading my book at lsb. 
+
+I don't want to forget about the bowl. I enjoyed that job. And I met Hannah Bacchus who is a really cool person. I hope to see her this summer and maybe over the Christmas break. She was just so down to earth. Not that I was interested in her but she was just a really cool person who I clicked with and I felt really got me. Those people don't come by all the time. Sidney is almost like that and devyn is almost also. Isabel is for sure. Funny how my best friends are women. I guess men are so bad at actually talking about meaningful things. 
+
+Anyway maybe I'll go to the bowl again if I can't get a SURF job. I like Nina and Molly too, they are really cool people. I wonder what's in store this summer. I wonder who I'll meet. The Sumer before last it was nick and Alex and Kara, who I remember an have no way to contact. I can't wait to see who I'll meet. </string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.410461507275876</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85975537771861</real>
+		<key>Place Name</key>
+		<string></string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>B1277F56D69E4FB191C74DCD0E7A6C35</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>17</string>
+		<key>Description</key>
+		<string>Mist and Fog</string>
+		<key>Fahrenheit</key>
+		<string>63</string>
+		<key>IconName</key>
+		<string>fogn.png</string>
+	</dict>
+</dict>
+</plist>

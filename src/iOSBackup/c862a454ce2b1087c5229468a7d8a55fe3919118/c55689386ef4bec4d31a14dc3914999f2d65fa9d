@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-04-28T05:59:11Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2014-04-28T05:59:11Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9.2</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.3</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>So I ran out of time again, and I really need to sleep.  BUT I am going to make writing in here a priority again because it helps me stay happy.   Quick rundown of things happening.
+
+Were getting into the thick of things with school and unfortunately I can tell that the whole rest of the quarter is going to be stressful.  Sidney and I have both been stressed about this but I think if I can keep staying positive and writing in here I will be able to make it through.  I have a lot I can say about how stressful and unfair everything is, but really I’ve said it all before and this is not going to be very different - honestly.
+
+Sidney and I are really good.  We are almost on the same page physically and we have had really good communication lately.  Last night we were able to carve out some time to see our friends and it was really good to be able to do that.  We drank and came home to fool around which we hadn’t done before.  We have still been moving slowly, bout forward nonetheless.  Last night we actually almost had sex.  Sidney and I are comfortable wearing no clothes and touching each other everywhere, and I almost stuck it in.  I probably could have convinced her to let me but we had moved forward in other respects so we didn’t get to that.  I predict that it will happen before the end of the year.  And by predict I mean hope.  SO well see I guess on that front but everything else with us is really good.  This week and just about every week following it are going to suck, but I feel like I can make it through.  I  really grateful for the happiness I can muster and for the ability to write in this journal.  And for TV.  Its cool.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409122019945094</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85357656289263</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>8F93C2DD394E4BB1A748F17A4D91A779</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>17</string>
+		<key>Description</key>
+		<string>Clear</string>
+		<key>Fahrenheit</key>
+		<string>63</string>
+		<key>IconName</key>
+		<string>clearn.png</string>
+		<key>Pressure MB</key>
+		<integer>1016</integer>
+		<key>Relative Humidity</key>
+		<integer>59</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-04-27T13:12:26Z</date>
+		<key>Sunset Date</key>
+		<date>2014-04-28T02:41:19Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>350</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>17</integer>
+		<key>Wind Speed KPH</key>
+		<integer>15</integer>
+	</dict>
+</dict>
+</plist>

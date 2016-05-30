@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>35</key>
+	<dict>
+		<key>Default</key>
+		<string>7.1.*</string>
+	</dict>
+	<key>37.0.2062.52</key>
+	<dict>
+		<key>Default</key>
+		<string>8.3.*</string>
+	</dict>
+	<key>45.0.2454.0</key>
+	<dict>
+		<key>Default</key>
+		<string>9.2.*</string>
+	</dict>
+</dict>
+</plist>

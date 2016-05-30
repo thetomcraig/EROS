@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-03-27T15:21:00Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>iPhone/iPhone5,1</string>
+		<key>Generation Date</key>
+		<date>2014-03-27T15:21:00Z</date>
+		<key>Host Name</key>
+		<string>SOLON</string>
+		<key>OS Agent</key>
+		<string>iOS/7.1</string>
+		<key>Software Agent</key>
+		<string>Day One iOS/1.13</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Spring break '14
+Home for spring break. Well at least where him is now - Laguna beach. It's a bummer, I haven't been able to see anyone because I'm not in Pasadena. But I spoke with Isabel on the phone and plays games online with jack and Rylan. So it's not all bad. 
+
+Really just been programming and playing with dog. Not much else. 
+
+Dad and I are going to South Pasadena today to move some of our shit around. So that's sad. It's still sad that we don't live there anymore. And I can't see any friends right now because of that. 
+
+On the other hand I had a really good quarter. Only three classes so I wasn't that stressed and had time to work in projects and the like. 
+
+—
+
+Almost done with the break, moving the shit to the house was definitely a bummer.  
+
+But it’s good to being going back to school I guess.
+
+Watching the last episode of Psych right now so I suppose many things we coming to an end. 
+
+Anyway about the quarter, Sidney and I did a good job taking breaks and not being so stressed.  Really it was the best quarter yet, in terms of stress level and the like.
+
+Interesting thing with friends.  Introduced Adrian to my friend Crystal so they could work together in ECE class.  Long story short, he was pretty inconsiderate to her and it pissed me off.  He just blew her off repeatedly and made her do most of their work.  And it’s frustrating for me to see this.  I mean I feel somewhat accountable, but past that, it just makes me upset because I thought he had to decided to be less of a dick.  But while he made have decided to be less so around me and Sidney, he was a total dick to Crystal.  Not outwardly, but he defiantly was not considerate to her or her time.  It makes me wonder how I should act around him, and I’m still kind of confused about it.
+
+I think I did a good job making more time for friends as well, and more me time/relaxing time.  I mean, I watched TV for christ’s sake!
+
+I think I do need to keep up writing in here though, because it helps me focus on the good, positive things in my life.  And there is a lot of positive.  I mean, I still hate school, and UCSB is really frustrating, but there are classes aI enjoy and I have good friends, family, and a cute girlfriend.  So really it doesn’t get much better than that.
+
+Lately, I have found a good way to keep a positive attitude.  Much like the adage “live every day like it’s your last” I tell myself that I could die at any time.  Seriosuly, I could die at any time, and I want to be able to look back at my life and know that in my remaining hours, days, or weeks, I was happy and positive.  The thing is, being happy starts right no, right this second.  Its about how you feel about the present.  What is happening to you right now.  And while my break is about to end, right now I am about to go have breakfast with my family.  I am so grateful for that.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>33.537427104674329</real>
+		<key>Locality</key>
+		<string>Laguna Beach</string>
+		<key>Longitude</key>
+		<real>-117.77405517034317</real>
+		<key>Place Name</key>
+		<string>652 Seaview St</string>
+		<key>Region</key>
+		<dict>
+			<key>Center</key>
+			<dict>
+				<key>Latitude</key>
+				<real>33.536501184500054</real>
+				<key>Longitude</key>
+				<real>-117.7709779315</real>
+			</dict>
+			<key>Radius</key>
+			<real>29.469831259652331</real>
+		</dict>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>9C5A28A9FF38451CA76D6BDA7AACF1C2</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>13</string>
+		<key>Description</key>
+		<string>Partly Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>55</string>
+		<key>IconName</key>
+		<string>fair.png</string>
+		<key>Pressure MB</key>
+		<integer>1017</integer>
+		<key>Relative Humidity</key>
+		<integer>77</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-03-27T13:44:06Z</date>
+		<key>Sunset Date</key>
+		<date>2014-03-28T02:08:55Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>210</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>13</integer>
+		<key>Wind Speed KPH</key>
+		<integer>7</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-02-23T17:19:32Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2015-02-23T17:19:32Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.3</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Yesterday was also work for most of the day - on cs170, but I’m at least feeling better now.  I am pretty bummed that my college career was not all I had hoped it would be.  And Sidney and I were talking about this yesterday.  Really though, I wish I a lot of things had been different, but they are the way there are because of my personality and the area of study I chose to pursue.  I really just want to get out of here.  I wish that was not the way I felt because I want to be enjoying my final year, but when I am taking hard classes like cs170, I have no real choice but to have this tunnel vision, because it’s so time consuming and stressful and demeaning, that I just have to keep telling myself that I will make it through and I am almost done.  And I am almost done, it’s currently week 8 of this quarter and I only have one more to go.  
+
+I have been thinking more about what things are going to be like when I graduate.  I think I’m going to be pretty sad when I say goodbye to all my friends, and to Sidney.  I am pretty sure that we are going to break up at the end of the year.  I feel bad telling myself this, but I know that I am not into long distance relationships.  If she was moving somewhere near me that might be a different story, but even so, I am not sure I would want to stay in a relationship.  I think I am ready for a change.  Of course on the other hand I do feel like I don’t want to say goodbye to her forever.  I think that its just easy for me to say that I am ready to break up at the end of the year because I am so used to having her in my life.  Our biggest relationship problem is that we see too much of each other, and because of this not seeing her even again seems like not too big a deal, even though I know it is.
+
+The thing that is keeping me going is just getting done what I have to get done and only thinking about positive things in the future.  But in terms of general anxiety I think meditation has helped, but it’s hard to really tell how I am  feeling because I’ve gotten so used to feeling the way I feel.  So in that sense I think I am kind of depressed, and there are times when I feel like crying but I can’t, because I’m just so tired or busy and I do not have the time or energy to do so.  Honestly this is not making me as sad as I feel it should.  I need to finish this quarter and I need to finish my degree, I’m not sure what else to do.
+
+Conversations were okay, I did try to ask Crystal about what was going on with her.  It’s just difficult when I’m sick and also with her because she is stressed and dealing with the same stuff in CS that Sidney and I are.  Overall, not much of a change.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409466468802734</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85102206426738</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>7A6FD9AEDA974936AB5AD4A4E8FB153C</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>14</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>57</string>
+		<key>IconName</key>
+		<string>clear.png</string>
+		<key>Pressure MB</key>
+		<integer>1015</integer>
+		<key>Relative Humidity</key>
+		<integer>77</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-02-23T14:34:29Z</date>
+		<key>Sunset Date</key>
+		<date>2015-02-24T01:50:43Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>140</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>14</integer>
+		<key>Wind Speed KPH</key>
+		<integer>7</integer>
+	</dict>
+</dict>
+</plist>

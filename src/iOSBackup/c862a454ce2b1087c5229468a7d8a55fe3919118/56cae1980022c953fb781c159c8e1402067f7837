@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-05-23T22:37:31Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2015-05-23T22:37:31Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.4</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.10</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>So close I can taste it.
+Home this weekend, for memorial day.  Today it has been a year since that kid shot up Isla Vista and killed 6 people.  Its weird how time tends to drag sometimes, and just such by in other respects - I can’t believe that was a year ago.  One thing that has not seemed to much by though is my time in college.  Which is slowly drawing to a close.  You know, I didn’t love it.  I didn’t really like it at all.  I learned so much and had such great experiences, but this was constantly overshadowed by  negative experiences.  I have decided that I want to write a small story/piece about my college experience, because I think I will have a few interesting things to say.  I am think it will be cathartic for me.
+
+I have a few assignments left, and seeing as i can get a D- in my classes and still graduate, I am not to concerned.  It sill be a lot of work though, thats for sure.  
+
+Stress has been okay, and I can tell that mediation and mindfulness are helping me a great deal. 
+
+I am telling myself now that it really doesn’t matter much any more because I am about to leave and start my actual life.
+
+Not much more to say - I am unimaginably excited to graduate.  This is mixed with negative emotions as well, but I just can’t wait.
+
+I just can’t wait
+</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.141348073508254</real>
+		<key>Locality</key>
+		<string>Los Angeles</string>
+		<key>Longitude</key>
+		<real>-118.19016010320036</real>
+		<key>Place Name</key>
+		<string>5218 Monte Bonito Dr</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>264DC6B1BC70473BAA865C42045BDB16</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>21</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>70</string>
+		<key>IconName</key>
+		<string>clear.png</string>
+		<key>Pressure MB</key>
+		<integer>1017</integer>
+		<key>Relative Humidity</key>
+		<integer>53</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-05-23T12:46:03Z</date>
+		<key>Sunset Date</key>
+		<date>2015-05-24T02:53:51Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>0</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>21</integer>
+		<key>Wind Speed KPH</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

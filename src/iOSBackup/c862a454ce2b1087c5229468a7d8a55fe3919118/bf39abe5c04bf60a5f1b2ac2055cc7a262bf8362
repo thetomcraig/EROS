@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-02-18T07:03:39Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2015-02-18T07:03:39Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.3</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Things going ok.  
+
+Was very worried about the s170 project and became less so today when we fixed a bug.  Honestly though cs170 is stressing me out so much it’s crazy.  I like that I am continuing to see Jeremy, my therapist here.  And I do, sometimes…, fee l confident about my academic.  Its just so hard and I feel like I am going to fail cs170 all the time.  I have gotten tunnel vision for this quarter because of that class and I have tunnel vision because I just want to get my degree and get out of here.  Which is really sad, because I would like to enjoy my final year here.  Maybe ifI was a different person I could do that, but I’m not.  I mean, I’m trying really hard, but honestly I don’t know what else I can do.  I am not depressed, well…  It’s hard to say really.  I am still constantly stressed so I do not know what to do about that other that the meditation and a few other things of that nature. 
+
+My conversations went well today.  I didn’t really forget to keep up and I found it challenging to hold my tongue.  Overall, 3/5</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409446671784679</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85131036754555</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>DB1EA7ABFA1A4146853E6D8574CC424E</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>12</string>
+		<key>Description</key>
+		<string>Mist and Fog</string>
+		<key>Fahrenheit</key>
+		<string>54</string>
+		<key>IconName</key>
+		<string>fogn.png</string>
+		<key>Pressure MB</key>
+		<integer>1019</integer>
+		<key>Relative Humidity</key>
+		<integer>88</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-02-17T14:41:22Z</date>
+		<key>Sunset Date</key>
+		<date>2015-02-18T01:45:15Z</date>
+		<key>Visibility KM</key>
+		<real>9.6560640000000006</real>
+		<key>Wind Bearing</key>
+		<integer>10</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>12</integer>
+		<key>Wind Speed KPH</key>
+		<integer>6</integer>
+	</dict>
+</dict>
+</plist>

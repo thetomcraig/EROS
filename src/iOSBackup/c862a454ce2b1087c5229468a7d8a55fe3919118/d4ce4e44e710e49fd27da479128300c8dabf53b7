@@ -1,0 +1,16 @@
+<!--x-coredata://2469044D-762E-4C34-AD45-671C16ABF2D0/ENNote/p1230-->
+<body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;" class="en-note">
+	<div>(1)<br />To simulate the motion of the masses moving in accordance with the springs in the system, we assigned each mass and each spring constant to a separate variable. We used a system of equations as follows:
+		<div><br /></div>m1*(x1)'' = -k1*x1 + k2*(x2 - x1)<br />m2*(x2)'' = -k2*(x2 - x1) + k3*(x3 - x2)<br />m3*(x3)'' = -k3*(x3 - x2) - k4*x3
+		<div><br /></div>(2)<br />Then we put the formulas in the form a matrix such that this equation is satisfied:
+		<div><br /></div>(d^2x)/dt^2 = Ax
+		<div><br /></div>(3)<br />Then we were able to solve for the eigen system using the matlab function:
+		<div><br /></div>[v, lambda] = eig(A)
+		<div><br /></div>Where v was a matrix containing the eigen vectors as its columns, and lambda was a diagonal matrix containing the eigen values.
+		<div><br /></div>(4)<br />Then we found the frequency of the oscillations using the following formula:
+		<div><br /></div>omega = sqrt(-lambda)
+		<div><br /></div>And the amplitude was found to be the elements of our matrix, v.
+		<div><br /></div>(5)<br />Using these values we then plotted nine sine graphs:
+		<div><br /></div>Each Hecuba a separate amplitude from the v matrix, and each column of the v matrix using one of the three frequencies. 
+	</div>
+</body>

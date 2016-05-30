@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-07-10T01:43:41Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2014-07-10T01:43:41Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.5</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>I need to keep working on this.
+I have been feeling pretty shitty recently.  My parents are really stressed about us moving stuff into this house and I am really stressed too.  Moving is hard and I have been really busy with JPL and my summer class.  The summer class is not hard but disorganized an stressful.  I come home from JPL and most days spend most of the night doing something for the class.  Honestly I feel fine when I have work and nothing else.  This of course is not a situation I will ever be in so I have to work on this.  
+
+JPL work is stressful also because I just don’t care about what I am doing and my progress seems so slow.  So I talked to Glenn about it today and feel like I might be able to do something a bit different that will make me feel better.
+
+I want to feel the way I did when last school year began.  I think that is more healthy for me.  I just allow myself to become incredibly stressed.  I want to focus again on my friends and personal relationships, because I think this will make me happier than what I am doing.  I really just want to spend all my time programming, but at the same time I feel bad for not moving as quickly as I would like to.
+
+I was going to go to laguna this weekend with mom and dad but I think that I want to try to stay.  Because this will allow me to spend more time with friends which I think is what’s most important for me.
+
+I am grateful for my friends whom I want to see desperately. </string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.141195582950097</real>
+		<key>Locality</key>
+		<string>Los Angeles</string>
+		<key>Longitude</key>
+		<real>-118.1906477101146</real>
+		<key>Place Name</key>
+		<string>1215 Hill Dr</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>99F3DF95DB4F4345803E495B3F287D40</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>24</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>75</string>
+		<key>IconName</key>
+		<string>clear.png</string>
+		<key>Pressure MB</key>
+		<integer>1011</integer>
+		<key>Relative Humidity</key>
+		<integer>65</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-07-09T12:50:00Z</date>
+		<key>Sunset Date</key>
+		<date>2014-07-10T03:07:02Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>0</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>24</integer>
+		<key>Wind Speed KPH</key>
+		<integer>11</integer>
+	</dict>
+</dict>
+</plist>

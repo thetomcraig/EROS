@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-02-24T18:14:50Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2015-02-24T18:14:50Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.3</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Project roller coaster.
+I constantly feel like I am on a roller coaster with the emotions I feel from these classes, and I feel like I have gotten so beaten down I don’t really have the same intensity of emotion I used to have.
+
+Finished the cs170 project finally, kept finding small bugs that we had to go back and change which was annoying - it makes me feel like were never done.  But at least I did okay in the midterm so I should be okay in the class.
+
+I saw my therapist - Jeremy - yesterday and talked about some stuff.  I don’t really know what to feel about Sidney, I keep going back and fourth which I don’t like.  I feel like I want to break up at the end of the year because I know I do not want to try a long distance relationship, but at other times I feel like I don’t want to let her go…  I guess I’m all confused about it.
+
+I felt pretty good about my conversations, and I had some good conversations with Sidney and other people.  We talked about art and I asked her about her classes and the like. - 4/5</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409543922233937</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85090075520584</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>000600824EEF457C94E930CF82644961</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>19</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>66</string>
+		<key>IconName</key>
+		<string>clear.png</string>
+		<key>Pressure MB</key>
+		<integer>1025</integer>
+		<key>Relative Humidity</key>
+		<integer>32</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-02-24T14:33:18Z</date>
+		<key>Sunset Date</key>
+		<date>2015-02-25T01:51:37Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>350</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>19</integer>
+		<key>Wind Speed KPH</key>
+		<integer>13</integer>
+	</dict>
+</dict>
+</plist>

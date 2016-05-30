@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-07-22T14:55:09Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookAir7,2</string>
+		<key>Generation Date</key>
+		<date>2015-07-22T14:55:09Z</date>
+		<key>Host Name</key>
+		<string>TYCHO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.4</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.10.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Sidney.
+Well Sidney is coming today, which I am moderately excited about.  I guess I am less worried about it now, which is good.  Maybe I am just not a very excitable person.
+
+I saw Libby yesterday, which was really nice.  I forgot how much I like her.  I think I’ll make more of an effort to keep in touch with her.
+
+More Japanese!</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.141187453772517</real>
+		<key>Locality</key>
+		<string>Los Angeles</string>
+		<key>Longitude</key>
+		<real>-118.1904764061218</real>
+		<key>Place Name</key>
+		<string>5201–5299 Monte Bonito Dr</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>6BAF59D0A81042FC9D64BF3CD9950544</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>22</string>
+		<key>Description</key>
+		<string>Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>72</string>
+		<key>IconName</key>
+		<string>cloudy.png</string>
+		<key>Pressure MB</key>
+		<integer>1012</integer>
+		<key>Relative Humidity</key>
+		<integer>78</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-07-22T12:58:05Z</date>
+		<key>Sunset Date</key>
+		<date>2015-07-23T03:01:10Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>0</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>22</integer>
+		<key>Wind Speed KPH</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-09-08T18:27:21Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2014-09-08T18:27:21Z</date>
+		<key>Host Name</key>
+		<string>PHILO (2)</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Saw Mark again today.  I feel like I’m hitting a wall with my issues.  But I don’t know if that’s bad really.  My understanding is this: my self esteem, and following therein, my general happiness is derived from my performance, and how I feel about it.  I am performing fine, but not really getting enough out of my relationships to feel like I am good enough.  But my only response to this is to put more into my performance; to DO more stuff so I can feel better about myself in that respect.  But the problem is that it is not working, as Mark argues, there are these two areas and I am putting all my energy into what I am doing (my performance) to feel good overall, but this is only half of the story.  
+
+This gets into what I was talking to Mark about in the last couple of years.  I remember him talking about the difference between use and value.  And the difference between feeling good about yourself for doing stuff and feeling good about yourself simply for being a person.  This is also what meditation should help, I think.  Maybe I will look into that more and try to do it more.  
+
+I think about what I was doing last year that made me feel better and I struggle with how to replicate that.
+
+One of the things I was doing was analyzing my emotions more.  Which is good, but I think what I should be doing is just allowing myself to feel the emotions and not react or analyze of squelch them.  I think I am afraid of feeling some things as well.  I am afraid of anger.  I don’t do much with my anger, and I internalize it, which leads to depression.  I am afraid of what people will think of me if I do express my anger.  And there is a lot to feel angry about, especially relating to my school.  But I don’t often express this anger. 
+
+Mark also talked with me about.  Going a bit deeper with my emotions.  I think this is different from just analyzing, which is applying logic and rules t emotion, kind of the reason I was not really helped by cognitive therapy.
+
+My default is thinking that people do not really like me.  Or are just not impressed or interested in me. 
+
+I believe that because stress and anxiety drives me, I cannot disassociate with it.  It is a part of me, almost intrinsic.  To be without this anxiety is to be without my drive and work ethic, my interest and passion, to be without it I am nothing.  Or at least not that much.  Average.  Boring, even.  Because I have invested so much time into working hard and accomplishing things, I don’t feel like I have much going on aside from that.  
+
+I need to stop doing things.  I need to stop doing things for other people.  Because that’s really what I am doing.  I am telling myself I am doing things for myself, but I am doing things for the version of myself that I want other people to accept and be impressed by.  That’s what computer science is.  I love it, but I should not be doing it because I want to be thought of as a programmer, I should be doing it because I want and love to.  If I want to play a video game I should fucking do it.
+
+Of course this is all easy to say, but its hard to do these things when they make me feel guilty.  Even though I know why they do and that I shouldn’t feel a certain way, I still feel that way.  So I should not just do these things and immediately become distressed that they make me feel shitty. 
+
+I like waking up early and having coffee and programming.  It makes me feel like I am accomplishing something.  I also think it’s good that I am setting small goals for myself with my new project, I think that is good too.  With PlayMe I bit off more than I could chew an took a long time shaping the project into something more digestible.  I make arranged the next steps for that project but by taking a break I think I can feel a bit more like I “did” PlayMe and am moving on.  Even though it doesn’t have everything I want in it and other apps do more stuff, the fact of the matter is that I made a cool app and thought myself how to do it from scratch with little more that some online guides and books for guidance.  I can make it cooler by doing more stuff but by breaking it up into chunks I will feel better.  Accomplishing goals feels good but my goal was to make and app that did a bunch of cool stuff in one summer and it was clearly not going to happen in that time frame.  I am happy with it now and proud of myself and I know I can move onto something else and come back at my leisure.  I am not assuming I will have tons of time to and am trying to not tie myself to any time frame like I did previously.  That said I st some small goal for my current project and will set a reasonable goal for the end of the summer.
+
+So enough planning…  Like I said I like getting up early and programming.  That’s okay.  I also like watching TV and playing video games.  But these have always been hard for me; I realize how stupid and petty it is to complain about these things: “I wish I could play video games, weh”, but at the same time they are problems.  Not just I wish I could play video games, but really that I can’t relax.  I’ve been feeling pretty depressed recently and this lack of relaxation has something to do with it I think.  But I can try.  I can try to relax - what else is there to do?  Maybe I should get drunk more often…
+
+I will continue to work on this stuff.  </string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.141193514580479</real>
+		<key>Locality</key>
+		<string>Los Angeles</string>
+		<key>Longitude</key>
+		<real>-118.1905909538299</real>
+		<key>Place Name</key>
+		<string>1215 Hill Dr</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>B4020D4803B64752BB2A040E686D9672</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>26</string>
+		<key>Description</key>
+		<string>Mostly Sunny</string>
+		<key>Fahrenheit</key>
+		<string>79</string>
+		<key>IconName</key>
+		<string>fair.png</string>
+		<key>Pressure MB</key>
+		<integer>1011</integer>
+		<key>Relative Humidity</key>
+		<integer>42</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-09-08T13:32:15Z</date>
+		<key>Sunset Date</key>
+		<date>2014-09-09T02:08:36Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>70</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>26</integer>
+		<key>Wind Speed KPH</key>
+		<integer>6</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Activity</key>
+	<string>Stationary</string>
+	<key>Creation Date</key>
+	<date>2014-11-15T03:39:13Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>iPhone/iPhone7,2</string>
+		<key>Generation Date</key>
+		<date>2014-11-15T03:39:13Z</date>
+		<key>Host Name</key>
+		<string>EUCLID</string>
+		<key>OS Agent</key>
+		<string>iOS/8.1</string>
+		<key>Software Agent</key>
+		<string>Day One iOS/1.15.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>So the quarter has been flying by.  Not really because I've been having fun though. </string>
+	<key>Ignore Step Count</key>
+	<true/>
+	<key>Starred</key>
+	<false/>
+	<key>Step Count</key>
+	<integer>13830</integer>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>5899377F3DE445DAADEB77D3BCAB0564</string>
+</dict>
+</plist>

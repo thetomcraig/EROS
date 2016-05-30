@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-07-19T20:45:42Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2015-07-19T20:45:42Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.4</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.10.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Deeper into summer.
+I am doing well.  Keeping busy with my projects, which no are django stuff and Japanese practice.  It’s really nice to have this time.
+
+My mom and I came back form Oakland about a week and a half ago and I did find an apartment - which I am really excited about.  It was not my number one place, but the housing market right now is insane - lots of competition for apartments and the like.  It is right on Lake Merritt - so I can’t really complain that much about location - its even walking distance from work as well.
+
+While we were there I got to meet my team members as well, and they all seem really nice, so I am legitimately excited to move and get underway.  I am really glad I got this break and surprisingly, I am not as anxious as I thought I would be.
+
+Met Alfred’s girlfriend yesterday - and spent 14 hours with with those friends.  It was interesting for me - I predicted that that much time would wear me out and it totally did.  I just can’t handle that much time with people, and I am okay with that.  I think a lot of the work I can do to be more happy is related to accepting my flaws and not trying to change or improve everything about myself.  I mean I think that there is a lot of improvement I can do, but I think I shouldn’t feel like I have to change everything all the time.  
+
+I wish I missed Sidney  - kind of at least.	I know that she misses me, but I just don’t really miss her.  I do like I do all of my friends, but I don’t really miss the relationship.  I think that I do not tend to miss people much, because I am fairly self-sufficient, but I think part of it is that I kind of got tired of her.  Which of course, I feel terrible saying, but the whole thing for me just got kind of tiring.  I just got tired of hearing the same stuff from her and dealing with her stress.  I think that as she opened up to me, she held everything back less.  And I kept hearing the same anxiety related stuff over and over.  Which of course I could relate to, but I kept seeing her cause these problems for herself.  I don’t know, I am not sure how to feel about it.  I think that getting tired of it is okay, and I feel that for the last couple of months leading up to graduation, I pretended that I wasn’t tired of it for her sake, because I knew that everything was going to end soon anyway.  And in retrospect - good job?  I don’t know if it was the right thing to do really.  I know that if this happened a million more times in a million different ways I would probably do the same thing though.  Because that is the kind of person I am.  
+
+I will probably always feel shitty about this.  And maybe I am doing the wrong thing by inviting her to visit me.  But I rationalize with several things:
+1. I want to have sex again
+2. I do miss her - just not in an unbearable loving kind of way
+
+And I think that is okay.  Kind of.  Ill probably think about it a lot more.
+
+Also I have decided that I do not need to finish my piece of writing about college.  It is just about complete, and unfortunately, any editing I could do now would server the purpose of making it sound nicer and less offensive.  I just don’t really want to think about college any more, so I a going to record it in this journal, to look back on, but I am no longer interested in doing any kind of publishing of it.
+</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.141347524093518</real>
+		<key>Locality</key>
+		<string>Los Angeles</string>
+		<key>Longitude</key>
+		<real>-118.19042258048759</real>
+		<key>Place Name</key>
+		<string>5218 Monte Bonito Dr</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>0649C32BDDE54712B98F21FDCC9D705C</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>32</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>90</string>
+		<key>IconName</key>
+		<string>clear.png</string>
+		<key>Pressure MB</key>
+		<integer>1015</integer>
+		<key>Relative Humidity</key>
+		<integer>43</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-07-19T12:56:04Z</date>
+		<key>Sunset Date</key>
+		<date>2015-07-20T03:02:56Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>270</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>32</integer>
+		<key>Wind Speed KPH</key>
+		<integer>17</integer>
+	</dict>
+</dict>
+</plist>

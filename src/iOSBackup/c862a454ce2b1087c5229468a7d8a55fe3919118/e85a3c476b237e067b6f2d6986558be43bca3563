@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-05-26T06:05:09Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2014-05-26T06:05:09Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.9.2</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.4</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Loss.
+
+Home for the weekend, and glad for it.  There was shooting in IV friday night, and I feel pretty lucky that I came home.  I’ve been taking it easy and not doing too much work - all of my teachers have sent out emails about the shooting canceling and extending due dates for assignments.  So the good thing is that I can take it easy for the remaining weeks.  
+
+It was a single guy who clearly had mental issues, and wanted to “seek revenge” or something along those lines, so he drove through IV and killed 6 people total.  I think I am bothered that I haven’t really felt anything about this situation.  
+
+I looked up the names of the victims.  It seems like the guy’s three roommates, whom he killed, were all some sort of engineering majors.  I didn’t know any of them.  They could have been CC students, but it kind of got me thinking about life in general.  It’s so scary, that I could have known them, or that it could have been me.  But more importantly, what bothers me is the lack of feeling I experience.  Loss is loss, its just so weird to me that I can feel such sadness for a person whom I do know, and nothing for those whom I don’t.  It just doesn’t make sense that a person would do such a thing I guess.  
+
+Theres a lot wrapped up in it.  But regardless I am going to bed.  I am grateful that I am safe and that everyone I know is safe as well.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>33.536672728246849</real>
+		<key>Locality</key>
+		<string>Laguna Beach</string>
+		<key>Longitude</key>
+		<real>-117.77097175272155</real>
+		<key>Place Name</key>
+		<string>726–760 Oak St</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>4511432FC1C94C49B7C473C4DFB7612F</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>19</string>
+		<key>Description</key>
+		<string>Mostly Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>66</string>
+		<key>IconName</key>
+		<string>mcloudyn.png</string>
+		<key>Pressure MB</key>
+		<integer>1014</integer>
+		<key>Relative Humidity</key>
+		<integer>78</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-05-25T12:44:09Z</date>
+		<key>Sunset Date</key>
+		<date>2014-05-26T02:52:52Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>260</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>19</integer>
+		<key>Wind Speed KPH</key>
+		<integer>6</integer>
+	</dict>
+</dict>
+</plist>

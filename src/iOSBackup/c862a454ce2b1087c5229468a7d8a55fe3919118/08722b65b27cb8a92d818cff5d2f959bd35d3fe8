@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2012-12-01T09:50:00Z</date>
+	<key>Entry Text</key>
+	<string>I emailed some Caltech people about doing a SURF this summer. Still waiting for a response from one guy who asked if Pri was my boss when I worked at Caltech last. Perhaps be is contacting her about me. I'm not sure but I know she liked me, so this could be good news. I plan on being on top of it this year and I think I should be able to snag a SURF thing. I almost got one last year. </string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.416899984739942</real>
+		<key>Locality</key>
+		<string>Goleta</string>
+		<key>Longitude</key>
+		<real>-119.8896141396677</real>
+		<key>Place Name</key>
+		<string></string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>FDC20AE8119F4100859F43166C62E566</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>16</string>
+		<key>Description</key>
+		<string>Mist and Fog</string>
+		<key>Fahrenheit</key>
+		<string>61</string>
+		<key>IconName</key>
+		<string>fogn.png</string>
+	</dict>
+</dict>
+</plist>

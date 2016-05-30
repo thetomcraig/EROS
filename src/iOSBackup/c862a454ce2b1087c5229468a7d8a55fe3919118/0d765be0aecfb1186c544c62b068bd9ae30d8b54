@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-05-12T21:20:53Z</date>
+	<key>Entry Text</key>
+	<string>So I did not finish any of midterms. But then again nobody else did. Still pretty fucking annoying. But hey, I got an A- on my philosophy paper so that's pretty damn good. </string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.282399462567902</real>
+		<key>Locality</key>
+		<string>Simi Valley</string>
+		<key>Longitude</key>
+		<real>-118.74250528413685</real>
+		<key>Place Name</key>
+		<string>CA-118 W</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>2D5F11C98B354681A40B0E0BB9633A38</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>39</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>102</string>
+		<key>IconName</key>
+		<string>sunny.png</string>
+	</dict>
+</dict>
+</plist>

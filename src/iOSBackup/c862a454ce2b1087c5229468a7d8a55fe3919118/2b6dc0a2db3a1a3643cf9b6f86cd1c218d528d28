@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-01-21T05:51:57Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>iPhone/iPhone5,1</string>
+		<key>Generation Date</key>
+		<date>2014-01-21T05:51:57Z</date>
+		<key>Host Name</key>
+		<string>SOLON</string>
+		<key>OS Agent</key>
+		<string>iOS/7.0.4</string>
+		<key>Software Agent</key>
+		<string>Day One iOS/1.12</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Sidney's house - sadness. 
+Just came back from Sidney’s house.  I was really nervous to go meet her parent but also very excited.  On Friday we flew there in her grandfather’s plane, which was really cool, and I even got to fly it.  The weekend was great, Sidney and I did homework the whole time, but her parents were very accommodating and her house was very nice as well.  Lots of animals around…  Anyway the weekend was very relaxing and enjoyable.  I slept very well there too.  I really liked her parents; I could tell they liked me too.  But something about being in her home made me feel something I had not felt in a long time.  This morning I woke up in her house and had had a dream about this school year finishing, and about that sort of thing - anxiety about things changing, etc.  When I realized that this was not the case upon waking, it really jarred me.  I woke up with the feeling of finishing the school year, or at least a quarter.  When I remembered that I was only two weeks into the quarter, it made me feel really depressed.  
+
+I think being at home in Sidney’s house made me remember what it was like to be in my own home.  And when I came to school I felt the pain of loosing our house from the move and the pain that comes with starting a school year.  
+
+Really, the thing is, I hate school.  I always have felt that way too, I just hate being in this place I don’t want to be in and having people I don’t like tell me when, how, and what to do.  Coming back her made me remember and feel the way I feel when I have to start a school year.  And made me remember how much I miss my parents and family.  I thought I wouldn’t miss seeing them, and I didn’t, but after having that dream and feeling that way, coming back here made me feel like I hadn’t seen them in much linger than just two weeks.  
+
+And I felt like being with may parents in our current house (beach house) wasn’t really being home.  It was being with my family, but it wasn’t really being home at all.  I miss home.  Home to me is our house in South Pasadena, and I miss it desperately.  
+
+Every once and I while I realize hoe much energy I have to put into just being here and keeping my head above water.   It’s really hard for me to act certain ways and do certain things and I have to spend all day here just doing things for other people.  Nad it makes me tired and sick.  
+
+I don’t know, maybe I just have to be sad for a time.  Ill have to think about all this I suppose…
+
+I am grateful for my family, and miss them so much.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409197665272131</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85332498201299</real>
+		<key>Place Name</key>
+		<string>1132–1170 Ocean Rd</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>645DDE516AF4429DB821C3D55E4C2FB2</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>9</string>
+		<key>Description</key>
+		<string>Clear</string>
+		<key>Fahrenheit</key>
+		<string>48</string>
+		<key>IconName</key>
+		<string>clearn.png</string>
+		<key>Pressure MB</key>
+		<integer>1022</integer>
+		<key>Relative Humidity</key>
+		<integer>87</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-01-20T15:03:25Z</date>
+		<key>Sunset Date</key>
+		<date>2014-01-21T01:18:04Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>0</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>9</integer>
+		<key>Wind Speed KPH</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-05-14T16:23:05Z</date>
+	<key>Entry Text</key>
+	<string>Did not get into brown, waiting on Vanderbilt...</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string></string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>0.0</real>
+		<key>Locality</key>
+		<string></string>
+		<key>Longitude</key>
+		<real>0.0</real>
+		<key>Place Name</key>
+		<string></string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>AD6556A16048484E849CFA182F82C16D</string>
+</dict>
+</plist>

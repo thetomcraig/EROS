@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Activity</key>
+	<string>Stationary</string>
+	<key>Creation Date</key>
+	<date>2015-07-20T05:30:32Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>iPhone/iPhone7,2</string>
+		<key>Generation Date</key>
+		<date>2015-07-20T05:30:32Z</date>
+		<key>Host Name</key>
+		<string>EUCLID</string>
+		<key>OS Agent</key>
+		<string>iOS/8.4</string>
+		<key>Software Agent</key>
+		<string>Day One iOS/1.17.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Good day. 
+Didn't run like I wanted to but learned a lot of Japanese and shanti stuff. New computer tomorrow! Lots of thinking about things and a lengthy journal entry. </string>
+	<key>Ignore Step Count</key>
+	<true/>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>アメリカ合衆国</string>
+		<key>Latitude</key>
+		<real>34.141220259511975</real>
+		<key>Locality</key>
+		<string>ロサンゼルス</string>
+		<key>Longitude</key>
+		<real>-118.19021883431652</real>
+		<key>Place Name</key>
+		<string>5212 Monte Bonito Dr</string>
+		<key>Region</key>
+		<dict>
+			<key>Center</key>
+			<dict>
+				<key>Latitude</key>
+				<real>34.14125215</real>
+				<key>Longitude</key>
+				<real>-118.19018174999999</real>
+			</dict>
+			<key>Radius</key>
+			<real>28.84730347736582</real>
+		</dict>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Step Count</key>
+	<integer>6078</integer>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>D470739C6C3F40A2B1A83EA9B2A40AD3</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>25</string>
+		<key>Description</key>
+		<string>Mostly Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>77</string>
+		<key>IconName</key>
+		<string>mcloudyn.png</string>
+		<key>Pressure MB</key>
+		<integer>1016</integer>
+		<key>Relative Humidity</key>
+		<integer>74</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-07-19T12:56:04Z</date>
+		<key>Sunset Date</key>
+		<date>2015-07-20T03:02:56Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>20</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>25</integer>
+		<key>Wind Speed KPH</key>
+		<integer>7</integer>
+	</dict>
+</dict>
+</plist>

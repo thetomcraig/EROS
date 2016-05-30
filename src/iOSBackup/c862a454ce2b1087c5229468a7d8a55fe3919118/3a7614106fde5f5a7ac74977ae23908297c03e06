@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-11-15T03:42:56Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2014-11-15T03:42:56Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Flying by.
+
+My senior year is flying by, but not really because I’ve been having fun.  I’ve been really fucking busy with three cs classes and trying to find a job.
+
+I have been interviewing with Pandora and I am actually going to fly out to Oakland in the next couple of days to do an in person interview.  
+
+The drugs haven’t really been working yet…  It’s been 5 weeks and apparently they can take up to 6.  
+
+I have also continued to see Jeremy (therapist) and I have been going to a mindfulness/meditation group here on campus.
+
+So I have been meditating and being mindful and also doing yoga and taking drugs.  I am also going to be writing in here more often… Or at least I will try to.  
+
+I feel like I have been doing  all of these things but haven’t seen a lot of progress.  It’s tough though because part of me is so resistant to feeling better because I am so used to not feeling good at all.
+
+So I am going to keep doing the things I have been doing, but I really wish I could feel better already!
+
+Nothing to do but keep trying.  I have been disenchanted with the whole self-betterment mindfulness train and all of that, but I feel like I have to try, because what else is there to do?
+
+Another thing in regards for awareness, and that’s paying attention to good things that happen.  And on that note…
+
+Sidney and I are actively having sex which is pretty sweet.  We have issues here an there but our relationship I think is really good right now.  I am very grateful for the friends I have also and I have been spending a good amount of time with them I think.  
+
+I also felt good about myself when I did my technical phone interview yesterday with Pandora.  I was incredibly anxious about it but I think I answered the question really well and did a good job of talking through my methods and testing and all of that stuff.
+
+So overall, really fucking busy a stressed right now but trying to be more aware of it and mindful about the good (and bad) things in my life.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409565185758595</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85068054845529</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>D5281EEAF064456E9A40DFB7ABF6DC53</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>17</string>
+		<key>Description</key>
+		<string>Clear</string>
+		<key>Fahrenheit</key>
+		<string>63</string>
+		<key>IconName</key>
+		<string>clearn.png</string>
+		<key>Pressure MB</key>
+		<integer>1015</integer>
+		<key>Relative Humidity</key>
+		<integer>77</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-11-14T14:32:49Z</date>
+		<key>Sunset Date</key>
+		<date>2014-11-15T00:55:12Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>0</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>17</integer>
+		<key>Wind Speed KPH</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

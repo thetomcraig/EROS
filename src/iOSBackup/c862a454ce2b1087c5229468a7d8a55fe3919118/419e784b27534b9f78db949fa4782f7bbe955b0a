@@ -1,0 +1,589 @@
+2016-05-04 3:56:31.727 PM [lvl=2] +[ENLogging setupGTMLoggingWithPath:verboseLogging:] ---------------------------------------------------
+2016-05-04 3:56:31.730 PM [lvl=2] -[EVEAccountContext initWithLongLivedAuthResult:serviceHost:unifiedFileSystem:] **********
+
+The Activity Log contains a detailed list of the steps the Evernote application performs, as well as information about your account, your device and location information (if enabled).  Your Note titles, tags, Notebook names and occasionally Note content also may be included. We treat your Activity Log data as confidential, and the terms of our Privacy Policy (https://evernote.com/privacy) apply.
+
+If sending your log to Evernote, you may want to email the file to yourself and edit out any sensitive information first.
+
+**********
+
+2016-05-04 3:56:31.745 PM [lvl=2] -[EVEAccountContext initWithLongLivedAuthResult:serviceHost:unifiedFileSystem:] Username: thetomcraig
+Client Version: 7.13 (344693)
+Hardware/OS Version: iPhone/iPhone OS (9.3.1)
+Device Type: iPhone7,2
+Carrier name: AT&T
+File System Size: 55.7 GB
+File System Free Size: 4.0 GB
+
+2016-05-04 3:56:31.747 PM [lvl=2] -[EVEAccountContext userPreferences] Loading user preferences for username: thetomcraig serviceHost: www.evernote.com
+2016-05-04 3:56:31.758 PM [lvl=2] -[ENAccountLimits rebuildFeatureMapWithUser:] Updating features based on privilege: 0
+2016-05-04 3:56:31.759 PM [lvl=2] -[ENAccountLimits rebuildSizeMapWithUser:] Updating size limits based on privilege: 0
+2016-05-04 3:56:31.762 PM [lvl=2] -[ENAccountLimits rebuildFeatureMapWithUser:] Updating features based on service level: 1
+2016-05-04 3:56:31.762 PM [lvl=2] -[ENAccountLimits rebuildSizeMapWithUser:] Updating size limits based on service level: 1
+2016-05-04 3:56:31.762 PM [lvl=2] -[ENUser updateWithEDAMUserObject:edamSubscriptionInfo:serviceLevelLimits:isCached:] User Service Level is Evernote Basic
+2016-05-04 3:56:31.767 PM [lvl=2] -[ENAccountLimits rebuildFeatureMapWithUser:] Updating features based on privilege: 0
+2016-05-04 3:56:31.767 PM [lvl=2] -[ENAccountLimits rebuildSizeMapWithUser:] Updating size limits based on privilege: 0
+2016-05-04 3:56:31.767 PM [lvl=2] -[ENAccountLimits rebuildFeatureMapWithUser:] Updating features based on privilege: 0
+2016-05-04 3:56:31.768 PM [lvl=2] -[ENAccountLimits rebuildSizeMapWithUser:] Updating size limits based on privilege: 0
+2016-05-04 3:56:31.768 PM [lvl=2] -[ENUser updateWithEDAMUserObject:edamSubscriptionInfo:serviceLevelLimits:isCached:] User Service Level is Unknown account type
+2016-05-04 3:56:31.799 PM [lvl=2] -[EVEAccountContext hasLongRunningTasks] lastAppVersion=21, EVEAccountContextCurrentVersion=22
+2016-05-04 3:56:31.799 PM [lvl=2] -[EVEAccountContext hasLongRunningTasks] Adding EVECleanupDuplicateUUIDsNoteMigrationOp
+2016-05-04 3:56:31.804 PM [lvl=2] -[ENSyncEngine init] self=0x15ef58e00
+2016-05-04 3:56:31.807 PM [lvl=3] -[EDAMUsage _updateRollingCountsWithSessionDelta:fromStartDate:] Can't update rolling stats w/o knowing what day to base delta(1) from
+2016-05-04 3:56:31.824 PM [lvl=2] -[EVEInAppPurchaseManager makeFullProductRequestWithCompletion:] Fetching AppStore locale
+2016-05-04 3:56:31.828 PM [lvl=2] -[EVEInAppPurchaseManager shouldPerformLocalReceiptValidation:] Last local receipt validation: (null) current date: 2016-05-04 10:56:31 PM +0000
+2016-05-04 3:56:31.833 PM [lvl=2] -[EVEInAppPurchaseManager saveLocalReceiptValidationDate:] Saving local receipt validation date: 2016-05-04 10:56:31 PM +0000
+2016-05-04 3:56:31.889 PM [lvl=2] -[EVEInAppPurchaseManager initWithAccountContext:] Receipt validation status: 1
+2016-05-04 3:56:31.919 PM [lvl=2] -[EVETierSelectionDisplayController rebuildEligibilityCheckTimer] Rechecking TSD eligibility at: 2016-01-26 1:30:23 AM +0000 (-8630768.404629052 seconds from now)
+2016-05-04 3:56:31.923 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInPromotionOfferEndDate] promotion offer end date:(null)
+2016-05-04 3:56:31.924 PM [lvl=2] -[EVEBusinessCardQuotaManager isOfferingLinkedInPromotion] isOfferingLinkedInPromotion: 0
+2016-05-04 3:56:31.924 PM [lvl=2] -[EVEBusinessCardQuotaManager loadTrialCount] loaded _usageCount = 6
+2016-05-04 3:56:31.929 PM [lvl=2] -[EVEBusinessCardQuotaManager determineStatus] haveUsedTrial: 1
+2016-05-04 3:56:31.930 PM [lvl=2] -[EVEBusinessCardQuotaManager determineStatus] _allowUnlimitedBusinessCardScan = 0, _allowBusinessCardScan = 0, _usageCount = 6
+2016-05-04 3:56:32.014 PM [lvl=2] -[ENCacheManager initWithAccountContext:listenForStartNotifications:] <EVEAccountContext: 0x15ef1c7a0> YES self=0x15ef9ca20
+2016-05-04 3:56:32.394 PM [lvl=2] -[EVEAppDelegate registerPSPSDFKit] PSPDFKit version: PSPDFKit 5.3.0 for iOS (39849)
+2016-05-04 3:56:32.876 PM [lvl=2] -[EVEEditableWebView lastChanged] Tried to lastChanged, but content isn't ready yet!
+2016-05-04 3:56:32.881 PM [lvl=2] -[EVENoteViewController(Editing) saveNoteExpungingResources:completionBlock:] Not saving note changes because it doesn't appear note content is loaded
+2016-05-04 3:56:32.882 PM [lvl=2] -[EVENoteWebView removeSearchTermHighlights] Tried to removeSearchTermHighlights, but content isn't ready yet!
+2016-05-04 3:56:33.143 PM [lvl=2] +[EDAMHTTPClient clientVersionString] Client name: Evernote iPhone/344693 (en-US-US); iPhone7,2/iPhone OS (9.3.1);
+2016-05-04 3:56:33.295 PM [lvl=2] __68-[EVEAppDelegate registerForRemoteNotificationsShowingReasonsAlert:]_block_invoke registering
+2016-05-04 3:56:33.299 PM [lvl=2] __68-[EVEAppDelegate registerForRemoteNotificationsShowingReasonsAlert:]_block_invoke registered
+2016-05-04 3:56:33.412 PM [lvl=2] -[EVEAppBadgingHandler rebuildBadgeWithMessageCount:] Setting app badge number to unread thread count: 0
+2016-05-04 3:56:33.462 PM [lvl=2] -[EVEAppDelegate registerPSPSDFKit] PSPDFKit version: PSPDFKit 5.3.0 for iOS (39849)
+2016-05-04 3:56:33.464 PM [lvl=2] -[ESCCrashCheckpoint reportCurrentCheckpoint] No crash checkpoint.
+2016-05-04 3:56:33.574 PM [lvl=2] -[EVEAppBadgingHandler rebuildBadgeWithMessageCount:] Setting app badge number to unread thread count: 0
+2016-05-04 3:56:34.156 PM [lvl=2] __73-[EVETierSelectionDisplayController refreshTSDEligibilityWithCompletion:]_block_invoke Rechecking TSD eligibility
+2016-05-04 3:56:34.414 PM [lvl=2] __73-[EVETierSelectionDisplayController refreshTSDEligibilityWithCompletion:]_block_invoke.142 Received TSD eligibility result: <EDAMTierSelectionDisplayEligibilityResult: 0x1601e6c60; shouldShowTsd = 0; timeToLive = 86400000; tsdType = (null); tsdTiming = (null); tsdVariation = (null); subscriptionInfo = <EDAMSubscriptionInfo: 0x15ed92030; currentTime = 1462402593938; currentlySubscribed = 0; subscriptionRecurring = 0; subscriptionExpirationDate = (null); subscriptionPending = 0; subscriptionCancellationPending = 0; serviceLevelsEligibleForPurchase = {(
+    3,
+    2
+)}; currentSku = (null); validUntil = 1493938593938; itunesReceiptRequested = 0;>; teamStarterPackResult = (null);>
+2016-05-04 3:56:34.416 PM [lvl=2] -[ENSyncEngine logNetworkStatus] reachability currentReachabilityStatus=WWAN
+2016-05-04 3:56:34.417 PM [lvl=2] __73-[EVETierSelectionDisplayController refreshTSDEligibilityWithCompletion:]_block_invoke Reusing the existing TSD eligibility result because shouldShow, type, timing, and variation match.
+2016-05-04 3:56:34.422 PM [lvl=2] -[ENCoreMessageSyncEngine considerSyncingViaNoteStoreWithCompletion:] Message sync already in progress
+2016-05-04 3:56:34.423 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:56:34.423 PM [lvl=2] -[ENSyncEngine _syncStarted] Sync started.
+2016-05-04 3:56:34.423 PM [lvl=2] __80-[ENSyncEngine syncIgnoringNetworkPreference:forcingAuthRefresh:localChangeIds:]_block_invoke.989 Contacting Evernote server...
+2016-05-04 3:56:34.574 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing personal account...
+2016-05-04 3:56:34.575 PM [lvl=2] __64-[ENSyncEngine fetchSubscriptionInfoForExistingInfo:completion:]_block_invoke Fetching subscription info
+2016-05-04 3:56:34.583 PM [lvl=2] __31-[ENSyncEngine serverSyncState]_block_invoke sessionCount=1
+2016-05-04 3:56:34.584 PM [lvl=3] -[EVEPuppetmasterLogger logLevel:function:file:line:object:message:] >UXPuppetmaster< Object: ENUXPScript file:/Users/endev/jenkins_slave/workspace/Evernote_iOS_AppStore/Plugins/ux-puppetmaster/Obj-C/Source/Core/Scripts/ENUXPScript.m#78 function:+[ENUXPScript scriptWithPath:title:url:source:] Did not find version information in script at path '/private/var/mobile/Containers/Shared/AppGroup/82ABE148-627B-49F4-89E7-58E0C859B059/Documents/puppetmaster/UXPuppetmaster.remote.js'
+2016-05-04 3:56:34.584 PM [lvl=3] -[EVEPuppetmasterLogger logLevel:function:file:line:object:message:] >UXPuppetmaster< Object: ENUXPScript file:/Users/endev/jenkins_slave/workspace/Evernote_iOS_AppStore/Plugins/ux-puppetmaster/Obj-C/Source/Core/Scripts/ENUXPScript.m#83 function:+[ENUXPScript scriptWithPath:title:url:source:] Could not get file attributes of script at path '/private/var/mobile/Containers/Shared/AppGroup/82ABE148-627B-49F4-89E7-58E0C859B059/Documents/puppetmaster/UXPuppetmaster.remote.js'
+2016-05-04 3:56:34.693 PM [lvl=2] -[ENUXPInputsManager processInputs:] Inputs generated in 0.0866 seconds
+2016-05-04 3:56:34.702 PM [lvl=3] -[EVEPuppetmasterLogger logLevel:function:file:line:object:message:] >UXPuppetmaster< Object: <ENUXPuppetmaster: 0x15eef0830> file:/Users/endev/jenkins_slave/workspace/Evernote_iOS_AppStore/Plugins/ux-puppetmaster/Obj-C/Source/Core/ENUXPuppetmaster.m#466 function:-[ENUXPuppetmaster loadScriptAtPath:] Failed to load script file '/private/var/mobile/Containers/Shared/AppGroup/82ABE148-627B-49F4-89E7-58E0C859B059/Documents/puppetmaster/Nightly_Scripts' - directory found
+2016-05-04 3:56:34.716 PM [lvl=2] -[EVENoteWebView removeSearchHighlights] Tried to removeSearchHighlights, but content isn't ready yet!
+2016-05-04 3:56:34.721 PM [lvl=2] -[EVENoteWebView updateTintColor] Tried to updateTintColor, but content isn't ready yet!
+2016-05-04 3:56:34.724 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 3:56:34.725 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 3:56:34.725 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 3:56:34.725 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 3:56:34.730 PM [lvl=2] -[EVEPuppetmasterLogger logLevel:function:file:line:object:message:] >UXPuppetmaster< Object: <ENUXPScriptManager: 0x16025b7f0> file:/Users/endev/jenkins_slave/workspace/Evernote_iOS_AppStore/Plugins/ux-puppetmaster/Obj-C/Source/Core/Scripts/ENUXPScriptManager.m#138 function:-[ENUXPScriptManager fetchScriptsIfNeeded] Already fetching scripts
+2016-05-04 3:56:34.732 PM [lvl=2] -[ENSyncEngine refreshUserInfo] Updating user info...
+2016-05-04 3:56:34.736 PM [lvl=2] __64-[EVEInAppPurchaseManager makeFullProductRequestWithCompletion:]_block_invoke Fetched AppStore locale en_US@currency=USD
+2016-05-04 3:56:34.736 PM [lvl=2] -[EVEInAppPurchaseManager fetchTSPAndMakeFullProductsRequestWithCompletion:] Fetching team starter pack with locale: en_US@currency=USD
+2016-05-04 3:56:34.737 PM [lvl=2] -[EVETeamStarterPackStatusDownloader fetchTeamStarterPackInfoForLocale:completion:] Requesting team starter pack sku with AppStore country: US
+2016-05-04 3:56:34.753 PM [lvl=2] __165-[ENCoreMessageService setupServiceWithSenderUser:messageStoreDirectory:syncEngine:authHelper:readWriteLocalStore:serviceReachable:contactIntegrationManagerEnabled:]_block_invoke CoreMessage local model ready
+2016-05-04 3:56:34.760 PM [lvl=2] -[ENContactIntegrationManager reloadContacts] Extractor type=2 is disconnected, try to deactivate all contacts from it
+2016-05-04 3:56:34.762 PM [lvl=2] -[ENContactIntegrationManager reloadContacts] Extractor type=3 is disconnected, try to deactivate all contacts from it
+2016-05-04 3:56:34.764 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 3:56:34.764 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 3:56:34.788 PM [lvl=2] __85-[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:]_block_invoke Subscription info is valid until 2017-05-04 10:56:34 PM +0000
+2016-05-04 3:56:34.794 PM [lvl=2] __50-[ENCoreMessageSyncEngine considerPendingMessages]_block_invoke 0 messages pending
+2016-05-04 3:56:34.799 PM [lvl=2] -[EVETeamStarterPackStatusDownloader skusForTeamStarterPackResult:] User can't buy team starter pack
+2016-05-04 3:56:34.799 PM [lvl=2] __76-[EVEInAppPurchaseManager fetchTSPAndMakeFullProductsRequestWithCompletion:]_block_invoke Fetched team starter pack sku: (
+)
+2016-05-04 3:56:34.799 PM [lvl=2] -[EVEInAppPurchaseManager makeFullProductRequestAddingProducts:] Making a full products request with locale: en_US@currency=USD
+2016-05-04 3:56:34.830 PM [lvl=2] __79-[EVEAppDelegate application:didRegisterForRemoteNotificationsWithDeviceToken:]_block_invoke Registered for push notifications
+2016-05-04 3:56:34.844 PM [lvl=2] __57-[ENContactIntegrationManager _enqueueContactExtraction:]_block_invoke Extractor type=1 will extract contacts
+2016-05-04 3:56:34.846 PM [lvl=2] -[ENEvernoteContactExtractor extractContacts] Begin extracting Evernote contacts
+2016-05-04 3:56:34.846 PM [lvl=2] -[ENEvernoteContactExtractor extractContacts] End fetching Evernote contacts
+2016-05-04 3:56:35.043 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 3:56:35.060 PM [lvl=2] -[ENAccountLimits rebuildFeatureMapWithUser:] Updating features based on service level: 1
+2016-05-04 3:56:35.060 PM [lvl=2] -[ENAccountLimits rebuildSizeMapWithUser:] Updating size limits based on service level: 1
+2016-05-04 3:56:35.061 PM [lvl=2] -[ENUser updateWithEDAMUserObject:edamSubscriptionInfo:serviceLevelLimits:isCached:] User Service Level is Evernote Basic
+2016-05-04 3:56:35.069 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 3:56:35.069 PM [lvl=2] -[ENSyncEngine updatePremiumCommerceWithUserInfo:] Can show in-app purchasing: 1, eligible services: {(
+    3,
+    2
+)}
+2016-05-04 3:56:35.069 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 3:56:35.070 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 3:56:35.070 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 3:56:35.070 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 3:56:35.070 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 3:56:35.070 PM [lvl=2] -[ENSyncEngine isFullSyncRequiredWithServerWithServerSyncState:]   current update count: 26371
+2016-05-04 3:56:35.206 PM [lvl=2] -[EVEInAppPurchaseManager fetchTSPAndMakeFullProductsRequestWithCompletion:] Fetching team starter pack with locale: en_US@currency=USD
+2016-05-04 3:56:35.207 PM [lvl=2] -[EVETeamStarterPackStatusDownloader skusForTeamStarterPackResult:] User can't buy team starter pack
+2016-05-04 3:56:35.207 PM [lvl=2] __76-[EVEInAppPurchaseManager fetchTSPAndMakeFullProductsRequestWithCompletion:]_block_invoke Fetched team starter pack sku: (
+)
+2016-05-04 3:56:35.207 PM [lvl=2] -[EVEInAppPurchaseManager makeFullProductRequestAddingProducts:] Product request already in progress
+2016-05-04 3:56:35.207 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 3:56:35.207 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 3:56:35.257 PM [lvl=2] -[ENSyncEngine(Notebooks) syncNotebooks:forcibly:] Syncing 29 notebooks (forcibly)...
+2016-05-04 3:56:35.298 PM [lvl=2] -[ENSyncEngine _syncServerChanges] [serverSyncState updateCount]=26544, self.currentSyncUpdateCount=26371
+2016-05-04 3:56:35.300 PM [lvl=2] -[ENSyncEngine(ChunkDownloader) syncChunkDownloaderWithFullSyncAtUSN:incrementalSyncAtUSN:chunkSize:] incrementalSyncAtUSN=26371, fullSyncAtUSN=26371
+2016-05-04 3:56:35.475 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 3:56:35.475 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 3:56:35.538 PM [lvl=2] -[EVENoteWebView(Attachments) attachmentIDs] Tried to attachmentIDs, but content isn't ready yet!
+2016-05-04 3:56:35.687 PM [lvl=2] -[ENSyncEngine(Notes) syncNotes:retryOnError:ignoreClientUUIDs:] Syncing 3 notes...
+2016-05-04 3:56:36.053 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 3:56:36.053 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 3:56:36.056 PM [lvl=2] -[ENSyncEngine(Notes) syncNotes:retryOnError:ignoreClientUUIDs:] Syncing 2 notes...
+2016-05-04 3:56:36.408 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing shared notes
+2016-05-04 3:56:36.413 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 3:56:36.415 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 3:56:36.417 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 3:56:36.420 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 3:56:36.422 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 3:56:36.424 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 3:56:36.428 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 3:56:36.429 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 3:56:36.430 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 3:56:36.431 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 3:56:36.432 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 3:56:36.435 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 3:56:36.438 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 3:56:36.439 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 3:56:36.440 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 3:56:36.441 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 3:56:36.442 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 3:56:36.445 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 3:56:36.448 PM [lvl=2] -[ENSyncEngine refreshUsageInfo] Updating usage info...
+2016-05-04 3:56:36.691 PM [lvl=2] -[ENAccountContext syncEngineDidStop:] 
+2016-05-04 3:56:36.698 PM [lvl=2] __50-[ENGoogleCredentialManager fetchSharedAuthToken:]_block_invoke lastQueried >= userUpdated
+2016-05-04 3:56:36.698 PM [lvl=2] -[ENCacheManager startWithBackground:] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:56:36.702 PM [lvl=2] -[ENSyncEngine _syncStoppedWithErrors:] Sync complete. No errors.
+2016-05-04 3:56:36.707 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInConnectionLastQueriedDate] linkedInConnectionLastQueriedDate:2016-01-18 4:30:08 AM +0000
+2016-05-04 3:56:36.771 PM [lvl=3] __71-[EVEBusinessCardSocialCredentialManager fetchUserCardScanningEndDate:]_block_invoke <EDAMUserException: 0x160258170; errorCode = 7; parameter = User.id;>
+2016-05-04 3:56:36.822 PM [lvl=2] -[ENCacheManager checkFileSystemIntegrity] File system appears to be in good shape. expected=314, actual=473
+2016-05-04 3:56:36.829 PM [lvl=2] __83-[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:]_block_invoke_2 shared token not exist in service
+2016-05-04 3:56:36.831 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager setLinkedInConnectionLastQueriedDate:] linkedInConnectionLastQueriedDate:2016-03-05 5:55:51 PM +0000
+2016-05-04 3:56:36.832 PM [lvl=2] __83-[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:]_block_invoke revoked shared LI token from web, removed local cached token
+2016-05-04 3:56:36.842 PM [lvl=2] __39-[ENCacheManager recalculateStatistics]_block_invoke totalSize=2081808, cachedSize=2081808, uncachedSize=0
+2016-05-04 3:56:36.858 PM [lvl=2] __77-[ENCacheManager fetchNextBatchOfDownloadOperationsUsingBackgroundTransfers:]_block_invoke Processing 0 notes
+2016-05-04 3:56:37.126 PM [lvl=2] -[EVENoteViewController willMoveToParentViewController:] Resigning note view controller because it's moving to nil parent
+2016-05-04 3:56:37.126 PM [lvl=2] -[EVENoteViewController resignSavingChanges:completion:] Resigning note view controller, saving changes: 1
+2016-05-04 3:56:37.130 PM [lvl=2] -[EVENoteViewController(Editing) saveNoteExpungingResources:completionBlock:] Not saving note because no changes were detected and no resources to expunge
+2016-05-04 3:56:37.399 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:56:38.354 PM [lvl=2] __57-[ENPromosDataSource downloadLatestPromotionsIfNecessary]_block_invoke Promotions downloaded
+2016-05-04 3:56:38.963 PM [lvl=2] -[EVETSDEligibilityResult eligibleForDisplay] Not eligible for display because shouldShowTsd == 0
+2016-05-04 3:56:38.964 PM [lvl=2] -[EVETierSelectionDisplayController displayableTSDFromEligibilityResult:isAboutToBeDisplayed:withSuitableOverride:] Not displaying TSD. Eligibility result: {
+    accumulatedSessionNumber = 17;
+    consumed = 0;
+    expirationDate = "2016-05-05 10:56:33 PM +0000";
+    previousSessionCount = 0;
+    promotionIds =     (
+        "tierdisplay_ios",
+        "tierdisplay_shared"
+    );
+    shouldShowTsd = 0;
+    tsdTiming =     (
+        1
+    );
+    tsdType = 0;
+    tsdVariation = 0;
+}
+2016-05-04 3:56:38.965 PM [lvl=2] -[ENCartAbandonmentController checkShouldShowCartAbandonmentMessage] CA: checking...
+2016-05-04 3:56:39.126 PM [lvl=2] __68-[ENCartAbandonmentController checkShouldShowCartAbandonmentMessage]_block_invoke CA: not showing because no TSE happened recently between (-1209600.000000) and (-86400.000000)
+2016-05-04 3:56:44.841 PM [lvl=2] -[EVECameraViewController cancelAutoCaptureDueToInterventionFromSource:] Auto capture is canceled due to intervention from source: <EVECameraHUDButton: 0x1602136b0; baseClass = UIButton; frame = (315 0; 40 40); transform = [6.123233995736766e-17, 1, -1, 6.123233995736766e-17, 0, 0]; opaque = NO; layer = <CALayer: 0x15ee9b210>>
+2016-05-04 3:56:45.811 PM [lvl=2] -[EVECameraViewController cancelAutoCaptureDueToInterventionFromSource:] Auto capture is canceled due to intervention from source: <EVECameraHUDButton: 0x1602136b0; baseClass = UIButton; frame = (315 0; 40 40); transform = [6.123233995736766e-17, 1, -1, 6.123233995736766e-17, 0, 0]; opaque = NO; layer = <CALayer: 0x15ee9b210>>
+2016-05-04 3:56:49.666 PM [lvl=2] -[EVECameraViewController cancelAutoCaptureDueToInterventionFromSource:] Auto capture is canceled due to intervention from source: <EVECameraShutterButton: 0x16025f3d0; baseClass = UIButton; frame = (162.5 5; 50 50); opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x1607cb540>>
+2016-05-04 3:56:50.774 PM [lvl=3] void OutputTraceMsg(int, const char *, ...) EVEDelegateLogger: PageCam Locate time: 0.260412
+2016-05-04 3:56:52.093 PM [lvl=3] void OutputTraceMsg(int, const char *, ...) EVEDelegateLogger: PageCam Transform time: 1.317381
+2016-05-04 3:56:52.263 PM [lvl=3] void OutputTraceMsg(int, const char *, ...) EVEDelegateLogger: PageCam XML: <?xml version="1.0" encoding="UTF-8"?>
+<PageCamera ver="v.5.7.52">
+    <ProcType>Plain</ProcType>
+    <DocType>Unspecified</DocType>
+    <DocFeatures>
+        <DPI>245</DPI>
+        <TextType>Handwritten</TextType>
+        <ResFormat type="jpeg" x="400" y="137" s="10274"/>
+    </DocFeatures>
+    <Area>
+        <DocArea Conf="55" x0="0" y0="608" x1="2832" y1="608" x2="2832" y2="1584" x3="0" y3="1584"/>
+    </Area>
+    <Context>
+        <LensPosition>0.756863</LensPosition>
+        <WhiteBalance red="1.6259766" green="1" blue="2.5019531"/>
+        <Torch>0.150000</Torch>
+        <Flash>0</Flash>
+    </Context>
+</PageCamera>
+
+2016-05-04 3:56:54.382 PM [lvl=2] -[EVECameraViewController cancelAutoCaptureDueToInterventionFromSource:] Auto capture is canceled due to intervention from source: <UIButton: 0x160836c30; frame = (320 10; 40 40); opaque = NO; tintColor = UIDeviceWhiteColorSpace 1 1; layer = <CALayer: 0x15ee56090>>
+2016-05-04 3:56:54.540 PM [lvl=2] -[ENSyncEngine logNetworkStatus] reachability currentReachabilityStatus=WWAN
+2016-05-04 3:56:54.559 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:56:54.574 PM [lvl=2] -[ENSyncEngine _syncStarted] Sync started.
+2016-05-04 3:56:54.574 PM [lvl=2] __80-[ENSyncEngine syncIgnoringNetworkPreference:forcingAuthRefresh:localChangeIds:]_block_invoke.989 Contacting Evernote server...
+2016-05-04 3:56:54.581 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing personal account...
+2016-05-04 3:56:54.932 PM [lvl=2] __31-[ENSyncEngine serverSyncState]_block_invoke sessionCount=0
+2016-05-04 3:56:54.985 PM [lvl=2] -[ENSyncEngine isFullSyncRequiredWithServerWithServerSyncState:]   current update count: 26544
+2016-05-04 3:56:54.989 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 3:56:54.991 PM [lvl=2] -[ENSyncEngine(Searches) processLocalSearchChanges] Processing local search changes...
+2016-05-04 3:56:54.994 PM [lvl=2] -[ENSyncEngine(LinkedNotebooks) processLocalLinkedNotebookChanges] Processing local linked notebook changes...
+2016-05-04 3:56:54.996 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 3:56:54.998 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 3:56:55.001 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 3:56:55.003 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] 1 notes to update/create
+2016-05-04 3:56:55.029 PM [lvl=2] -[ENSyncEngine(Resources) updateServerResource:fromLocalResource:usingAlternateBackingFile:] adding resource (filename=Evernote Snapshot 20160504 35654 PM.png,mime=image/png,dataLength=137516) from path:/private/var/mobile/Containers/Shared/AppGroup/82ABE148-627B-49F4-89E7-58E0C859B059/Documents/www.evernote.com/955273/pending/B651BE23-CEB6-4FF6-91C3-EC4C7BBE9B66/5766FDEC-2482-4644-BE2B-F5391D2306CF.png
+2016-05-04 3:56:55.048 PM [lvl=2] __88-[ENSyncEngine(Notes) updateServerNoteFromLocalNoteWithID:resourceFileMap:attemptRetry:]_block_invoke.1346   adding note 'Snapshot from 300 Lakeside Dr in Oakland' to server
+2016-05-04 3:56:55.276 PM [lvl=2] -[EVETSDEligibilityResult eligibleForDisplay] Not eligible for display because shouldShowTsd == 0
+2016-05-04 3:56:55.277 PM [lvl=2] -[EVETierSelectionDisplayController displayableTSDFromEligibilityResult:isAboutToBeDisplayed:withSuitableOverride:] Not displaying TSD. Eligibility result: {
+    accumulatedSessionNumber = 17;
+    consumed = 0;
+    expirationDate = "2016-05-05 10:56:33 PM +0000";
+    previousSessionCount = 0;
+    promotionIds =     (
+        "tierdisplay_ios",
+        "tierdisplay_shared"
+    );
+    shouldShowTsd = 0;
+    tsdTiming =     (
+        1
+    );
+    tsdType = 0;
+    tsdVariation = 0;
+}
+2016-05-04 3:56:55.277 PM [lvl=2] -[EVEHomeViewController checkForCartAbandonmentIfNecessary] CA: not checking because last checked at 2016-05-04 10:56:38 PM +0000 (16.312263 ago).
+2016-05-04 3:56:55.946 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 3:56:55.992 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 3:56:56.024 PM [lvl=2] -[ENSyncEngine refreshUsageInfo] Updating usage info...
+2016-05-04 3:56:56.024 PM [lvl=2] __31-[ENSyncEngine serverSyncState]_block_invoke sessionCount=0
+2016-05-04 3:56:56.089 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing shared notes
+2016-05-04 3:56:56.092 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 3:56:56.093 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 3:56:56.094 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 3:56:56.096 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 3:56:56.097 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 3:56:56.100 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 3:56:56.103 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 3:56:56.104 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 3:56:56.105 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 3:56:56.106 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 3:56:56.108 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 3:56:56.110 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 3:56:56.114 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 3:56:56.115 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 3:56:56.116 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 3:56:56.117 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 3:56:56.118 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 3:56:56.121 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 3:56:56.124 PM [lvl=2] -[ENSyncEngine refreshUsageInfo] Updating usage info...
+2016-05-04 3:56:56.183 PM [lvl=2] -[ENAccountContext syncEngineDidStop:] 
+2016-05-04 3:56:56.185 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInConnectionLastQueriedDate] linkedInConnectionLastQueriedDate:2016-03-05 5:55:51 PM +0000
+2016-05-04 3:56:56.185 PM [lvl=2] __50-[ENGoogleCredentialManager fetchSharedAuthToken:]_block_invoke lastQueried >= userUpdated
+2016-05-04 3:56:56.185 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:] lastQueried >= userUpdated
+2016-05-04 3:56:56.186 PM [lvl=2] -[ENCacheManager startWithBackground:] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:56:56.189 PM [lvl=2] -[ENSyncEngine _syncStoppedWithErrors:] Sync complete. No errors.
+2016-05-04 3:56:56.261 PM [lvl=2] __39-[ENCacheManager recalculateStatistics]_block_invoke totalSize=2081808, cachedSize=2081808, uncachedSize=0
+2016-05-04 3:56:56.282 PM [lvl=2] __77-[ENCacheManager fetchNextBatchOfDownloadOperationsUsingBackgroundTransfers:]_block_invoke Processing 0 notes
+2016-05-04 3:56:56.804 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:57:11.666 PM [lvl=2] -[EVEAppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:] Received background push sync notification
+2016-05-04 3:57:11.667 PM [lvl=2] -[ENSyncEngine(Background) performBackgroundSyncForAccountID:pushedUpdateCount:completionHandler:] accountID=(null), updateCount=26546
+2016-05-04 3:57:11.668 PM [lvl=2] -[ENSyncEngine logNetworkStatus] reachability currentReachabilityStatus=WWAN
+2016-05-04 3:57:11.668 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:57:11.668 PM [lvl=2] -[ENSyncEngine _syncStarted] Sync started.
+2016-05-04 3:57:11.669 PM [lvl=2] -[ENSyncEngine(Background) performBackgroundSyncForAccountID:pushedUpdateCount:completionHandler:] updateCount=26546, lastSyncUpdateCount=26546
+2016-05-04 3:57:11.669 PM [lvl=2] -[ENAccountContext syncEngineDidStop:] 
+2016-05-04 3:57:11.669 PM [lvl=2] -[ENCacheManager startWithBackground:] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:57:11.670 PM [lvl=2] -[ENSyncEngine _syncStoppedWithErrors:] Sync complete. No errors.
+2016-05-04 3:57:11.670 PM [lvl=2] __98-[ENSyncEngine(Background) performBackgroundSyncForAccountID:pushedUpdateCount:completionHandler:]_block_invoke Invoking completionHandler with result: 1
+2016-05-04 3:57:11.672 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInConnectionLastQueriedDate] linkedInConnectionLastQueriedDate:2016-03-05 5:55:51 PM +0000
+2016-05-04 3:57:11.672 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:] lastQueried >= userUpdated
+2016-05-04 3:57:11.672 PM [lvl=2] __82-[EVEAppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]_block_invoke.2037 Push sync completed with fetch result: 1
+2016-05-04 3:57:11.674 PM [lvl=2] __50-[ENGoogleCredentialManager fetchSharedAuthToken:]_block_invoke lastQueried >= userUpdated
+2016-05-04 3:57:11.723 PM [lvl=2] __39-[ENCacheManager recalculateStatistics]_block_invoke totalSize=2081808, cachedSize=2081808, uncachedSize=0
+2016-05-04 3:57:11.750 PM [lvl=2] __77-[ENCacheManager fetchNextBatchOfDownloadOperationsUsingBackgroundTransfers:]_block_invoke Processing 0 notes
+2016-05-04 3:57:12.276 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:57:35.307 PM [lvl=3] -[EVEInAppPurchaseManager request:didFailWithError:] Product request: <SKProductsRequest: 0x16039d870> failed with error: Error Domain=NSURLErrorDomain Code=-1001 "Cannot connect to iTunes Store" UserInfo={NSLocalizedDescription=Cannot connect to iTunes Store, NSErrorFailingURLStringKey=https://itunes.apple.com/WebObjects/MZStore.woa/wa/fetchSoftwareAddOns?appAdamId=281796108&sfId=143441-1,29%20ab:c64SxcB2&appExtVrsId=816977811&bvrs=344693&offerNames=premium_1mon_2015_iOS_Evernote,premium_1mon_2015_iOS_GBP,premium_1mon_2015_iOS_HKD,premium_1mon_2015_iOS_IDR,premium_1mon_2015_iOS_ILS,premium_1mon_2015_iOS_INR,premium_1mon_2015_iOS_JPY,premium_1mon_2015_iOS_MXN,premium_1mon_2015_iOS_NOK,premium_1mon_2015_iOS_NZD,premium_1mon_2015_iOS_RUB,premium_1mon_2015_iOS_SAR,premium_1mon_2015_iOS_SEK,premium_1mon_2015_iOS_SGD,premium_1mon_2015_iOS_TRY,premium_1mon_2015_iOS_TWD,premium_1mon_2015_iOS_USD,premium_1mon_2015_iOS_ZAR,premium_1year_2015_iOS_AED,premium_1year_2015_iOS_AUD,premium_1year_2015_iOS_CAD,premium_1year_2015_iOS_CHF,premium_1year_2015_iOS_DKK,premium_1year_2015_iOS_EUR&bid=com.evernote.iPhone.Evernote&icuLocale=en_US, NSErrorFailingURLKey=https://itunes.apple.com/WebObjects/MZStore.woa/wa/fetchSoftwareAddOns?appAdamId=281796108&sfId=143441-1,29%20ab:c64SxcB2&appExtVrsId=816977811&bvrs=344693&offerNames=premium_1mon_2015_iOS_Evernote,premium_1mon_2015_iOS_GBP,premium_1mon_2015_iOS_HKD,premium_1mon_2015_iOS_IDR,premium_1mon_2015_iOS_ILS,premium_1mon_2015_iOS_INR,premium_1mon_2015_iOS_JPY,premium_1mon_2015_iOS_MXN,premium_1mon_2015_iOS_NOK,premium_1mon_2015_iOS_NZD,premium_1mon_2015_iOS_RUB,premium_1mon_2015_iOS_SAR,premium_1mon_2015_iOS_SEK,premium_1mon_2015_iOS_SGD,premium_1mon_2015_iOS_TRY,premium_1mon_2015_iOS_TWD,premium_1mon_2015_iOS_USD,premium_1mon_2015_iOS_ZAR,premium_1year_2015_iOS_AED,premium_1year_2015_iOS_AUD,premium_1year_2015_iOS_CAD,premium_1year_2015_iOS_CHF,premium_1year_2015_iOS_DKK,premium_1year_2015_iOS_EUR&bid=com.evernote.iPhone.Evernote&icuLocale=en_US, _kCFStreamErrorDomainKey=4, _kCFStreamErrorCodeKey=-2102, NSUnderlyingError=0x15eef4730 {Error Domain=kCFErrorDomainCFNetwork Code=-1001 "The request timed out." UserInfo={NSErrorFailingURLStringKey=https://itunes.apple.com/WebObjects/MZStore.woa/wa/fetchSoftwareAddOns?appAdamId=281796108&sfId=143441-1,29%20ab:c64SxcB2&appExtVrsId=816977811&bvrs=344693&offerNames=premium_1mon_2015_iOS_Evernote,premium_1mon_2015_iOS_GBP,premium_1mon_2015_iOS_HKD,premium_1mon_2015_iOS_IDR,premium_1mon_2015_iOS_ILS,premium_1mon_2015_iOS_INR,premium_1mon_2015_iOS_JPY,premium_1mon_2015_iOS_MXN,premium_1mon_2015_iOS_NOK,premium_1mon_2015_iOS_NZD,premium_1mon_2015_iOS_RUB,premium_1mon_2015_iOS_SAR,premium_1mon_2015_iOS_SEK,premium_1mon_2015_iOS_SGD,premium_1mon_2015_iOS_TRY,premium_1mon_2015_iOS_TWD,premium_1mon_2015_iOS_USD,premium_1mon_2015_iOS_ZAR,premium_1year_2015_iOS_AED,premium_1year_2015_iOS_AUD,premium_1year_2015_iOS_CAD,premium_1year_2015_iOS_CHF,premium_1year_2015_iOS_DKK,premium_1year_2015_iOS_EUR&bid=com.evernote.iPhone.Evernote&icuLocale=en_US, NSErrorFailingURLKey=https://itunes.apple.com/WebObjects/MZStore.woa/wa/fetchSoftwareAddOns?appAdamId=281796108&sfId=143441-1,29%20ab:c64SxcB2&appExtVrsId=816977811&bvrs=344693&offerNames=premium_1mon_2015_iOS_Evernote,premium_1mon_2015_iOS_GBP,premium_1mon_2015_iOS_HKD,premium_1mon_2015_iOS_IDR,premium_1mon_2015_iOS_ILS,premium_1mon_2015_iOS_INR,premium_1mon_2015_iOS_JPY,premium_1mon_2015_iOS_MXN,premium_1mon_2015_iOS_NOK,premium_1mon_2015_iOS_NZD,premium_1mon_2015_iOS_RUB,premium_1mon_2015_iOS_SAR,premium_1mon_2015_iOS_SEK,premium_1mon_2015_iOS_SGD,premium_1mon_2015_iOS_TRY,premium_1mon_2015_iOS_TWD,premium_1mon_2015_iOS_USD,premium_1mon_2015_iOS_ZAR,premium_1year_2015_iOS_AED,premium_1year_2015_iOS_AUD,premium_1year_2015_iOS_CAD,premium_1year_2015_iOS_CHF,premium_1year_2015_iOS_DKK,premium_1year_2015_iOS_EUR&bid=com.evernote.iPhone.Evernote&icuLocale=en_US, _kCFStreamErrorCodeKey=-2102, _kCFStreamErrorDomainKey=4, NSLocalizedDescription=The request timed out.}}}
+2016-05-04 3:57:51.717 PM [lvl=2] -[EVEAppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:] Received background push sync notification
+2016-05-04 3:57:51.717 PM [lvl=2] -[ENSyncEngine(Background) performBackgroundSyncForAccountID:pushedUpdateCount:completionHandler:] accountID=(null), updateCount=26547
+2016-05-04 3:57:51.719 PM [lvl=2] -[ENSyncEngine logNetworkStatus] reachability currentReachabilityStatus=WWAN
+2016-05-04 3:57:51.721 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:57:51.722 PM [lvl=2] -[ENSyncEngine _syncStarted] Sync started.
+2016-05-04 3:57:51.722 PM [lvl=2] -[ENSyncEngine isFullSyncRequiredWithServerWithServerSyncState:]   current update count: 26546
+2016-05-04 3:57:51.967 PM [lvl=2] __43-[EDAMHTTPOperation prepareDownloadSession]_block_invoke_2 Total number of download tasks : 1
+2016-05-04 3:57:51.968 PM [lvl=2] __43-[EDAMHTTPOperation prepareDownloadSession]_block_invoke_3 Data tasks : 0, Upload tasks : 0, Download tasks : 1
+2016-05-04 3:57:52.756 PM [lvl=2] -[TSessionHTTPClient URLSession:downloadTask:didFinishDownloadingToURL:] Received 329 bytes of data for session: com.evernote.EDAMHTTPClient.session.syncChunk
+2016-05-04 3:57:52.758 PM [lvl=2] -[TSessionHTTPClient URLSession:task:didCompleteWithError:] Session completed task : <__NSURLBackgroundSession: 0x160287a20>
+2016-05-04 3:57:52.782 PM [lvl=2] -[ENAccountContext syncEngineDidStop:] 
+2016-05-04 3:57:52.782 PM [lvl=2] -[ENCacheManager startWithBackground:] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:57:52.783 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInConnectionLastQueriedDate] linkedInConnectionLastQueriedDate:2016-03-05 5:55:51 PM +0000
+2016-05-04 3:57:52.783 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:] lastQueried >= userUpdated
+2016-05-04 3:57:52.784 PM [lvl=2] -[ENSyncEngine _syncStoppedWithErrors:] Sync complete. No errors.
+2016-05-04 3:57:52.784 PM [lvl=2] __50-[ENGoogleCredentialManager fetchSharedAuthToken:]_block_invoke lastQueried >= userUpdated
+2016-05-04 3:57:52.786 PM [lvl=2] __98-[ENSyncEngine(Background) performBackgroundSyncForAccountID:pushedUpdateCount:completionHandler:]_block_invoke Invoking completionHandler with result: 0
+2016-05-04 3:57:52.794 PM [lvl=2] __82-[EVEAppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]_block_invoke.2037 Push sync completed with fetch result: 0
+2016-05-04 3:57:52.815 PM [lvl=2] -[ENCacheManager checkFileSystemIntegrity] File system appears to be in good shape. expected=314, actual=474
+2016-05-04 3:57:52.839 PM [lvl=2] __39-[ENCacheManager recalculateStatistics]_block_invoke totalSize=2081808, cachedSize=2081808, uncachedSize=0
+2016-05-04 3:57:52.857 PM [lvl=2] __77-[ENCacheManager fetchNextBatchOfDownloadOperationsUsingBackgroundTransfers:]_block_invoke Processing 0 notes
+2016-05-04 3:57:53.377 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 3:59:37.426 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:19.463 PM [lvl=2] -[ENSyncEngine logNetworkStatus] reachability currentReachabilityStatus=WWAN
+2016-05-04 4:35:19.466 PM [lvl=2] -[ENCoreMessageSyncEngine considerSyncingViaNoteStoreWithCompletion:] Message sync already in progress
+2016-05-04 4:35:19.467 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:19.468 PM [lvl=2] -[ENSyncEngine _syncStarted] Sync started.
+2016-05-04 4:35:19.468 PM [lvl=2] __80-[ENSyncEngine syncIgnoringNetworkPreference:forcingAuthRefresh:localChangeIds:]_block_invoke.989 Contacting Evernote server...
+2016-05-04 4:35:19.471 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing personal account...
+2016-05-04 4:35:19.881 PM [lvl=2] __31-[ENSyncEngine serverSyncState]_block_invoke sessionCount=3
+2016-05-04 4:35:19.933 PM [lvl=2] -[ENSyncEngine refreshUserInfo] Updating user info...
+2016-05-04 4:35:19.993 PM [lvl=2] -[ENAccountLimits rebuildFeatureMapWithUser:] Updating features based on service level: 1
+2016-05-04 4:35:19.993 PM [lvl=2] -[ENAccountLimits rebuildSizeMapWithUser:] Updating size limits based on service level: 1
+2016-05-04 4:35:19.994 PM [lvl=2] -[ENUser updateWithEDAMUserObject:edamSubscriptionInfo:serviceLevelLimits:isCached:] User Service Level is Evernote Basic
+2016-05-04 4:35:19.995 PM [lvl=2] -[ENSyncEngine updatePremiumCommerceWithUserInfo:] Can show in-app purchasing: 1, eligible services: {(
+    3,
+    2
+)}
+2016-05-04 4:35:19.998 PM [lvl=2] -[ENSyncEngine isFullSyncRequiredWithServerWithServerSyncState:]   current update count: 26547
+2016-05-04 4:35:20.009 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing shared notes
+2016-05-04 4:35:20.014 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:20.015 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:20.016 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:20.017 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:20.019 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:20.021 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:20.025 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:20.026 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:20.027 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:20.028 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:20.029 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:20.032 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:20.035 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:20.036 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:20.037 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:20.038 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:20.040 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:20.042 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:20.045 PM [lvl=2] -[ENSyncEngine refreshUsageInfo] Updating usage info...
+2016-05-04 4:35:20.098 PM [lvl=2] -[ENAccountContext syncEngineDidStop:] 
+2016-05-04 4:35:20.099 PM [lvl=2] -[ENCacheManager startWithBackground:] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:20.100 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInConnectionLastQueriedDate] linkedInConnectionLastQueriedDate:2016-03-05 5:55:51 PM +0000
+2016-05-04 4:35:20.101 PM [lvl=2] __50-[ENGoogleCredentialManager fetchSharedAuthToken:]_block_invoke lastQueried >= userUpdated
+2016-05-04 4:35:20.102 PM [lvl=2] -[ENSyncEngine _syncStoppedWithErrors:] Sync complete. No errors.
+2016-05-04 4:35:20.132 PM [lvl=2] -[ENCacheManager checkFileSystemIntegrity] File system appears to be in good shape. expected=314, actual=474
+2016-05-04 4:35:20.152 PM [lvl=2] __39-[ENCacheManager recalculateStatistics]_block_invoke totalSize=2081808, cachedSize=2081808, uncachedSize=0
+2016-05-04 4:35:20.176 PM [lvl=3] __71-[EVEBusinessCardSocialCredentialManager fetchUserCardScanningEndDate:]_block_invoke <EDAMUserException: 0x160a57c50; errorCode = 7; parameter = User.id;>
+2016-05-04 4:35:20.186 PM [lvl=2] __77-[ENCacheManager fetchNextBatchOfDownloadOperationsUsingBackgroundTransfers:]_block_invoke Processing 0 notes
+2016-05-04 4:35:20.226 PM [lvl=2] __83-[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:]_block_invoke_2 shared token not exist in service
+2016-05-04 4:35:20.228 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager setLinkedInConnectionLastQueriedDate:] linkedInConnectionLastQueriedDate:2016-05-04 10:56:54 PM +0000
+2016-05-04 4:35:20.228 PM [lvl=2] __83-[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:]_block_invoke revoked shared LI token from web, removed local cached token
+2016-05-04 4:35:20.670 PM [lvl=2] -[EVEAppBadgingHandler rebuildBadgeWithMessageCount:] Setting app badge number to unread thread count: 0
+2016-05-04 4:35:20.725 PM [lvl=2] -[ENSyncEngine logNetworkStatus] reachability currentReachabilityStatus=WWAN
+2016-05-04 4:35:20.728 PM [lvl=2] -[ENCoreMessageSyncEngine considerSyncingViaNoteStoreWithCompletion:] Message sync already in progress
+2016-05-04 4:35:20.731 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:20.732 PM [lvl=2] -[ENSyncEngine _syncStarted] Sync started.
+2016-05-04 4:35:20.733 PM [lvl=2] __80-[ENSyncEngine syncIgnoringNetworkPreference:forcingAuthRefresh:localChangeIds:]_block_invoke.989 Contacting Evernote server...
+2016-05-04 4:35:20.733 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing personal account...
+2016-05-04 4:35:20.735 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:20.847 PM [lvl=2] __31-[ENSyncEngine serverSyncState]_block_invoke sessionCount=0
+2016-05-04 4:35:20.911 PM [lvl=2] -[ENSyncEngine isFullSyncRequiredWithServerWithServerSyncState:]   current update count: 26547
+2016-05-04 4:35:20.922 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing shared notes
+2016-05-04 4:35:20.925 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:20.926 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:20.928 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:20.929 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:20.931 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:20.934 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:20.938 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:20.939 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:20.939 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:20.940 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:20.942 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:20.944 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:20.948 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:20.949 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:20.950 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:20.951 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:20.952 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:20.955 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:20.958 PM [lvl=2] -[ENSyncEngine refreshUsageInfo] Updating usage info...
+2016-05-04 4:35:21.007 PM [lvl=2] -[ENAccountContext syncEngineDidStop:] 
+2016-05-04 4:35:21.008 PM [lvl=2] -[ENCacheManager startWithBackground:] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:21.009 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInConnectionLastQueriedDate] linkedInConnectionLastQueriedDate:2016-05-04 10:56:54 PM +0000
+2016-05-04 4:35:21.009 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:] lastQueried >= userUpdated
+2016-05-04 4:35:21.010 PM [lvl=2] -[ENSyncEngine _syncStoppedWithErrors:] Sync complete. No errors.
+2016-05-04 4:35:21.009 PM [lvl=2] __50-[ENGoogleCredentialManager fetchSharedAuthToken:]_block_invoke lastQueried >= userUpdated
+2016-05-04 4:35:21.039 PM [lvl=2] __39-[ENCacheManager recalculateStatistics]_block_invoke totalSize=2081808, cachedSize=2081808, uncachedSize=0
+2016-05-04 4:35:21.055 PM [lvl=2] __77-[ENCacheManager fetchNextBatchOfDownloadOperationsUsingBackgroundTransfers:]_block_invoke Processing 0 notes
+2016-05-04 4:35:21.568 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:22.365 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:24.713 PM [lvl=2] -[ENSyncEngine logNetworkStatus] reachability currentReachabilityStatus=WWAN
+2016-05-04 4:35:24.715 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:24.715 PM [lvl=2] -[ENSyncEngine _syncStarted] Sync started.
+2016-05-04 4:35:24.715 PM [lvl=2] __80-[ENSyncEngine syncIgnoringNetworkPreference:forcingAuthRefresh:localChangeIds:]_block_invoke.989 Contacting Evernote server...
+2016-05-04 4:35:24.723 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing personal account...
+2016-05-04 4:35:24.978 PM [lvl=2] __31-[ENSyncEngine serverSyncState]_block_invoke sessionCount=0
+2016-05-04 4:35:25.036 PM [lvl=2] -[ENSyncEngine isFullSyncRequiredWithServerWithServerSyncState:]   current update count: 26547
+2016-05-04 4:35:25.046 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing shared notes
+2016-05-04 4:35:25.050 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:25.052 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:25.053 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:25.054 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:25.056 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:25.059 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:25.063 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:25.064 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:25.065 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:25.067 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:25.069 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:25.072 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:25.076 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:25.077 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:25.079 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:25.080 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:25.081 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:25.084 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:25.090 PM [lvl=2] -[ENSyncEngine refreshUsageInfo] Updating usage info...
+2016-05-04 4:35:25.138 PM [lvl=2] -[ENAccountContext syncEngineDidStop:] 
+2016-05-04 4:35:25.138 PM [lvl=2] -[ENCacheManager startWithBackground:] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:25.139 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInConnectionLastQueriedDate] linkedInConnectionLastQueriedDate:2016-05-04 10:56:54 PM +0000
+2016-05-04 4:35:25.139 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:] lastQueried >= userUpdated
+2016-05-04 4:35:25.140 PM [lvl=2] __50-[ENGoogleCredentialManager fetchSharedAuthToken:]_block_invoke lastQueried >= userUpdated
+2016-05-04 4:35:25.140 PM [lvl=2] -[ENSyncEngine _syncStoppedWithErrors:] Sync complete. No errors.
+2016-05-04 4:35:25.171 PM [lvl=2] __39-[ENCacheManager recalculateStatistics]_block_invoke totalSize=2081808, cachedSize=2081808, uncachedSize=0
+2016-05-04 4:35:25.187 PM [lvl=2] __77-[ENCacheManager fetchNextBatchOfDownloadOperationsUsingBackgroundTransfers:]_block_invoke Processing 0 notes
+2016-05-04 4:35:25.281 PM [lvl=2] -[EVEAppBadgingHandler rebuildBadgeWithMessageCount:] Setting app badge number to unread thread count: 0
+2016-05-04 4:35:25.326 PM [lvl=2] -[ENSyncEngine logNetworkStatus] reachability currentReachabilityStatus=WWAN
+2016-05-04 4:35:25.328 PM [lvl=2] -[ENCoreMessageSyncEngine considerSyncingViaNoteStoreWithCompletion:] Message sync already in progress
+2016-05-04 4:35:25.328 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:25.329 PM [lvl=2] -[ENSyncEngine _syncStarted] Sync started.
+2016-05-04 4:35:25.329 PM [lvl=2] __80-[ENSyncEngine syncIgnoringNetworkPreference:forcingAuthRefresh:localChangeIds:]_block_invoke.989 Contacting Evernote server...
+2016-05-04 4:35:25.329 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing personal account...
+2016-05-04 4:35:25.357 PM [lvl=2] __31-[ENSyncEngine serverSyncState]_block_invoke sessionCount=0
+2016-05-04 4:35:25.410 PM [lvl=2] -[ENSyncEngine isFullSyncRequiredWithServerWithServerSyncState:]   current update count: 26547
+2016-05-04 4:35:25.419 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing shared notes
+2016-05-04 4:35:25.423 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:25.424 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:25.425 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:25.426 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:25.427 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:25.431 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:25.435 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:25.437 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:25.438 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:25.439 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:25.440 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:25.444 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:25.447 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:25.448 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:25.449 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:25.451 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:25.452 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:25.455 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:25.459 PM [lvl=2] -[ENSyncEngine refreshUsageInfo] Updating usage info...
+2016-05-04 4:35:25.572 PM [lvl=2] -[ENAccountContext syncEngineDidStop:] 
+2016-05-04 4:35:25.572 PM [lvl=2] -[ENCacheManager startWithBackground:] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:25.573 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInConnectionLastQueriedDate] linkedInConnectionLastQueriedDate:2016-05-04 10:56:54 PM +0000
+2016-05-04 4:35:25.573 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:] lastQueried >= userUpdated
+2016-05-04 4:35:25.574 PM [lvl=2] __50-[ENGoogleCredentialManager fetchSharedAuthToken:]_block_invoke lastQueried >= userUpdated
+2016-05-04 4:35:25.574 PM [lvl=2] -[ENSyncEngine _syncStoppedWithErrors:] Sync complete. No errors.
+2016-05-04 4:35:25.609 PM [lvl=2] __39-[ENCacheManager recalculateStatistics]_block_invoke totalSize=2081808, cachedSize=2081808, uncachedSize=0
+2016-05-04 4:35:25.626 PM [lvl=2] __77-[ENCacheManager fetchNextBatchOfDownloadOperationsUsingBackgroundTransfers:]_block_invoke Processing 0 notes
+2016-05-04 4:35:25.734 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:26.176 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:27.894 PM [lvl=2] -[EVETSDEligibilityResult eligibleForDisplay] Not eligible for display because shouldShowTsd == 0
+2016-05-04 4:35:27.895 PM [lvl=2] -[EVETierSelectionDisplayController displayableTSDFromEligibilityResult:isAboutToBeDisplayed:withSuitableOverride:] Not displaying TSD. Eligibility result: {
+    accumulatedSessionNumber = 20;
+    consumed = 0;
+    expirationDate = "2016-05-05 10:56:33 PM +0000";
+    previousSessionCount = 0;
+    promotionIds =     (
+        "tierdisplay_ios",
+        "tierdisplay_shared"
+    );
+    shouldShowTsd = 0;
+    tsdTiming =     (
+        1
+    );
+    tsdType = 0;
+    tsdVariation = 0;
+}
+2016-05-04 4:35:28.568 PM [lvl=2] -[EVEEditableWebView lastChanged] Tried to lastChanged, but content isn't ready yet!
+2016-05-04 4:35:28.571 PM [lvl=2] -[EVENoteViewController(Editing) saveNoteExpungingResources:completionBlock:] Not saving note changes because it doesn't appear note content is loaded
+2016-05-04 4:35:28.582 PM [lvl=2] -[EVENoteWebView removeSearchTermHighlights] Tried to removeSearchTermHighlights, but content isn't ready yet!
+2016-05-04 4:35:28.594 PM [lvl=2] -[EVEEditableWebView lastChanged] Tried to lastChanged, but content isn't ready yet!
+2016-05-04 4:35:28.595 PM [lvl=2] -[EVENoteViewController(Editing) saveNoteExpungingResources:completionBlock:] Not saving note changes because it doesn't appear note content is loaded
+2016-05-04 4:35:28.595 PM [lvl=2] -[EVENoteWebView removeSearchTermHighlights] Tried to removeSearchTermHighlights, but content isn't ready yet!
+2016-05-04 4:35:28.597 PM [lvl=2] -[EVEEditableWebView lastChanged] Tried to lastChanged, but content isn't ready yet!
+2016-05-04 4:35:28.598 PM [lvl=2] -[EVENoteViewController(Editing) saveNoteExpungingResources:completionBlock:] Not saving note changes because it doesn't appear note content is loaded
+2016-05-04 4:35:28.598 PM [lvl=2] -[EVENoteWebView removeSearchTermHighlights] Tried to removeSearchTermHighlights, but content isn't ready yet!
+2016-05-04 4:35:28.666 PM [lvl=2] -[EVENoteWebView removeSearchTermHighlights] Tried to removeSearchTermHighlights, but content isn't ready yet!
+2016-05-04 4:35:28.831 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 4:35:28.831 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 4:35:28.831 PM [lvl=2] -[EVENoteWebView updateTintColor] Tried to updateTintColor, but content isn't ready yet!
+2016-05-04 4:35:28.831 PM [lvl=2] -[EVENoteWebView updateTintColor] Tried to updateTintColor, but content isn't ready yet!
+2016-05-04 4:35:28.831 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 4:35:28.832 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 4:35:28.832 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 4:35:28.832 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 4:35:28.845 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 4:35:28.845 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 4:35:28.928 PM [lvl=2] -[EVEEditableWebView effectiveContentSize] Tried to effectiveContentSize, but content isn't ready yet!
+2016-05-04 4:35:28.928 PM [lvl=2] -[EVEEditableWebView setVisibleFrame:] Tried to setVisibleFrame:, but content isn't ready yet!
+2016-05-04 4:35:28.933 PM [lvl=2] -[EVENoteWebView(Attachments) attachmentIDs] Tried to attachmentIDs, but content isn't ready yet!
+2016-05-04 4:35:47.364 PM [lvl=2] -[EVESharedNoteURLActivityItemProvider item] existing sharedNoteURL=(null)
+2016-05-04 4:35:47.373 PM [lvl=2] -[EVESharedNoteURLActivityItemProvider item] semaphore_wait
+2016-05-04 4:35:47.400 PM [lvl=2] -[ENSyncEngine logNetworkStatus] reachability currentReachabilityStatus=WWAN
+2016-05-04 4:35:47.403 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:47.403 PM [lvl=2] -[ENSyncEngine _syncStarted] Sync started.
+2016-05-04 4:35:47.403 PM [lvl=2] __80-[ENSyncEngine syncIgnoringNetworkPreference:forcingAuthRefresh:localChangeIds:]_block_invoke.989 Contacting Evernote server...
+2016-05-04 4:35:47.404 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing personal account...
+2016-05-04 4:35:48.331 PM [lvl=2] __66-[ENNoteSharingOperation startSharingNoteWithID:guid:usingClient:]_block_invoke note shared ok c896aa62-a412-468a-a549-e8bec0e9bfe2
+2016-05-04 4:35:48.388 PM [lvl=2] __66-[ENNoteSharingOperation startSharingNoteWithID:guid:usingClient:]_block_invoke usn=26548 sharedDate=2016-05-04 11:35:47 PM +0000
+2016-05-04 4:35:48.437 PM [lvl=2] -[EVESharedNoteURLActivityItemProvider syncEngineDidGenerateShareKey:] 
+2016-05-04 4:35:48.437 PM [lvl=2] -[EVESharedNoteURLActivityItemProvider syncEngineDidGenerateShareKey:] found target note
+2016-05-04 4:35:48.439 PM [lvl=2] -[EVESharedNoteURLActivityItemProvider syncEngineDidGenerateShareKey:] url=https://www.evernote.com/shard/s7/sh/c896aa62-a412-468a-a549-e8bec0e9bfe2/bf8ef48e989fc5122b146babe7ecc066
+2016-05-04 4:35:48.444 PM [lvl=2] __31-[ENSyncEngine serverSyncState]_block_invoke sessionCount=0
+2016-05-04 4:35:48.489 PM [lvl=2] -[ENSyncEngine isFullSyncRequiredWithServerWithServerSyncState:]   current update count: 26547
+2016-05-04 4:35:48.490 PM [lvl=2] -[ENSyncEngine _syncServerChanges] [serverSyncState updateCount]=26548, self.currentSyncUpdateCount=26547
+2016-05-04 4:35:48.492 PM [lvl=2] -[ENSyncEngine(ChunkDownloader) syncChunkDownloaderWithFullSyncAtUSN:incrementalSyncAtUSN:chunkSize:] incrementalSyncAtUSN=26547, fullSyncAtUSN=26547
+2016-05-04 4:35:48.560 PM [lvl=2] -[ENSyncEngine(Notes) syncNotes:retryOnError:ignoreClientUUIDs:] Syncing 1 notes...
+2016-05-04 4:35:48.588 PM [lvl=2] -[EVESharedNoteURLActivityItemProvider item] generated sharedNoteURL=https://www.evernote.com/shard/s7/sh/c896aa62-a412-468a-a549-e8bec0e9bfe2/bf8ef48e989fc5122b146babe7ecc066
+2016-05-04 4:35:48.623 PM [lvl=2] -[ENSyncEngine _synchronizeAccountsWithIds:processServerChanges:processLocalChanges:] Synchronizing shared notes
+2016-05-04 4:35:48.626 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:48.628 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:48.628 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:48.630 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:48.631 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:48.634 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:48.639 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:48.640 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:48.641 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:48.642 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:48.643 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:48.645 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:48.650 PM [lvl=2] -[ENSyncEngine(Tags) processLocalTagChanges] Processing local tag changes...
+2016-05-04 4:35:48.651 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookChanges] Processing local notebook changes...
+2016-05-04 4:35:48.652 PM [lvl=2] -[ENSyncEngine(SharedNotebooks) processLocalSharedNotebookChanges] Processing local shared notebook changes...
+2016-05-04 4:35:48.653 PM [lvl=2] -[ENSyncEngine(Notes) processLocalNoteChanges] Processing local note changes...
+2016-05-04 4:35:48.655 PM [lvl=2] -[ENSyncEngine(Resources) processLocalResourceChanges] Processing local resource changes...
+2016-05-04 4:35:48.657 PM [lvl=2] -[ENSyncEngine(Notebooks) processLocalNotebookExpungements] Processing local notebook expungements...
+2016-05-04 4:35:48.661 PM [lvl=2] -[ENSyncEngine refreshUsageInfo] Updating usage info...
+2016-05-04 4:35:48.716 PM [lvl=2] -[ENAccountContext syncEngineDidStop:] 
+2016-05-04 4:35:48.717 PM [lvl=2] -[ENCacheManager startWithBackground:] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:35:48.718 PM [lvl=2] __50-[ENGoogleCredentialManager fetchSharedAuthToken:]_block_invoke lastQueried >= userUpdated
+2016-05-04 4:35:48.718 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInConnectionLastQueriedDate] linkedInConnectionLastQueriedDate:2016-05-04 10:56:54 PM +0000
+2016-05-04 4:35:48.718 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:] lastQueried >= userUpdated
+2016-05-04 4:35:48.718 PM [lvl=2] -[ENSyncEngine _syncStoppedWithErrors:] Sync complete. No errors.
+2016-05-04 4:35:48.750 PM [lvl=2] __39-[ENCacheManager recalculateStatistics]_block_invoke totalSize=2081808, cachedSize=2081808, uncachedSize=0
+2016-05-04 4:35:48.769 PM [lvl=2] __77-[ENCacheManager fetchNextBatchOfDownloadOperationsUsingBackgroundTransfers:]_block_invoke Processing 0 notes
+2016-05-04 4:35:49.287 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:36:05.623 PM [lvl=2] -[EVESharedNoteURLActivityItemProvider item] existing sharedNoteURL=https://www.evernote.com/shard/s7/sh/c896aa62-a412-468a-a549-e8bec0e9bfe2/bf8ef48e989fc5122b146babe7ecc066
+2016-05-04 4:36:06.939 PM [lvl=2] -[EVEAppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:] Received background push sync notification
+2016-05-04 4:36:06.940 PM [lvl=2] -[ENSyncEngine(Background) performBackgroundSyncForAccountID:pushedUpdateCount:completionHandler:] accountID=(null), updateCount=26548
+2016-05-04 4:36:06.941 PM [lvl=2] -[ENSyncEngine logNetworkStatus] reachability currentReachabilityStatus=WWAN
+2016-05-04 4:36:06.942 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:36:06.942 PM [lvl=2] -[ENSyncEngine _syncStarted] Sync started.
+2016-05-04 4:36:06.942 PM [lvl=2] -[ENSyncEngine(Background) performBackgroundSyncForAccountID:pushedUpdateCount:completionHandler:] updateCount=26548, lastSyncUpdateCount=26548
+2016-05-04 4:36:06.943 PM [lvl=2] -[ENAccountContext syncEngineDidStop:] 
+2016-05-04 4:36:06.943 PM [lvl=2] __50-[ENGoogleCredentialManager fetchSharedAuthToken:]_block_invoke lastQueried >= userUpdated
+2016-05-04 4:36:06.943 PM [lvl=2] -[ENCacheManager startWithBackground:] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:36:06.946 PM [lvl=2] -[ENSyncEngine _syncStoppedWithErrors:] Sync complete. No errors.
+2016-05-04 4:36:06.946 PM [lvl=2] __98-[ENSyncEngine(Background) performBackgroundSyncForAccountID:pushedUpdateCount:completionHandler:]_block_invoke Invoking completionHandler with result: 1
+2016-05-04 4:36:06.950 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager linkedInConnectionLastQueriedDate] linkedInConnectionLastQueriedDate:2016-05-04 10:56:54 PM +0000
+2016-05-04 4:36:06.950 PM [lvl=2] -[EVEBusinessCardSocialCredentialManager fetchSharedLinkedInCredentialIfNecessary:] lastQueried >= userUpdated
+2016-05-04 4:36:06.957 PM [lvl=2] __82-[EVEAppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]_block_invoke.2037 Push sync completed with fetch result: 1
+2016-05-04 4:36:06.987 PM [lvl=2] __39-[ENCacheManager recalculateStatistics]_block_invoke totalSize=2081808, cachedSize=2081808, uncachedSize=0
+2016-05-04 4:36:07.006 PM [lvl=2] __77-[ENCacheManager fetchNextBatchOfDownloadOperationsUsingBackgroundTransfers:]_block_invoke Processing 0 notes
+2016-05-04 4:36:07.552 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>
+2016-05-04 4:36:44.679 PM [lvl=2] -[EVENoteViewController applicationWillResignActive:] Not saving note when application is resigning being active because it's either not editable or has no user-made changes (Existing note (evernotecid://2469044D-762E-4C34-AD45-671C16ABF2D0/ENNote/p1633))
+2016-05-04 4:36:45.476 PM [lvl=2] -[ENCacheManager stop] self=<ENCacheManager: 0x15ef9ca20>

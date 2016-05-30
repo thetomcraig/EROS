@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>children</key>
+		<array>
+			<dict>
+				<key>children</key>
+				<array>
+					<dict>
+						<key>title</key>
+						<string>Hidden Brain</string>
+						<key>uuid</key>
+						<string>B8FDDD2A-EDE8-4D02-9BD3-546FF6DE01DD</string>
+					</dict>
+					<dict>
+						<key>title</key>
+						<string>Planet Money</string>
+						<key>uuid</key>
+						<string>8B4D4AC6-F44F-4D07-8012-1CE8F8344C14</string>
+					</dict>
+					<dict>
+						<key>title</key>
+						<string>TekThing</string>
+						<key>uuid</key>
+						<string>9188E79C-18D2-4072-942B-29705F8200C3</string>
+					</dict>
+					<dict>
+						<key>title</key>
+						<string>10% Happier with Dan Harris</string>
+						<key>uuid</key>
+						<string>2DE7EE70-48A6-4A94-94ED-BA1C3D74B11B</string>
+					</dict>
+					<dict>
+						<key>title</key>
+						<string>Serial</string>
+						<key>uuid</key>
+						<string>E2396ECA-62D6-4537-9A3C-DCF5D2E53014</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>My Podcasts</string>
+				<key>uuid</key>
+				<string>Podcasts</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>My Stations</string>
+				<key>uuid</key>
+				<string>Stations</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>Root</string>
+		<key>uuid</key>
+		<string>A269CA89-DCEF-4401-967E-FBCF3221F439</string>
+	</dict>
+</array>
+</plist>

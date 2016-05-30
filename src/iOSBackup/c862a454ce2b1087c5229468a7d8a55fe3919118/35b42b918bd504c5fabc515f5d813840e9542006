@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-05-06T07:08:15Z</date>
+	<key>Entry Text</key>
+	<string>The college stuff is worrying me. And so is Sidney. I'm afraid I'm going to have to break up with her.  Getting really tired of her not actually being a girlfriend. It's going to suck if it comes to that but I may have to break up with her. 
+
+Two midterms coming up, then I get to go home. Going to surprise mom for Mother's Day. 
+
+Wednesday and Thursday were my weekend so I worked all day Friday, Saturday, and today. Only really took a big break to watch a movie with Sidney and Nate. 
+
+I'm feeling good about 64 and not stats, should hopefully have enough time to study. 
+
+Can't wait to time, still worried about colleges, freaked about Sidney. I just don't k is of it can so it anymore. Of course, I'm also just tired if her because I'm spending too much time with her. I may feel this way because of that but I think I feel this way and the situation is bringing it to light. 
+
+I guess I'll sleep on it :/. Nothing is ever really easy it seems </string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.410394938300641</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.8531873832797</real>
+		<key>Place Name</key>
+		<string></string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>104D3A6B65ED43909EBB1771A6C9C090</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>16</string>
+		<key>Description</key>
+		<string>Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>61</string>
+		<key>IconName</key>
+		<string>cloudyn.png</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-01-11T19:55:09Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2015-01-11T19:55:09Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.2</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Better.
+
+So I’ve been into the Zen thing.  Trying to meditate everyday for around 15-30 minutes.  I also am going to go a group tomorrow at 7am and see if that is something I will want to continue.  
+
+This has been making me feel better.  I am off the drugs I was taking and they really just made me depressed more than anything.  I am still a little depressed, but been feeling less overall anxiety since I started thinking about zen more and doing more meditation.  Also I have been doing a little yoga for most days of the week.
+
+The quarter is going to get real pretty quick.  Lots of stuff to d with not much time, but I am feeling like I can do a better job managing it, which I think is good and a testament of my mediation practice.  I really think there is something to one of the things I read in the zen book I just finished: you don’t so zen because you want to, you do it because you feel like you have to.  And that is kind of the way I feel now.  But I am liking it so far.  
+
+So classes are okay, two hard CS ones, and two bullshit ones.  At this point I really am feeling like I just need to get through it, but I do think I will like my capstone class, which is like an intern in industry kind of thing.  Not that I need tag for a job, but I think I will like it more than a stupidly hard class.
+
+I am happy with the way I have been feeling.  Not to say that I am happy or not stressed, but I think that I have been doing a good job of trying to be more accepting, and understanding of what happens to me and who I am.
+
+I am grateful for this.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409557510287172</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85075049298641</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>D215CC1535CF497393EB963F4E5F2020</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>16</string>
+		<key>Description</key>
+		<string>Mostly Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>61</string>
+		<key>IconName</key>
+		<string>mcloudy.png</string>
+		<key>Pressure MB</key>
+		<integer>1018</integer>
+		<key>Relative Humidity</key>
+		<integer>88</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-01-11T15:06:07Z</date>
+		<key>Sunset Date</key>
+		<date>2015-01-12T01:09:13Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>250</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>16</integer>
+		<key>Wind Speed KPH</key>
+		<integer>7</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,8 @@
+2015-04-26 18:43:49.806 [lvl=2] +[ENLogging setupGTMLoggingWithPath:verboseLogging:] ---------------------------------------------------
+2015-04-26 18:43:49.884 [lvl=2] -[ENSComposeViewController reloadNotebookList] 
+2015-04-26 18:43:49.885 [lvl=2] -[EVEExtensionNotebookList setListenForExternalChanges:] YES
+2015-04-26 18:43:49.948 [lvl=2] -[ENSComposeViewController processNotebooksFromList:] 
+2015-04-26 18:43:51.879 [lvl=2] -[ENSNoteUploader performUploadOfNote:withAuthResult:completion:] Serializing note to: file:///private/var/mobile/Containers/Shared/AppGroup/82ABE148-627B-49F4-89E7-58E0C859B059/Documents/www.evernote.com/955273/87B231F2-4720-40CF-98F8-8C825BBD8A9F.edamnote
+2015-04-26 18:43:51.893 [lvl=2] +[EDAMUserAgent clientVersionString] Client name: Evernote iPhone/315053 (en-US); iPhone7,2/iPhone OS (8.3); EvernoteShare/315053;
+2015-04-26 18:43:51.951 [lvl=2] -[EVEExtensionNotebookList setListenForExternalChanges:] NO
+2015-04-26 18:43:51.951 [lvl=2] -[ENSNoteUploader dealloc] 

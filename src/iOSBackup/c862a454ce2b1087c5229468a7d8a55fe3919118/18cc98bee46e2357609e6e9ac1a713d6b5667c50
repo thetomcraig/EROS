@@ -1,0 +1,26 @@
+{
+  "config-version" : "3",
+  "models" : [ {
+    "type" : "term",
+    "path" : "en_US_bg_c.lm3",
+    "version" : "1"
+  }, {
+    "type" : "term",
+    "path" : "en_US_bg_c.lm1",
+    "version" : "1"
+  }, {
+    "type" : "term",
+    "path" : "en_US_fg_c.lm3",
+    "version" : "4"
+  }, {
+    "type" : "term",
+    "path" : "ios.lm3",
+    "version" : "1"
+  } ],
+  "tags" : [ "english", "en", "US", "id:en_US", "id:en", "name:English (US)" ],
+  "ime" : "ime.json",
+  "character-map" : "charactermap.json",
+  "punctuation" : "punctuation-SDK1.2.json",
+  "timestamp" : "2014/08/26 16:59",
+  "version" : "4.0"
+}

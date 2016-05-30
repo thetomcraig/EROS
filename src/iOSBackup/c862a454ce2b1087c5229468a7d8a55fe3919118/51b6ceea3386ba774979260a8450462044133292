@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-08-05T04:50:36Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2014-08-05T04:50:36Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Keyed up/birthday.
+
+I always seem to get bummed on my birthday.  I wasn’t really planning on doing much this weekend but on Saturday Sidney cam to visit and totally surprised me.  My parents arranged for her to stay, and on Sunday I was surprised again by a bunch of my friends who came to my house to see me.  This made me really happy - but since then I feel kind of keyed up.  I really don’t know why.  I mean I was panning on doing some programming this weekend and not seeing people so there’s that, but I think it goes beyond the classic “seeing people when I didn’t want to” deal with it.  I really don’t know.
+
+Work was okay today.  My boss, Glenn, wasn’t in again today and I a ma little nervous about not really getting done what I should get done.  My coworker actually wished me a happy birthday and I thought that twas pretty nice.  So things are fine at JPL.  Could be better but are not terrible.  Truthfully I don’t know why I am so anxious.  I am incredibly relieved to be done with my summer class, and I didn’t do much today after work than a couple of tasks I’ve been meaning to complete.  This was neither good nor bad.  I really don’t know why but since Saturday I have been feeling incredibly nervous.  
+
+It’s actually a physical discomfort that has been coming and going every couple of hours.  I know that it won’t last for a very long time (probably) but am still peeved to say the least.  
+
+I really don’t know what it is…
+
+Regardless I am very grateful for my friends and family who were thoughtful enough to surprise me this weekend.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.141155618035349</real>
+		<key>Locality</key>
+		<string>Los Angeles</string>
+		<key>Longitude</key>
+		<real>-118.19056825335063</real>
+		<key>Place Name</key>
+		<string>1215 Hill Dr</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>06F050980E5D47779C5569EE599B54D3</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>20</string>
+		<key>Description</key>
+		<string>Clear</string>
+		<key>Fahrenheit</key>
+		<string>68</string>
+		<key>IconName</key>
+		<string>clearn.png</string>
+		<key>Pressure MB</key>
+		<integer>1015</integer>
+		<key>Relative Humidity</key>
+		<integer>69</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-08-04T13:07:30Z</date>
+		<key>Sunset Date</key>
+		<date>2014-08-05T02:50:45Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>0</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>20</integer>
+		<key>Wind Speed KPH</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

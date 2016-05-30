@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-04-15T23:53:38Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2015-04-15T23:53:38Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.3</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Not shitty!
+Had a shitty morning - woke up groggy because I was up late working on cs, and was confused in my 8 am class.
+
+But I tried hard to not have this affect me for the rest of the day because I am trying to be more present and I don’t want to have one bad thing ruin an entire day for me.  And this pretty much worked.  The rest of the day until now has been good, and I am in a pretty good mood.
+
+I am nervous because this quarter hasn’t been impossibly hard yet.  It’s mid-week three.  I would like to have a relatively relaxing final quarter, and it looks like this can happen, not sure how hard my classes will become.  I have a mild case of seniority - its seniority for me but I feel like I am still putting it much more work for my classes than my peers.  And I think this is okay.  I wish I didn’t fee they way I do right now - which is that I really don’t give a shit about my classes.  I am still interested in the material - but I am just not really driven like I normally am.  It’s uncomfortable for me.  I feel like I am normally driven just because I feel like if I don’t give it my all, I will fail my classes.  I don’t really eel this way currently because I don’t think I can fail my current classes.  I mean I can always fail if I just don’t even try, but I feel like trying the amount I am now - I probably won’t fail.  So I am not driven in the same way.  I know that if I don’t try I will fail so I’m still driven in that sense - but I don’t feel like i have to constantly be doing everything perfectly. 
+
+I think this is good because its a healthy mentality - whereas my normal mode of operation is not.  But it still makes me nervous because it’s now how I am used to feeling.  
+
+I am going to have to do a not of adjustment when I finally graduate and start working because I think I am going to have to transition to this kind of feeling all of the time - and I think that because I have been doing well for the past 4 years acting a certain way - it will be very hard to change.  I am interested in seeing how this quarter goes - and hey, it’s the last one.
+
+Still doing mediation, trying to do it more, and trying to be mindful and present.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409429242937797</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85133394349126</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>C759BB3A246B49FB979BED95A3D54F2A</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>22</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>72</string>
+		<key>IconName</key>
+		<string>clear.png</string>
+		<key>Pressure MB</key>
+		<integer>1014</integer>
+		<key>Relative Humidity</key>
+		<integer>19</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-04-15T13:26:48Z</date>
+		<key>Sunset Date</key>
+		<date>2015-04-16T02:31:40Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>250</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>22</integer>
+		<key>Wind Speed KPH</key>
+		<integer>13</integer>
+	</dict>
+</dict>
+</plist>

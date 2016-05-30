@@ -61,7 +61,6 @@ class Person(User, models.Model):
 
 		return (new_markov_chain, randomness)
 
-
 class Sentence(models.Model):
 	class Meta:
 		abstract = True

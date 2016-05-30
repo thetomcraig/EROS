@@ -3,14 +3,19 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.contrib.auth.models import User
+
+from scrapers.models.plain_text_classes import Person, Sentence, MarkovChain, SentenceCache
 from scrapers.models.twitter import TwitterPerson, TwitterPost, TwitterPostMarkov
 from scrapers.models.facebook import FacebookPerson, FacebookPost
+from scrapers.models.literature import LiteraturePerson, LiteratureSentence, LiteratureSentenceMarkov
 
 from constants import *
 
 def home(request):
 	if(request.GET.get('go_to_dash')):
-		favorite_people = [TwitterPerson.objects.all()[0]] 
+		favorite_people = [] 
+		favorite_people.append(TwitterPerson.objects.all()[0])
+		favorite_people.append(LiteraturePerson.objects.all()[0])
 		context = RequestContext(request, \
 			{'favorite_people': favorite_people})
 		return render_to_response('scrapers/dashboard.html', context_instance=context)
@@ -56,39 +61,67 @@ def twitter_people(request):
 	})
 	return HttpResponse(template.render(context))
 	
-def twitter_person_detail(request, twitter_person_username):
+def person_detail(request, person_username):
 	author = None
 	for person in TwitterPerson.objects.all():
-		if person.username.strip() == twitter_person_username.strip():
+		if person.username.strip() == person_username.strip():
 			author = person
 
+	if not author:
+		for person in LiteraturePerson.objects.all():
+			if person.username.strip() == person_username.strip():
+				author = person
+
+	#If you are already on the page, these things 
+	#will happen when you click buttons
 	if(request.GET.get('go_back_to_list')):
 		return HttpResponseRedirect('/scrapers/twitter_people/')
 
 	if(request.GET.get('scrape')):
 		author.scrape()
-		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+twitter_person_username)
+		return HttpResponseRedirect('/scrapers/person_detail/'+person_username)
 
 	if(request.GET.get('apply_markov_chains')):
 		author.apply_markov_chains()
-		return HttpResponseRedirect('/scrapers/twitter_person_detail/'+twitter_person_username)
+		return HttpResponseRedirect('/scrapers/person_detail/'+person_username)
 
-	template = loader.get_template('scrapers/twitter_person_detail.html')
+	template = loader.get_template('scrapers/person_detail.html')
+		
+	sentences = []
+	markov_sentences = []
+	person_type = ''
+	
+	#Grab data from author if twitter person	
+	if isinstance(author, TwitterPerson):
+		person_type = str(TwitterPerson)
+		twitter_sentences = TwitterPost.objects.filter(author=author)
+		sentences = [t.content for t in twitter_sentences] 
 
-	twitter_posts = TwitterPost.objects.filter(author=author)
-	twitter_posts = [t.content for t in twitter_posts] 
+		twitter_markov_sentences = author.twitterpostmarkov_set.all().order_by('-randomness')
+		markov_sentences = \
+			[(t.content.encode('ascii', 'ignore'), \
+			t.randomness) for t in twitter_markov_sentences]
 
-	twitter_posts_markov = author.twitterpostmarkov_set.all().order_by('-randomness')
-	twitter_posts_markov = \
-		[(t.content.encode('ascii', 'ignore'), \
-		t.randomness) for t in twitter_posts_markov]
+	#Grab data from author if literature person	
+	if isinstance(author, LiteraturePerson):
+		person_type = str(LiteraturePerson)
+		literature_sentences = LiteratureSentence.objects.filter(author=author)
+		sentences = [t.content for t in literature_sentences] 
+
+		literature_markov_sentences = \
+			author.literaturesentencemarkov_set.all().order_by('-randomness')
+		markov_sentences = \
+			[(t.content.encode('ascii', 'ignore'), \
+			t.randomness) for t in literature_markov_sentences]
+
 
 	context = RequestContext(request, {
-			'twitter_person': author,
-			'twitter_posts' : twitter_posts,
-			'twitter_posts_markov'	: twitter_posts_markov,
-			'len_twitter_posts'	: len(twitter_posts),
-			'len_twitter_posts_markov'	: len(twitter_posts_markov),
+			'person': author,
+			'person_type': person_type,
+			'sentences' : sentences,
+			'markov_sentences'	: markov_sentences,
+			'len_sentences'	: len(sentences),
+			'len_markov_sentences'	: len(markov_sentences),
 	})
 
 	return HttpResponse(template.render(context))

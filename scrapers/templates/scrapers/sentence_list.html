@@ -3,21 +3,21 @@
 {% block main %}
 	{% autoescape off %}   
 		<div style="padding-left:3%; padding-right:3%">
-			{% if twitter_posts %}
+			{% if sentences %}
 					<h4>{{ table_title }}</h4>
 					<table class="table-striped" style="border-collapse:collapse;">
 						<tbody>
-							{% for twitter_post in twitter_posts %}
+							{% for sentence in sentences %}
 								<div id="wrap">
 									<tr>
-										<h5>{{ twitter_post }}</h5>
+										<h5>{{ sentence }}</h5>
 									</tr>
 								</div>
 							{% endfor %}
 						</tbody>
 					</table>
 				{% else %}
-						<p>No Markov Posts</p>
+						<p>No data to show</p>
 				{% endif %}
 		</div>
 	{% endautoescape %}

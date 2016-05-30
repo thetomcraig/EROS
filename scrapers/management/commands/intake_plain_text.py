@@ -24,8 +24,9 @@ class Command(BaseCommand):
 		if options['file_name']:
 			file_name = options['file_name']
 			sentences = utils.read_source_into_sentence_list(file_name)
-			author = LiteraturePerson.objects.get_or_create(real_name=options['author'])[0]
+			author = LiteraturePerson.objects.get_or_create(username=options['author'], real_name=options['author'])[0]
 			for sentence in sentences: 
 				print sentence
 				l = LiteratureSentence(author=author, content=" ".join(sentence))
-			
+				l.save()
+				author.cache_sentence(l)

@@ -7,8 +7,14 @@ if __name__ == "__main__":
 from scrapers import models, utils
 from scrapers.models.twitter import TwitterPost, TwitterPerson
 from scrapers.models.plain_text_classes import Person
+from scrapers.models.literature import LiteraturePerson
 
-lines = utils.read_source_into_sentence_list("src/pride_and_prejudice.txt")
+#lines = utils.read_source_into_sentence_list("src/pride_and_prejudice.txt")
+
+j = LiteraturePerson.objects.filter(real_name='Jane Austin')[0]
+j.username = j.real_name
+j.save()
+
 
 
 

@@ -6,7 +6,7 @@
     {% for person in favorite_people %}
       <div class="sub">
         <a name="go_to_person" 
-                href="/scrapers/twitter_person_detail/{{ person.username }}"
+                href="/scrapers/person_detail/{{ person.username }}"
                 value={{ person.username }}
                 class="invisible-button">
 
@@ -20,7 +20,7 @@
     </table>
 
   {% else %}
-      <p>No twitter people in the database.</p>
+      <p>No people in the database.</p>
   {% endif %}
 
 {% endblock %}

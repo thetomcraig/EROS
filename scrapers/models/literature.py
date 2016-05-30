@@ -10,12 +10,6 @@ class LiteraturePerson(plain_text_classes.Person):
 	def __str__(self):
 		return self.username
 
-	def scrape(self,input_text_as_sentences):
-		for sentence in input_text_as_sentences:
-		
-			sentence = Sentence.objects.create(author=self, content=final_sentence)
-			self.cache_sentence(sentence)
-
 	def cache_sentence(self, sentence):
 		"""
 		"""
@@ -24,11 +18,6 @@ class LiteraturePerson(plain_text_classes.Person):
 			word1 = word_list[index]
 			word2 = word_list[index+1]
 			final_word = word_list[index+2]
-
-			print "caching:"
-			print word1.encode('utf-8')
-			print word2.encode('utf-8')
-			print final_word.encode('utf-8')
 
 			post_cache = SentenceCache(
 				author=self, 
@@ -42,7 +31,7 @@ class LiteraturePerson(plain_text_classes.Person):
 		"""
 		"""
 		print "Applying markov chains"
-		all_beginning_caches = self.sentencepostcache_set.filter(beginning=True)
+		all_beginning_caches = self.sentencecache_set.filter(beginning=True)
 		all_caches = self.sentencecache_set.all()
 		new_markov_post = self.apply_markov_chains_inner(all_beginning_caches, all_caches)
 
@@ -51,7 +40,7 @@ class LiteraturePerson(plain_text_classes.Person):
 		for word in new_markov_post[0]:
 			content = content + word + " "
 
-		self.sentencemarkov_set.create(content=content[:-1], randomness=randomness)
+		self.literaturesentencemarkov_set.create(content=content[:-1], randomness=randomness)
 
 #LITERATURE VERSION
 class LiteratureSentence(plain_text_classes.Sentence):

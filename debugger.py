@@ -17,6 +17,7 @@ t.save()
 #t.intake_raw_io_backup_texts("./src/iOSBackup/_export/")
 
 t.apply_markov_chains()
+
 for m in t.textmessagemarkov_set.all():
   try:
     print m.content

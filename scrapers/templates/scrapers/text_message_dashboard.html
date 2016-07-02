@@ -1,6 +1,12 @@
 {% extends 'scrapers/base.html' %}
 
 {% block main %}
+
+  <div class="ui-widget">
+    <label for="drugs">Drugs: </label>
+    <input id="drugs">
+  </div>
+
   {% if first_words %}
     <table align="center">
     {% for word in first_words%}

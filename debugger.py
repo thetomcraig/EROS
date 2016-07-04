@@ -14,7 +14,7 @@ from scrapers.models.text_message import TextMessagePerson
 
 t = TextMessagePerson.objects.get_or_create(username="tomcraig", real_name="Tom Craig")[0]
 t.save()
-#t.intake_raw_io_backup_texts("./src/iOSBackup/_export/")
+t.intake_raw_io_backup_texts("./src/iOSBackup/_export/")
 
 t.apply_markov_chains()
 

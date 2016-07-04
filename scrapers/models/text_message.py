@@ -90,7 +90,6 @@ class TextMessagePerson(plain_text_classes.Person, models.Model):
 
     self.textmessagemarkov_set.create(content=content[:-1], randomness=randomness)
 
-
   
 #TEXT MESSAGE VERSION
 class TextMessage(plain_text_classes.Sentence):

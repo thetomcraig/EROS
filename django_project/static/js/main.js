@@ -1,8 +1,7 @@
-console.log("loaded the js");
+console.log("alpha");
 
-$('#target').click(divFunction);
-
-function divFunction(){
-  console.log("alpha");
- //some code
-}
+$(function () {
+  $("#drugs").autocomplete({
+    source: "get_drugs/" 
+  });
+});

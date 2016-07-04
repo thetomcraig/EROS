@@ -12,6 +12,7 @@ from scrapers.models.text_message import TextMessagePerson, TextMessage, TextMes
 
 from constants import *
 import json
+import re
 
 def home(request):
   if(request.GET.get('go_to_dash')):
@@ -50,23 +51,15 @@ def home(request):
   return render_to_response('scrapers/home.html', context_instance=context)
 
 def get_drugs(request):
-  print "in the views"
-  if request.is_ajax():
-    q = request.GET.get('term', '')
-    drugs = TwitterPerson.objects.all()
-    results = []
-    for drug in drugs:
-      drug_json = {}
-      drug_json['id'] = drug.username
-      drug_json['label'] = drug.username
-      drug_json['value'] = drug.username
-      results.append(drug_json)
-      data = json.dumps(results)
-    else:
-      data = 'fail'
-    mimetype = 'application/json'
-    return HttpResponse(data, mimetype)
+  q = request.GET.get('term', '')
+  texts = TextMessage.objects.all()
+  results = []
+  for text in texts:
+    results.append(text.content)
 
+  data = json.dumps(results)
+  mimetype = 'application/json'
+  return HttpResponse(data, mimetype)
 
 
 def post_index(request):

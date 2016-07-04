@@ -55,7 +55,11 @@ def get_drugs(request):
   texts = TextMessage.objects.all()
   results = []
   for text in texts:
-    results.append(text.content)
+    try:
+      if re.match(q, text.content, re.I):
+        results.append(text.content)
+    except:
+      pass
 
   data = json.dumps(results)
   mimetype = 'application/json'

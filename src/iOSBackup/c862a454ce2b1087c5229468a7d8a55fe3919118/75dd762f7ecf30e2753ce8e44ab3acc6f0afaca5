@@ -1,0 +1,267 @@
+[ {
+  "name" : "Português (BR)",
+  "language" : "pt",
+  "country" : "BR",
+  "sha1" : "6fa1edbe9426466088291bce77f59b08a08bb44c",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/pt_BR.zip"
+}, {
+  "name" : "Polski",
+  "language" : "pl",
+  "country" : "PL",
+  "sha1" : "a1e951e6f1fa8caa598f609c1e2fcec693adc697",
+  "version" : 11,
+  "archive" : "https://skslm.swiftkey.net/Store/ioskb/pl_PL/pl_PL.11.zip"
+}, {
+  "name" : "English (US)",
+  "language" : "en",
+  "country" : "US",
+  "sha1" : "8cc8997f3d712ab591375f2a76504fa089652e25",
+  "version" : 4,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/en_US.zip"
+}, {
+  "name" : "Български",
+  "language" : "bg",
+  "country" : "BG",
+  "sha1" : "2fd5ceb7a16d0d5fab2af8b368f3c1190a9b155b",
+  "version" : 1,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/bg_BG.zip"
+}, {
+  "name" : "Русский",
+  "language" : "ru",
+  "country" : "RU",
+  "sha1" : "78b241e82b720de7e8c1f84616096c88630d12f9",
+  "version" : 1,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/ru_RU.zip"
+}, {
+  "name" : "Română",
+  "language" : "ro",
+  "country" : "RO",
+  "sha1" : "dc07a5246f44272c68cc897177ca133f0041a904",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/ro_RO.zip"
+}, {
+  "name" : "Ελληνικά",
+  "language" : "el",
+  "country" : "GR",
+  "sha1" : "1a7f26232877b0e18feca645927f2a9e7527b859",
+  "version" : 1,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/el_GR.zip"
+}, {
+  "name" : "Português (PT)",
+  "language" : "pt",
+  "country" : "PT",
+  "sha1" : "70f47ea16839cdde01575456df8491f666ba2511",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/pt_PT.zip"
+}, {
+  "name" : "English (UK)",
+  "language" : "en",
+  "country" : "GB",
+  "sha1" : "62b402d8c1ac5cab8afd2c05f4d83877ab25293e",
+  "version" : 3,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/en_GB.zip"
+}, {
+  "name" : "Español (América Latina)",
+  "language" : "es",
+  "country" : "LA",
+  "sha1" : "af7d4f619816f578d6e9e188c1358b4f47adfb40",
+  "version" : 4,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/es_LA.zip"
+}, {
+  "name" : "Slovenčina",
+  "language" : "sk",
+  "country" : "SK",
+  "sha1" : "5a26ea749fc5e559bc865e2fafd141da2f4b329a",
+  "version" : 1,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/sk_SK.zip"
+}, {
+  "name" : "Český",
+  "language" : "cs",
+  "country" : "CZ",
+  "sha1" : "c7903c1f59215056aab0faaa38779ad6e7e22738",
+  "version" : 3,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/cs_CZ.zip"
+}, {
+  "name" : "Català",
+  "language" : "ca",
+  "country" : "ES",
+  "sha1" : "5970c61d8fea3afc580df39ab72b96f23c8a7f51",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/ca_ES.zip"
+}, {
+  "name" : "עברית",
+  "language" : "he",
+  "country" : "IL",
+  "sha1" : "cb103720b76c46e250d70acde70081b2a31e7b70",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/he_IL.zip"
+}, {
+  "name" : "Norsk",
+  "language" : "nb",
+  "country" : "NO",
+  "sha1" : "eb0dc8573af4b1563b16f12a8a80dd32b7a189be",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/nb_NO.zip"
+}, {
+  "name" : "Français (CA)",
+  "language" : "fr",
+  "country" : "CA",
+  "sha1" : "c9c9bbafaf4aabc835f4f9ee99ba3d4f6b077327",
+  "version" : 4,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/fr_CA.zip"
+}, {
+  "name" : "Español (ES)",
+  "language" : "es",
+  "country" : "ES",
+  "sha1" : "b93d0f6599c6a639f3fa0098f656c18e25c04e04",
+  "version" : 3,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/es_ES.zip"
+}, {
+  "name" : "English (AU)",
+  "language" : "en",
+  "country" : "AU",
+  "sha1" : "238c0e22585abd54a715f2e6c69b0295062b356c",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/en_AU.zip"
+}, {
+  "name" : "فارسی",
+  "language" : "fa",
+  "country" : "IR",
+  "sha1" : "ed9abfb95763fbcb6f0e889fc68a828d74231933",
+  "version" : 1,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/fa_IR.zip"
+}, {
+  "name" : "English (CA)",
+  "language" : "en",
+  "country" : "CA",
+  "sha1" : "0cb7beb33ab5847936d2f64da6b8f6d1f15b1f24",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/en_CA.zip"
+}, {
+  "name" : "Bahasa Indonesia",
+  "language" : "id",
+  "country" : "ID",
+  "sha1" : "6adee34518c97910781325f5c38afd3a8e3a711a",
+  "version" : 1,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/id_ID.zip"
+}, {
+  "name" : "Latviešu",
+  "language" : "lv",
+  "country" : "LV",
+  "sha1" : "d07996f740ed6c5aa0ef3b378737008e0041b23a",
+  "version" : 1,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/lv_LV.zip"
+}, {
+  "name" : "Hrvatski",
+  "language" : "hr",
+  "country" : "HR",
+  "sha1" : "8b3fa42023a9820dbffc32af507888fcc3e86a46",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/hr_HR.zip"
+}, {
+  "name" : "Íslenska",
+  "language" : "is",
+  "country" : "IS",
+  "sha1" : "48b9329a11cd6a5f427f92964462f98ac73f7901",
+  "version" : 1,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/is_IS.zip"
+}, {
+  "name" : "Srpski",
+  "language" : "sr",
+  "country" : "RS",
+  "sha1" : "93013e80c751b26f49b69d2161faf38fb249a31e",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/sr_RS.zip"
+}, {
+  "name" : "Hinglish",
+  "language" : "hg",
+  "country" : "IN",
+  "sha1" : "91db2ef283b55ca17ece034aa26e92d436ce49b3",
+  "version" : 1,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/hg_IN.zip"
+}, {
+  "name" : "Italiano",
+  "language" : "it",
+  "country" : "IT",
+  "sha1" : "94bda313b36ba453eca240c6920d97df49c87a59",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/it_IT.zip"
+}, {
+  "name" : "Deutsch",
+  "language" : "de",
+  "country" : "DE",
+  "sha1" : "09e99834679e8727bb01e46251fdc86007920940",
+  "version" : 11,
+  "archive" : "https://skslm.swiftkey.net/Store/ioskb/de_DE/de_DE.11.zip"
+}, {
+  "name" : "Suomi",
+  "language" : "fi",
+  "country" : "FI",
+  "sha1" : "e53452c7c3835cb1a2d3e8dd2d889516f882db7b",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/fi_FI.zip"
+}, {
+  "name" : "Magyar",
+  "language" : "hu",
+  "country" : "HU",
+  "sha1" : "6fe4cfd68dce6470ddedc50bd0a4ba2b01ce6ed2",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/hu_HU.zip"
+}, {
+  "name" : "Français (FR)",
+  "language" : "fr",
+  "country" : "FR",
+  "sha1" : "7e8d3f9cb0a4490791fd4f695248bbfd25264a4e",
+  "version" : 4,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/fr_FR.zip"
+}, {
+  "name" : "Español (US)",
+  "language" : "es",
+  "country" : "US",
+  "sha1" : "07530bddbcaa2b67da55efabd49236a16e8ac1f7",
+  "version" : 4,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/es_US.zip"
+}, {
+  "name" : "Afrikaans",
+  "language" : "af",
+  "country" : "ZA",
+  "sha1" : "3f0bc22bd8bf5a21eee65c549c1f9bd41a9bc9b3",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/af_ZA.zip"
+}, {
+  "name" : "Türkçe",
+  "language" : "tr",
+  "country" : "TR",
+  "sha1" : "0ddefe26aa904fc8ba291406ff6231d5d90d81ba",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/tr_TR.zip"
+}, {
+  "name" : "Svenska",
+  "language" : "sv",
+  "country" : "SE",
+  "sha1" : "975f4d38d0c3173e0306d72c81726e258b7372e2",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/sv_SE.zip"
+}, {
+  "name" : "Dansk",
+  "language" : "da",
+  "country" : "DK",
+  "sha1" : "1ab9fdf60d7f330ccebaac836f077683e1e2d6bc",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/da_DK.zip"
+}, {
+  "name" : "العربية",
+  "language" : "ar",
+  "country" : "SA",
+  "sha1" : "b68f0ed5a92979a60a928e56f89e76707f521b86",
+  "version" : 2,
+  "archive" : "https://skslm.swiftkey.net/iOSkb/sksdk-2.3/iOSkb-1.4.6/ar_SA.zip"
+}, {
+  "name" : "Nederlands",
+  "language" : "nl",
+  "country" : "NL",
+  "sha1" : "446d5fd37fa14ae8bd510122a1369cdf741de9da",
+  "version" : 5,
+  "archive" : "https://skslm.swiftkey.net/Store/ioskb/nl_NL/nl_NL.5.zip"
+} ]

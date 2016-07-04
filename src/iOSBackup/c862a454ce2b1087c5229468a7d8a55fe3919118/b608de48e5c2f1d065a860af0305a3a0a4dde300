@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-08-11T15:42:46Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookAir7,2</string>
+		<key>Generation Date</key>
+		<date>2015-08-11T15:42:46Z</date>
+		<key>Host Name</key>
+		<string>TYCHO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.4</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.10.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Can I work now?
+Well, I am just about out of stuff to do…  I’ve been doing apartment related stuff, buying necessary things and exploring the neighborhood.  I am liking it a lot more than I thought I would.  My initial thought was that Oakland was kind a lame.  I guess because San Francisco gets so much attention.  But I really like the area where I live, and I’m getting used to it.
+
+I am feeling a bit better about Sidney, I mean I still feel shitty about it and probably will for a while, but I think we are both feeling better about it.  I think that after more time it will feel more normal between us…</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>37.801212978281939</real>
+		<key>Locality</key>
+		<string>Oakland</string>
+		<key>Longitude</key>
+		<real>-122.25400943712087</real>
+		<key>Place Name</key>
+		<string>1824 Lakeshore Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>F086FD9C1EC04F679DD2C4F31FD001CE</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>17</string>
+		<key>Description</key>
+		<string>Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>63</string>
+		<key>IconName</key>
+		<string>cloudy.png</string>
+		<key>Pressure MB</key>
+		<integer>1014</integer>
+		<key>Relative Humidity</key>
+		<integer>83</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-08-11T13:21:50Z</date>
+		<key>Sunset Date</key>
+		<date>2015-08-12T03:06:09Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>230</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>17</integer>
+		<key>Wind Speed KPH</key>
+		<integer>11</integer>
+	</dict>
+</dict>
+</plist>

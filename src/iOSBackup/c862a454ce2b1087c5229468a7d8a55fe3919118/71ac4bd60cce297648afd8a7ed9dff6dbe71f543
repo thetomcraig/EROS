@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-03-18T03:56:32Z</date>
+	<key>Entry Text</key>
+	<string>Sick, studying for finals isn't that bad though. I have pink eye I believe, hopefully going into the health place tomorrow. Got the iPad mini, it's very nice but I think I just don't need a tablet, so if I well that I should be able to make a bit of profit, and if I do the nexus too, is should have a lot of PayPal dollars. Need a mouse so I should be able to buy one. Other stuff I want to sell too, I'll do so at home next week. 
+
+Can't wait to be home, tired of this quarter even though it seemed so short!  Sidney has been con earned about out me, she makes me feel better. We have been having some good talks lately, I think we're good at working out potential relationship issues. Slept 12 hours last night. Going to bed early. Sickness during finals week is the best!</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409602224014442</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85564968624999</real>
+		<key>Place Name</key>
+		<string></string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>FD119A5FA44F4FD8882A91D93A67BD5E</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>14</string>
+		<key>Description</key>
+		<string>Mostly Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>57</string>
+		<key>IconName</key>
+		<string>mcloudyn.png</string>
+	</dict>
+</dict>
+</plist>

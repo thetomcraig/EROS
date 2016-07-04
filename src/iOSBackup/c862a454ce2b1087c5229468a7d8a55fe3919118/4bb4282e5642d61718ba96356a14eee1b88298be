@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MSAssetMetadataDateContentCreated</key>
+	<date>2016-02-14T18:46:01Z</date>
+	<key>MSAssetMetadataDateContentModified</key>
+	<date>2016-02-14T18:46:01Z</date>
+	<key>MSAssetMetadataDeviceID</key>
+	<string>672121caa6dc8d5ae8d4c1ad2f3d0e5bcbb58e0c</string>
+	<key>MSAssetMetadataFileSize</key>
+	<integer>118499</integer>
+	<key>MSAssetMetadataPixelHeight</key>
+	<integer>960</integer>
+	<key>MSAssetMetadataPixelWidth</key>
+	<integer>540</integer>
+	<key>MSAssetMetadataSourceiCloudPhotoLibraryEnabledKey</key>
+	<integer>1</integer>
+	<key>MSAssetMetadataStreamIDKey</key>
+	<string>1630402806</string>
+	<key>isDerivedAsset</key>
+	<false/>
+	<key>k-filename</key>
+	<string>IMG_3502.JPG</string>
+	<key>kPLLocalMSMetadataAssetPLUUIDKey</key>
+	<string>37957573-E573-4DA0-ADA6-F4E15F91450E</string>
+	<key>kPLPhotoStreamAssetCollectionUUID</key>
+	<string>26C95A33-4C21-4DFE-9685-D7E3556AAB87</string>
+	<key>kPLPhotoStreamDateCreatedKey</key>
+	<date>2016-02-14T18:46:01Z</date>
+	<key>kPLPhotoStreamMasterAssetHashKey</key>
+	<data>
+	AXSqMrM6VBr/cJCey2Vb8P3dv2qv
+	</data>
+	<key>kPLPhotoStreamMasterAssetMetadataKey</key>
+	<dict>
+		<key>MSAssetMetadataDateContentCreated</key>
+		<date>2016-02-14T18:46:01Z</date>
+		<key>MSAssetMetadataDateContentModified</key>
+		<date>2016-02-14T18:46:01Z</date>
+		<key>MSAssetMetadataDeviceID</key>
+		<string>672121caa6dc8d5ae8d4c1ad2f3d0e5bcbb58e0c</string>
+		<key>MSAssetMetadataFileSize</key>
+		<integer>118499</integer>
+		<key>MSAssetMetadataPixelHeight</key>
+		<integer>960</integer>
+		<key>MSAssetMetadataPixelWidth</key>
+		<integer>540</integer>
+		<key>MSAssetMetadataSourceiCloudPhotoLibraryEnabledKey</key>
+		<integer>1</integer>
+		<key>MSAssetMetadataStreamIDKey</key>
+		<string>1630402806</string>
+	</dict>
+	<key>kPLPhotoStreamModifiedDateKey</key>
+	<date>2016-02-14T18:46:01Z</date>
+	<key>kPLPhotoStreamServerUploadedDateKey</key>
+	<date>2016-02-14T20:39:51Z</date>
+</dict>
+</plist>

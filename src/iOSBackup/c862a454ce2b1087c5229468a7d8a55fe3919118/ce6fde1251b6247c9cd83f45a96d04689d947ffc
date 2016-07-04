@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-09-22T17:15:45Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2013-09-22T17:15:45Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9</string>
+		<key>Software Agent</key>
+		<string>Day One (Mac)/1.8.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Day One.
+Well here I am in my single room, last night I went to dinner with Aowei, Hin, Josh, and Adam.  And later I went to Aowei's to party with Josh, Adam, and Michael Ryan.  Played Beer pong and managed to not loose, then played drunken Settler of Catan.  Which is not so fun drunk.   I only saw Sidney for a about fig minutes, because she went to have dinner some some friend and didn't come party with us.  So I haven't been able to actually catch up with her, but from the couple of minutes I spent talking to her, I have included that she is far cuter than I remember....   I will have to actually talk to her and see how I feel about her I guess.  I just wish I could do that already!  But I guess she is busy working (move in crew) and shit.  So I will have to wait for now... :/
+
+I have a few goals this year - party more (or just spend more time with friends), make new friends, and have sex.  Hopefully with Sidney...  But seriously, this is ridiculous. </string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409250581264132</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85342496147973</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>1A2D64C28EED4C13815D5C0B77C441E0</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>24</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>75</string>
+		<key>IconName</key>
+		<string>sunny.png</string>
+	</dict>
+</dict>
+</plist>

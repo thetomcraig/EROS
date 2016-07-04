@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-07-15T05:08:29Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2013-07-15T05:08:29Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.8.4</string>
+		<key>Software Agent</key>
+		<string>Day One (Mac)/1.8</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Back from the beach, Sunday night and the new week approacheth.  I am sad that we are moving, as is predicable.  But, I am trying to be okay with it, and to look forward.  I have decided, or re-decided that doing something every day is the way to go.  And this can include being brief, with things like projects.  I've found it hard to come back to something when I haven't given myself time to work on it at all.  And I read something someone said about doing something for yourself every day, even if it is late or you don't feel like you have time or whatever.  I am going to try to do these things every day, and if I get into a good enough habit, it will hopefully be easier to do at school.  But of course it's so much easier to do these things now than doing the school year.  Which I find some solace in.  I know that having a job will not be as annoying as school!
+
+Things I am plan on doing every day
+	Reading a book
+	Situps
+	Being aware (at least once)
+	Writing in here
+	Working on a CS project
+	Meditation…. This one will be harder I think
+Things I am going to try to do more often
+	Running
+	Pullups
+	Drinking water
+Things I am working on
+	Typing
+	Dreaming
+
+Okay so this is a lofty list tight here.  I am going to focus on a few things first.  I have reading down pretty much already.  Same with sit-ups, as I have just started doing (I can now reach my toes [!]) and the being aware thing is going pretty well, and so is running for that matter.  So where does that leave us then?  I want to start writing in this journal more, I think it will keep me more focused and positive.  I tried doing this when I initially started using Day One, and then gave up because I didn't have much to say I found.  But I think it's a good idea, as it will help me remember when I have run and keep me on task with the things I want to do every day.  So, keep on track with running 2-3 times a week, keep being aware, do sit-ups, read, and start writing in here and CS project-ing more often.  So immediate things to focus on are coding and writing.  I wanted to work on the Hamurabi project today (and did) but found it difficult when I couldn't remember where I had left off.  So anyway, those two are the current goals.
+
+I always have some goals for myself.  I think this is good and I am proud to say that I am always improving myself in some way, but sometimes it makes me feel like I have not quote accomplished all that I want to, and by this I mean all the time.  But I think I should take the opportunity of writing in here to say that I am proud of myself.  And that is something I personally want to say more often, because I don't way it enough.  I am proud of me, I work hard and I am incredibly conscientious.  
+
+Anyway, Ive been thinking about life recently and have realized that life is fucking hard, but I am glad that I am trying to figure it out now, at 19.  Maybe by the time I am out of college I will have it all figured out!  Ha, but seriously its all going to be constant	ly changing and really all you can get better at is adaptability.
+
+I think that people don't change.  I think we really just have what's given to us.  I look back on things I've done in elementary school and they resemble my tendencies now.  And I am just like dad.  Jack has always been the same to.  I mean we change obviously, but I think there is a certain level of predictability concerning that fact that we will always have the same tendencies concerning certain things.  This is vague, but you know what I am talking about, right Tom?
+
+I think what's important is what we are willing to do with what we have.  I try so hard to do a lot of things, things that aren't necessary easy.  And I don't like everything that I do, like school.  Other people have other priorities, I mean Jack just wants to watch TV all day and Id much rather find some project to work on.  But maybe, this ability to force yourself to be virtuous is also an inborn trait.  Hmmmmmm.  This is one to think about.  As if I don't do enough thinking already.  
+
+At the risk of sounding pretentious, I remind myself of Hamlet; think to much.  Lately I have come to realize that I treat everything with to much importance.  Anyway I should sleep, but this was good, I am feeling good about the future.
+
+This is one of my longtime goals:
+I want to make a  product that a lot of people will like and want to use.
+I wonder if my music app could be this…
+
+I am grateful for the life I have had here in South Pasadena, and all that that encompasses. Goodnight moon.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.107481595854097</real>
+		<key>Locality</key>
+		<string>South Pasadena</string>
+		<key>Longitude</key>
+		<real>-118.14628070628693</real>
+		<key>Place Name</key>
+		<string>1600 Marengo Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>315C72C9826B47C2B3C62F35C6A20A65</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>25</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>77</string>
+		<key>IconName</key>
+		<string>sunny.png</string>
+	</dict>
+</dict>
+</plist>

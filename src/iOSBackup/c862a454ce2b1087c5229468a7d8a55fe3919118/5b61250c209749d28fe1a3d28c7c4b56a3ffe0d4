@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-08-09T04:03:23Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookAir7,2</string>
+		<key>Generation Date</key>
+		<date>2015-08-09T04:03:23Z</date>
+		<key>Host Name</key>
+		<string>TYCHO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.4</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.10.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Tormented.
+I mean the term lightly, but I have been feeling a bit tormented lately.  Ever since I broke up with Sidney.  And that’s really what it was.  I knew logically, that  I was just *reminding* her that we were going to break up at this time.  But, I mean, come on.  Of course she didn’t feel like that, and although we had talked about it before, it didn’t really matter because she felt like the relationship was changing but could be maintained.  Part of me wishes that I could feel that way too.  But the more dominant part of me feels that no, I did what was right for me.  And even though it made her sad, its better than lying to her and myself until I can’t take it anymore.
+
+I guess I am really annoyed because of how I felt - tired of her.  I feel like she does not deserve that.  But at the same time, I can’t really help it.  I guess I just wish that wasn’t the reason, like I wish there was a really compelling other reason for it ending.
+
+I’m planning on talking to her tomorrow.  Just to maintain contact.  I mean, really I don’t care.  That’s the problem!  I want to talk to her because I know that she is hurting right now and I don’t want to loose her as a friend.  And for the last couple of days I have been trying to decide when and if I should contact her because I do and do not at the same time.  I mean I really do like her as a person and want to maintain friends with her.  The problem is that I am really quite happy keeping myself and not contacting her.  But I also feel like I should because I know she is so upset and doesn’t want to loose me. I don’t want to contact her because I don’t want to make her sad because she still has feelings for me; I don’t want to make her feel any worse.  Which is what will happen if I take too long as well….  God this is difficult.  
+
+I think tomorrow is good.  6 days of silence is good I think.  My test has been that if I think about talking to her and don’t feel really shitty, then it’s time.  This has not been true so far…
+
+Will report back!  Other things are going well.  Im keeping up with running and my projects and the apartment is coming along  really, well.  I like Oakland, and am getting used to it.  I like living in the city much more than I thought I would.  Found a nice coffee shop today that I will probably start frequenting.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>37.801175952745204</real>
+		<key>Locality</key>
+		<string>Oakland</string>
+		<key>Longitude</key>
+		<real>-122.2539988599178</real>
+		<key>Place Name</key>
+		<string>1824 Lakeshore Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>0BD525956E2547B788CD43985DB052EA</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>18</string>
+		<key>Description</key>
+		<string>Mostly Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>64</string>
+		<key>IconName</key>
+		<string>mcloudyn.png</string>
+		<key>Pressure MB</key>
+		<integer>1014</integer>
+		<key>Relative Humidity</key>
+		<integer>73</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-08-08T13:19:16Z</date>
+		<key>Sunset Date</key>
+		<date>2015-08-09T03:09:40Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>260</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>18</integer>
+		<key>Wind Speed KPH</key>
+		<integer>20</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>usergeneratedvibration:2632DEA7-A5E6-4F2C-A532-B4F9E0F35B8A</key>
+	<dict>
+		<key>Name</key>
+		<string>Not annoying</string>
+		<key>Pattern</key>
+		<dict>
+			<key>Intensity</key>
+			<real>1</real>
+			<key>VibePattern</key>
+			<array>
+				<true/>
+				<integer>499</integer>
+				<false/>
+				<integer>2536</integer>
+				<true/>
+				<integer>465</integer>
+				<false/>
+				<integer>2269</integer>
+				<true/>
+				<integer>415</integer>
+				<false/>
+				<integer>2069</integer>
+				<true/>
+				<integer>398</integer>
+				<false/>
+				<integer>500</integer>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>

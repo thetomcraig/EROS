@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RCComposedAVURL</key>
+	<string>file:///var/mobile/Media/Recordings/20151229%20151458.m4a</string>
+	<key>RCComposedWaveformURL</key>
+	<string>file:///var/mobile/Media/Recordings/20151229%20151458.waveform</string>
+	<key>RCDecomposedFragments</key>
+	<array/>
+	<key>RCSavedRecordingURI</key>
+	<string>x-coredata://59452CED-9398-4BAD-888B-E243E231389B/Recording/p4</string>
+</dict>
+</plist>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-11-16T23:05:45Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2014-11-16T23:05:45Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Good day.  
+
+I actually had a good day yesterday.  I had to deal with an ant problem in my room which really stressed me out, but then Sidney and I went to the beach with our friend maddie.  I did a few things I needed to do and we had dinner with my freshmen year friends: Josh, Adam, and Nick.  Then we played cards at their place and had margaritas.
+
+I did no homework yesterday, which almost never happens.  It was really nice to have a relaxing day for once, and while it is still harder me to actually relax, I had a nice time drinking wine on the beach, listening to music and swimming in the ocean.  Today I did a few clerical things and am going to start all the new exciting homework assignments I have to work on.
+
+But I thought it was important for me to write about yesterday because I don’t have a lot of days like that and it wasn’t impossible for me to relax for once.  
+
+I will be going to Oakland soon because I have been interviewing with Pandora and they want to meet me in person for an open position, which is super exciting.  So in the next couple of days I will be going back to my psychiatrist, working, doing another interview with Microsoft, and doing my homework so I can fly to Oakland.
+
+So yeah, super busy, but I think I have been doing an alright job of relaxing more and trying to be present in the moment.  I still feel kind of a low grade depression that I have been feeling since the beginning of the year, but I think it is getting better.
+
+I am still not sure what the deal is with the drugs I have been taking, because they don’t seem to be helping me a whole lot, but I think I will find more out tomorrow when I go to the health center.  
+
+Also sex with sidney is providing kind of difficult, but we are working on it.  My main concern is that she become frustrated and fed up, but I think we are going to keep trying different things so that she can eventually feel as good as I do. 
+
+That’s it for now - back to homework!
+
+
+Oh and I almost forgot, on Friday night Sidney and I went to a party thrown by one of my friends from ResNet.  It was super fun and we played beer die for the firs time.  Then we cam home and had sex, watched adventure time, and Sidney gave me a bj.  Oh and I took a toke at the party.  So overall a pretty awesome night.  Actually became better friends with some of my workmates and classmates which is really cool.  So yeah, that was a really positive experience.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409393889112152</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85130557861901</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>7CFF878E0B134C2C808BB7A8338C0353</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>20</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>68</string>
+		<key>IconName</key>
+		<string>clear.png</string>
+		<key>Pressure MB</key>
+		<integer>1020</integer>
+		<key>Relative Humidity</key>
+		<integer>49</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-11-16T14:34:43Z</date>
+		<key>Sunset Date</key>
+		<date>2014-11-17T00:54:02Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>270</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>20</integer>
+		<key>Wind Speed KPH</key>
+		<integer>15</integer>
+	</dict>
+</dict>
+</plist>

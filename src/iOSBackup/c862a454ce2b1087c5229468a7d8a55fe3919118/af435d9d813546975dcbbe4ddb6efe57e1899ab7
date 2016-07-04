@@ -1,0 +1,14 @@
+12:18:53:274 [main            ] I <200>     **** NEW SESSION ****
+12:18:53:284 [main            ] I <200>     DayOne/2.0.3 (en_US; iOS/9.3; iPhone; iPhone7,2; Release/63) <03/26/2016 12:18:53 PDT(-0700)> <03/26/2016 13:18:53 MDT(-0600)>
+12:18:53:597 [com.apple.root.b] I <Core>    DODataModel CREATING BACKUP DayOneJournals.sqlite to DayOneJournalsBackup.sqlite
+12:18:53:599 [main            ] I <Core>    Search Index does not exist.
+12:18:53:645 [main            ] W <Core>    Error preparing search index: Error Domain=kDOSearchIndexDomain Code=1 "(null)"
+12:18:53:647 [main            ] I <Core>    Rebuilding search index
+12:18:53:974 [NSManagedObjectC] I <Core>    Collecting 0 photo objects.
+12:18:53:994 [com.apple.root.b] I <Core>    Collecting 0 photo/thumbnail files.
+12:18:54:080 [main            ] I <200>     User is not signed in
+12:19:17:532 [NSManagedObjectC] I <Core>    Import Entry count at 100.
+12:19:17:532 [NSManagedObjectC] I <Core>    Import Photo count at 7.
+12:19:19:858 [NSManagedObjectC] I <Core>    Import Entry count at 200.
+12:19:19:858 [NSManagedObjectC] I <Core>    Import Photo count at 16.
+12:20:06:114 [com.apple.root.b] I <Core>    DODataModel CREATING BACKUP DayOneJournals.sqlite to DayOneJournalsBackup.sqlite

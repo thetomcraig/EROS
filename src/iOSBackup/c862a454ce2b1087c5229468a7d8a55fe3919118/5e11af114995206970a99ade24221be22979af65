@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-08-23T07:58:27Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2013-08-23T07:58:27Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.8.4</string>
+		<key>Software Agent</key>
+		<string>Day One (Mac)/1.8.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Yeah, so I stopped trying to write in here every day.  Whatever.
+Today was my last day at JPL, finished up a lot of things and feel pretty accomplished.  Now i finally have some time to devote to my projects.  I hope to get the iTunes one done before I go back to school.  As well as getting computer pile II up and running with some games. 
+
+Not much going on in my life.  I got a text from Katya yesterday.  Just saying whats up, etc.  Which is strange because I haven't spoken to her in two years, and 'm pretty sure I broke her heart…  I honestly thought she hated me.  So that was strange, not sure if the conversation is over either.
+
+Dad just came back from taking Jack to Louisiana for grad school.  So now I am finally free for a month before I go back to school, even though everyone is already gone…  But hey, jury duty is coming up!
+
+I am going to see Mark Baker on Monday.
+
+I guess thats most of the big stuff that has happened recently.
+
+I am grateful for my job and my coworkers.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.107483597499986</real>
+		<key>Locality</key>
+		<string>South Pasadena</string>
+		<key>Longitude</key>
+		<real>-118.14628283249998</real>
+		<key>Place Name</key>
+		<string>1600 Marengo Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>205B08E72A9F4CAEA64C31F2F4C9BD3F</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>21</string>
+		<key>Description</key>
+		<string>Clear</string>
+		<key>Fahrenheit</key>
+		<string>70</string>
+		<key>IconName</key>
+		<string>sunnyn.png</string>
+	</dict>
+</dict>
+</plist>

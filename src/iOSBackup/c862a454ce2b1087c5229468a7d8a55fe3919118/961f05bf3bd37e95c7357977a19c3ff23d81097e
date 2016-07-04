@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Activity</key>
+	<string>Stationary</string>
+	<key>Creation Date</key>
+	<date>2016-02-03T02:32:03Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>iPhone/iPhone7,2</string>
+		<key>Generation Date</key>
+		<date>2016-02-03T02:32:03Z</date>
+		<key>Host Name</key>
+		<string>EUCLID</string>
+		<key>OS Agent</key>
+		<string>iOS/9.2.1</string>
+		<key>Software Agent</key>
+		<string>Day One iOS/1.17.5</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Patience part II
+Shitty haircut still shitty. 
+
+Haven't seen Sidney since a week and a half ago. I might try to see her this coming weekend.  It's not that bad when I don't see her and I can hang out with other people to take my mind off of it. I am still interested though, but I think the soft deadline of a month that I have myself is still feasible.  I'm not sure about this weekend but next weekend I'll be seeing my parents so I think I'll try to plan something with Sidney the weekend after that and see if I can garage how she is feeling. 
+
+This past weekend as a lot of fun. Went on a hike with some Pandora friends and friends of friends. And I smoked Saturday night and had a really good time with some other friends. Then had brunch on Sunday with a newer friend. 
+
+And the Pandora holiday party was last Thursday and also a lot of fun. 
+
+So moral of the story here is patience. Working on any kind of relationship can be hard and you have to pit yourself out there I think. I feel like I almost happy when I can do quite a few things alone but still have a significant amount of time with friends and family. 
+
+For me, it seems, ir has a lot to do with being able to take your mind off of some things. I think I am still learning what makes me happy and how to live with myself and move forward. 
+
+Except this God damned haircut. God Damnit. 
+
+Anyway I'm having some people over tonight which should be a good time also. 
+
+Anyway I think I'm getting better at this kind of pace. Slower than school, that is.  Especially at work I'm having to plan and work towards larger goals which I'm not totally used to. But I think it's good really, and takes some faith too, believing things will work out in the end. And I think they will. </string>
+	<key>Ignore Step Count</key>
+	<true/>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>37.801178359584135</real>
+		<key>Locality</key>
+		<string>Oakland</string>
+		<key>Longitude</key>
+		<real>-122.25385607817319</real>
+		<key>Place Name</key>
+		<string>1824 Lakeshore Ave</string>
+		<key>Region</key>
+		<dict>
+			<key>Center</key>
+			<dict>
+				<key>Latitude</key>
+				<real>37.801139200000001</real>
+				<key>Longitude</key>
+				<real>-122.25395465</real>
+			</dict>
+			<key>Radius</key>
+			<real>33.449471015569934</real>
+		</dict>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Step Count</key>
+	<integer>12426</integer>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>6E3ECDC5BCCC4C3A9471A9D28EFA2EF2</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>9</string>
+		<key>Description</key>
+		<string>Partly Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>48</string>
+		<key>IconName</key>
+		<string>cloudyn.png</string>
+		<key>Pressure MB</key>
+		<integer>1025</integer>
+		<key>Relative Humidity</key>
+		<integer>71</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2016-02-02T15:11:13Z</date>
+		<key>Sunset Date</key>
+		<date>2016-02-03T01:34:10Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>50</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>9</integer>
+		<key>Wind Speed KPH</key>
+		<integer>20</integer>
+	</dict>
+</dict>
+</plist>

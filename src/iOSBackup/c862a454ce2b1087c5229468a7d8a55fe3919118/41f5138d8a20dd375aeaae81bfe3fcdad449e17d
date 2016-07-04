@@ -1,0 +1,37 @@
+<body class="en-note">
+	
+	<div>
+		
+		<p><span></span></p>
+		
+		<p>If you have an always-on computer at home, like a <a href="http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu" shape="rect">home server</a>, you probably run the occasional command on it to start a process, troubleshoot something, or otherwise control it through a terminal. DIYer Steve figured out how to run commands on his Raspberry Pi just by sending a text message.</p>
+
+		
+		<p>Steve’s process uses Google Voice and a simple script that checks his messages every minute. If he sends a text message from his phone starting with “cmd,” his computer will run the command that comes after it—basically, it allows him to SSH into his computer via SMS. You probably won’t perform any mega-complicated tasks, but it can be handy to have if you find yourself needing to control your computer from afar. Hit the link to download the script and tweak it for your own machine.</p>
+
+		
+		<p><a href="http://stevenhickson.blogspot.com/2013/03/controlling-raspberry-pi-via-text.html" shape="rect">Controlling Raspberry Pi via Text Message</a> | Steve’s Computer Vision Blog via <a href="http://hackaday.com/2013/05/19/controlling-a-terminal-with-google-voice/" shape="rect">Hack a Day</a></p>
+		
+		<div><span>Related</span>
+			
+			<div>
+				
+				<div>
+					
+					<div><a href="http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu" shape="rect"><span></span></a>
+						
+						<h6><a href="http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu" shape="rect">Turn an Old Computer into a Networked Backup, Streaming, or Torrenting Machine with Ubuntu</a></h6>
+						
+						<p>You’ve heard the word “server” thrown around a lot, but usually in the context of web sites or big companies that have a lot of data… <a href="http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu" shape="rect">Read…</a></p>
+					
+					</div>
+				
+				</div>
+			
+			</div>
+		
+		</div>
+	
+	</div><br /><img width="640" x-evernote-mime="image/jpeg" src="evernotecid://A49DB69E-11AD-4784-9B2C-54D368333129/ENResource/p981?contextid=" height="360" class="en-media" /><br /><img width="137" x-evernote-mime="image/jpeg" src="evernotecid://A49DB69E-11AD-4784-9B2C-54D368333129/ENResource/p980?contextid=" height="77" class="en-media" /><br /><img width="640" x-evernote-mime="image/jpeg" src="evernotecid://A49DB69E-11AD-4784-9B2C-54D368333129/ENResource/p981?contextid=" height="360" class="en-media" /><br /><img width="137" x-evernote-mime="image/jpeg" src="evernotecid://A49DB69E-11AD-4784-9B2C-54D368333129/ENResource/p980?contextid=" height="77" class="en-media" />
+
+</body>

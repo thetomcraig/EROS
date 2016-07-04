@@ -1,0 +1,127 @@
+Wed May 25 13:25:44 2016
+Device: iPhone
+System: iPhone OS (9.3.2)
+Locale: en_US
+1Password 6.4.1 (641004)
+
+Wed May 25 13:25:44 2016| 641004 [Unknown App State][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S application:willFinishLaunchingWithOptions: | Entering method
+Wed May 25 13:25:44 2016| 641004 [Unknown App State][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S checkForLegacyBackup | Check 1 files in file:///var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Documents/ for legacy backups.
+Wed May 25 13:25:44 2016| 641004 [ApplicationStateInactive][DATABASE:(Main Thread):<OP4Database: 0x127565d20>] S openDatabaseWithError: | SQLite Version: 3.8.10.2
+Wed May 25 13:25:44 2016| 641004 [ApplicationStateInactive][DATABASE:(Main Thread):<B5Database: 0x1275cba60>] S openDatabaseWithError: | SQLite Version: 3.8.10.2
+Wed May 25 13:25:44 2016| 641004 [ApplicationStateInactive][APP:(Main Thread):<OPRootViewController: 0x128065400>] S activeProfileWillChange: | Enabling reauth requests for all accounts.
+Wed May 25 13:25:44 2016| 641004 [ApplicationStateInactive][UTILS:(Main Thread):AGUserKeychain] S isKeychainAvailable | Keychain canary is alive and well
+Wed May 25 13:25:44 2016| 641004 [ApplicationStateInactive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S loadLocalAuthenticationFramework | Loading LocalAuthentication.framework
+Wed May 25 13:25:44 2016| 641004 [ApplicationStateInactive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S restoreStateAtLaunch: | Lock mode changed (2): QuickUnlock
+Wed May 25 13:25:44 2016| 641004 [ApplicationStateInactive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S storeSecretForQuickUnlockInSystemKeychain | 
+Wed May 25 13:25:44 2016| 641004 [ApplicationStateInactive][STORE:(Main Thread):<OPApplicationCustomer: 0x1275cddb0>] S restorePremiumFromKeychain | Premium features restored from keychain
+Wed May 25 13:25:44 2016| 641004 [ApplicationStateInactive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S application:willFinishLaunchingWithOptions: | Leaving method
+Wed May 25 13:25:44 2016| 641004 [ApplicationStateInactive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S application:didFinishLaunchingWithOptions: | Entering method
+Wed May 25 13:25:45 2016| 641004 [ApplicationStateActive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S application:didFinishLaunchingWithOptions: | Leaving method
+Wed May 25 13:25:45 2016| 641004 [ApplicationStateActive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationDidBecomeActive: | Entering method
+Wed May 25 13:25:45 2016| 641004 [ApplicationStateActive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S restoreStateAtLaunch: | Lock mode changed (2): QuickUnlock
+Wed May 25 13:25:45 2016| 641004 [ApplicationStateActive][STORE:(Main Thread):<OPAppStore: 0x128906b30>] S isPurchased | Customer is grandfathered, unlocking IAP
+Wed May 25 13:25:45 2016| 641004 [ApplicationStateActive][STORE:(Main Thread):<OPAppStore: 0x128906b30>] S refreshProducts | Customer has already purchased, not refreshing products.
+Wed May 25 13:25:45 2016| 641004 [ApplicationStateActive][STORE:(Main Thread):<OPPremiumValidator: 0x1275d8220>] S validate | Entering method. AppStore: <OPAppStore: 0x128906b30>, ApplicationCustomer: <OPApplicationCustomer: 0x1275cddb0>, original download version: (null)
+Wed May 25 13:25:45 2016| 641004 [ApplicationStateActive][STORE:(Main Thread):<OPAppStore: 0x128906b30>] S isPurchased | Customer is grandfathered, unlocking IAP
+Wed May 25 13:25:45 2016| 641004 [ApplicationStateActive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationDidBecomeActive: | Leaving method
+Wed May 25 13:25:45 2016| 641004 [ApplicationStateActive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S application:didRegisterForRemoteNotificationsWithDeviceToken: | 
+Wed May 25 13:25:46 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x127664f10):<OPAgileKeychainReplicator: 0x12764a2c0>] S run | Keychain replicator started
+Wed May 25 13:25:46 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x127664f10):<OPAgileKeychainReplicator: 0x12764a2c0>] S _loadDataFolderMetadata | Current sync path in <OPDropboxFileSyncService: Dropbox, 0x1277c14c0>: </Apps/1Password/1Password.agilekeychain>
+Wed May 25 13:25:46 2016| 641004 [ApplicationStateActive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationWillResignActive: | 
+Wed May 25 13:25:48 2016| 641004 [ApplicationStateInactive][REPLICATOR:(Secondary Thread 0x127611550):<OPAgileKeychainReplicator: 0x12764a2c0>] S fileSyncTrackerCompletedAllPaths: | Item sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:25:48 2016| 641004 [ApplicationStateInactive][REPLICATOR:(Secondary Thread 0x127611550):<OPAgileKeychainReplicator: 0x12764a2c0>] S fileSyncTrackerCompletedAllPaths: | Attachment sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:25:48 2016| 641004 [ApplicationStateInactive][REPLICATOR:(Secondary Thread 0x127611550):<OPAgileKeychainReplicator: 0x12764a2c0>] S _signalCompletion | 
+Wed May 25 13:25:48 2016| 641004 [ApplicationStateInactive][REPLICATOR:(Secondary Thread 0x127611550):<OPAgileKeychainReplicator: 0x12764a2c0>] S _signalCompletion | Dropbox replicator finished
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateInactive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S processQuickUnlock:withCompletionHandler: | 
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateInactive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S unlockWithSecretStoredInSystemKeychain | Unlocked with keychain
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateInactive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S startHeartbeat | Started heartbeat
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateInactive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S storeSecretForQuickUnlockInSystemKeychain | 
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateInactive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S setAppLockMode: | Lock mode changed (0): 'Unlocked'
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateActive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationDidBecomeActive: | Entering method
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateActive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S restoreStateAtLaunch: | Lock mode changed (0): Unlocked
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateActive][STORE:(Main Thread):<OPAppStore: 0x128906b30>] S isPurchased | Customer is grandfathered, unlocking IAP
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateActive][STORE:(Main Thread):<OPAppStore: 0x128906b30>] S refreshProducts | Customer has already purchased, not refreshing products.
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateActive][STORE:(Main Thread):<OPPremiumValidator: 0x1275d8220>] S validate | Entering method. AppStore: <OPAppStore: 0x128906b30>, ApplicationCustomer: <OPApplicationCustomer: 0x1275cddb0>, original download version: (null)
+Wed May 25 13:26:04 2016| 641004 [ApplicationStateActive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationDidBecomeActive: | Leaving method
+Wed May 25 13:26:05 2016| 641004 [ApplicationStateActive][SYNC:(Secondary Thread 0x127664f10):<OPAgileKeychainSyncer (/var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Library/Replicas/Dropbox_1425986/~Apps~1Password~1Password.agilekeychain) 0x128932580>] S main | > Sync started
+Wed May 25 13:26:07 2016| 641004 [ApplicationStateActive][SYNC:(Secondary Thread 0x127664f10):<OPAgileKeychainSyncer (/var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Library/Replicas/Dropbox_1425986/~Apps~1Password~1Password.agilekeychain) 0x128932580>] S main | < Sync finished
+Wed May 25 13:26:36 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128936450):<OPAgileKeychainReplicator: 0x128a94990>] S run | Keychain replicator started
+Wed May 25 13:26:36 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128936450):<OPAgileKeychainReplicator: 0x128a94990>] S _loadDataFolderMetadata | Current sync path in <OPDropboxFileSyncService: Dropbox, 0x128a50040>: </Apps/1Password/1Password.agilekeychain>
+Wed May 25 13:26:37 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x12774cbb0):<OPAgileKeychainReplicator: 0x128a94990>] S fileSyncTrackerCompletedAllPaths: | Item sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:26:38 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x1277635c0):<OPAgileKeychainReplicator: 0x128a94990>] S fileSyncTrackerCompletedAllPaths: | Attachment sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:26:38 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x1277635c0):<OPAgileKeychainReplicator: 0x128a94990>] S _signalCompletion | 
+Wed May 25 13:26:38 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x1277635c0):<OPAgileKeychainReplicator: 0x128a94990>] S _signalCompletion | Dropbox replicator finished
+Wed May 25 13:26:38 2016| 641004 [ApplicationStateActive][SYNC:(Secondary Thread 0x127752770):<OPAgileKeychainSyncer (/var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Library/Replicas/Dropbox_1425986/~Apps~1Password~1Password.agilekeychain) 0x1276d1d60>] S main | > Sync started
+Wed May 25 13:26:38 2016| 641004 [ApplicationStateActive][SYNC:(Secondary Thread 0x127752770):<OPAgileKeychainSyncer (/var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Library/Replicas/Dropbox_1425986/~Apps~1Password~1Password.agilekeychain) 0x1276d1d60>] S main | < Sync finished
+Wed May 25 13:27:16 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128936450):<OPAgileKeychainReplicator: 0x127778b40>] S run | Keychain replicator started
+Wed May 25 13:27:16 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128936450):<OPAgileKeychainReplicator: 0x127778b40>] S _loadDataFolderMetadata | Current sync path in <OPDropboxFileSyncService: Dropbox, 0x1275e5d20>: </Apps/1Password/1Password.agilekeychain>
+Wed May 25 13:27:18 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128baddf0):<OPAgileKeychainReplicator: 0x127778b40>] S fileSyncTrackerCompletedAllPaths: | Item sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:27:18 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128b278f0):<OPAgileKeychainReplicator: 0x127778b40>] S fileSyncTrackerCompletedAllPaths: | Attachment sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:27:18 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128b278f0):<OPAgileKeychainReplicator: 0x127778b40>] S _signalCompletion | 
+Wed May 25 13:27:18 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128b278f0):<OPAgileKeychainReplicator: 0x127778b40>] S _signalCompletion | Dropbox replicator finished
+Wed May 25 13:27:18 2016| 641004 [ApplicationStateActive][SYNC:(Secondary Thread 0x128b278f0):<OPAgileKeychainSyncer (/var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Library/Replicas/Dropbox_1425986/~Apps~1Password~1Password.agilekeychain) 0x1276643b0>] S main | > Sync started
+Wed May 25 13:27:18 2016| 641004 [ApplicationStateActive][SYNC:(Secondary Thread 0x128b278f0):<OPAgileKeychainSyncer (/var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Library/Replicas/Dropbox_1425986/~Apps~1Password~1Password.agilekeychain) 0x1276643b0>] S main | < Sync finished
+Wed May 25 13:28:06 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x1289b8a80):<OPAgileKeychainReplicator: 0x128c42570>] S run | Keychain replicator started
+Wed May 25 13:28:06 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x1289b8a80):<OPAgileKeychainReplicator: 0x128c42570>] S _loadDataFolderMetadata | Current sync path in <OPDropboxFileSyncService: Dropbox, 0x1289ed740>: </Apps/1Password/1Password.agilekeychain>
+Wed May 25 13:28:07 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x1289b8a80):<OPAgileKeychainReplicator: 0x128c42570>] S fileSyncTrackerCompletedAllPaths: | Item sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:28:08 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128a49540):<OPAgileKeychainReplicator: 0x128c42570>] S fileSyncTrackerCompletedAllPaths: | Attachment sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:28:08 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128a49540):<OPAgileKeychainReplicator: 0x128c42570>] S _signalCompletion | 
+Wed May 25 13:28:08 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x128a49540):<OPAgileKeychainReplicator: 0x128c42570>] S _signalCompletion | Dropbox replicator finished
+Wed May 25 13:28:08 2016| 641004 [ApplicationStateActive][SYNC:(Secondary Thread 0x128c5ced0):<OPAgileKeychainSyncer (/var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Library/Replicas/Dropbox_1425986/~Apps~1Password~1Password.agilekeychain) 0x128c1c5a0>] S main | > Sync started
+Wed May 25 13:28:08 2016| 641004 [ApplicationStateActive][SYNC:(Secondary Thread 0x128c5ced0):<OPAgileKeychainSyncer (/var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Library/Replicas/Dropbox_1425986/~Apps~1Password~1Password.agilekeychain) 0x128c1c5a0>] S main | < Sync finished
+Wed May 25 13:28:25 2016| 641004 [ApplicationStateActive][UI:(Main Thread):<OPNewLoginViewController: 0x128ad8ff0>] M save: | Saving item 8C20D5B0897B487D87586B4EF38D7E8B
+Wed May 25 13:28:25 2016| 641004 [ApplicationStateActive][DATABASE:(Secondary Thread 0x128ca1eb0):<OP4Database: 0x127565d20>] S txUpdateItem:mergeIfNecessary:error: | Created new item: 8C20D5B0897B487D87586B4EF38D7E8B
+Wed May 25 13:28:25 2016| 641004 [ApplicationStateActive][SYNC:(Secondary Thread 0x128c6d5c0):<OPAgileKeychainSyncer (/var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Library/Replicas/Dropbox_1425986/~Apps~1Password~1Password.agilekeychain) 0x12762e190>] S main | > Sync started
+Wed May 25 13:28:26 2016| 641004 [ApplicationStateActive][SYNC:(Secondary Thread 0x128c6d5c0):<OPAgileKeychainSyncer (/var/mobile/Containers/Data/Application/E3824F88-9B5A-4FA8-815C-41B8F7AA0342/Library/Replicas/Dropbox_1425986/~Apps~1Password~1Password.agilekeychain) 0x12762e190>] S main | < Sync finished
+Wed May 25 13:28:26 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x12898f6d0):<OPAgileKeychainReplicator: 0x128ea8e60>] S run | Keychain replicator started
+Wed May 25 13:28:26 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x12898f6d0):<OPAgileKeychainReplicator: 0x128ea8e60>] S _loadDataFolderMetadata | Current sync path in <OPDropboxFileSyncService: Dropbox, 0x12754bf90>: </Apps/1Password/1Password.agilekeychain>
+Wed May 25 13:28:28 2016| 641004 [ApplicationStateActive][REPLICATOR:(Secondary Thread 0x12898f6d0):<OPAgileKeychainReplicator: 0x128ea8e60>] S fileSyncTrackerCompletedAllPaths: | Item sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:28:28 2016| 641004 [ApplicationStateActive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationWillResignActive: | 
+Wed May 25 13:28:28 2016| 641004 [ApplicationStateBackground][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationDidEnterBackground: | 
+Wed May 25 13:28:29 2016| 641004 [ApplicationStateBackground][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S storeSecretForQuickUnlockInSystemKeychain | 
+Wed May 25 13:28:29 2016| 641004 [ApplicationStateBackground][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S setAppLockMode: | Lock mode changed (2): 'QuickUnlock'
+Wed May 25 13:28:29 2016| 641004 [ApplicationStateBackground][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S stopHeartbeat | Stopping heartbeat
+Wed May 25 13:28:29 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128a49540):<OPAgileKeychainReplicator: 0x128ea8e60>] S fileSyncTrackerCompletedAllPaths: | Attachment sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:28:29 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128a49540):<OPAgileKeychainReplicator: 0x128ea8e60>] S _signalCompletion | 
+Wed May 25 13:28:29 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128a49540):<OPAgileKeychainReplicator: 0x128ea8e60>] S _signalCompletion | Dropbox replicator finished
+Wed May 25 13:57:49 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128de37a0):<OPAgileKeychainReplicator: 0x128c619d0>] S run | Keychain replicator started
+Wed May 25 13:57:49 2016| 641004 [ApplicationStateBackground][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S application:performFetchWithCompletionHandler: | 
+Wed May 25 13:57:49 2016| 641004 [ApplicationStateBackground][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] E application:performFetchWithCompletionHandler: | Protected data is not available, cannot perform a background fetch.
+Wed May 25 13:57:49 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128de37a0):<OPAgileKeychainReplicator: 0x128c619d0>] S _loadDataFolderMetadata | Current sync path in <OPDropboxFileSyncService: Dropbox, 0x128c66fc0>: </Apps/1Password/1Password.agilekeychain>
+Wed May 25 13:57:54 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128de37a0):<OPAgileKeychainReplicator: 0x128c619d0>] S fileSyncTrackerCompletedAllPaths: | Item sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:57:54 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128de37a0):<OPAgileKeychainReplicator: 0x128c619d0>] S fileSyncTrackerCompletedAllPaths: | Attachment sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 13:57:54 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128de37a0):<OPAgileKeychainReplicator: 0x128c619d0>] S _signalCompletion | 
+Wed May 25 13:57:54 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128de37a0):<OPAgileKeychainReplicator: 0x128c619d0>] S _signalCompletion | Dropbox replicator finished
+Wed May 25 14:10:47 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128c866b0):<OPAgileKeychainReplicator: 0x128c60c60>] S run | Keychain replicator started
+Wed May 25 14:10:47 2016| 641004 [ApplicationStateBackground][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S application:performFetchWithCompletionHandler: | 
+Wed May 25 14:10:47 2016| 641004 [ApplicationStateBackground][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] E application:performFetchWithCompletionHandler: | Protected data is not available, cannot perform a background fetch.
+Wed May 25 14:10:48 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128c866b0):<OPAgileKeychainReplicator: 0x128c60c60>] S _loadDataFolderMetadata | Current sync path in <OPDropboxFileSyncService: Dropbox, 0x1289ca250>: </Apps/1Password/1Password.agilekeychain>
+Wed May 25 14:10:51 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128c866b0):<OPAgileKeychainReplicator: 0x128c60c60>] S fileSyncTrackerCompletedAllPaths: | Item sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 14:10:51 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128c6ee10):<OPAgileKeychainReplicator: 0x128c60c60>] S fileSyncTrackerCompletedAllPaths: | Attachment sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 14:10:51 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128c6ee10):<OPAgileKeychainReplicator: 0x128c60c60>] S _signalCompletion | 
+Wed May 25 14:10:51 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128c6ee10):<OPAgileKeychainReplicator: 0x128c60c60>] S _signalCompletion | Dropbox replicator finished
+Wed May 25 14:17:47 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x127571f60):<OPAgileKeychainReplicator: 0x128c66760>] S run | Keychain replicator started
+Wed May 25 14:17:47 2016| 641004 [ApplicationStateBackground][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S application:performFetchWithCompletionHandler: | 
+Wed May 25 14:17:47 2016| 641004 [ApplicationStateBackground][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] E application:performFetchWithCompletionHandler: | Protected data is not available, cannot perform a background fetch.
+Wed May 25 14:17:47 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x127571f60):<OPAgileKeychainReplicator: 0x128c66760>] S _loadDataFolderMetadata | Current sync path in <OPDropboxFileSyncService: Dropbox, 0x12762e1f0>: </Apps/1Password/1Password.agilekeychain>
+Wed May 25 14:17:50 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x127571f60):<OPAgileKeychainReplicator: 0x128c66760>] S fileSyncTrackerCompletedAllPaths: | Item sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 14:17:50 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x12778a3b0):<OPAgileKeychainReplicator: 0x128c66760>] S fileSyncTrackerCompletedAllPaths: | Attachment sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 14:17:50 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x12778a3b0):<OPAgileKeychainReplicator: 0x128c66760>] S _signalCompletion | 
+Wed May 25 14:17:50 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x12778a3b0):<OPAgileKeychainReplicator: 0x128c66760>] S _signalCompletion | Dropbox replicator finished
+Wed May 25 16:27:03 2016| 641004 [ApplicationStateBackground][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationWillEnterForeground: | 
+Wed May 25 16:27:03 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128f0b250):<OPAgileKeychainReplicator: 0x128c6d780>] S run | Keychain replicator started
+Wed May 25 16:27:03 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128f0b250):<OPAgileKeychainReplicator: 0x128c6d780>] S _loadDataFolderMetadata | Current sync path in <OPDropboxFileSyncService: Dropbox, 0x128940c80>: </Apps/1Password/1Password.agilekeychain>
+Wed May 25 16:27:03 2016| 641004 [ApplicationStateBackground][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S restoreStateAtLaunch: | Lock mode changed (2): QuickUnlock
+Wed May 25 16:27:05 2016| 641004 [ApplicationStateActive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationDidBecomeActive: | Entering method
+Wed May 25 16:27:05 2016| 641004 [ApplicationStateActive][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S restoreStateAtLaunch: | Lock mode changed (2): QuickUnlock
+Wed May 25 16:27:05 2016| 641004 [ApplicationStateActive][STORE:(Main Thread):<OPAppStore: 0x128906b30>] S isPurchased | Customer is grandfathered, unlocking IAP
+Wed May 25 16:27:05 2016| 641004 [ApplicationStateActive][STORE:(Main Thread):<OPAppStore: 0x128906b30>] S refreshProducts | Customer has already purchased, not refreshing products.
+Wed May 25 16:27:05 2016| 641004 [ApplicationStateActive][STORE:(Main Thread):<OPPremiumValidator: 0x1275d8220>] S validate | Entering method. AppStore: <OPAppStore: 0x128906b30>, ApplicationCustomer: <OPApplicationCustomer: 0x1275cddb0>, original download version: (null)
+Wed May 25 16:27:05 2016| 641004 [ApplicationStateActive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationDidBecomeActive: | Leaving method
+Wed May 25 16:27:05 2016| 641004 [ApplicationStateInactive][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationWillResignActive: | 
+Wed May 25 16:27:06 2016| 641004 [ApplicationStateBackground][APP:(Main Thread):<OPAppDelegate: 0x1276290d0>] S applicationDidEnterBackground: | 
+Wed May 25 16:27:06 2016| 641004 [ApplicationStateBackground][LOCKSERVICE:(Main Thread):<OPLockService: 0x1275d6ce0>] S storeSecretForQuickUnlockInSystemKeychain | 
+Wed May 25 16:27:07 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x128f0b250):<OPAgileKeychainReplicator: 0x128c6d780>] S fileSyncTrackerCompletedAllPaths: | Item sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 16:27:08 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x1289e16a0):<OPAgileKeychainReplicator: 0x128c6d780>] S fileSyncTrackerCompletedAllPaths: | Attachment sync tracker completed; receivedAll = YES, error count = 0
+Wed May 25 16:27:08 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x1289e16a0):<OPAgileKeychainReplicator: 0x128c6d780>] S _signalCompletion | 
+Wed May 25 16:27:08 2016| 641004 [ApplicationStateBackground][REPLICATOR:(Secondary Thread 0x1289e16a0):<OPAgileKeychainReplicator: 0x128c6d780>] S _signalCompletion | Dropbox replicator finished

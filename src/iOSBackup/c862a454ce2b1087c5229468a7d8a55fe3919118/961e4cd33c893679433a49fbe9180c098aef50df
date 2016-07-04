@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-10-25T20:57:32Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookAir7,2</string>
+		<key>Generation Date</key>
+		<date>2015-10-25T20:57:32Z</date>
+		<key>Host Name</key>
+		<string>TYCHO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.11</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.10.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Single life.
+Yeah leading the single life lately…  It’s kind of lonely, but I am getting used to it - and making better friends at work as well.  I was Crystal this weekend - really good to catch up with her, and I am glad we have remained friends.  I made an experiment out of this weekend - Crystal is not the best of planning things and I know that that kind of thing makes me really anxious, so I tried to see if I have gotten better in this respect and could keep my cool.  Not that I blow up or do anything bad really, but I kind of get anxious and depressed.  It seemed like I did a good job though - I have started running  lot more and still meditate daily - both of which I have not done in the last couple of days.  I could tell that by not doing those two things I was getting a bit anxious, but over all I did not get as stressed as I thought I would.  This makes me really happy.
+
+It was pretty fun catching up with her and she had to pick out bathroom tile which I helped with.  I think its a special kind of friend that you can do boring chores with and they will have a good time just because they are spending time with you.  Also another person who I could see as a roommate at some point.  
+
+Work is going well.  I am on my first ‘project’ which is just updating the version of Django we use in our service - so nothing fancy.  But still feels important and I will be in a position of telling other people something I know that they do not and I think that’s pretty cool.  We also found out who is leaving the team, so in a few months the team will be down to 10 people.  A good number I think (14 is too many), AND we will be getting a new manager.  So, exciting stuff all round.  I really like working.  It has pretty much met my expectations - in a good way.  I knew in school that working would be better and it really is.  I do miss some things - I actually liked going to lecture and learning when the professor was good and the lecture hall wasn’t all dirty and gross.  And I liked the sense of camaraderie with classmates.  But there was just too much wrong with the whole thing and wrong for me specifically.  It’s so good to be out.  Talking about school almost feels like talking about war; I constantly feel like saying YOU WEREN’T THERE, because so many people just don’t get it.
+
+It’s okay though - and I am enjoying getting closer to my work friends.  I am looking forward to being comfortable with them and inviting them over to my place and that sort of thing.  I feel really lucky to have gotten a job out of college that I like with coworkers who I also like.  I feel like I deserve this, but also that it’s almost TOO great.  Beggars can’t be choosers I guess!
+
+My apartment rent is still ridiculous - 2740.  But this apartment is pretty great also.  27 is probably about right, more than I want to pay, but reasonable for this kind of place in today’s market.
+
+I miss Sidney - I think what I really miss is being in a relationship, and I know (like pretty damn sure) that it would not be a good idea to get back together with her.  But I miss being that close with someone - and I know that sadly that kind of thing takes a long time.  I am still using these stupid dating apps, but give far less of a shit about them now.  I still care in many ways I am desperate for a girlfriend, but I care much less about the girls on the apps.  Which kind of annoys me - the whole culture of online dating is about not giving a shit and this makes it hard to find someone who is real and down to earth.  But I guess I just have to keep trying.
+
+I want to work out more.  It’s weird, but the more I have been walking and running and exercising, the more energy I have.  I guess people already knew that but I really didn’t believe it.  I have started running in the mornings and I want to start doing so daily, or something like 6/7 days of the week - very good stress relief.  I did not finish insanity, but I don’t really care.  I might pick it up again, or I might not.  It did help build my endurance, which is good.  I think i might just keep doing the ab workout from insanity and try to work on that.  We’ll see.  
+
+Also learning how to do food.  Which is good.
+
+I am grateful for my job and all of my friends and family.  This is the first time in my life that I actually feel optimistic and happy often - I am working towards contentment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>37.801189220518211</real>
+		<key>Locality</key>
+		<string>Oakland</string>
+		<key>Longitude</key>
+		<real>-122.25396257395974</real>
+		<key>Place Name</key>
+		<string>1824 Lakeshore Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>D13CD4FE10B34024BE1D22E79639AF02</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>19</string>
+		<key>Description</key>
+		<string>Mostly Sunny</string>
+		<key>Fahrenheit</key>
+		<string>66</string>
+		<key>IconName</key>
+		<string>fair.png</string>
+		<key>Pressure MB</key>
+		<integer>1016</integer>
+		<key>Relative Humidity</key>
+		<integer>68</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-10-25T14:27:50Z</date>
+		<key>Sunset Date</key>
+		<date>2015-10-26T01:17:59Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>220</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>19</integer>
+		<key>Wind Speed KPH</key>
+		<integer>11</integer>
+	</dict>
+</dict>
+</plist>

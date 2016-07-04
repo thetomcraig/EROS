@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-09-09T08:23:00Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2013-09-09T08:23:00Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9</string>
+		<key>Software Agent</key>
+		<string>Day One (Mac)/1.8.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>"It’s very possible that if you have a life filled with that constant stress, little by little the body is breaking down."
+
+That's something to work on...  I need to do something like reinventing myself.  Judging others and myself on just actions is not working.  Something I do what I am.
+
+Saw Isabel today, it was nice.  Talked to her about the shitty men in her life and my relationship with Sidney, which I am unsure about continuing - but I probably will want to go for.
+
+I am glad she is my friend - Isabel that is.  I need to have good friends who I can actually have meaningful emotional interactions with.
+
+Anyway out's bed time, I would write more but I haven't really done anything too exciting.  Just been moving boxes from our hose to Doreen's house to store, and selling stuff.  And doing a lot of programming.  But aside from that, nothing.  Which is good.  I will have some version of my program done by the time I go to school and that will be nice.  
+
+I am thinking about meditation...  But more on all of this later!
+
+I am grateful for my friend Isabel.</string>
+	<key>Location</key>
+	<dict>
+		<key>Latitude</key>
+		<real>34.107318899887254</real>
+		<key>Longitude</key>
+		<real>-118.14627785959266</real>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>8B0A02216ABF41C68704C3CB71F84EBD</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>19</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>66</string>
+		<key>IconName</key>
+		<string>sunny.png</string>
+	</dict>
+</dict>
+</plist>

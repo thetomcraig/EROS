@@ -6,14 +6,14 @@
     {% for twitter_person in twitter_people %}
       <div class="sub">
         <a name="go_to_twitter_person" 
-                href="/scrapers/twitter_person_detail/{{ twitter_person.username }}"
+                href="/scrapers/person_detail/{{ twitter_person.username }}"
                 value={{ twitter_person.username }}
                 class="invisible-button">
 
           <div class="image-cropper">
             <img src={{ twitter_person.avatar }} align="middle"/>
           </div>
-          <h5>{{ twitter_person.username}}</h5> 
+          <h5>{{ twitter_person.real_name}}</h5> 
         </a>
       </div>
     {% endfor %}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-05-24T18:11:56Z</date>
+	<key>Entry Text</key>
+	<string>Phil 20C TA: I took a survey of my students today and almost none if them had read the paper prompt.
+Phil 20C Professor: What idiots!</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string></string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>0.0</real>
+		<key>Locality</key>
+		<string></string>
+		<key>Longitude</key>
+		<real>0.0</real>
+		<key>Place Name</key>
+		<string></string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>A5B13E22C747495F8424E830421B75E7</string>
+</dict>
+</plist>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-08-09T07:32:52Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>iPhone/iPhone5,1</string>
+		<key>Generation Date</key>
+		<date>2013-08-10T07:32:52Z</date>
+		<key>Host Name</key>
+		<string>SOLON</string>
+		<key>OS Agent</key>
+		<string>iOS/6.1.4</string>
+		<key>Software Agent</key>
+		<string>Day One (iOS)/1.11.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Beach house - new house. 
+At the beach for one night. Moving stuff down here. Had terrible allergy attacks. Played some minecraft with jack. Did some work and made progress on my mac app. Very excited about that. Watched Side Effects with mom and dad, and it was pretty interesting. 
+
+Have not made time to write in here lately :/. Liking the books I'm reading and the projects I'm working on. Still want to see mark held though. 
+
+I am grateful for the beach house. At least I won't loosing all my childhood when we sell out house. </string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.107331700000003</real>
+		<key>Locality</key>
+		<string>South Pasadena</string>
+		<key>Longitude</key>
+		<real>-118.1461034</real>
+		<key>Place Name</key>
+		<string>1610 Marengo Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>2061233CB6CB4EA985F983232E167BDF</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>17</string>
+		<key>Description</key>
+		<string>Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>63</string>
+		<key>IconName</key>
+		<string>cloudy.png</string>
+	</dict>
+</dict>
+</plist>

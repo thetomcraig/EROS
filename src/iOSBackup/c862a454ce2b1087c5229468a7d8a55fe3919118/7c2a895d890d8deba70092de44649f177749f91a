@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-08-05T03:37:25Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookAir7,2</string>
+		<key>Generation Date</key>
+		<date>2015-08-05T03:37:25Z</date>
+		<key>Host Name</key>
+		<string>TYCHO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.4</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.10.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Well its my birthday, and I have become a man.
+Parent left yesterday, I am alone in this new apartment figuring out how to be an adult.  Oh yeah, and I broke up with Sidney yesterday.  I didn’t feel great about it.  Really, I saw the whole thing coming.  It was totally a bad idea to visit over the break.  She felt that we were going to try to keep the relationship going, even though we didn’t really verbally discuss that.  I knew she probably felt that way, and I am annoyed because I fell like she knew how I felt but was avoiding it hoping I would not bring up the breakup again.  But of course I did, because I am that kind of person, and we said we would break up at this time so I was honoring that.  There is a lot to be said about it, but I think, really, I have changed over the last year and she has not.  I don’t want it to seem like I think I am better than her, because it’s not like that.  Really, I feel like we are very similar, but have become less so over the past year as I have changed.  Things like mediation have helped a lot with my stress, and I feel that she has come to rely on me for stress management and that kind of thing.  I have enough to worry about trying to figure out my own issues and I feel like she has been piling on, so I am dealing with two versions of the same thing.  
+
+It really resulted in me just kind of not caring.  Not that I don’t care about her, but the relationship just wasn’t really something I cared much about working on anymore.  And I think this had to do with e just getting tired of her.  I think that in the end she was less emotionally mature than I, and it took too much energy for me to deal with.  I guess one of the things that annoys me about this whole situation is that I wish I was not so sensitive, because the whole thing does not seam like a big deal really, but it is enough to make me crazy.  Just the fact that there is something bothering me and I am bothered by that fact that I am bother by it…  THAT is enough to make me crazy.  And I don’t think that really there is a way to make myself not be bothered by that situation, nor should I, really.  
+
+I guess I am really annoyed that I just got bored.  I wish there was more emotional charge to it.  Like there was something dreadfully wrong, because it almost doesn’t seem warranted to me at this point.
+
+
+Really I feel shitty about the whole thing, because I am her best friend and she loves me.  At one point I did love her, but in the last couple of months I just kind of fell out of love with her.  I feel this kind of guilt because she values me so much and loves me so much and I don’t feel like I deserve it.  I am really not attached to her as much as she is to me.
+
+Even when we were breaking up it was hard because she said she wasn’t angry at me, but was just sad.  And she cried a lot.  I cried too, but not the same amount.  Crying is something lately I have been doing less.  Not that I should be doing it all the time, but I found that at times when it would feel good to cry, I have found myself unable to do so. 
+
+So I feel this mix of sadness and apathy at this point.  And apathy is something I have been dealing with a lot lately.  As my anxiety has diminished, a lot of my emotions have seemed less charged.  
+
+I am keeping busy though.  I wanted to start earlier, but was not able to do, so I am going to have to find thing stop do to keep out of my own head.  On the right track so far, only 13 more days…
+
+
+
+
+
+
+
+
+
+
+</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>37.801214738898899</real>
+		<key>Locality</key>
+		<string>Oakland</string>
+		<key>Longitude</key>
+		<real>-122.25400244179833</real>
+		<key>Place Name</key>
+		<string>1824 Lakeshore Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>CD3C24DCAE114BF884058481740EFFBD</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>21</string>
+		<key>Description</key>
+		<string>Partly Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>70</string>
+		<key>IconName</key>
+		<string>fair.png</string>
+		<key>Pressure MB</key>
+		<integer>1016</integer>
+		<key>Relative Humidity</key>
+		<integer>57</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-08-04T13:15:50Z</date>
+		<key>Sunset Date</key>
+		<date>2015-08-05T03:14:04Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>260</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>21</integer>
+		<key>Wind Speed KPH</key>
+		<integer>22</integer>
+	</dict>
+</dict>
+</plist>

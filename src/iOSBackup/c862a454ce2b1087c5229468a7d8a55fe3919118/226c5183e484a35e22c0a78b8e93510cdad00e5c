@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-03-15T04:28:14Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2015-03-15T04:28:14Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.3</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Bored and Tired.
+Really tired of this quarter.  Finals studying is not so bad this quarter because my two hard classes already had finals and we are almost done with the project for one class.
+
+Again the common theme here is that I feel like I should be enjoying myself more than an I am.  Really, I am getting better at dealing with this kind of stuff.  I mean I know that I am not as happy as I could be perhaps, but there isn’t rally much I could do about that now, and I am kind of okay with that.  Kind of because obviously its not optimal, but I’m coming to terms with it.
+
+I think its important that I am getting used to this and when I think about it, I think this is a good skill to have.  Even if real life is nothing like college.  And I don’t think it will be, at least I am getting better at dealing with suboptimal surroundings.
+
+It does bother me, and I think this is true, that most of the people I know in engineering majors have matured by becoming more like me.  By becoming more like I was freshmen year.  I see this because I complained to much about bad undergrad professors and at the time I felt like not many of my peers really understood what I was talking about.  Now I feel like I can actually converse with them about academics on that same level.
+
+I don’t want to imply that college has not matured me, because I really think it has, but it has made me a little less the way I was freshmen year.  And I feel like for everyone else, it has made them more like that person I was freshmen year.
+
+I can champion some things though, and I think its really good that I am figuring some things out right now in my early 20’s that other people are figuring our in their middle ages.  Ill check back in a another 5-10 years….
+
+But really, I am sad about college coming to an end.  Ill be home in a week and after that I only have one more quarter.  It’s bittersweet to make an understatement, but what are you gonna do?</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409508067478363</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85087914873354</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>6FD6AC983D454287BD94F0DDFD2F591A</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>20</string>
+		<key>Description</key>
+		<string>Clear</string>
+		<key>Fahrenheit</key>
+		<string>68</string>
+		<key>IconName</key>
+		<string>clearn.png</string>
+		<key>Pressure MB</key>
+		<integer>1016</integer>
+		<key>Relative Humidity</key>
+		<integer>46</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-03-14T14:10:00Z</date>
+		<key>Sunset Date</key>
+		<date>2015-03-15T02:06:44Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>280</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>20</integer>
+		<key>Wind Speed KPH</key>
+		<integer>6</integer>
+	</dict>
+</dict>
+</plist>

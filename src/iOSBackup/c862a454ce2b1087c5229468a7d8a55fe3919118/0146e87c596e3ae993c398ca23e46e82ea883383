@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MSAssetMetadataFileSize</key>
+	<integer>492345</integer>
+	<key>MSAssetMetadataPixelHeight</key>
+	<integer>1536</integer>
+	<key>MSAssetMetadataPixelWidth</key>
+	<integer>2048</integer>
+	<key>MSAssetMetadataStreamIDKey</key>
+	<string>1630402806</string>
+	<key>isDerivedAsset</key>
+	<true/>
+	<key>k-filename</key>
+	<string>IMG_3618.JPG</string>
+	<key>kPLLocalMSMetadataAssetPLUUIDKey</key>
+	<string>ED607D3B-5109-46F3-844C-C0671B483203</string>
+	<key>kPLPhotoStreamAssetCollectionUUID</key>
+	<string>89AF82D5-BF9C-48B5-9271-BC0C1B166D4D</string>
+	<key>kPLPhotoStreamDateCreatedKey</key>
+	<date>2016-03-24T01:19:23Z</date>
+	<key>kPLPhotoStreamDerivedAssetHashKey</key>
+	<data>
+	AS9mzlzrm6cnRe0K8LpBsjnn1/q6
+	</data>
+	<key>kPLPhotoStreamMasterAssetHashKey</key>
+	<data>
+	AbN+OpLU8J8gSKnKgYW4oKGORGHE
+	</data>
+	<key>kPLPhotoStreamMasterAssetMetadataKey</key>
+	<dict>
+		<key>MSAssetMetadataDateContentCreated</key>
+		<date>2016-03-24T01:19:23Z</date>
+		<key>MSAssetMetadataDateContentModified</key>
+		<date>2016-03-24T01:19:24Z</date>
+		<key>MSAssetMetadataDeviceID</key>
+		<string>672121caa6dc8d5ae8d4c1ad2f3d0e5bcbb58e0c</string>
+		<key>MSAssetMetadataFileSize</key>
+		<integer>1697924</integer>
+		<key>MSAssetMetadataPixelHeight</key>
+		<integer>2448</integer>
+		<key>MSAssetMetadataPixelWidth</key>
+		<integer>3264</integer>
+		<key>MSAssetMetadataSourceiCloudPhotoLibraryEnabledKey</key>
+		<integer>1</integer>
+		<key>MSAssetMetadataStreamIDKey</key>
+		<string>1630402806</string>
+	</dict>
+	<key>kPLPhotoStreamModifiedDateKey</key>
+	<date>2016-03-24T01:19:24Z</date>
+	<key>kPLPhotoStreamServerUploadedDateKey</key>
+	<date>2016-03-24T01:20:02Z</date>
+</dict>
+</plist>

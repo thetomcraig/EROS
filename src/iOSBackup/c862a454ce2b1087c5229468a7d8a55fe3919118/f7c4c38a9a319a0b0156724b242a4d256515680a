@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-12-06T00:44:56Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2013-12-06T00:44:56Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Things are good, things are are bad.
+
+Not much going on, finishing up my assignments and getting ready to go home!  Thanksgiving break was all work, which kind of sucked, and my comp sic teacher sucks this quarter.  I tore him a new asshole on the feedback sheets which was kind of nice though…
+
+Sidney and I have been really good recently, and are moving forward physically as well….
+
+I am studying for a final on Saturday, which is crazy early, but there isn’t anything I can do about it.  I will probably not do well in this (physics) class because of this, but I honestly do not care anymore.  I am feeling pretty good about all my other classes, and as long as I do not fail physics I couldn’t care less why my gee is in the course.  So that’s good.
+
+I can’t wait to go home, Jack has a break that lines up with mine this year and that will be really cool.
+
+I visited Doreen and Peter on my way back up here from Thanksgiving break, and was very saddened, talking o the guy who bought our house.  I really like that family, but it makes me sad to know I do not I’ve there anymore….
+
+Hopefully mom and dad will buy some place in Pasadena, and I agreed to work at JPL this coming summer, so its more of an incentive for them.
+
+Anyway I have to get back to studying, but things are really good.  Even the things that suck are really good.
+
+I am grateful for all of the fantastic people in my life.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409209282517438</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85332570406486</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>EEE9D20F7D484BE4898C3B45EADDF6A8</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>15</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>59</string>
+		<key>IconName</key>
+		<string>clear.png</string>
+		<key>Pressure MB</key>
+		<integer>1016</integer>
+		<key>Relative Humidity</key>
+		<integer>14</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2013-12-05T14:52:06Z</date>
+		<key>Sunset Date</key>
+		<date>2013-12-06T00:49:03Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>340</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>15</integer>
+		<key>Wind Speed KPH</key>
+		<integer>15</integer>
+	</dict>
+</dict>
+</plist>

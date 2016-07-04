@@ -120,13 +120,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
-"""
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (('static/'),('scrapers/static/'),)
-STATIC_ROOT = '/static'
-LOGIN_REDIRECT_URL = '/'
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
-"""
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'

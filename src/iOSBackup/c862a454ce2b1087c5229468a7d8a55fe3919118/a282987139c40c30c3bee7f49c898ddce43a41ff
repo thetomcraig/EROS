@@ -1,0 +1,24 @@
+23:09:10:920 [main            ] I <App>     **** NEW SESSION ****
+23:09:10:938 [main            ] I <App>     DayOne/1.17.5 (en_US; iOS/9.1; iPhone; iPhone7,2; AdHoc/190) <12/04/2015 23:09:10 PST(-0800)> <12/05/2015 00:09:10 MST(-0700)>
+23:09:11:364 [main            ] I <Core>    <Mixpanel: 0x13dda0b10 6ea4894513a2d88722ca873b12b758fd> error getting ifa: falling back to uuid
+23:09:11:660 [main            ] I <App>     Added journal index backup. Total backups: 8
+23:09:11:793 [main            ] I <Core>    JOURNAL INDEX OPENED (store:/private/var/mobile/Containers/Shared/AppGroup/B1A14457-614B-4831-BB7D-E1085741DB61/Journal.sqlite) (file:/private/var/mobile/Containers/Shared/AppGroup/B1A14457-614B-4831-BB7D-E1085741DB61/Journal.dayone)
+23:09:11:918 [main            ] I <App>     Day One Base URL: https://dayone.me
+23:09:13:077 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 18 entries - reset:0 - hasMore:0
+23:09:44:779 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:10:14:871 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:10:44:955 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:11:15:030 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:11:46:225 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:12:18:316 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:12:48:406 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:13:18:486 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:13:48:566 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:14:18:670 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:14:52:803 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:15:22:927 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:15:53:004 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:16:23:579 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:16:53:658 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:17:23:785 [NSManagedObjectC] I <Sync>    DB - DELTA RCVD - 0 entries - reset:0 - hasMore:0
+23:17:25:291 [com.apple.root.d] I <Core>    JOURNAL INDEX CLOSED

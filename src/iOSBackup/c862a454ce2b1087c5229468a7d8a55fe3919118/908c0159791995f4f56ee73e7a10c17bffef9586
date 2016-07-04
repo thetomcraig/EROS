@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SupportedLanguages</key>
+	<dict>
+		<key>en</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>remind me to…</string>
+			<key>QueryPrefix</key>
+			<string>remind me to</string>
+		</dict>
+		<key>en-AU</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>remind me to…</string>
+			<key>QueryPrefix</key>
+			<string>remind me to</string>
+		</dict>
+		<key>en-GB</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>remind me to…</string>
+			<key>QueryPrefix</key>
+			<string>remind me to</string>
+		</dict>
+		<key>en-IN</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>remind me to…</string>
+			<key>QueryPrefix</key>
+			<string>remind me to</string>
+		</dict>
+		<key>fr</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>me rappeler de…</string>
+			<key>QueryPrefix</key>
+			<string>me rappeler de</string>
+		</dict>
+		<key>es</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>recordarme…</string>
+			<key>QueryPrefix</key>
+			<string>recordarme</string>
+		</dict>
+		<key>it</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>ricordami di…</string>
+			<key>QueryPrefix</key>
+			<string>ricordami di</string>
+		</dict>
+		<key>de</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>erinnerung an…</string>
+			<key>QueryPrefix</key>
+			<string>erinnerung an</string>
+		</dict>
+		<key>ja</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>リマインダーを作成…</string>
+			<key>QueryPrefix</key>
+			<string>リマインダーを作成</string>
+		</dict>
+		<key>pt</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>lembre-me de…</string>
+			<key>QueryPrefix</key>
+			<string>lembre-me de</string>
+		</dict>
+		<key>ru</key>
+		<dict>
+			<key>ZeroSuggestString</key>
+			<string>напомнить мне…</string>
+			<key>QueryPrefix</key>
+			<string>напомнить мне</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

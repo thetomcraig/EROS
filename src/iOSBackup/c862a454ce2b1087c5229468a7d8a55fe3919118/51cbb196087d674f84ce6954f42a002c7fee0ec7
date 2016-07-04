@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Activity</key>
+	<string>Stationary</string>
+	<key>Creation Date</key>
+	<date>2015-02-20T06:51:29Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>iPhone/iPhone7,2</string>
+		<key>Generation Date</key>
+		<date>2015-02-20T06:51:29Z</date>
+		<key>Host Name</key>
+		<string>EUCLID</string>
+		<key>OS Agent</key>
+		<string>iOS/8.1.3</string>
+		<key>Software Agent</key>
+		<string>Day One iOS/1.15.2</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Ugh tunnel vision?
+Its hard to stay focused and in the moment. I feel like I'm giving up so much just to complete the work I have to do in cs170, that I have just developed tunnel vision for this quarter and for my college career. Especially because I already have a job - I just feel like I need to get through this,which is really sad,but at the same time I don't know how else to feel. 
+There is a lot I'm sad and upset about right now and I'm not incredibly depressed but just feel kind of glum a lot of the time. 
+I will elaborate more this weekend. 
+
+I did have some good conversations today, I have been listening to Sidney more, and trying not to interject about myself and I did this when we saw nate today also.  4/5  
+</string>
+	<key>Ignore Step Count</key>
+	<true/>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.410351790001108</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85732245998651</real>
+		<key>Place Name</key>
+		<string>6567 Sabado Tarde Rd</string>
+		<key>Region</key>
+		<dict>
+			<key>Center</key>
+			<dict>
+				<key>Latitude</key>
+				<real>34.410251313535852</real>
+				<key>Longitude</key>
+				<real>-119.85735645165352</real>
+			</dict>
+			<key>Radius</key>
+			<real>26.741818348502271</real>
+		</dict>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Step Count</key>
+	<integer>8367</integer>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>1691B9FE402E42428B3F18D36A1F0B40</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>12</string>
+		<key>Description</key>
+		<string>Mist and Fog</string>
+		<key>Fahrenheit</key>
+		<string>54</string>
+		<key>IconName</key>
+		<string>fogn.png</string>
+		<key>Pressure MB</key>
+		<integer>1017</integer>
+		<key>Relative Humidity</key>
+		<integer>94</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-02-19T14:39:08Z</date>
+		<key>Sunset Date</key>
+		<date>2015-02-20T01:47:06Z</date>
+		<key>Visibility KM</key>
+		<real>6.4373760000000004</real>
+		<key>Wind Bearing</key>
+		<integer>30</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>12</integer>
+		<key>Wind Speed KPH</key>
+		<integer>6</integer>
+	</dict>
+</dict>
+</plist>

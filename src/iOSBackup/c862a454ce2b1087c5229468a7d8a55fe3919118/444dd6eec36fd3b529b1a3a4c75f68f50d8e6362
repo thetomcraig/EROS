@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2016-01-29T02:19:59Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookAir7,2</string>
+		<key>Generation Date</key>
+		<date>2016-01-29T02:19:59Z</date>
+		<key>Host Name</key>
+		<string>TYCHO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.11.2</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.10.2</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Patience…
+I have been thinking about patience lately.  As an adult, I have been working on coming to terms with the pacing of my life. Especially at work, I'm really not used to thinking in the long term. I'm so used to trying to get shit done quickly and managing four classes at once, it's weird to have this one job with long deadlines and slower paced work. 
+
+A am realizing that at this point in my life I really just need to be patient. 
+
+I talked to Sidney again, a week after I had talked to her after the Vacaville trip. Really, she needs more time. Hence the patience. We talked about it and the plan now is to just remain friends and stay the course until she is ready to start something new. IF she is that is. It's possible that she'll decide she really isn't interested, and I'm cool with that (kind of). The fact of the matter is, the solution here is to wait  I have a soft time line of a month.  If she doesn't say anything or I don't feel like anything is going on a in a month (about three weeks now) then I will reassess myself. 
+
+Oh and I got a shitty haircut. Didn't want that much cut be he cut more than I wanted. So, yeah, patience. Nothing to do about that but wait. 
+
+Work, hobbies, shitty haircut, girls. Just gotta wait. 
+
+Anyway off to the Pandora holiday party!</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>37.801146877892187</real>
+		<key>Locality</key>
+		<string>Oakland</string>
+		<key>Longitude</key>
+		<real>-122.25397623414094</real>
+		<key>Place Name</key>
+		<string>1824 Lakeshore Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>679F5619C06D41D0A5DC9BCE0DF76268</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>14</string>
+		<key>Description</key>
+		<string>Cloudy</string>
+		<key>Fahrenheit</key>
+		<string>57</string>
+		<key>IconName</key>
+		<string>cloudyn.png</string>
+		<key>Pressure MB</key>
+		<integer>1023</integer>
+		<key>Relative Humidity</key>
+		<integer>77</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2016-01-28T15:15:21Z</date>
+		<key>Sunset Date</key>
+		<date>2016-01-29T01:28:36Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>0</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>14</integer>
+		<key>Wind Speed KPH</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

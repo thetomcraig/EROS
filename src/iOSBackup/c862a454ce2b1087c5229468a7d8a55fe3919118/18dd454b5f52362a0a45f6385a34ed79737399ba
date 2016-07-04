@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-08-27T10:08:02Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2013-08-27T10:08:02Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9</string>
+		<key>Software Agent</key>
+		<string>Day One (Mac)/1.8.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Depth.
+I saw Mark Baker (therapist) today.  He had a few things to say about me.  He mentioned the difference between usefulness and value.  Usefulness being show good/productive you are and value being more emotional; how much you are loved.  
+
+I need to appreciate myself for simply existing - or so he says...  Which is hard for me; how can I love myself devoid of the things I like about myself: my work ethic, intelligence, kindness, etc.  But he says this has to with my thinking that's too logical, and not emotional enough.
+
+He basically said that I have trouble being bothered by so many things because I try to quantify everything.  I don't really concern myself with my emotions, and instead I am always thinking that allocating more time to things can make me more happy.  
+
+I am not happy because I pick a thing to tell myself is making me unhappy, and fixate on that.  There is an obsessive tendency here, I can't stop thinking about  the things that bother me and t really gets on my nerves when things are not perfect.  Perhaps from anxiety; fearing that I am not perfect myself.  
+
+He said I should start by trying to ask myself why I am bothered  by something when I find myself bothered by it.  And I am not really attuned to my emotions, which is why I ascribe such strong emotions to things of little importance, because I can't stop thinking about them.  
+
+On that front.  I got a backpack I think I like.  It's the fifth one I think...  So there is a good example - why am I so concerned with getting a new backpack, and why am I so concerned with hang perfect physical possessions?  I don't really know.  I seem to have convinced myself that there is a line though.  I know that, it's just drawing the line that's hard.
+
+Does one annoying zipper on a backpack mean I should keep looking for a new one?  Does one aspect of a girlfriend mean I should dump her?  I don't know... I mean that's what I think about with Sidney - I want to be in a relationship that has a physical aspect, and I don't know if I can be with Sidney when I go back to school, if that's not an aspect.  But I don't know how she will feel either... 
+
+When it comes to physical objects.  I don't really know - maybe I just think that imperfections will get in the way of me enjoying the object.  And then I will feel like I wasted money.  Or maybe I think that I will be made unhappy by imperfect things - but maybe this is a bit of a vicious cycle...  I'll have to think more about that.
+
+I am tired, must slep. 
+
+I am grateful for myself.  Despite my flaws, I think I am a good person.  </string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.107430256982518</real>
+		<key>Locality</key>
+		<string>South Pasadena</string>
+		<key>Longitude</key>
+		<real>-118.14631890725278</real>
+		<key>Place Name</key>
+		<string>1610 Marengo Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>1F157347379A47A999D00E9C53674B41</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>17</string>
+		<key>Description</key>
+		<string>Clear</string>
+		<key>Fahrenheit</key>
+		<string>63</string>
+		<key>IconName</key>
+		<string>sunnyn.png</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-01-02T06:01:10Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>iPhone/iPhone5,1</string>
+		<key>Generation Date</key>
+		<date>2014-01-02T06:01:10Z</date>
+		<key>Host Name</key>
+		<string>SOLON</string>
+		<key>OS Agent</key>
+		<string>iOS/7.0.4</string>
+		<key>Software Agent</key>
+		<string>Day One iOS/1.12</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>👍
+Well, the break is almost over. And it's been pretty good. I finished a version of my program that I can begin beta testing, I got and trained a new dog pretty well, played a lot of Pokemon, saw friends and spent time with family, miss Sidney, and generally did the shit I like to do. 
+
+Sidney also finally told one of her parents about me, so that's pretty nice too. Even though it sucks, I'm excited to go back to school as well. That's always the case isn't it?
+
+At the risk of sounding like a broken record, this quarter will be different!
+
+Seriously though, I went through a very serious kind of personality shift last quarter which was good, and it resulted in me solving some of problems and actually accomplishing some of my goals.  
+
+Last quarter I got better about running, and sleeping, and did them more often. I managed to fit reading every night into my schedule, and I think Sidney and I fixed a lot of issues I the relationship we had last year. I realize that something were more important than others, and I figured out some issues I had been having, mostly with perfectionism. 
+
+I am much more focused on the process now, how I feel about what I'm doing. I worked really hard on the program I just finished and I'm proud of that. I try in all my classes and I'm proud of that too. My relationship with Sidney is not perfect, but it makes me really happy and I am satisfied with it. 
+
+I made great strides last quarter, and I've made a lot of emotional progress that I am eager to put I to action.  I got a C+ and a D+ for the first time in my life, but it was my best quarter yet. And that's because I stop caring about my grades. And that works for me,it might not everyone, but it works for me. That is one of the more interesting discoveries I have had. All the things I have learned about how to be happier have been highly individualized. And, they have been the opposite of the advice others keep giving me. I need to work less hard. I need to worry about classes less kneed to care about grades less. I need to procrastinate more. And this is all the product of my subpar college education. Honestly my teachers have been terrible. Not all, but more often than not, my teachers have been pretty bad. But my peers have been in the same boat, and comparatively, I'm not far off the mark. In fewer than 2 years though, I'll be done, and then what the fuck will I do? 
+
+Well see...
+
+But until then, I'll be trying to phase in some changes, and because of this I'm very excited for the winter quarter. 
+
+</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>33.53661702948952</real>
+		<key>Locality</key>
+		<string>Laguna Beach</string>
+		<key>Longitude</key>
+		<real>-117.77101999159694</real>
+		<key>Place Name</key>
+		<string>725 Oak St</string>
+		<key>Region</key>
+		<dict>
+			<key>Center</key>
+			<dict>
+				<key>Latitude</key>
+				<real>33.536659393500102</real>
+				<key>Longitude</key>
+				<real>-117.77118513950001</real>
+			</dict>
+			<key>Radius</key>
+			<real>26.268513820352279</real>
+		</dict>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>7F0AD19610594211BEE5A6865191D02C</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>13</string>
+		<key>Description</key>
+		<string>Hazy</string>
+		<key>Fahrenheit</key>
+		<string>55</string>
+		<key>IconName</key>
+		<string>hazyn.png</string>
+		<key>Pressure MB</key>
+		<integer>1018</integer>
+		<key>Relative Humidity</key>
+		<integer>72</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-01-01T14:56:14Z</date>
+		<key>Sunset Date</key>
+		<date>2014-01-02T00:54:53Z</date>
+		<key>Visibility KM</key>
+		<real>6.4373760000000004</real>
+		<key>Wind Bearing</key>
+		<integer>0</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>13</integer>
+		<key>Wind Speed KPH</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

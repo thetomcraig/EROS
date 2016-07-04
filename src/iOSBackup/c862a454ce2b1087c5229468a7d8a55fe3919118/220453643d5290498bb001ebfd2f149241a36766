@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2014-05-18T17:18:56Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2014-05-18T17:18:56Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9.2</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.3</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Still trying with the sanity.
+So shit is rough, and this quarter turned out to be a a little too much like last year.  But what’s important is trying to remain on the wagon.  While I am incredibly stressed and always have too much to do, I have to keep trying to remain happy.  When I give up it become a downward spiral.  I have three weeks of instruction left and then finals week.  This weekend is half over and the next couple of days are going to be their own special kind of hell because of all the things piling up.  But after these next couple of weeks I shouldn’t have so many things to worry about simultaneously.  I am worried about next year, and it will be hard, there’s no doubt about it.  But I am getting better at managing the stress.  And that’s what writing in here is for.  
+
+I am not sure I can be completely happy here.  I know it’s sad to say, and I am doing a very good job of being happier over all and I am proud of myself for that, but honestly, when I have as much shit to do as I do currently, I am not sure I can be entirely happy.  The good thing is that I feel  confident that ager college I won’t be stressed.  Or at least I won’t be stressed in the same way.
+
+Things are good though.  We bought a new house!  So I am looking forward to going home there, and I really looking forward to this summer.  It won’t be perfect (ha ha, I know) but I will be able toe spend some time with my family and friends.  I can’t wait until this summer and I can’t believe this year is almost over.  I am going to be a senior next year! 
+
+Anyway things that aren’t school are good, and I will make it through. I know I can.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.40920646871934</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.85342229131497</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>83896CE84A444A49B582334208CFB6B1</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>19</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>66</string>
+		<key>IconName</key>
+		<string>clear.png</string>
+		<key>Pressure MB</key>
+		<integer>1012</integer>
+		<key>Relative Humidity</key>
+		<integer>64</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2014-05-18T12:54:04Z</date>
+		<key>Sunset Date</key>
+		<date>2014-05-19T02:57:40Z</date>
+		<key>Visibility KM</key>
+		<real>14.484095999999999</real>
+		<key>Wind Bearing</key>
+		<integer>150</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>19</integer>
+		<key>Wind Speed KPH</key>
+		<integer>11</integer>
+	</dict>
+</dict>
+</plist>

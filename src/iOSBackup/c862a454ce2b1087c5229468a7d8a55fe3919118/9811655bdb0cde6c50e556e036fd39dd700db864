@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-12-13T17:16:53Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookAir7,2</string>
+		<key>Generation Date</key>
+		<date>2015-12-13T17:16:53Z</date>
+		<key>Host Name</key>
+		<string>TYCHO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.11.1</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.10.2</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>More confused again.
+Things have been pretty good - work is pretty much the same and other things have been ok.  Tomorrow I am going to finally merge my code which will be a pretty big change, so that’s pretty exciting.  Other than that I’ve been working on Japanese and other things/projects.  
+
+I’m pretty fed up with the online dating thing.  It’s made me pretty jaded, and I am not even getting much out of it.  So I’m on the verge of giving up on that whole thing at least for the time being.
+
+I have been thinking about Sidney also - just trying to figure out how I feel about her.
+
+I think that breaking up with her when I did was definitely the best choice, and I needed to do at the time.  What I am trying to figure out right now is whether I still have feelings for her, and what that means if I do.  
+
+Lately I have been missing her, but I have been trying to figure out if it was her who I was missing, or if I just missed being in a relationship.  I assumed that really I just missed being in a relationship.  I assumed that if I did get back together with her, nothing would change and I would feel the same as I did when I broke up with her.  I still am afraid of that really, but what I’m trying to figure out now is how much of that stuff has/can be fixed if I feel like I really want to get back together with her.  Of course its also depended upon how SHE feels.  I feel like she still has some feelings, but I don’t really know, and for all I know she isn’t interested and this problem will be solved for me.
+
+My biggest fear is that I tell her I still have feelings and she does too and we get back together, and then I end up feeling the same way I did towards the end of senior year; tired of her and fed up with seeing her every day and ready to spend time away from her.  I would kill me and be so unfair to her if that happened again, and I am terrified that it will.  I felt like she really loved me and i just didn’t love her anymore.  I don’t really know if that was because of a fundamental issue with the relationship or if I was feeling that way because of other circumstances and feelings.  I just don’t know.  And I don’t know if the solution to being unsure is action or inaction.
+
+I have been feeling for the past week that I want to talk to her, but the real issue has been what I want to say.  I feel that regardless of how I feel or what I want, she does deserve an actual explanation for why I broke up with her.  What she does or how she feels about it notwithstanding, I just feel that overall she would benefit from me feeling her the truth about what was going on.
+
+I don’t really blame myself for NOT telling her the truth at the time either.  I didn’t really understand how I felt or how to explain it at the time and I think I really did need to be away from her and out of the relationship to gain the (relative) clarity I have now about the whole situation.
+
+I don’t know about the whole thing really, I see reasons for both notions and just don’t know what to do.  I know that I will tell her about how I was feeling before, but past that I’m kind of lost.  I see it like this:
+
+
+Being back in a relationship with Sidney - benefits:
+Being in a relationship is nice (companionship, sexy time, etc)
+I know we are social compatible
+
+Being back in a relationship with Sidney - pitfalls:
+Stress level - managing her stress like in college
+Maybe I would get tired of her?
+Maybe I won’t love her?
+
+…Well, that was useless.  I guess I’ll just tell her the first thing and see what happens.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>37.801146233041536</real>
+		<key>Locality</key>
+		<string>Oakland</string>
+		<key>Longitude</key>
+		<real>-122.25402575518454</real>
+		<key>Place Name</key>
+		<string>1824 Lakeshore Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>78711058A289457A973F65594F749E8C</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>12</string>
+		<key>Description</key>
+		<string>Rain</string>
+		<key>Fahrenheit</key>
+		<string>54</string>
+		<key>IconName</key>
+		<string>rain.png</string>
+		<key>Pressure MB</key>
+		<integer>1011</integer>
+		<key>Relative Humidity</key>
+		<integer>94</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-12-13T15:16:02Z</date>
+		<key>Sunset Date</key>
+		<date>2015-12-14T00:50:59Z</date>
+		<key>Wind Bearing</key>
+		<integer>160</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>12</integer>
+		<key>Wind Speed KPH</key>
+		<integer>41</integer>
+	</dict>
+</dict>
+</plist>

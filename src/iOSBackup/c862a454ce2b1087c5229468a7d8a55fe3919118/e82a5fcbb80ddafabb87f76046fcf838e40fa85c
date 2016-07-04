@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-08-08T05:26:19Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>iPhone/iPhone5,1</string>
+		<key>Generation Date</key>
+		<date>2013-08-08T05:26:19Z</date>
+		<key>Host Name</key>
+		<string>SOLON</string>
+		<key>OS Agent</key>
+		<string>iOS/6.1.4</string>
+		<key>Software Agent</key>
+		<string>Day One (iOS)/1.11.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Computer Pile. 
+Slept in today, had Rylan over, went in to work around 12.  
+Got some new stuff in the mail, which I actually like. 
+Finding it easy to work on comp sci projects when I am very interested in them!
+
+Got the wood piece from rylans dad, and it looks great. 
+This is for computer pile 2, which used to be the n64. 
+Rylan is taking computer pile - out minecraft server - to school with him. 
+Sad to see it go, but well play on it of course. Just part of moving I guess. 
+
+Talked to Sidney for a few minutes in the phone, UC horror stories, will elaborate later. 
+
+Off to bed.</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>California</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.107331700000003</real>
+		<key>Locality</key>
+		<string>South Pasadena</string>
+		<key>Longitude</key>
+		<real>-118.1461034</real>
+		<key>Place Name</key>
+		<string>1610 Marengo Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>767B1149F8F34A3F9F6EEA0E58DF0B54</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>21</string>
+		<key>Description</key>
+		<string>Clear</string>
+		<key>Fahrenheit</key>
+		<string>70</string>
+		<key>IconName</key>
+		<string>sunnyn.png</string>
+	</dict>
+</dict>
+</plist>

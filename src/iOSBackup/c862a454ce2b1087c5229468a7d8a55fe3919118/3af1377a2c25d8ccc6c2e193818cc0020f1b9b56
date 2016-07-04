@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-08-30T08:54:06Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2013-08-30T08:54:06Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>Mac OS X/10.9</string>
+		<key>Software Agent</key>
+		<string>Day One (Mac)/1.8.1</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>App progress - my happiness.
+
+Thinking about what I talked about with Mark. 
+
+But first - iTunes application is coming along quite well - implemented a color algorithm today and have been doing a bunch of improvements, so that's nice.  I really hope I can at least get a version done before school starts, we'll see.
+
+Decided to keep a backpack, I think, maybe...  I don't know, I wish I didn't put so much meaning into material objects.  More on this in a moment.
+
+I have been thinking a lot about my happiness.  Which is what I talked about with Mark.  He thinks happiness  should be present independent from actions, accomplishments, etc.  This doesn't really seem possible for me.  
+
+He says that the happiness I feel the few times I do something perfectly is an illusion because refection is obviously unattainable.  
+
+This does make sense to a certain extent, of course I can't be happy if I think perfection is the only thing that will bring me happiness.  
+
+This conflicts with my running narrative - I have s running narrative about myself.   Essentially, I am overall happy with myself because I am conscientious  and thoughtful person.  What brings me unhappiness are the things around me - material objects, annoying people, frustrating situations, various imperfections.  and my struggle has been trying to come to terms with the imperfection in the world as it relates to me, and, when possible, eliminating things from my life entirely when I feel they are imperfect and are causing me stress. 
+
+Mark says that this seems to make sense - its obvious and easy to say that the THING currently annoying me is the problem, and I just need to fix that THING.  But this will never end, and comes from an uneasiness I have with being imperfect myself.  And this makes sense.
+
+He said my main problem was magnification - when something annoyed me, it becomes the most annoying thing in the world.  It's obsessive thought.  He says I should simply start paying attention to the emotions I have because there is some emotional issue going on.  If I can't tell how important something should be, or I think everything is the most important thing in the world, he says its a issue allocating emotion.
+
+This is kind of a problem when it comes to time though.  I don't know how much time to spend on certain things, or how important certain things should be to me.  I really don't know how important some things should be - I don't really see what this has to do with emotion.  It used to be that school was everything, school was what I devoted time to, because school was important.  But I had to realize last year that I could not devote was much time as I thought to school.  Now I just don't know how much time to allocate to certain tasks.
+
+But this is what Mark is talking about - this is the problem.  I spend all this time trying ti figure things out, trying to come up with the magic formula.  He says happiness won't come from figuring out this magic formula and doing the right nobler of things and spending the right amount of time.  He talked about usefulness and value, pertaining to this calculation, verses emotion.  Happiness, he says, has nothing to do with any of this shit I think about; its simply being happy for being, for existing.  But to me, I can't be happy for so little.  
+
+Back to my narrative, I feel like I am more happy that I should be if I didn't do the things I did.  If i don't do well in school it makes me unhappy, so it would stand to reason that my happiness should stem from my doing well in certain areas of my life.  I see no world in which I work hard and have not anxiety attached to it.  I work hard because I am afraid f failure, because I think it will makes me unhappy.
+
+This leads back to the ides that happiness ≠ success.  And I guess I always thought of this in terms of the big picture, great success and dream fulfillment.  But I am thinking now that perhaps it applies to everything, school tests, classes, relationships, anything one can fail at.  
+
+But this seems so impossible to me, because I don't know where my motivation will come from if I am happy regardless of the outcome of my affairs.  I worry about tests so I study hard and do well.  If I wasn't worried about the test I wouldn't study as hard.  
+
+Maybe I am confusing worry/anxiety with happiness.  being anxious makes me unhappy.  But anxiety is so prevalent.  Maybe I need to separate emotions and not have everything be related t happiness...
+
+ I'll keep thinking about it.
+
+I can't stop thinking about Sidney... I really want to be with her if I go back, but I worry that the sex thing will be a issue, but there isn't anything I can do about it now.  I want to be with her, hold her, talk to her, kiss her, have sex with her.  I want to love her.  </string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.107404909054281</real>
+		<key>Locality</key>
+		<string>South Pasadena</string>
+		<key>Longitude</key>
+		<real>-118.14618932110295</real>
+		<key>Place Name</key>
+		<string>1610 Marengo Ave</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>7ACA8183D68A49ED8B4543D0DAAFF43B</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>20</string>
+		<key>Description</key>
+		<string>Clear</string>
+		<key>Fahrenheit</key>
+		<string>68</string>
+		<key>IconName</key>
+		<string>sunnyn.png</string>
+	</dict>
+</dict>
+</plist>

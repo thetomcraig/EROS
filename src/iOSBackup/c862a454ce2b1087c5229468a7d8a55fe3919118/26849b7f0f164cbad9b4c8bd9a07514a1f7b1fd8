@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2015-02-25T19:21:08Z</date>
+	<key>Creator</key>
+	<dict>
+		<key>Device Agent</key>
+		<string>Macintosh/MacBookPro8,2</string>
+		<key>Generation Date</key>
+		<date>2015-02-25T19:21:08Z</date>
+		<key>Host Name</key>
+		<string>PHILO</string>
+		<key>OS Agent</key>
+		<string>MacOS/10.10.3</string>
+		<key>Software Agent</key>
+		<string>Day One Mac/1.9.6</string>
+	</dict>
+	<key>Entry Text</key>
+	<string>Tiny bit of free time
+Its the eye of the storm that always occurs in between large class projects.  I did a small project on my computer yesterday and this morning I went for a run in the first time for a very long time.  I am thinking about what Jeremy said about my relationship, and diverting more energy there.  It’s hard though, considering what I said previously about Sidney and me.  But I am still trying and I think trying is all I can do really.
+
+Conversations were pretty good yesterday, I talked to Sidney more about art and tried to focus more on Mady when I spoke with her. Talked to Sidney about her art project and to Madison about some parties she went to and how she was proud of her self for not giving a shit about Morey. 4/5	</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>CA</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>34.409457446929537</real>
+		<key>Locality</key>
+		<string>Isla Vista</string>
+		<key>Longitude</key>
+		<real>-119.8510024720326</real>
+		<key>Place Name</key>
+		<string>University of California Santa Barbara</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Tags</key>
+	<array/>
+	<key>Time Zone</key>
+	<string>America/Los_Angeles</string>
+	<key>UUID</key>
+	<string>AE4048175E2D4AE7885498F946771B3C</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>17</string>
+		<key>Description</key>
+		<string>Sunny</string>
+		<key>Fahrenheit</key>
+		<string>63</string>
+		<key>IconName</key>
+		<string>clear.png</string>
+		<key>Pressure MB</key>
+		<integer>1021</integer>
+		<key>Relative Humidity</key>
+		<integer>64</integer>
+		<key>Service</key>
+		<string>HAMweather</string>
+		<key>Sunrise Date</key>
+		<date>2015-02-25T14:32:05Z</date>
+		<key>Sunset Date</key>
+		<date>2015-02-26T01:52:30Z</date>
+		<key>Visibility KM</key>
+		<real>16.093440000000001</real>
+		<key>Wind Bearing</key>
+		<integer>190</integer>
+		<key>Wind Chill Celsius</key>
+		<integer>17</integer>
+		<key>Wind Speed KPH</key>
+		<integer>11</integer>
+	</dict>
+</dict>
+</plist>

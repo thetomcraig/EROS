@@ -1,0 +1,148 @@
+
+
+
+{
+   "serialNumber":"324932087",
+   "formatVersion":1,
+   "passTypeIdentifier":"pass.com.southwest.MobileBoardingPass",
+   "associatedStoreIdentifiers":[344542975],
+   "teamIdentifier":"2QHT4F69Y7",
+   "description":"Southwest Boarding pass",
+   "locations": [
+          {
+           "latitude" : 37.7122,
+           "longitude" : -122.213,
+           "relevantText" : "Flight # 1694 Boarding 06:30 PM"
+         }
+        ],
+   "expirationDate":"2015-12-24T03:00:33+00:00",
+   "barcode":{
+      "message":"M1CRAIG/THOMAS        EH9NJVH OAKBURWN 1694 356S047A0047 125>30B0WW5355BWN 0E             0C0161L^460MEQCIDG+vFIKBY85OZcmQCCLCMkyxkDTGAm09BCiD0Tc/XEKAiArllSHJ9ImOvdTg13XaFNLmb1uUkaHuNEbz4Hi74k/Lg==",
+      "format":"PKBarcodeFormatAztec",
+      "messageEncoding":"iso-8859-1"
+   },
+   "organizationName":"Southwest Airlines",
+   "logoText":"",
+   "foregroundColor":"rgb(255, 255, 255)",
+   "backgroundColor":"rgb(48, 76, 178)",
+   "labelColor":"rgb(255, 191, 39)",
+
+   "boardingPass":{
+      "transitType":"PKTransitTypeAir",
+      "headerFields":[
+         {
+            "key":"gate",
+            "label":"GATE",
+            "value":"--",
+            "changeMessage":"Gate changed to %@."
+         },
+		 {
+            "key":"flight",
+            "label":"FLIGHT",
+            "value":"1694",
+            "changeMessage":"Flight number changed to %@"
+         }
+		
+      ],
+      "primaryFields":[
+         {
+            "key":"source",
+            "label":"OAKLAND",
+            "value":"OAK",
+            "changeMessage":"Departure airport changed to %@."
+         },
+         {
+            "key":"destination",
+            "label":"BURBANK",
+            "value":"BUR",
+            "changeMessage":"Destination airport changed to %@."
+         }
+      ],
+      "secondaryFields":[         
+         {
+            "key":"passenger",
+            "label":"PASSENGER",
+            "value":"Craig/Thomas",
+            "changeMessage":"Passenger changed to %@."
+         },
+        {
+            "key":"confirmation",
+            "label":"STATUS",
+            "value":"--",
+            "textAlignment":"PKTextAlignmentRight",
+            "changeMessage":"Status changed to %@"
+         }],
+              
+      "auxiliaryFields":[
+         {
+            "key":"boards",
+            "label":"BOARDS",
+            "value":"06:30 PM",
+            "changeMessage":"Date number changed to %@"
+         },
+		 {
+            "key":"departs",
+            "label":"DEPARTS",
+            "value":"07:00 PM",
+            "changeMessage":"Date number changed to %@"
+         },
+         {
+            "key":"group",
+            "label":"GROUP",
+            "value":"A",
+            "textAlignment":"PKTextAlignmentRight",
+            "changeMessage":"Date number changed to %@"
+         },
+         {
+            "key":"position",
+            "label":"POSITION",
+            "value":"47",
+            "textAlignment":"PKTextAlignmentRight",
+            "changeMessage":"Position number changed to %@"
+         }
+      ],
+	"backFields" : [
+			{
+			"key":"flightDate",			
+			"label":"DATE OF FLIGHT",
+			"value":"Tuesday, Dec 22, 2015"
+			},
+			{
+			"key":"departureTime",			
+			"label":"DEPARTURE TIME",
+			"value":"07:00 PM\n\nTime, gate, and terminal may change - check monitors."
+			},
+			{
+			"key":"confNum",			
+			"label":"CONFIRMATION #",
+			"value":"H9NJVH"
+			},
+			{
+			"key":"rrNum",			
+			"label":"RAPID REWARDS #",
+			"value":"20540339536"
+			},
+			{
+			"key":"fareType",			
+			"label":"FARE TYPE",
+			"value":"Wanna Get Away"
+			},
+			{
+			"key":"coupon",			
+			"label":"DRINK COUPON",
+			"value":"No"
+			},
+			{
+			"key":"specialAssistance",			
+			"label":"SPECIAL ASSISTANCE",
+			"value":"--"
+			},
+			{
+			"key":"SouthwestWishes",			
+			"label":"READY, SET, GO!",
+			"value":"Before departure please review our Mobile Boarding Pass <a href='https://www.southwest.com/html/customer-service/airport-experience/mobile-boarding-pass.html'>FAQ</a>."
+			}
+    ]	
+    
+   }
+}

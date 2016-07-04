@@ -16,7 +16,8 @@ t = TextMessagePerson.objects.get_or_create(username="tomcraig", real_name="Tom 
 t.save()
 t.intake_raw_io_backup_texts("./src/iOSBackup/_export/")
 
-t.apply_markov_chains()
+for i in range (100):
+  t.apply_markov_chains()
 
 for m in t.textmessagemarkov_set.all():
   try:

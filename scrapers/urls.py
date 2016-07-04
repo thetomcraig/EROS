@@ -8,6 +8,4 @@ urlpatterns = [
     url(r'^scrape_top_twitter_people', views.scrape_top_twitter_people),
     url(r'^apply_markov_chains', views.apply_markov_chains),
     url(r'^sentiment_analyze', views.sentiment_analyze),
-
 ]
-

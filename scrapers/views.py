@@ -50,13 +50,23 @@ def home(request):
   context = RequestContext(request, {'request': request,'user': request.user})
   return render_to_response('scrapers/home.html', context_instance=context)
 
-def get_drugs(request):
-  q = request.GET.get('term', '')
+
+def get_texts(request):
   texts = TextMessage.objects.all()
+  q = request.GET.get('term', '')
+  return fuzzy_search_query(q, texts)
+
+def get_markov_texts(request):
+  texts = TextMessageMarkov.objects.all()
+  q = request.GET.get('term', '')
+  return fuzzy_search_query(q, texts)
+
+def fuzzy_search_query(query, query_set):
   results = []
-  for text in texts:
+  for text in query_set:
+    print text.content
     try:
-      if re.match(q, text.content, re.I):
+      if re.match(query, text.content, re.I):
         results.append(text.content)
     except:
       pass

@@ -1,14 +1,14 @@
+django_project/local_settings.py
 venv
-*.pyc
 .env
-db.sqlite3
-*.sw*
-tags
-logs/
 env/
 env/*
-env/lib/python2.7/*
+tags
+logs/
+*.pyc
+*.sw*
 **/*.DS_Store
-db.sqlite3
-database_output.txt
 
+database_output.txt
+*.sqlite3
+db.sqlite3

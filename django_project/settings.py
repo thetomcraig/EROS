@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#For Heroku also
+SESSION_ENGINE= 'django.contrib.sessions.backends.cached_db'
 
 # Application definition
 
@@ -135,11 +137,6 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
     )
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-
-
-
-   
-
 
 
 #Defaults to the HEROKU credentials

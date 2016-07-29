@@ -164,12 +164,22 @@ class Migration(migrations.Migration):
             field=models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, default=1, serialize=False, to='scrapers.Person'),
             preserve_default=False,
         ),
+        """
+        migrations.AddField(
+            model_name='twitterpost',
+            name='sentence_ptr',
+            field=models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, default=1, serialize=False, to='scrapers.Sentence'),
+            preserve_default=False,
+        ),
+        """
+        """
         migrations.AddField(
             model_name='twitterpostmarkov',
             name='markovchain_ptr',
             field=models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, default=1, serialize=False, to='scrapers.MarkovChain'),
             preserve_default=False,
         ),
+        """
         migrations.RenameField(
             model_name='person',
             old_name='real_name',

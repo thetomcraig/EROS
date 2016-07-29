@@ -114,7 +114,8 @@ else:
       }
   }
 """
-
+import dj_database_url
+DATABASES = {'default': dj_database_url.config(default='postgres://foo:bar@localhost:5432/db')}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

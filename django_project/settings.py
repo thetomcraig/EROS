@@ -97,6 +97,8 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+#Sessions issue
+"""
 import dj_database_url
 in_heroku = False
 if 'DATABASE_URL' in os.environ:
@@ -111,6 +113,13 @@ else:
           'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
       }
   }
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Internationalization

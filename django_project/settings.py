@@ -98,7 +98,6 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 #Sessions issue
-"""
 import dj_database_url
 in_heroku = False
 if 'DATABASE_URL' in os.environ:
@@ -113,9 +112,6 @@ else:
           'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
       }
   }
-"""
-import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://foo:bar@localhost:5432/db')}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

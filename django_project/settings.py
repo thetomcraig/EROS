@@ -135,8 +135,8 @@ STATIC_URL = '/static/'
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(PROJECT_ROOT, 'django_project/static'),
     )
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 
 #Defaults to the HEROKU credentials

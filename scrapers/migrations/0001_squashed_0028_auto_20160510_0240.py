@@ -180,9 +180,11 @@ class Migration(migrations.Migration):
             preserve_default=False,
         ),
         """
+        """
         migrations.RenameField(
             model_name='person',
             old_name='real_name',
             new_name='name',
         ),
+        """
     ]

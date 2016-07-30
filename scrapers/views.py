@@ -17,8 +17,9 @@ import re
 def home(request):
   if(request.GET.get('go_to_dash')):
     favorite_people = [] 
-    favorite_people.append(TwitterPerson.objects.all()[0])
-    favorite_people.append(LiteraturePerson.objects.all()[0])
+    #TODO - force the first one here to see on the dash
+    #favorite_people.append(TwitterPerson.objects.all()[0])
+    #favorite_people.append(LiteraturePerson.objects.all()[0])
     context = RequestContext(request, \
       {'favorite_people': favorite_people})
     return render_to_response('scrapers/dashboard.html', context_instance=context)

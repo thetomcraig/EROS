@@ -33,16 +33,20 @@
       <input name="collect_fb_data" type="submit" class="btn btn-primary" value="View Facebook Data">
     </form>
 
-    <div class="row large-buffer">
+    <div class="row small-buffer">
 
 		<form action="#" method="get">
 			<input name="scrape_top_twitter_people" type="submit" class="btn btn-default" value="Scrape All Twitter Users">
 		</form>
-    {# TODO link with function #}
+
+    <div class="row small-buffer">
+
 		<form action="#" method="get">
 			<input name="train_on_text_messages" type="submit" class="btn btn-default" value="Train on Test Messages">
 		</form>
-    
+
+    <div class="row small-buffer">
+
     <a href="{% url 'auth:logout' %}?next={{ request.path }}">
       <button type="button" class="btn btn-default navbar-btn">Logout</button>
     </a>

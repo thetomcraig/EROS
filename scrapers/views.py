@@ -48,6 +48,9 @@ def home(request):
   if(request.GET.get('scrape_top_twitter_people')):
     return HttpResponseRedirect('/scrapers/scrape_top_twitter_people/')
 
+  if(request.GET.get('train_on_text_messages')):
+    return HttpResponseRedirect('/scrapers/train_on_text_messages/')
+
   context = RequestContext(request, {'request': request,'user': request.user})
   return render_to_response('scrapers/home.html', context_instance=context)
 
@@ -180,9 +183,17 @@ def scrape_top_twitter_people(request):
   data = {'total num posts': num}
   return JsonResponse({'success': data})
   
+def train_on_text_messages(request):
+  """
+  Build the markov chain text messages based on a dump
+  """
+  template = loader.get_template('scrapers/text_message_upload_and_anaylze.html')
+  context = RequestContext(request, {})
+  return HttpResponse(template.render(context))
+
 def apply_markov_chains(request):
   """
-  API for manually applyin markov chains
+  API for manually applying markov chains
   """
   all_twitter_people = TwitterPerson.objects.all()
   for person in all_twitter_people:

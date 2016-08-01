@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Person(User, models.Model):
 	class Meta:
 		abstract = True
-	real_name = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
+	real_name = models.CharField(max_length=1000, default='PLACEHOLDER')
 	avatar = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
 
 	def apply_markov_chains_inner(self, beginning_caches, all_caches):

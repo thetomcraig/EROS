@@ -15,7 +15,7 @@ from .. import utils
 
 #TEXT MESSAGE VERSION
 class TextMessagePerson(plain_text_classes.Person):
-  user = models.ForeignKey(User, related_name='textmessageperson_users', null=True)
+  user = models.ForeignKey(User, related_name='textmessageperson_users', null=True, default=None)
   happiness = models.IntegerField(default=0)
 
   def __str__(self):

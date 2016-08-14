@@ -15,12 +15,8 @@ class Command(BaseCommand):
 
   def handle(self, *args, **options):
     if options['path_to_iOSBackup']:
-      peeps = TextMessagePerson.objects.all()
-      for p in peeps:
-        p.delete()
-      if len(TextMessagePerson.objects.all()) != 0:
-       TextMessagePerson.objects.create(username="tomcraig", real_name="Tom Craig")
-      t = TextMessagePerson.objects.get(username="tomcraig")
-      t.intake_raw_io_backup_texts(options['path_to_iOSBackup'] + "/_export")
+      t = TextMessagePerson.objects.get_or_create(username="tomcraig", real_name="Tom Craig")[0]
+      print t
+      #t.intake_raw_io_backup_texts(options['path_to_iOSBackup'] + "/_export")
       t.save()
 

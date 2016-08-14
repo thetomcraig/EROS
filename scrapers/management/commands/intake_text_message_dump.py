@@ -20,7 +20,7 @@ class Command(BaseCommand):
         p.delete()
       if len(TextMessagePerson.objects.all()) != 0:
        TextMessagePerson.objects.create(username="tomcraig", real_name="Tom Craig")
-      t = TextMessagePerson.get(username="tomcraig")
+      t = TextMessagePerson.objects.get(username="tomcraig")
       t.intake_raw_io_backup_texts(options['path_to_iOSBackup'] + "/_export")
       t.save()
 

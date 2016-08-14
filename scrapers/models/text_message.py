@@ -14,13 +14,15 @@ from scrapers.constants import *
 from .. import utils
 
 #TEXT MESSAGE VERSION
-class TextMessagePerson(plain_text_classes.Person, models.Model):
+class TextMessagePerson(plain_text_classes.Person):
+  user = models.ForeignKey(User, related_name='textmessageperson_users', null=True)
   happiness = models.IntegerField(default=0)
 
   def __str__(self):
     return self.username
 
   def intake_raw_io_backup_texts(self, iOSBackup_folder_location):
+    print "intaking texts"
     root = iOSBackup_folder_location
     for directory, subdirectories, files, in os.walk(root):
       m = re.match(r"(.*)(\+1)([0-9]{10})$", directory)
@@ -28,6 +30,8 @@ class TextMessagePerson(plain_text_classes.Person, models.Model):
         for f in files:
           if re.match(r"([0-9]{8})(\.html)", f):
             date = datetime.strptime(f.split('.')[0], '%Y%m%d')
+            print "intaking texts for date:"
+            print date
             self.scrape_replies_from_html_file(directory+"/"+f, date, m.group(3))
 
       if re.match(r"(.*)(\+1)([0-9]{10})(\/)([0-9]{8})$", directory):
@@ -95,7 +99,7 @@ class TextMessagePerson(plain_text_classes.Person, models.Model):
 class TextMessage(plain_text_classes.Sentence):
   author = models.ForeignKey(TextMessagePerson, default=None, null=True)
   time_sent = models.DateTimeField()
-  partner = models.CharField(max_length=8)
+  partner = models.CharField(max_length=100)
 
 #TEXT MESSAGE VERSION
 class TextMessageCache(plain_text_classes.SentenceCache):

@@ -68,7 +68,6 @@ def get_markov_texts(request):
 def fuzzy_search_query(query, query_set):
   results = []
   for text in query_set:
-    print text.content
     try:
       if re.match(query, text.content, re.I):
         results.append(text.content)

@@ -16,7 +16,7 @@ class Command(BaseCommand):
   def handle(self, *args, **options):
     if options['path_to_iOSBackup']:
       u = User.objects.first()
-      t = TextMessagePerson.objects.get_or_create(user=u)
+      t = TextMessagePerson.objects.get_or_create(user=u)[0]
       t.intake_raw_io_backup_texts(options['path_to_iOSBackup'] + "/_export")
       t.save()
 

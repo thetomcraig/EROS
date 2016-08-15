@@ -1,0 +1,8 @@
+#Setup Django
+https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
+
+#Postgres heroku piping command
+http://stackoverflow.com/questions/31057998/migrating-database-from-local-development-to-heroku-django-1-8
+
+#Intake texts on heroku
+heroku run python manage.py intake_text_message_dump --path_to_iOSBackup src/iOSBackup/ --app eros-prospect9

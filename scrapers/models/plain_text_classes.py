@@ -43,9 +43,7 @@ class Person(User, models.Model):
       try:
         new_markov_chain.append(w2)
         all_next_caches = all_caches.filter(word1=w1, word2=w2)
-        print "a"
         next_cache_index = random.randint(0, len(all_next_caches)-1)
-        print "b"
         next_cache = all_next_caches[next_cache_index]
         w1 = next_cache.word2
         w2 = next_cache.final_word
@@ -55,11 +53,15 @@ class Person(User, models.Model):
           
       except Exception as e:
         print e
+        print "Done"
         break
 
     #Determind random level, and save the post
     randomness = 1.0 - float(randomness)/len(new_markov_chain)
     #Done making the post
+
+    print "made: "
+    print new_markov_chain, randomness
 
     return (new_markov_chain, randomness)
 

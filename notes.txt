@@ -5,4 +5,6 @@ https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your
 http://stackoverflow.com/questions/31057998/migrating-database-from-local-development-to-heroku-django-1-8
 
 #Intake texts on heroku
-heroku run python manage.py intake_text_message_dump --path_to_iOSBackup src/iOSBackup/ --app eros-prospect9
+heroku run python manage.py text_message --intake_iOSBackup_at src/iOSBackup/ --app eros-prospect9
+heroku run python manage.py text_message --apply_markov_chains yes --app eros-prospect9
+

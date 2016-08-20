@@ -17,4 +17,4 @@ class Migration(migrations.Migration):
             name='time_sent',
             field=models.DateTimeField(max_length=25),
         ),
-    ]
+    ] 

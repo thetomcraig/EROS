@@ -155,3 +155,6 @@ SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
 SOCIAL_AUTH_FACEBOOK_KEY = '1736382553252283'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'd16e9c0762201b306380f9ad3fb12f03'
 """
+
+#These are the services that I scrape from and analyze data from 
+OUTLETS = ["plain_text", "text_messages", "twitter", "facebook(stubbed)"]

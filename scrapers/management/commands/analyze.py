@@ -5,12 +5,12 @@ from scrapers.models.facebook import FacebookPerson, FacebookPost
 from django.core.management import BaseCommand
 from scrapers.models.twitter import TwitterPost 
 from datetime import datetime
-from settings import OUTLETS
+from django.conf import settings
 
 
 command_arguments = { \
-  "--apply_markov_chains": ",".join(OUTLETS), 
-  "--sentiment_analyze": ",".join(OUTLETS) }
+  "--apply_markov_chains": ",".join(settings.OUTLETS), 
+  "--sentiment_analyze": ",".join(settings.OUTLETS) }
 
 usage = "python manage.py analyze "
 

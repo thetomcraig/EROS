@@ -6,22 +6,12 @@
     <label for="get_texts">Text Messages: </label>
     <input id="get_texts">
   </div>
+  <div>{{ texts|length }}</div>
 
   <div class="ui-widget">
     <label for="get_markov_texts">Markov Text Messages: </label>
     <input id="get_markov_texts">
   </div>
-
-  {# debug shit listing the words #}
-  {% if first_words %}
-    <table align="center">
-    {% for word in first_words%}
-      <h5>{{ word }}</h5>
-    {% endfor %}
-    </table>
-
-  {% else %}
-      <p>No cached beginning words.</p>
-  {% endif %}
+  <div>{{ markov_texts|length }}</div>
 
 {% endblock %}

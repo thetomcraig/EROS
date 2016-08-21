@@ -198,10 +198,7 @@ def scrape_top_twitter_people(self):
 
   for entry in names_and_unames:
     person = None
-    try:
-      person = TwitterPerson.objects.get(username=entry['uname'])[0]
-    except:
-      person = TwitterPerson.objects.create(username=entry['uname'])
+    person = TwitterPerson.objects.get_or_create(username=entry['uname'])[0]
 
     person.username = entry['uname']
     person.real_name= entry['name']

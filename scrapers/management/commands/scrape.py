@@ -2,6 +2,7 @@ import urllib
 from django.contrib.auth.models import User
 from scrapers.models.twitter import TwitterPerson, TwitterPost, TwitterPostMarkov
 from scrapers.models.facebook import FacebookPerson, FacebookPost
+from scrapers.models.text_message import TextMessagePerson 
 from django.core.management import BaseCommand
 from scrapers.models.twitter import TwitterPost 
 from datetime import datetime

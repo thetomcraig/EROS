@@ -51,8 +51,21 @@ class Command(BaseCommand):
                 pass
 
         if options['transfer']:
+            print options['transfer']
             if options['transfer'] == "twitter_to_text_messages":
                 people = TwitterPerson.objects.all()
                 for person in people:
                     u = User.objects.get_or_create(username=person.username)[0]
-                    t = TextMessagePerson.get_or_create(user=u, username=u.username, first_name=u.username, last_name=u.username)
+                    print "u: ", u
+
+                    print len(TextMessagePerson.objects.all())
+                    print [str(x.__dict__) + "\n" for x in TextMessagePerson.objects.all()]
+                    print [str(x.user.__dict__) + "\n" for x in TextMessagePerson.objects.all()]
+                    try:
+                        t = TextMessagePerson.objects.get(username=u.username)
+                    except:
+                        t = TextMessagePerson(
+                            username=u.username,
+                            first_name=u.username,
+                            last_name=u.username)
+                        t.save()

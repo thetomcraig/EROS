@@ -81,18 +81,18 @@ class TextMessagePerson(plain_text_classes.Person):
       text_cache.save()
 
 
-  def apply_markov_chains(self):
-    print "Applying markov chains"
-    all_beginning_caches = self.textmessagecache_set.filter(beginning=True)
-    all_caches = self.textmessagecache_set.all()
-    new_markov_message = self.apply_markov_chains_inner(all_beginning_caches, all_caches)
+  def apply_markov_chains(self, iterations=1):
+    for iteration in range(iterations):
+      all_beginning_caches = self.textmessagecache_set.filter(beginning=True)
+      all_caches = self.textmessagecache_set.all()
+      new_markov_message = self.apply_markov_chains_inner(all_beginning_caches, all_caches)
 
-    randomness = new_markov_message[1]
-    content = ""
-    for word in new_markov_message[0]:
-      content = content + word + " "
+      randomness = new_markov_message[1]
+      content = ""
+      for word in new_markov_message[0]:
+        content = content + word + " "
 
-    self.textmessagemarkov_set.create(content=content[:-1], randomness=randomness)
+      self.textmessagemarkov_set.create(content=content[:-1], randomness=randomness)
 
   
 #TEXT MESSAGE VERSION

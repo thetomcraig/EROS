@@ -1,6 +1,7 @@
 import urllib
 from django.contrib.auth.models import User
 from scrapers.models.twitter import TwitterPerson, TwitterPost, TwitterPostMarkov
+from scrapers.models.text_message import TextMessagePerson
 from scrapers.models.facebook import FacebookPerson, FacebookPost
 from django.core.management import BaseCommand
 from scrapers.models.twitter import TwitterPost 
@@ -10,7 +11,8 @@ from django.conf import settings
 
 command_arguments = { \
   "--apply_markov_chains": ",".join(settings.OUTLETS), 
-  "--sentiment_analyze": ",".join(settings.OUTLETS) }
+  "--sentiment_analyze": ",".join(settings.OUTLETS),
+  "--transfer": "twitter_to_text_messages" }
 
 usage = "python manage.py analyze "
 
@@ -31,7 +33,7 @@ class Command(BaseCommand):
       if options['apply_markov_chains'] == 'text_messages':
         u = User.objects.first()
         t = TextMessagePerson.objects.get_or_create(user=u)[0]
-        t.apply_markov_chains()
+        t.apply_markov_chains(100)
         t.save()
 
       if options['apply_markov_chains'] == 'twitter':
@@ -50,5 +52,16 @@ class Command(BaseCommand):
       if options['sentiment_analyze'] == 'twitter':
         pass
       if options['sentiment_analyze'] == 'facebook':
-        print "stubbed"
         pass
+
+    if options['transfer']:
+      if options['transfer'] == "twitter_to_text_messages":
+        people = TwitterPerson.objects.all()
+        for person in people:
+          u = User.objects.get_or_create(username=person.username)[0]
+          t = TextMessagePerson.get_or_create(user=u, username=u.username, first_name=u.username, last_name=u.username)
+
+          
+          
+
+          

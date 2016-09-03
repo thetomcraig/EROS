@@ -32,11 +32,16 @@ def home(request):
     return render_to_response('scrapers/post_index.html', context_instance=context)
 
   if(request.GET.get('go_to_my_texts')):
+    texts = TextMessage.objects.all()
     markov_texts = TextMessageMarkov.objects.all()
     first_words = TextMessageCache.objects.filter(beginning=True)
     first_words_no_dupes = set([x.word1 for x in first_words])
     context = RequestContext(request,  \
-      {'request': request, 'user': request.user, 'first_words': first_words_no_dupes, 'markov_texts': markov_texts})
+      {'request': request, \
+      'user': request.user, \
+      'first_words': first_words_no_dupes, \
+      'texts': texts, \
+      'markov_texts': markov_texts})
     return render_to_response('scrapers/text_message_dashboard.html', context_instance=context)
 
   if(request.GET.get('view_twitter_data')):

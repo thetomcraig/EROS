@@ -10,7 +10,7 @@ from django.conf import settings
 
 
 command_arguments = { \
-  "--twitter": "top",
+  "--twitter": "top|existing",
   "--intake_iOSBackup_for_text_messages_at": "path",
   "--intake_file_for_plain_text_at": "path" }
 
@@ -28,8 +28,12 @@ class Command(BaseCommand):
 
   def handle(self, *args, **options):
     if options['twitter']:
-      tom = User.objects.get_or_create(username='tom')[0]
-      tom.scrape_top_twitter_people()
+      if options['twitter'] == 'top':
+        u = User.objects.first()
+        u.scrape_top_twitter_people()
+      if options['twitter'] == 'existing':
+        for person in TwitterPerson.objects.all():
+          person.scrape()
       
     if options['intake_iOSBackup_for_text_messages_at']:
       u = User.objects.first()
@@ -39,10 +43,10 @@ class Command(BaseCommand):
 
 
     if options['intake_file_for_plain_text_at']:
-			file_name = options['intake_file_for_plain_text_at']
-			sentences = utils.read_source_into_sentence_list(file_name)
-			author = LiteraturePerson.objects.get_or_create(username=options['author'], real_name=options['author'])[0]
-			for sentence in sentences: 
-				l = LiteratureSentence(author=author, content=" ".join(sentence))
-				l.save()
-				author.cache_sentence(l)
+      file_name = options['intake_file_for_plain_text_at']
+      sentences = utils.read_source_into_sentence_list(file_name)
+      author = LiteraturePerson.objects.get_or_create(username=options['author'], real_name=options['author'])[0]
+      for sentence in sentences: 
+        l = LiteratureSentence(author=author, content=" ".join(sentence))
+        l.save()
+        author.cache_sentence(l)

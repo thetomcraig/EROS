@@ -18,7 +18,7 @@ TAG_TOKEN = "<<tag>>"
 
 
 # TWITTER VERSION
-class TwitterPerson(plain_text_classes.Person, models.Model):
+class TwitterPerson(plain_text_classes.Person):
     happiness = models.IntegerField(default=0)
 
     def __str__(self):
@@ -187,7 +187,7 @@ class TwitterMention(models.Model):
 
 def scrape_top_twitter_people(self):
     """
-    Fille db with metadata from top 50 users
+    Fill db with metadata from top 50 users
     Used to update avatars etc
     """
     t = TweepyScraper(

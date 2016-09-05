@@ -1,13 +1,16 @@
 import random
 from django.db import models
-from django.contrib.auth.models import User
 
 
-class Person(User, models.Model):
+class Person(models.Model):
+    real_name = models.CharField(max_length=1000, default='PLACEHOLDER')
+    first_name = models.CharField(max_length=1000, default='PLACEHOLDER')
+    last_name = models.CharField(max_length=1000, default='PLACEHOLDER')
+    username = models.CharField(max_length=1000, default='PLACEHOLDER')
+    avatar = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
+
     class Meta:
         abstract = True
-    real_name = models.CharField(max_length=1000, default='PLACEHOLDER')
-    avatar = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
 
     def apply_markov_chains_inner(self, beginning_caches, all_caches):
         """

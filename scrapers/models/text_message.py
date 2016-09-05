@@ -91,7 +91,7 @@ class TextMessagePerson(plain_text_classes.Person):
 # TEXT MESSAGE VERSION
 class TextMessage(plain_text_classes.Sentence):
     author = models.ForeignKey(TextMessagePerson, default=None, null=True)
-    time_sent = models.DateTimeField()
+    time_sent = models.DateTimeField(null=True)
     partner = models.CharField(max_length=100)
 
 

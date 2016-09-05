@@ -16,14 +16,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='FacebookPerson',
             fields=[
-                ('user_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'abstract': False,
                 'verbose_name': 'user',
                 'verbose_name_plural': 'users',
             },
-            bases=('auth.user', models.Model),
             managers=[
                 ('objects', django.contrib.auth.models.UserManager()),
             ],
@@ -44,7 +42,6 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='LiteraturePerson',
             fields=[
-                ('user_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
                 ('real_name', models.CharField(default=b'PLACEHOLDER', max_length=1000, null=True)),
                 ('avatar', models.CharField(default=b'PLACEHOLDER', max_length=1000, null=True)),
                 ('happiness', models.IntegerField(default=0)),
@@ -52,7 +49,6 @@ class Migration(migrations.Migration):
             options={
                 'abstract': False,
             },
-            bases=('auth.user', models.Model),
             managers=[
                 ('objects', django.contrib.auth.models.UserManager()),
             ],
@@ -135,7 +131,6 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TextMessagePerson',
             fields=[
-                ('user_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
                 ('real_name', models.CharField(default=b'PLACEHOLDER', max_length=1000, null=True)),
                 ('avatar', models.CharField(default=b'PLACEHOLDER', max_length=1000, null=True)),
                 ('happiness', models.IntegerField(default=0)),
@@ -143,7 +138,6 @@ class Migration(migrations.Migration):
             options={
                 'abstract': False,
             },
-            bases=('auth.user', models.Model),
             managers=[
                 ('objects', django.contrib.auth.models.UserManager()),
             ],
@@ -172,7 +166,6 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TwitterPerson',
             fields=[
-                ('user_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
                 ('real_name', models.CharField(default=b'PLACEHOLDER', max_length=1000, null=True)),
                 ('avatar', models.CharField(default=b'PLACEHOLDER', max_length=1000, null=True)),
                 ('happiness', models.IntegerField(default=0)),
@@ -180,7 +173,6 @@ class Migration(migrations.Migration):
             options={
                 'abstract': False,
             },
-            bases=('auth.user', models.Model),
             managers=[
                 ('objects', django.contrib.auth.models.UserManager()),
             ],

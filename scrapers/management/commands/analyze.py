@@ -51,21 +51,29 @@ class Command(BaseCommand):
                 pass
 
         if options['transfer']:
-            print options['transfer']
-            if options['transfer'] == "twitter_to_text_messages":
+            if options['transfer'] == 'twitter_to_text_messages':
                 people = TwitterPerson.objects.all()
-                for person in people:
-                    u = User.objects.get_or_create(username=person.username)[0]
-                    print "u: ", u
-
-                    print len(TextMessagePerson.objects.all())
-                    print [str(x.__dict__) + "\n" for x in TextMessagePerson.objects.all()]
-                    print [str(x.user.__dict__) + "\n" for x in TextMessagePerson.objects.all()]
+                for twitter_person in people:
                     try:
-                        t = TextMessagePerson.objects.get(username=u.username)
+                        text_person = TextMessagePerson.objects.get(username=u.username)
                     except:
-                        t = TextMessagePerson(
-                            username=u.username,
-                            first_name=u.username,
-                            last_name=u.username)
-                        t.save()
+                        text_person = TextMessagePerson(
+                            username=twitter_person.username,
+                            first_name=twitter_person.username,
+                            last_name=twitter_person.username)
+                        text_person.save()
+
+                    # Deep copy of the post/message objects from twitter to text messages
+                    for twitter_post in twitter_person.twitterpost_set.all():
+                        text_person.textmessage_set.create(
+                            content=twitter_post.content
+                        )
+
+                    # Deep copy of the cache objects from twitter to text messages
+                    for twitter_post_cache in twitter_person.twitterpostcache_set.all():
+                        text_person.textmessagecache_set.create(
+                            word1=twitter_post_cache.word1,
+                            word2=twitter_post_cache.word2,
+                            final_word=twitter_post_cache.final_word,
+                            beginning=twitter_post_cache.beginning
+                        )

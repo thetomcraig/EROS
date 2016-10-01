@@ -11,6 +11,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
+psql_pass = 'Zork69105'
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
@@ -110,10 +112,6 @@ else:
       'default': {
           'ENGINE': 'django.db.backends.postgresql_psycopg2',
           'NAME': 'eros',
-          'USER': 'tom',
-          'PASSWORD': 'Zork69105',
-          'HOST': 'localhost',
-          'PORT': '',
       }
   }
 

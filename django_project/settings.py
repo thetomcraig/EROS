@@ -11,10 +11,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
-psql_pass = 'Zork69105'
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import local_settings
+
+instagram_username = local_settings.instagram_username
+instagram_password = local_settings.instagram_password
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

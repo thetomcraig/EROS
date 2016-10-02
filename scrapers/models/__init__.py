@@ -3,3 +3,4 @@ from twitter import *
 from facebook import * 
 from literature import * 
 from text_message import * 
+from instagram import * 

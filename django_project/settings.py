@@ -15,8 +15,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 import local_settings
 
-instagram_username = local_settings.instagram_username
-instagram_password = local_settings.instagram_password
+INSTAGRAM_USERNAME = local_settings.instagram_username
+INSTAGRAM_PASSWORD = local_settings.instagram_password
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

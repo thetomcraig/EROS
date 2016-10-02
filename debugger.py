@@ -9,8 +9,14 @@ from scrapers.models.twitter import TwitterPost, TwitterPerson
 from scrapers.models.plain_text_classes import Person
 from scrapers.models.literature import LiteraturePerson
 from scrapers.models.text_message import TextMessagePerson
+from scrapers.models.instagram import InstagramPerson 
+from scrapers import utils
+
+utils.collect_hashtags()
 
 
+
+"""
 t = TextMessagePerson.objects.get_or_create(username="tomcraig", real_name="Tom Craig")[0]
 t.save()
 t.intake_raw_io_backup_texts("./src/iOSBackup/_export/")
@@ -24,6 +30,7 @@ for m in t.textmessagemarkov_set.all():
     except:
         pass
 
+"""
 """
 person = TwitterPerson.objects.all()[0]
 print person.username

@@ -1,0 +1,29 @@
+{% extends 'integrations/base.html' %}
+
+{% block main %}
+    <div class="row small-buffer">
+
+    <form action="#" method="get">
+        <input name="go_back_to_home" type="submit" class="btn btn-default" value="Home">
+    </form>
+
+    <div class="ui-widget">
+        <label for="get_texts">Text Messages: </label>
+        <input id="get_texts">
+    </div>
+    <div>{{ texts|length }}</div>
+
+    <div class="ui-widget">
+        <label for="get_markov_texts">Markov Text Messages: </label>
+        <input id="get_markov_texts">
+    </div>
+    <div>{{ markov_texts|length }}</div>
+
+    <div class="row small-buffer">
+
+    <form action="#" method="get">
+        <input name="train_on_text_messages" type="submit" class="btn btn-default" value="Train on Text Messages">
+    </form>
+
+
+{% endblock %}

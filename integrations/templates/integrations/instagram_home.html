@@ -1,0 +1,28 @@
+{% extends 'integrations/base.html' %}
+
+{% block main %}
+
+
+<form action="#" method="get">
+	<input name="go_back_to_home" type="submit" class="btn btn-default" value="Home">
+</form>
+
+<div align="middle">
+	<h2>{{ num_posts }}</h2>
+	<h2>{{ num_followers}}</h2>
+</div>
+
+<div class="row small-buffer">
+
+<form href="integrations/instagram_home" action="#" method="get">
+    <input name="refresh_followers" type="submit" class="btn btn-default" value="Refresh Followers">
+</form>
+
+<div class="row small-buffer">
+
+<form href="integrations/instagram_home" action="#" method="get">
+    <input name="follow_my_followers" type="submit" class="btn btn-default" value="Follow My Followers">
+</form>
+
+
+{% endblock %}

@@ -135,3 +135,4 @@ TAG_TOKEN = "<<tag>>"
 
 INSTAGRAM_USERNAME = local_settings.instagram_username    
 INSTAGRAM_PASSWORD = local_settings.instagram_password    
+INSTAGRAM_ACCOUNT_USERNAME = local_settings.instagram_account_username

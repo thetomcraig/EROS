@@ -12,6 +12,8 @@ from integrations.helpers.utils import (
     scrape_twitter_person, 
     apply_markov_chains_twitter,
     get_num_instagram_followers,
+    refresh_and_return_me_from_instagram,
+    get_me_from_instagram,
     refresh_instagram_followers,
     follow_my_instagram_followers)
 
@@ -148,6 +150,7 @@ def instagram_home(request):
     template = loader.get_template('integrations/instagram_home.html')
     num_posts = 0
     num_followers = get_num_instagram_followers()
-    context = {'num_posts': num_posts, 'num_followers': num_followers}
+    me = get_me_from_instagram()
+    context = {'num_posts': num_posts, 'num_followers': num_followers, 'me': me}
     return HttpResponse(template.render(context, request))
 

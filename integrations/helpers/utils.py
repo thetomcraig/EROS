@@ -1,79 +1,96 @@
-import random                                                                                                           
+import random
 import HTMLParser
-from django.conf import settings                                                                                        
+from django.conf import settings
 
 from integrations.models.twitter import TwitterPerson, TwitterPost, TwitterPostCache, TwitterPostMarkov
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
 from integrations.helpers.InstagramAPI.InstagramAPI import InstagramAPI
 from integrations.helpers.TweepyScraper import TweepyScraper
-                                                                                                                        
-def read_source_into_sentence_list(source_file):                                                                        
-    """                                                                                                                 
-    Reads a text file and returns its contents as list of sentances                                                     
-    Split at punctuations                                                                                               
-    Ignores words with punctuation in them, like Mr. and Mrs.                                                           
-    """                                                                                                                 
-    lines = []                                                                                                          
-    punctuations = [".", "!", "?"]                                                                                      
-    ignored_words = ["Mr.", "Mrs."]                                                                                     
-    with open(source_file, "r") as file:                                                                                
-        line = []                                                                                                       
-        for file_line in file:                                                                                          
-            for word in file_line.split():                                                                              
-                line.append(word)                                                                                       
-                if any(p in word for p in punctuations):                                                                
-                    if all(not i in word for i in ignored_words):                                                       
-                        lines.append(line)                                                                              
-                        line = []                                                                                       
-                                                                                                                        
-    return lines                                                                                                        
-                                                                                                                        
-                                                                                                                        
-def collect_hashtags():                                                                                                 
-    """                                                                                                                 
-    Look at my timeline and collect posts                                                                               
-    Strip out hash tabs and save them as objects                                                                        
-    """                                                                                                                 
-    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)                                        
-    api.login()                                                                                                         
-    api.timelineFeed()                                                                                                  
-    result = api.LastJson                                                                                               
-                                                                                                                        
-    if result['status'] != 'ok':                                                                                        
-        pass                                                                                                            
-                                                                                                                        
-    num_results = result['num_results']                                                                                 
-                                                                                                                        
-    items = result['items']                                                                                             
-                                                                                                                        
-    for item in items:                                                                                                  
-        user = item['user']                                                                                             
-                                                                                                                        
-        i = InstagramPerson.objects.get_or_create(                                                                      
-            username = user['username'],                                                                                
-            real_name = user['full_name'])[0]                                                                           
-                                                                                                                        
-        i.avatar = user['profile_pic_url']                                                                              
-        i.save()                                                                                                        
-                                                                                                                        
-        post = InstagramPost.objects.get_or_create(content = item['caption']['text'])                                   
-                                                                                                                        
-        for comment in item['comments']:                                                                                
-            print comment['text']                                                                                       
-            print comment['user']['username']                                                                           
-                                                                                                                        
-        print "\n"                                                                                                      
-                                                                                                                        
+
+def read_source_into_sentence_list(source_file):
+    """
+    Reads a text file and returns its contents as list of sentances
+    Split at punctuations
+    Ignores words with punctuation in them, like Mr. and Mrs.
+    """
+    lines = []
+    punctuations = [".", "!", "?"]
+    ignored_words = ["Mr.", "Mrs."]
+    with open(source_file, "r") as file:
+        line = []
+        for file_line in file:
+            for word in file_line.split():
+                line.append(word)
+                if any(p in word for p in punctuations):
+                    if all(not i in word for i in ignored_words):
+                        lines.append(line)
+                        line = []
+
+    return lines
+
+
+def collect_hashtags():
+    """
+    Look at my timeline and collect posts
+    Strip out hash tabs and save them as objects
+    """
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
+    api.login()
+    api.timelineFeed()
+    result = api.LastJson
+
+    if result['status'] != 'ok':
+        pass
+
+    num_results = result['num_results']
+
+    items = result['items']
+
+    for item in items:
+        user = item['user']
+
+        i = InstagramPerson.objects.get_or_create(
+            username = user['username'],
+            real_name = user['full_name'])[0]
+
+        i.avatar = user['profile_pic_url']
+        i.save()
+
+        post = InstagramPost.objects.get_or_create(content = item['caption']['text'])
+
+        for comment in item['comments']:
+            print comment['text']
+            print comment['user']['username']
+
+        print "\n"
+
 def get_num_instagram_followers():
     followers = InstagramPerson.objects.all()
     return len(followers)
 
+
+def refresh_and_return_me_from_instagram():
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
+    api.login()
+    api.getProfileData()
+    result = api.LastJson
+    me = InstagramPerson.objects.get_or_create(
+        username=settings.INSTAGRAM_USERNAME,
+        real_name=result['user']['full_name'],
+        avatar=str(result['user']['hd_profile_pic_versions'][0]['url'])
+    )
+
+    return me
+
+def get_me_from_instagram():
+   return InstagramPerson.objects.get(username=settings.INSTAGRAM_USERNAME)
+
 def refresh_instagram_followers():
-    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)                                        
-    api.login()                                                                                                         
-    api.getSelfUserFollowers()                                                                                          
-    result = api.LastJson                                                                                               
-    for user in result['users']:                                                                                        
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
+    api.login()
+    api.getSelfUserFollowers()
+    result = api.LastJson
+    for user in result['users']:
         InstagramPerson.objects.get_or_create(
             username = user['username'],
             username_id = user['pk'],
@@ -81,7 +98,7 @@ def refresh_instagram_followers():
             avatar = user['profile_pic_url'])
 
 def follow_my_instagram_followers():
-    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)                                        
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
     api.login()
 
     followers = InstagramPerson.objects.all()
@@ -229,4 +246,4 @@ def replace_tokens(word_list_and_randomness, token, model_set):
 
     return (word_list, word_list_and_randomness[1])
 
-    
+

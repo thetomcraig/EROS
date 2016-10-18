@@ -11,7 +11,9 @@ from integrations.helpers.utils import (
     get_num_instagram_followers,
     get_me_from_instagram,
     refresh_instagram_followers,
-    follow_my_instagram_followers)
+    follow_my_instagram_followers,
+    refresh_and_return_me_from_instagram,
+    generate_instagam_post)
 
 import json
 import re
@@ -132,6 +134,8 @@ def instagram_home(request):
     """
     The top twitter profiles, that link to particular users
     """
+    me = get_me_from_instagram()
+
     if(request.GET.get('go_back_to_home')):
         return HttpResponseRedirect(reverse('home'))
 
@@ -141,9 +145,14 @@ def instagram_home(request):
     if(request.GET.get('follow_my_followers')):
         follow_my_instagram_followers()
 
+    if(request.GET.get('refresh_me')):
+        me = refresh_and_return_me_from_instagram()
+
+    if(request.GET.get('generate_post')):
+        generate_instagam_post()
+
     template = loader.get_template('integrations/instagram_home.html')
     num_posts = 0
     num_followers = get_num_instagram_followers()
-    me = get_me_from_instagram()
     context = {'num_posts': num_posts, 'num_followers': num_followers, 'me': me}
     return HttpResponse(template.render(context, request))

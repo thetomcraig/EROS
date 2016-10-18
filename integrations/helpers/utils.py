@@ -65,17 +65,19 @@ def collect_hashtags():
         print "\n"
 
 def get_num_instagram_followers():
-    followers = InstagramPerson.objects.all()
+    followers = InstagramPerson.objects.all().exclude(username=settings.INSTAGRAM_USERNAME)
     return len(followers)
 
 
 def refresh_and_return_me_from_instagram():
     api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
-    api.login()
+    api.login(force=True)
     api.getProfileData()
     result = api.LastJson
     me = InstagramPerson.objects.get_or_create(
         username=settings.INSTAGRAM_USERNAME,
+        first_name='Tom',
+        last_name='Craig',
         real_name=result['user']['full_name'],
         avatar=str(result['user']['hd_profile_pic_versions'][0]['url'])
     )
@@ -83,19 +85,32 @@ def refresh_and_return_me_from_instagram():
     return me
 
 def get_me_from_instagram():
-   return InstagramPerson.objects.get(username=settings.INSTAGRAM_USERNAME)
+    try:
+        return InstagramPerson.objects.get(username=settings.INSTAGRAM_USERNAME)
+    except:
+        return refresh_and_return_me_from_instagram()
 
 def refresh_instagram_followers():
     api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
     api.login()
     api.getSelfUserFollowers()
     result = api.LastJson
+
     for user in result['users']:
-        InstagramPerson.objects.get_or_create(
-            username = user['username'],
-            username_id = user['pk'],
-            real_name = user['full_name'],
-            avatar = user['profile_pic_url'])
+        person = None
+        try:
+            person = InstagramPerson.objects.get(
+                username = user['username'],
+                username_id = user['pk'],
+                real_name = user['full_name'])
+        except:
+            person = InstagramPerson.objects.create(
+                username = user['username'],
+                username_id = user['pk'],
+                real_name = user['full_name'])
+
+        person.avatar = user['profile_pic_url']
+        person.save()
 
 def follow_my_instagram_followers():
     api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
@@ -109,6 +124,21 @@ def follow_my_instagram_followers():
         except AttributeError as e:
             print e
             return False
+
+def generate_instagam_post():
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
+    api.login()
+
+    isabel = InstagramPerson.objects.get(username='lemonadventuretime')
+    api.getUserFeed(isabel.username_id)
+    result = api.LastJson
+    posts = result['items']
+    for post in posts:
+        caption = post['caption']['text']
+        print caption
+
+
+
 
 def scrape_top_twitter_people():
     """

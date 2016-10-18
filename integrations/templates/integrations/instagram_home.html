@@ -2,29 +2,35 @@
 
 {% block main %}
 
-<form action="#" method="get">
-	<input name="go_back_to_home" type="submit" class="btn btn-default" value="Home">
+<form action='#' method='get'>
+	<input name='go_back_to_home' type='submit' class='btn btn-default' value='Home'>
 </form>
 
-<div align="middle">
-	<div class="image-cropper">
-		<img src={{ me.avatar }} align="middle"/>
+<div align='middle'>
+	<div class='image-cropper'>
+		<img src={{ me.avatar }} align='middle'/>
 	</div>
 	<h2>{{ me.real_name}}</h2>
 
     <h6>Posts: {{ num_posts }}</h6>
     <h6>Followers: {{ num_followers }}</h6>
 
-	<form action="#" method="get">
-		<input name="scrape" type="submit" class="btn btn-success" value="Scrape STUB">
-		<input name="apply_markov_chains" type="submit" class="btn btn-warning" value="Make New Markov Post STUB">
+	<form action='#' method='get'>
+		<input name='generate_post' type='submit' class='btn btn-success' value='Scrape STUB'>
+		<input name='apply_markov_chains' type='submit' class='btn btn-warning' value='Make New Markov Post STUB'>
 	</form>
 
-    <div class="row small-buffer">
+    <div class='row small-buffer'>
 
-	<form action="#" method="get">
-        <input name="refresh_followers" type="submit" class="btn btn-default" value="Refresh Followers">
-        <input name="follow_my_followers" type="submit" class="btn btn-default" value="Follow My Followers">
+	<form action='#' method='get'>
+        <input name='refresh_followers' type='submit' class='btn btn-default' value='Refresh Followers'>
+        <input name='follow_my_followers' type='submit' class='btn btn-default' value='Follow My Followers'>
+	</form>
+
+    <div class='row small-buffer'>
+
+	<form action='#' method='get'>
+        <input name='refresh_me' type='submit' class='btn btn-default' value='Refresh Me'>
 	</form>
 </div>
 {% endblock %}

@@ -1,3 +1,4 @@
 **/*.pyc
 eros/local_settings.py
 **/*.DS_Store
+**/*.sw*

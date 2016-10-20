@@ -32,5 +32,23 @@
 	<form action='#' method='get'>
         <input name='refresh_me' type='submit' class='btn btn-default' value='Refresh Me'>
 	</form>
+
+    <table align="center">
+    {% for follower in followers %}
+        <div class="sub">
+            <a name="go_to_twitter_person" 
+                            href=""
+                            value={{ follower.username }}
+                            class="invisible-button">
+
+                <div class="image-cropper">
+                    <img src={{ follow.avatar }} align="middle"/>
+                </div>
+                <h5>{{ follower.username }}</h5> 
+            </a>
+        </div>
+    {% endfor %}
+    </table>
+
 </div>
 {% endblock %}

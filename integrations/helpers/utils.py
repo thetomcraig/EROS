@@ -64,9 +64,10 @@ def collect_hashtags():
 
         print "\n"
 
-def get_num_instagram_followers():
+
+def get_instagram_followers():
     followers = InstagramPerson.objects.all().exclude(username=settings.INSTAGRAM_USERNAME)
-    return len(followers)
+    return followers
 
 
 def refresh_and_return_me_from_instagram():
@@ -130,13 +131,27 @@ def generate_instagam_post():
     api.login()
 
     isabel = InstagramPerson.objects.get(username='lemonadventuretime')
-    api.getUserFeed(isabel.username_id)
+    person = isabel 
+
+    api.getUserFeed(person.username_id)
     result = api.LastJson
     posts = result['items']
     for post in posts:
         caption = post['caption']['text']
-        print caption
 
+        new_caption = ''
+        new_post = person.instagrampost_set.create(content=new_caption)
+
+        for word in caption:
+            if "#" in word:
+                new_post.instagramhashtag_set.create(content=word, original_post=new_post)
+                word = settings.TAG_TOKEN
+
+            new_caption= new_caption + word + ' '
+        new_caption = new_caption[:-1]
+
+        new_post.content = new_caption
+        new_post.save()
 
 
 

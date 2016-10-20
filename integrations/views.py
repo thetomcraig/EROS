@@ -8,7 +8,7 @@ from integrations.models.text_message import TextMessage, TextMessageCache, Text
 from integrations.helpers.utils import (
     scrape_twitter_person,
     apply_markov_chains_twitter,
-    get_num_instagram_followers,
+    get_instagram_followers,
     get_me_from_instagram,
     refresh_instagram_followers,
     follow_my_instagram_followers,
@@ -141,18 +141,23 @@ def instagram_home(request):
 
     if(request.GET.get('refresh_followers')):
         refresh_instagram_followers()
+        return HttpResponseRedirect('instagram_home/')
 
     if(request.GET.get('follow_my_followers')):
         follow_my_instagram_followers()
+        return HttpResponseRedirect('instagram_home/')
 
     if(request.GET.get('refresh_me')):
         me = refresh_and_return_me_from_instagram()
+        return HttpResponseRedirect('instagram_home/')
 
     if(request.GET.get('generate_post')):
         generate_instagam_post()
+        return HttpResponseRedirect('instagram_home/')
 
     template = loader.get_template('integrations/instagram_home.html')
     num_posts = 0
-    num_followers = get_num_instagram_followers()
-    context = {'num_posts': num_posts, 'num_followers': num_followers, 'me': me}
+    followers = get_instagram_followers()
+    num_followers = len(followers)
+    context = {'num_posts': num_posts, 'followers': followers, 'num_followers': num_followers, 'me': me}
     return HttpResponse(template.render(context, request))

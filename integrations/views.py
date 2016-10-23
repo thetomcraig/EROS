@@ -4,6 +4,7 @@ from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
 
 from integrations.models.twitter import TwitterPerson, TwitterPost
+from integrations.models.instagram import InstagramPerson
 from integrations.models.text_message import TextMessage, TextMessageCache, TextMessageMarkov
 from integrations.helpers.utils import (
     scrape_twitter_person,
@@ -84,6 +85,39 @@ def twitter_home(request):
     return HttpResponse(template.render(context, request))
 
 
+def instagram_home(request):
+    """
+    The top twitter profiles, that link to particular users
+    """
+    me = get_me_from_instagram()
+
+    if(request.GET.get('go_back_to_home')):
+        return HttpResponseRedirect(reverse('home'))
+
+    if(request.GET.get('refresh_followers')):
+        refresh_instagram_followers()
+        return HttpResponseRedirect('instagram_home/')
+
+    if(request.GET.get('follow_my_followers')):
+        follow_my_instagram_followers()
+        return HttpResponseRedirect('instagram_home/')
+
+    if(request.GET.get('refresh_me')):
+        me = refresh_and_return_me_from_instagram()
+        return HttpResponseRedirect('instagram_home/')
+
+    if(request.GET.get('generate_post')):
+        generate_instagam_post()
+        return HttpResponseRedirect('instagram_home/')
+
+    template = loader.get_template('integrations/instagram_home.html')
+    num_posts = 0
+    followers = get_instagram_followers()
+    num_followers = len(followers)
+    context = {'num_posts': num_posts, 'followers': followers, 'num_followers': num_followers, 'me': me}
+    return HttpResponse(template.render(context, request))
+
+
 def twitter_person_detail(request, person_username):
     author = None
     for person in TwitterPerson.objects.all():
@@ -129,35 +163,22 @@ def twitter_person_detail(request, person_username):
 
     return HttpResponse(template.render(context))
 
+def instagram_person_detail(request, person_username):
+    author = None
+    for person in InstagramPerson.objects.all():
+        if person.username.strip() == person_username.strip():
+            author = person
 
-def instagram_home(request):
-    """
-    The top twitter profiles, that link to particular users
-    """
-    me = get_me_from_instagram()
+    # If you are already on the page, these things
+    # will happen when you click buttons
+    if(request.GET.get('go_back_to_list')):
+        return HttpResponseRedirect(reverse('instagam_home'))
 
-    if(request.GET.get('go_back_to_home')):
-        return HttpResponseRedirect(reverse('home'))
 
-    if(request.GET.get('refresh_followers')):
-        refresh_instagram_followers()
-        return HttpResponseRedirect('instagram_home/')
+    context = RequestContext(request, {
+        'person': author,
+    })
 
-    if(request.GET.get('follow_my_followers')):
-        follow_my_instagram_followers()
-        return HttpResponseRedirect('instagram_home/')
+    template = loader.get_template('integrations/instagram_person_detail.html')
 
-    if(request.GET.get('refresh_me')):
-        me = refresh_and_return_me_from_instagram()
-        return HttpResponseRedirect('instagram_home/')
-
-    if(request.GET.get('generate_post')):
-        generate_instagam_post()
-        return HttpResponseRedirect('instagram_home/')
-
-    template = loader.get_template('integrations/instagram_home.html')
-    num_posts = 0
-    followers = get_instagram_followers()
-    num_followers = len(followers)
-    context = {'num_posts': num_posts, 'followers': followers, 'num_followers': num_followers, 'me': me}
-    return HttpResponse(template.render(context, request))
+    return HttpResponse(template.render(context))

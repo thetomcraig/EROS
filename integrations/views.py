@@ -4,13 +4,14 @@ from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
 
 from integrations.models.twitter import TwitterPerson, TwitterPost
-from integrations.models.instagram import InstagramPerson
+from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
 from integrations.models.text_message import TextMessage, TextMessageCache, TextMessageMarkov
 from integrations.helpers.utils import (
     scrape_twitter_person,
     apply_markov_chains_twitter,
     get_instagram_followers,
     get_me_from_instagram,
+	scrape_all_followers,
     refresh_instagram_followers,
     follow_my_instagram_followers,
     refresh_and_return_me_from_instagram,
@@ -94,6 +95,10 @@ def instagram_home(request):
     if(request.GET.get('go_back_to_home')):
         return HttpResponseRedirect(reverse('home'))
 
+    if(request.GET.get('scrape_all_followers')):
+        scrape_all_followers()
+        return HttpResponseRedirect('instagram_home/')
+
     if(request.GET.get('refresh_followers')):
         refresh_instagram_followers()
         return HttpResponseRedirect('instagram_home/')
@@ -169,14 +174,21 @@ def instagram_person_detail(request, person_username):
         if person.username.strip() == person_username.strip():
             author = person
 
+    len_hashtags = 0
+    posts = InstagramPost.objects.filter(author=author)
+    hashtags = InstagramHashtag.objects.filter(original_post__author=author)
+
     # If you are already on the page, these things
     # will happen when you click buttons
     if(request.GET.get('go_back_to_list')):
         return HttpResponseRedirect(reverse('instagam_home'))
 
-
     context = RequestContext(request, {
         'person': author,
+        'posts': posts,
+        'len_posts': len(posts),
+        'hashtags': hashtags,
+        'len_hashtags': len(hashtags),
     })
 
     template = loader.get_template('integrations/instagram_person_detail.html')

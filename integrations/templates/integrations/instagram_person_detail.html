@@ -10,23 +10,36 @@
 		<img src={{ person.avatar }} align="middle"/>
 	</div>
 	<h2>{{ person.real_name}}</h2>
-
-	
-	{% if 'TwitterPerson' in person_type %}
-		<h4>@{{ person.username }}</h2>
-		<h6>Sentences: {{ len_sentences }}</h6>
-		<h6>Markov Sentences: {{ len_markov_sentences }}</h6>
-	{% endif %}
-
-	{% if 'LiteraturePerson' in person_type %}
-		<h6>Sentences: {{ len_sentences }}</h6>
-		<h6>Markov Sentences: {{ len_markov_sentences }}</h6>
-	{% endif %}
+    <h4>@{{ person.username }}</h2>
+    <h6>Posts: {{ len_posts }}</h6>
+    <h6>Hashtags: {{ len_hashtags }}</h6>
 
 	<form action="#" method="get">
 		<input name="scrape" type="submit" class="btn btn-success" value="Scrape">
 		<input name="apply_markov_chains" type="submit" class="btn btn-warning" value="Make New Markov Post">
 	</form>
+</div>
+
+<div class="container">
+  <h2>Posts</h2>
+  <table class="table table-striped">
+    <thead>
+    </thead>
+    <tbody>
+		<div class="row">
+			{% for post in posts %}
+				<div>
+					{{ post.content }}
+				</div>
+			{% endfor %}
+			{% for tag in hashtags %}
+				<div>
+					{{ tag.content }}
+				</div>
+			{% endfor %}
+		</div>
+    </tbody>
+  </table>
 </div>
 
 {% include "integrations/sentence_list.html" with table_title='' sentences=markov_sentences %}

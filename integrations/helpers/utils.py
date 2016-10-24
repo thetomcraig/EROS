@@ -29,10 +29,10 @@ def read_source_into_sentence_list(source_file):
     return lines
 
 
-def collect_hashtags():
+def scrape_all_followers():
     """
     Look at my timeline and collect posts
-    Strip out hash tabs and save them as objects
+    Strip out hash tags and save them as objects
     """
     api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
     api.login()
@@ -42,28 +42,23 @@ def collect_hashtags():
     if result['status'] != 'ok':
         pass
 
-    num_results = result['num_results']
-
     items = result['items']
 
     for item in items:
         user = item['user']
-
+        # Grab the user and update their avatar
         i = InstagramPerson.objects.get_or_create(
             username = user['username'],
             real_name = user['full_name'])[0]
-
         i.avatar = user['profile_pic_url']
         i.save()
+        # Save the post 
+        text = item['caption']['text']
+        post = InstagramPost.objects.get_or_create(content=text)[0]
 
-        post = InstagramPost.objects.get_or_create(content = item['caption']['text'])
-
-        for comment in item['comments']:
-            print comment['text']
-            print comment['user']['username']
-
-        print "\n"
-
+        for word in text.split():
+            if word[0] == '#':
+                InstagramHashtag.objects.get_or_create(original_post=post, content=word)
 
 def get_instagram_followers():
     followers = InstagramPerson.objects.all().exclude(username=settings.INSTAGRAM_USERNAME)
@@ -235,9 +230,6 @@ def create_post_cache(person, post):
         word1 = word_list[index]
         word2 = word_list[index + 1]
         final_word = word_list[index + 2]
-        print word1.encode('utf-8')
-        print word2.encode('utf-8')
-        print final_word.encode('utf-8')
 
         beginning = False
         if (index == 0):

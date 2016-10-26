@@ -169,20 +169,31 @@ def twitter_person_detail(request, person_username):
     return HttpResponse(template.render(context))
 
 def instagram_person_detail(request, person_username):
-    author = None
-    for person in InstagramPerson.objects.all():
-        if person.username.strip() == person_username.strip():
-            author = person
-
-    len_hashtags = 0
-    posts = InstagramPost.objects.filter(author=author)
-    hashtags = InstagramHashtag.objects.filter(original_post__author=author)
-
     # If you are already on the page, these things
     # will happen when you click buttons
     if(request.GET.get('go_back_to_list')):
         return HttpResponseRedirect(reverse('instagam_home'))
 
+    if(request.GET.get('follow_my_followers')):
+        follow_my_instagram_followers()
+        return HttpResponseRedirect('/integrations/instagram_home/')
+
+    if(request.GET.get('refresh_me')):
+        me = refresh_and_return_me_from_instagram()
+        return HttpResponseRedirect('/integrations/instagram_home/')
+
+    if(request.GET.get('generate_post')):
+        generate_instagam_post()
+        return HttpResponseRedirect('/integrations/instagram_home/')
+
+    author = None
+    for person in InstagramPerson.objects.all():
+        if person.username.strip() == person_username.strip():
+            author = person
+
+    template = loader.get_template('integrations/instagram_home.html')
+    posts = InstagramPost.objects.filter(author=author)
+    hashtags = InstagramHashtag.objects.filter(original_post__author=author)
     context = RequestContext(request, {
         'person': author,
         'posts': posts,

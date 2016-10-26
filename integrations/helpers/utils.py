@@ -126,14 +126,12 @@ def generate_instagam_post():
     api.login()
 
     isabel = InstagramPerson.objects.get(username='lemonadventuretime')
-    person = isabel 
 
     api.getUserFeed(person.username_id)
     result = api.LastJson
     posts = result['items']
     for post in posts:
         caption = post['caption']['text']
-
         new_caption = ''
         new_post = person.instagrampost_set.create(content=new_caption)
 

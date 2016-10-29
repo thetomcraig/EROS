@@ -20,28 +20,8 @@
 	</form>
 </div>
 
-<div class="container">
-  <h2>Posts</h2>
-  <table class="table table-striped">
-    <thead>
-    </thead>
-    <tbody>
-		<div class="row">
-			{% for post in posts %}
-				<div>
-					{{ post.content }}
-				</div>
-			{% endfor %}
-			{% for tag in hashtags %}
-				<div>
-					{{ tag.content }}
-				</div>
-			{% endfor %}
-		</div>
-    </tbody>
-  </table>
-</div>
+<div class='row small-buffer'>
 
-{% include "integrations/sentence_list.html" with table_title='' sentences=markov_sentences %}
+{% include "integrations/sentence_list.html" with table_title='' sentences=posts %}
 
 {% endblock %}

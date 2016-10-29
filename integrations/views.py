@@ -11,7 +11,7 @@ from integrations.helpers.utils import (
     apply_markov_chains_twitter,
     get_instagram_followers,
     get_me_from_instagram,
-	scrape_all_followers,
+    scrape_all_followers,
     refresh_instagram_followers,
     follow_my_instagram_followers,
     refresh_and_return_me_from_instagram,
@@ -168,18 +168,18 @@ def twitter_person_detail(request, person_username):
 
     return HttpResponse(template.render(context))
 
+
 def instagram_person_detail(request, person_username):
     # If you are already on the page, these things
     # will happen when you click buttons
     if(request.GET.get('go_back_to_list')):
-        return HttpResponseRedirect(reverse('instagam_home'))
+        return HttpResponseRedirect('/integrations/instagram_home/')
 
     if(request.GET.get('follow_my_followers')):
         follow_my_instagram_followers()
         return HttpResponseRedirect('/integrations/instagram_home/')
 
     if(request.GET.get('refresh_me')):
-        me = refresh_and_return_me_from_instagram()
         return HttpResponseRedirect('/integrations/instagram_home/')
 
     if(request.GET.get('generate_post')):

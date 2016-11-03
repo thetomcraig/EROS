@@ -2,8 +2,6 @@
 
 .large-buffer { margin-top:80px; }
 
-body{margin:40px;}
-
 .sub{
     width:10%; 
     position:relative; 
@@ -35,7 +33,7 @@ img {
 	:: General
 	-------------------------------------------------- */
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	color: #353535;
 }
 .content h1 {

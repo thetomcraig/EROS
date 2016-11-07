@@ -15,6 +15,8 @@ from integrations.helpers.utils import (
     refresh_instagram_followers,
     follow_my_instagram_followers,
     refresh_and_return_me_from_instagram,
+    scrape_follower,
+    clear_follower_posts,
     generate_instagam_post)
 
 import json
@@ -170,28 +172,26 @@ def twitter_person_detail(request, person_username):
 
 
 def instagram_person_detail(request, person_username):
-    # If you are already on the page, these things
-    # will happen when you click buttons
-    if(request.GET.get('go_back_to_list')):
-        return HttpResponseRedirect('/integrations/instagram_home/')
-
-    if(request.GET.get('follow_my_followers')):
-        follow_my_instagram_followers()
-        return HttpResponseRedirect('/integrations/instagram_home/')
-
-    if(request.GET.get('refresh_me')):
-        return HttpResponseRedirect('/integrations/instagram_home/')
-
-    if(request.GET.get('generate_post')):
-        generate_instagam_post()
-        return HttpResponseRedirect('/integrations/instagram_home/')
-
     author = None
     for person in InstagramPerson.objects.all():
         if person.username.strip() == person_username.strip():
             author = person
 
-    template = loader.get_template('integrations/instagram_home.html')
+    if(request.GET.get('go_back_to_list')):
+        return HttpResponseRedirect('/integrations/instagram_home')
+
+    if(request.GET.get('scrape')):
+        scrape_follower(person_username)
+        return HttpResponseRedirect('/integrations/instagram_person_detail/' + person_username)
+
+    if(request.GET.get('generate_post')):
+        generate_instagam_post(author)
+        return HttpResponseRedirect('/integrations/instagram_person_detail/' + person_username)
+
+    if(request.GET.get('clear_follower_posts')):
+        clear_follower_posts(author)
+        return HttpResponseRedirect('/integrations/instagram_person_detail/' + person_username)
+
     posts = InstagramPost.objects.filter(author=author)
     hashtags = InstagramHashtag.objects.filter(original_post__author=author)
     context = RequestContext(request, {

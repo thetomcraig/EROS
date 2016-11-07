@@ -2,10 +2,11 @@ import random
 import HTMLParser
 from django.conf import settings
 
-from integrations.models.twitter import TwitterPerson, TwitterPost, TwitterPostCache, TwitterPostMarkov
+from integrations.models.twitter import TwitterPost, TwitterPostCache
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
 from integrations.helpers.InstagramAPI.InstagramAPI import InstagramAPI
 from integrations.helpers.TweepyScraper import TweepyScraper
+
 
 def read_source_into_sentence_list(source_file):
     """
@@ -22,7 +23,7 @@ def read_source_into_sentence_list(source_file):
             for word in file_line.split():
                 line.append(word)
                 if any(p in word for p in punctuations):
-                    if all(not i in word for i in ignored_words):
+                    if all(i not in word for i in ignored_words):
                         lines.append(line)
                         line = []
 
@@ -34,8 +35,8 @@ def scrape_all_followers():
     Look at my timeline and collect posts
     Strip out hash tags and save them as objects
     """
-    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
-    api.login()
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME,
+                       settings.INSTAGRAM_PASSWORD)
     api.timelineFeed()
     result = api.LastJson
 
@@ -48,25 +49,46 @@ def scrape_all_followers():
         user = item['user']
         # Grab the user and update their avatar
         i = InstagramPerson.objects.get_or_create(
-            username = user['username'],
-            real_name = user['full_name'])[0]
+            username=user['username'],
+            real_name=user['full_name'])[0]
         i.avatar = user['profile_pic_url']
         i.save()
-        # Save the post 
+        # Save the post
         text = item['caption']['text']
         post = InstagramPost.objects.get_or_create(content=text)[0]
 
         for word in text.split():
             if word[0] == '#':
-                InstagramHashtag.objects.get_or_create(original_post=post, content=word)
+                InstagramHashtag.objects.get_or_create(
+                    original_post=post, content=word)
+
+
+def scrape_follower(username):
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME,
+                       settings.INSTAGRAM_PASSWORD)
+
+    api.getUserFeed(username)
+    result = api.LastJson
+
+    with open('./scrape_result.txt', 'a') as f:
+        import json
+        json.dump(result, f)
+
+    if result['status'] != 'ok':
+        pass
+
+    # NOT DONE YET DER DER DER
+
 
 def get_instagram_followers():
-    followers = InstagramPerson.objects.all().exclude(username=settings.INSTAGRAM_USERNAME)
+    followers = InstagramPerson.objects.all().exclude(
+        username=settings.INSTAGRAM_USERNAME)
     return followers
 
 
 def refresh_and_return_me_from_instagram():
-    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME,
+                       settings.INSTAGRAM_PASSWORD)
     api.login(force=True)
     api.getProfileData()
     result = api.LastJson
@@ -80,14 +102,17 @@ def refresh_and_return_me_from_instagram():
 
     return me
 
+
 def get_me_from_instagram():
     try:
         return InstagramPerson.objects.get(username=settings.INSTAGRAM_USERNAME)
     except:
         return refresh_and_return_me_from_instagram()
 
+
 def refresh_instagram_followers():
-    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME,
+                       settings.INSTAGRAM_PASSWORD)
     api.login()
     api.getSelfUserFollowers()
     result = api.LastJson
@@ -96,20 +121,22 @@ def refresh_instagram_followers():
         person = None
         try:
             person = InstagramPerson.objects.get(
-                username = user['username'],
-                username_id = user['pk'],
-                real_name = user['full_name'])
+                username=user['username'],
+                username_id=user['pk'],
+                real_name=user['full_name'])
         except:
             person = InstagramPerson.objects.create(
-                username = user['username'],
-                username_id = user['pk'],
-                real_name = user['full_name'])
+                username=user['username'],
+                username_id=user['pk'],
+                real_name=user['full_name'])
 
         person.avatar = user['profile_pic_url']
         person.save()
 
+
 def follow_my_instagram_followers():
-    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME,
+                       settings.INSTAGRAM_PASSWORD)
     api.login()
 
     followers = InstagramPerson.objects.all()
@@ -121,31 +148,35 @@ def follow_my_instagram_followers():
             print e
             return False
 
-def generate_instagam_post():
-    api = InstagramAPI(settings.INSTAGRAM_USERNAME, settings.INSTAGRAM_PASSWORD)
+
+def clear_follower_posts(person):
+   [x.delete() for x in person.instagrampost_set.all()]
+
+
+def generate_instagam_post(person):
+    """
+    # Debugging
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME,
+                       settings.INSTAGRAM_PASSWORD)
     api.login()
-
-    isabel = InstagramPerson.objects.get(username='lemonadventuretime')
-
     api.getUserFeed(person.username_id)
     result = api.LastJson
+    """
+
+    """
+    # Debugging
+    with open('./api_response.txt', 'a') as f:
+        import json
+        json.dump(result, f)
+    """
+    f = open('./api_response.txt', 'r').read()
+    import json
+    result = json.loads(f)
+
     posts = result['items']
     for post in posts:
         caption = post['caption']['text']
-        new_caption = ''
-        new_post = person.instagrampost_set.create(content=new_caption)
-
-        for word in caption:
-            if "#" in word:
-                new_post.instagramhashtag_set.create(content=word, original_post=new_post)
-                word = settings.TAG_TOKEN
-
-            new_caption= new_caption + word + ' '
-        new_caption = new_caption[:-1]
-
-        new_post.content = new_caption
-        new_post.save()
-
+        person.instagrampost_set.create(content=caption)
 
 
 def scrape_top_twitter_people():
@@ -162,6 +193,7 @@ def scrape_top_twitter_people():
     names_and_unames = t.scrape_top_users(50)
 
     return names_and_unames
+
 
 def scrape_twitter_person(person):
     """
@@ -217,6 +249,7 @@ def scrape_twitter_person(person):
 
     return new_post_ids
 
+
 def create_post_cache(person, post):
     """
     Create the postcache item from the new post
@@ -232,8 +265,10 @@ def create_post_cache(person, post):
         beginning = False
         if (index == 0):
             beginning = True
-        post_cache = TwitterPostCache(author=person, word1=word1, word2=word2, final_word=final_word, beginning=beginning)
+        post_cache = TwitterPostCache(
+            author=person, word1=word1, word2=word2, final_word=final_word, beginning=beginning)
         post_cache.save()
+
 
 def apply_markov_chains_twitter(person):
     """
@@ -246,19 +281,25 @@ def apply_markov_chains_twitter(person):
     print "Applying markov chains"
     all_beginning_caches = person.twitterpostcache_set.filter(beginning=True)
     all_caches = person.twitterpostcache_set.all()
-    new_markov_post = person.apply_markov_chains_inner(all_beginning_caches, all_caches)
+    new_markov_post = person.apply_markov_chains_inner(
+        all_beginning_caches, all_caches)
 
     # Replace the tokens (twitter specific)
-    replace_tokens(new_markov_post, settings.USER_TOKEN, person.twittermention_set.all())
-    replace_tokens(new_markov_post, settings.LINK_TOKEN, person.twitterlink_set.all())
-    replace_tokens(new_markov_post, settings.TAG_TOKEN, person.twitterhashtag_set.all())
+    replace_tokens(new_markov_post, settings.USER_TOKEN,
+                   person.twittermention_set.all())
+    replace_tokens(new_markov_post, settings.LINK_TOKEN,
+                   person.twitterlink_set.all())
+    replace_tokens(new_markov_post, settings.TAG_TOKEN,
+                   person.twitterhashtag_set.all())
 
     randomness = new_markov_post[1]
     content = ""
     for word in new_markov_post[0]:
         content = content + word + " "
 
-    person.twitterpostmarkov_set.create(content=content[:-1], randomness=randomness)
+    person.twitterpostmarkov_set.create(
+        content=content[:-1], randomness=randomness)
+
 
 def replace_tokens(word_list_and_randomness, token, model_set):
     """
@@ -280,5 +321,3 @@ def replace_tokens(word_list_and_randomness, token, model_set):
                 print word_list[word_index]
 
     return (word_list, word_list_and_randomness[1])
-
-

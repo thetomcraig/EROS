@@ -63,23 +63,6 @@ def scrape_all_followers():
                     original_post=post, content=word)
 
 
-def scrape_follower(username):
-    api = InstagramAPI(settings.INSTAGRAM_USERNAME,
-                       settings.INSTAGRAM_PASSWORD)
-
-    api.getUserFeed(username)
-    result = api.LastJson
-
-    with open('./scrape_result.txt', 'a') as f:
-        import json
-        json.dump(result, f)
-
-    if result['status'] != 'ok':
-        pass
-
-    # NOT DONE YET DER DER DER
-
-
 def get_instagram_followers():
     followers = InstagramPerson.objects.all().exclude(
         username=settings.INSTAGRAM_USERNAME)
@@ -149,34 +132,31 @@ def follow_my_instagram_followers():
             return False
 
 
-def clear_follower_posts(person):
-   [x.delete() for x in person.instagrampost_set.all()]
-
-
-def generate_instagam_post(person):
-    """
-    # Debugging
+def scrape_follower(person):
     api = InstagramAPI(settings.INSTAGRAM_USERNAME,
                        settings.INSTAGRAM_PASSWORD)
     api.login()
     api.getUserFeed(person.username_id)
     result = api.LastJson
-    """
-
-    """
-    # Debugging
-    with open('./api_response.txt', 'a') as f:
-        import json
-        json.dump(result, f)
-    """
-    f = open('./api_response.txt', 'r').read()
-    import json
-    result = json.loads(f)
 
     posts = result['items']
     for post in posts:
         caption = post['caption']['text']
         person.instagrampost_set.create(content=caption)
+
+
+def generate_instagam_post(author):
+    hashtags = []
+    for post in author.instagrampost_set.all():
+        for word in post.content.split():
+            if word[0] == '#':
+                hashtags.append(word[1:])
+    print hashtags
+    # Profit???
+
+
+def clear_follower_posts(author):
+    [x.delete() for x in author.instagrampost_set.all()]
 
 
 def scrape_top_twitter_people():

@@ -181,7 +181,7 @@ def instagram_person_detail(request, person_username):
         return HttpResponseRedirect('/integrations/instagram_home')
 
     if(request.GET.get('scrape')):
-        scrape_follower(person_username)
+        scrape_follower(author)
         return HttpResponseRedirect('/integrations/instagram_person_detail/' + person_username)
 
     if(request.GET.get('generate_post')):

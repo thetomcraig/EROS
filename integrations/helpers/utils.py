@@ -1,4 +1,5 @@
 import random
+import json
 import HTMLParser
 from django.conf import settings
 
@@ -146,12 +147,26 @@ def scrape_follower(person):
 
 
 def generate_instagam_post(author):
+    from collections import Counter
+
+    api = InstagramAPI(settings.INSTAGRAM_USERNAME,
+                       settings.INSTAGRAM_PASSWORD)
+    api.login()
+
     hashtags = []
     for post in author.instagrampost_set.all():
         for word in post.content.split():
             if word[0] == '#':
                 hashtags.append(word[1:])
-    print hashtags
+    counted_hashtags = Counter(hashtags)
+    most_common = [key for key, value in counted_hashtags.iteritems() if value > 4]
+
+    api.getHashtagFeed(most_common[0])
+    with open("hash_search.txt", "a") as f:
+        f.write(json.dumps(api.LastJson))
+
+    print api
+    print most_common
     # Profit???
 
 

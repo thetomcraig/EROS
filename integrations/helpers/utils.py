@@ -161,9 +161,16 @@ def generate_instagam_post(author):
     counted_hashtags = Counter(hashtags)
     most_common = [key for key, value in counted_hashtags.iteritems() if value > 4]
 
+
     api.getHashtagFeed(most_common[0])
-    with open("hash_search.txt", "a") as f:
-        f.write(json.dumps(api.LastJson))
+    result = json.loads(api.LastJson)
+
+    items = result['items']
+
+    for item in items:
+        text = item['caption']['text']
+        print text
+
 
     print api
     print most_common

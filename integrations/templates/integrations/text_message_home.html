@@ -1,29 +1,25 @@
 {% extends 'integrations/base.html' %}
-
 {% block main %}
-    <div class="row small-buffer">
 
-    <form action="#" method="get">
-        <input name="go_back_to_home" type="submit" class="btn btn-default" value="Home">
-    </form>
+<form action='#' method='get'>
+	<input name='go_back_to_home' type='submit' class='btn btn-default' value='Home'>
+</form>
 
-    <div class="ui-widget">
-        <label for="get_texts">Text Messages: </label>
-        <input id="get_texts">
-    </div>
-    <div>{{ texts|length }}</div>
+<div align='middle'>
+    <h6>Texts: {{ len_texts }}</h6>
+    <h6>Text Caches: {{ len_caches }}</h6>
+    <h6>Text Beginning Caches: {{ len_beginning_caches }}</h6>
 
-    <div class="ui-widget">
-        <label for="get_markov_texts">Markov Text Messages: </label>
-        <input id="get_markov_texts">
-    </div>
-    <div>{{ markov_texts|length }}</div>
+	<form action='#' method='get'>
+		<input name='read_raw_texts' type='submit' class='btn btn-success' value='Consume Raw Texts'>
+		<input name='generate_text' type='submit' class='btn btn-primary' value='Generate Text'>
+		<input name='convert_to_instagram_posts' type='submit' class='btn btn-danger' value='Convert To Instagram Posts'>
+		<input name='clear_texts' type='submit' class='btn btn-danger' value='Clear All Texts'>
+	</form>
+</div>
 
-    <div class="row small-buffer">
+<div class='row small-buffer'>
 
-    <form action="#" method="get">
-        <input name="train_on_text_messages" type="submit" class="btn btn-default" value="Train on Text Messages">
-    </form>
-
+{% include 'integrations/sentence_list.html' with table_title='' sentences=texts %}
 
 {% endblock %}

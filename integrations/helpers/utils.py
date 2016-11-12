@@ -1,34 +1,23 @@
 import random
-import json
 import HTMLParser
 from django.conf import settings
 
-from integrations.models.twitter import TwitterPost, TwitterPostCache
+from integrations.models.twitter import TwitterPost
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
+from integrations.models.text_message import TextMessage, TextMessagePerson, TextMessageCache
 from integrations.helpers.InstagramAPI.InstagramAPI import InstagramAPI
 from integrations.helpers.TweepyScraper import TweepyScraper
 
 
-def read_source_into_sentence_list(source_file):
-    """
-    Reads a text file and returns its contents as list of sentances
-    Split at punctuations
-    Ignores words with punctuation in them, like Mr. and Mrs.
-    """
-    lines = []
-    punctuations = [".", "!", "?"]
-    ignored_words = ["Mr.", "Mrs."]
-    with open(source_file, "r") as file:
-        line = []
-        for file_line in file:
-            for word in file_line.split():
-                line.append(word)
-                if any(p in word for p in punctuations):
-                    if all(i not in word for i in ignored_words):
-                        lines.append(line)
-                        line = []
+def read_raw_texts(filename):
+    me = TextMessagePerson.objects.get_or_create(first_name='Tom', last_name='Craig')[0]
 
-    return lines
+    f = open(filename, 'r')
+
+    for line in f.readlines():
+        text = TextMessage.objects.get_or_create(author=me, content=line)[0]
+
+        create_post_cache(text, me.textmessagecache_set)
 
 
 def scrape_all_followers():
@@ -58,6 +47,8 @@ def scrape_all_followers():
         text = item['caption']['text']
         post = InstagramPost.objects.get_or_create(content=text)[0]
 
+        create_post_cache(post, i.instagrampostcache_set)
+
         for word in text.split():
             if word[0] == '#':
                 InstagramHashtag.objects.get_or_create(
@@ -85,6 +76,10 @@ def refresh_and_return_me_from_instagram():
     )
 
     return me
+
+
+def get_text_message_me():
+    return TextMessagePerson.objects.get_or_create(first_name='Tom', last_name='Craig')[0]
 
 
 def get_me_from_instagram():
@@ -143,42 +138,36 @@ def scrape_follower(person):
     posts = result['items']
     for post in posts:
         caption = post['caption']['text']
-        person.instagrampost_set.create(content=caption)
+        post = person.instagrampost_set.create(content=caption)
+
+        create_post_cache(post, person.instagrampostcache_set)
 
 
-def generate_instagam_post(author):
-    from collections import Counter
-
-    api = InstagramAPI(settings.INSTAGRAM_USERNAME,
-                       settings.INSTAGRAM_PASSWORD)
-    api.login()
-
-    hashtags = []
-    for post in author.instagrampost_set.all():
-        for word in post.content.split():
-            if word[0] == '#':
-                hashtags.append(word[1:])
-    counted_hashtags = Counter(hashtags)
-    most_common = [key for key, value in counted_hashtags.iteritems() if value > 4]
+def generate_instagram_post(author):
+    return generate_markov_instagram_post(author)
 
 
-    api.getHashtagFeed(most_common[0])
-    result = json.loads(api.LastJson)
+def generate_markov_instagram_post(person):
+    print "Applying markov chains"
+    all_caches = person.instagrampostcache_set.all()
+    all_beginning_caches = all_caches.filter(beginning=True)
 
-    items = result['items']
+    new_markov_post = person.apply_markov_chains_inner(all_beginning_caches, all_caches)
 
-    for item in items:
-        text = item['caption']['text']
-        print text
+    content = ""
+    for word in new_markov_post[0]:
+        content = content + word + " "
 
-
-    print api
-    print most_common
-    # Profit???
+    print content[:-1]
+    return content[:-1]
 
 
 def clear_follower_posts(author):
     [x.delete() for x in author.instagrampost_set.all()]
+
+
+def clear_texts(author):
+    [x.delete() for x in author.textmessage_set.all()]
 
 
 def scrape_top_twitter_people():
@@ -246,30 +235,42 @@ def scrape_twitter_person(person):
         final_tweet = h.unescape(final_tweet.decode('utf-8'))
 
         post = TwitterPost.objects.create(author=person, content=final_tweet)
-        create_post_cache(person, post)
         new_post_ids.append(post.id)
+
+        create_post_cache(post, person.twitterpostcache_set)
 
     return new_post_ids
 
 
-def create_post_cache(person, post):
+def create_post_cache(post, cache_set):
     """
     Create the postcache item from the new post
     to be used to make the markov post
     """
     word_list = post.content.split()
     for index in range(len(word_list) - 2):
-        print "caching:"
         word1 = word_list[index]
         word2 = word_list[index + 1]
         final_word = word_list[index + 2]
 
+        print "caching:"
+        print word1
+        print word2
+        print "|"
+        print "`--> " + final_word
+
         beginning = False
         if (index == 0):
             beginning = True
-        post_cache = TwitterPostCache(
-            author=person, word1=word1, word2=word2, final_word=final_word, beginning=beginning)
-        post_cache.save()
+
+        cache_set.create(word1=word1, word2=word2, final_word=final_word, beginning=beginning)
+
+
+def generate_text():
+    me = get_text_message_me()
+    all_caches = TextMessageCache.objects.all()
+    all_beginning_caches = all_caches.filter(beginning=True)
+    print me.apply_markov_chains_inner(all_beginning_caches, all_caches)
 
 
 def apply_markov_chains_twitter(person):

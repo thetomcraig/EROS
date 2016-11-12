@@ -10,6 +10,7 @@ from integrations.helpers.utils import (
     scrape_twitter_person,
     apply_markov_chains_twitter,
     get_instagram_followers,
+    get_text_message_me,
     get_me_from_instagram,
     scrape_all_followers,
     refresh_instagram_followers,
@@ -17,24 +18,15 @@ from integrations.helpers.utils import (
     refresh_and_return_me_from_instagram,
     scrape_follower,
     clear_follower_posts,
-    generate_instagam_post)
-
-import json
-import re
+    generate_text,
+    clear_texts,
+    generate_instagram_post,
+    read_raw_texts)
 
 
 def home(request):
     if(request.GET.get('text_message_home')):
-        texts = TextMessage.objects.all()
-        markov_texts = TextMessageMarkov.objects.all()
-        first_words = TextMessageCache.objects.filter(beginning=True)
-        first_words_no_dupes = set([x.word1 for x in first_words])
-        context = RequestContext(request, {
-            'request': request,
-            'first_words': first_words_no_dupes,
-            'texts': texts,
-            'markov_texts': markov_texts})
-        return render_to_response('integrations/text_message_home.html', context_instance=context)
+        return HttpResponseRedirect(reverse('text_message_home'))
 
     if(request.GET.get('twitter_home')):
         return HttpResponseRedirect(reverse('twitter_home'))
@@ -46,30 +38,38 @@ def home(request):
     return render_to_response('integrations/home.html', context_instance=context)
 
 
-def get_texts(request):
+def text_message_home(request):
+    me = get_text_message_me()
+
+    if(request.GET.get('go_back_to_home')):
+        return HttpResponseRedirect(reverse('home'))
+
+    if(request.GET.get('read_raw_texts')):
+        read_raw_texts('/Users/tom/Dropbox/TomCraig/Projects/EROS/text_raw.txt')
+        return HttpResponseRedirect('text_message_home/')
+
+    if(request.GET.get('generate_text')):
+        generate_text()
+        return HttpResponseRedirect('text_message_home/')
+
+    if(request.GET.get('clear_texts')):
+        clear_texts(me)
+        return HttpResponseRedirect('text_message_home/')
+
     texts = TextMessage.objects.all()
-    q = request.GET.get('term', '')
-    return fuzzy_search_query(q, texts)
+    caches = TextMessageCache.objects.all()
+    beginning_caches = caches.filter(beginning=True)
+    markov_texts = TextMessageMarkov.objects.all()
 
-
-def get_markov_texts(request):
-    texts = TextMessageMarkov.objects.all()
-    q = request.GET.get('term', '')
-    return fuzzy_search_query(q, texts)
-
-
-def fuzzy_search_query(query, query_set):
-    results = []
-    for text in query_set:
-        try:
-            if re.match(query, text.content, re.I):
-                results.append(text.content)
-        except:
-            pass
-
-    data = json.dumps(results)
-    mimetype = 'application/json'
-    return HttpResponse(data, mimetype)
+    template = loader.get_template('integrations/text_message_home.html')
+    context = RequestContext(request, {
+        'request': request,
+        'texts': texts,
+        'len_texts': len(texts),
+        'len_caches': len(caches),
+        'len_beginning_caches': len(beginning_caches),
+        'markov_texts': markov_texts})
+    return HttpResponse(template.render(context, request))
 
 
 def twitter_home(request):
@@ -114,7 +114,7 @@ def instagram_home(request):
         return HttpResponseRedirect('instagram_home/')
 
     if(request.GET.get('generate_post')):
-        generate_instagam_post()
+        generate_instagram_post()
         return HttpResponseRedirect('instagram_home/')
 
     template = loader.get_template('integrations/instagram_home.html')
@@ -185,7 +185,7 @@ def instagram_person_detail(request, person_username):
         return HttpResponseRedirect('/integrations/instagram_person_detail/' + person_username)
 
     if(request.GET.get('generate_post')):
-        generate_instagam_post(author)
+        generate_instagram_post(author)
         return HttpResponseRedirect('/integrations/instagram_person_detail/' + person_username)
 
     if(request.GET.get('clear_follower_posts')):

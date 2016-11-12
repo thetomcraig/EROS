@@ -24,6 +24,4 @@ urlpatterns = [
     url(r'^integrations/', include('integrations.urls')),
     url(r'^scrapers/', include('scrapers.urls')),
     url('', include('django.contrib.auth.urls', namespace='auth')),
-    url(r'^get_texts/', 'integrations.views.get_texts', name='get_texts'),
-    url(r'^get_markov_texts/', 'integrations.views.get_markov_texts', name='get_markov_texts'),
 ]

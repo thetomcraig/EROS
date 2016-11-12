@@ -10,7 +10,6 @@ import base
 
 # TEXT MESSAGE VERSION
 class TextMessagePerson(base.Person):
-    user = models.ForeignKey(User, related_name='textmessageperson_users', null=True, default=None)
     happiness = models.IntegerField(default=0)
 
     def __str__(self):

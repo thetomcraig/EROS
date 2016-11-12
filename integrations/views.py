@@ -45,7 +45,7 @@ def text_message_home(request):
         return HttpResponseRedirect(reverse('home'))
 
     if(request.GET.get('read_raw_texts')):
-        read_raw_texts('/Users/tom/Dropbox/TomCraig/Projects/EROS/text_raw.txt')
+        read_raw_texts('/Users/tom/Dropbox/TomCraig/Projects/EROS/iOS_backup/')
         return HttpResponseRedirect('text_message_home/')
 
     if(request.GET.get('generate_text')):

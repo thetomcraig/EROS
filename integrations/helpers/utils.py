@@ -1,23 +1,62 @@
 import random
+import os
+import re
+
 import HTMLParser
+from datetime import datetime
+from bs4 import BeautifulSoup
+
 from django.conf import settings
 
 from integrations.models.twitter import TwitterPost
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
-from integrations.models.text_message import TextMessage, TextMessagePerson, TextMessageCache
+from integrations.models.text_message import TextMessagePerson, TextMessageCache
 from integrations.helpers.InstagramAPI.InstagramAPI import InstagramAPI
 from integrations.helpers.TweepyScraper import TweepyScraper
 
 
-def read_raw_texts(filename):
-    me = TextMessagePerson.objects.get_or_create(first_name='Tom', last_name='Craig')[0]
+def read_raw_texts(iOSBackup_folder_location):
+    print "intaking texts"
+    root = iOSBackup_folder_location
+    for directory, subdirectories, files, in os.walk(root):
+        m = re.match(r"(.*)(\+1)([0-9]{10})$", directory)
+        if m:
+            for f in files:
+                if re.match(r"([0-9]{8})(\.html)", f):
+                    date = datetime.strptime(f.split('.')[0], '%Y%m%d')
+                    print "intaking texts for date:"
+                    print date
+                    scrape_replies_from_html_file(directory + "/" + f, date, m.group(3))
 
-    f = open(filename, 'r')
+        if re.match(r"(.*)(\+1)([0-9]{10})(\/)([0-9]{8})$", directory):
+            # files will all be pictures from that day
+            pass
 
-    for line in f.readlines():
-        text = TextMessage.objects.get_or_create(author=me, content=line)[0]
 
-        create_post_cache(text, me.textmessagecache_set)
+def scrape_replies_from_html_file(filename, day, partner):
+    me = get_text_message_me()
+
+    url = filename
+    page = open(url)
+    soup = BeautifulSoup(page.read())
+
+    raw_replies = soup.find_all('div', {'class': 'sent'})
+
+    for reply in raw_replies:
+        date_and_text = re.search('([0-9][0-9])(:)([0-9][0-9])(:)([0-9][0-9])(.*)', reply.text)
+        text_hour = int(date_and_text.group(1))
+        text_minute = int(date_and_text.group(3))
+        text_second = int(date_and_text.group(5))
+        content = date_and_text.group(6)
+        time_sent = datetime(day.year, day.month, day.day, text_hour, text_minute, text_second)
+
+        text_message = me.textmessage_set.create(
+            author=me,
+            time_sent=time_sent,
+            content=content,
+            partner=partner)
+
+        create_post_cache(text_message, me.textmessagecache_set)
 
 
 def scrape_all_followers():
@@ -168,6 +207,7 @@ def clear_follower_posts(author):
 
 def clear_texts(author):
     [x.delete() for x in author.textmessage_set.all()]
+    [x.delete() for x in author.textmessagecache_set.all()]
 
 
 def scrape_top_twitter_people():

@@ -201,6 +201,10 @@ def generate_markov_instagram_post(person):
     return content[:-1]
 
 
+def clear_set(set_to_clear):
+    [x.delete() for x in set_to_clear]
+
+
 def clear_follower_posts(author):
     [x.delete() for x in author.instagrampost_set.all()]
 

@@ -18,6 +18,7 @@ from integrations.helpers.utils import (
     refresh_and_return_me_from_instagram,
     scrape_follower,
     clear_follower_posts,
+    clear_set,
     generate_text,
     clear_texts,
     generate_instagram_post,
@@ -140,8 +141,14 @@ def twitter_person_detail(request, person_username):
         scrape_twitter_person(author)
         return HttpResponseRedirect('/integrations/twitter_person_detail/' + person_username)
 
-    if(request.GET.get('apply_markov_chains')):
+    if(request.GET.get('generate_post')):
         apply_markov_chains_twitter(author)
+        return HttpResponseRedirect('/integrations/twitter_person_detail/' + person_username)
+
+    if(request.GET.get('clear_posts')):
+        clear_set(author.twitterpost_set.all())
+        clear_set(author.twitterpostcache_set.all())
+        clear_set(author.twitterpostmarkov_set.all())
         return HttpResponseRedirect('/integrations/twitter_person_detail/' + person_username)
 
     template = loader.get_template('integrations/twitter_person_detail.html')
@@ -156,8 +163,7 @@ def twitter_person_detail(request, person_username):
         twitter_sentences = TwitterPost.objects.filter(author=author)
         sentences = [t.content for t in twitter_sentences]
 
-        twitter_markov_sentences = author.twitterpostmarkov_set.all().order_by('-randomness')
-        markov_sentences = [(t.content.encode('ascii', 'ignore'), t.randomness) for t in twitter_markov_sentences]
+        markov_sentences = author.twitterpostmarkov_set.all().order_by('-randomness')
 
     context = RequestContext(request, {
         'person': author,

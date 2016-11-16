@@ -22,13 +22,17 @@
 		<h6>Markov Sentences: {{ len_markov_sentences }}</h6>
 	{% endif %}
 
+
 	<form action="#" method="get">
 		<input name="scrape" type="submit" class="btn btn-success" value="Scrape">
 		<input name='generate_post' type='submit' class='btn btn-primary' value='Generate Post'>
 		<input name='clear_posts' type='submit' class='btn btn-danger' value='Clear All Posts'>
+
+		<input name='show-original' type='submit' class='btn btn-default' value='Show Original Sentences'>
+		<input name='show-markov' type='submit' class='btn btn-warning' value='Show Markov Sentences'>
 	</form>
 </div>
 
-{% include "integrations/sentence_list.html" with table_title='' sentences=markov_sentences %}
+{% include "integrations/sentence_list.html" with table_title='' sentences=sentences %}
 
 {% endblock %}

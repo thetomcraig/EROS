@@ -251,13 +251,6 @@ def scrape_twitter_person(person):
     for tweet in tweets:
         words = tweet.split()
 
-        if ('RT' in tweet):
-            print "skipping retweets"
-            continue
-        if (len(words) < 1):
-            print "skipping short tweets"
-            continue
-
         final_tweet = ""
         for word in words:
             if "@" in word:

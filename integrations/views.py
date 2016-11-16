@@ -132,6 +132,18 @@ def twitter_person_detail(request, person_username):
         if person.username.strip() == person_username.strip():
             author = person
 
+    sentences = []
+    markov_sentences = []
+    person_type = ''
+
+    # Grab data from author if twitter person
+    if isinstance(author, TwitterPerson):
+        person_type = str(TwitterPerson)
+        sentences = TwitterPost.objects.filter(author=author)
+
+        markov_sentences = author.twitterpostmarkov_set.all().order_by('-randomness')
+
+    sentences_to_render = markov_sentences
     # If you are already on the page, these things
     # will happen when you click buttons
     if(request.GET.get('go_back_to_list')):
@@ -140,6 +152,12 @@ def twitter_person_detail(request, person_username):
     if(request.GET.get('scrape')):
         scrape_twitter_person(author)
         return HttpResponseRedirect('/integrations/twitter_person_detail/' + person_username)
+
+    if(request.GET.get('show-original')):
+        sentences_to_render = sentences
+
+    if(request.GET.get('show-markov')):
+        sentences_to_render = markov_sentences
 
     if(request.GET.get('generate_post')):
         apply_markov_chains_twitter(author)
@@ -151,25 +169,13 @@ def twitter_person_detail(request, person_username):
         clear_set(author.twitterpostmarkov_set.all())
         return HttpResponseRedirect('/integrations/twitter_person_detail/' + person_username)
 
+    print sentences_to_render[0]
+
     template = loader.get_template('integrations/twitter_person_detail.html')
-
-    sentences = []
-    markov_sentences = []
-    person_type = ''
-
-    # Grab data from author if twitter person
-    if isinstance(author, TwitterPerson):
-        person_type = str(TwitterPerson)
-        twitter_sentences = TwitterPost.objects.filter(author=author)
-        sentences = [t.content for t in twitter_sentences]
-
-        markov_sentences = author.twitterpostmarkov_set.all().order_by('-randomness')
-
     context = RequestContext(request, {
         'person': author,
         'person_type': person_type,
-        'sentences': sentences,
-        'markov_sentences': markov_sentences,
+        'sentences': sentences_to_render,
         'len_sentences': len(sentences),
         'len_markov_sentences': len(markov_sentences),
     })

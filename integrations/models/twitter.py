@@ -1,10 +1,8 @@
 # at artandlogic.com modles for comment storing)
-import random
 from django.db import models
-from django.contrib.auth.models import User
-from django.conf import settings
 
 import base
+
 
 class TwitterPerson(base.Person):
     happiness = models.IntegerField(default=0)

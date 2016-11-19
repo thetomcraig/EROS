@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-import local_settings    
+import local_settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -133,6 +133,6 @@ USER_TOKEN = "<<user>>"
 LINK_TOKEN = "<<link>>"
 TAG_TOKEN = "<<tag>>"
 
-INSTAGRAM_USERNAME = local_settings.instagram_username    
-INSTAGRAM_PASSWORD = local_settings.instagram_password    
+INSTAGRAM_USERNAME = local_settings.instagram_username
+INSTAGRAM_PASSWORD = local_settings.instagram_password
 INSTAGRAM_ACCOUNT_USERNAME = local_settings.instagram_account_username

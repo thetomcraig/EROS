@@ -28,11 +28,12 @@
 		<input name='generate_post' type='submit' class='btn btn-primary' value='Generate Post'>
 		<input name='clear_posts' type='submit' class='btn btn-danger' value='Clear All Posts'>
 
-		<input name='show-original' type='submit' class='btn btn-default' value='Show Original Sentences'>
-		<input name='show-markov' type='submit' class='btn btn-warning' value='Show Markov Sentences'>
+		<input name='show_original' type='submit' class='btn btn-default' value='Show Original Sentences'>
+		<input name='show_markov' type='submit' class='btn btn-warning' value='Show Markov Sentences'>
 	</form>
 </div>
 
+{% include "integrations/pool_table.html" with table_title='' pool=pool %}
 {% include "integrations/sentence_list.html" with table_title='' sentences=sentences %}
 
 {% endblock %}

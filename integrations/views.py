@@ -132,6 +132,8 @@ def twitter_person_detail(request, person_username):
         if person.username.strip() == person_username.strip():
             author = person
 
+    pool = person.pool.all()
+    pool_table_list = pool
     sentences = []
     markov_sentences = []
     person_type = ''
@@ -153,10 +155,10 @@ def twitter_person_detail(request, person_username):
         scrape_twitter_person(author)
         return HttpResponseRedirect('/integrations/twitter_person_detail/' + person_username)
 
-    if(request.GET.get('show-original')):
+    if(request.GET.get('show_original')):
         sentences_to_render = sentences
 
-    if(request.GET.get('show-markov')):
+    if(request.GET.get('show_markov')):
         sentences_to_render = markov_sentences
 
     if(request.GET.get('generate_post')):
@@ -169,7 +171,14 @@ def twitter_person_detail(request, person_username):
         clear_set(author.twitterpostmarkov_set.all())
         return HttpResponseRedirect('/integrations/twitter_person_detail/' + person_username)
 
-    print sentences_to_render[0]
+    if(request.GET.get('show_pool')):
+        pool_table_list = pool
+
+    if(request.GET.get('show_all')):
+        pool_table_list = TwitterPerson.objects.all()
+
+    if(request.GET.get('add_selected_to_pool')):
+        pass
 
     template = loader.get_template('integrations/twitter_person_detail.html')
     context = RequestContext(request, {
@@ -178,6 +187,7 @@ def twitter_person_detail(request, person_username):
         'sentences': sentences_to_render,
         'len_sentences': len(sentences),
         'len_markov_sentences': len(markov_sentences),
+        'pool_table_list': pool_table_list
     })
 
     return HttpResponse(template.render(context))

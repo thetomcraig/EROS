@@ -8,6 +8,7 @@ class Person(models.Model):
     last_name = models.CharField(max_length=1000, default='PLACEHOLDER')
     username = models.CharField(max_length=1000, default='PLACEHOLDER')
     avatar = models.CharField(max_length=1000, default='PLACEHOLDER', null=True)
+    pool_owner = models.ForeignKey('self', related_name='pool', default=None, null=True)
 
     class Meta:
         abstract = True

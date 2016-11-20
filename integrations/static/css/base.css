@@ -29,9 +29,6 @@ img {
     width: auto;
 }
 
-/*    --------------------------------------------------
-	:: General
-	-------------------------------------------------- */
 body {
 	font-family: 'Helvetica', sans-serif;
 	color: #353535;
@@ -49,9 +46,6 @@ body {
 	font-weight: bold;
 }
 
-/*	--------------------------------------------------
-	:: Table Filter
-	-------------------------------------------------- */
 .panel {
 	border: 1px solid #ddd;
 	background-color: #fcfcfc;

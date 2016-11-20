@@ -27,15 +27,15 @@
                             </form>
 
                             {% if pool_table_list %}
-                                {% for pool_member in pool_table_list  %}
-                                    <div class="table-container">
-                                        <table class="table table-filter">
-                                            <tbody>
+                                <div class="table-container">
+                                    <table class="table table-filter">
+                                        <tbody>
+                                            {% for pool_member in pool_table_list  %}
                                                 <tr data-status="pagado">
                                                     <td>
                                                         <div class="ckbox">
-                                                            <input type="checkbox" id="checkbox1">
-                                                            <label for="checkbox1"></label>
+                                                            <input type="checkbox" id={{ pool_member.id }}>
+                                                            <label for={{ pool_member.id }}></label>
                                                         </div>
                                                     </td>
                                                     <td>
@@ -46,10 +46,10 @@
                                                         </h4>
                                                     </td>
                                                 </tr>
-                                            </tbody>
-                                        </table>
-                                        </div>
-                                    {% endfor %}
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
                             {% endif %}
                         </div>
                     </div>

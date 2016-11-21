@@ -11,7 +11,6 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="panel panel-default">
                         <div class="panel-body">
-
                             <form action="#" method="get">
                                 <div class="pull-right">
                                     <div class="btn-group">
@@ -30,6 +29,12 @@
                                 <div class="table-container">
                                     <table class="table table-filter">
                                         <tbody>
+
+
+<form method="POST" class="pool-form">
+	{% csrf_token %}
+	{{ pool_form.as_p }}
+
                                             {% for pool_member in pool_table_list  %}
                                                 <tr data-status="pagado">
                                                     <td>
@@ -47,6 +52,8 @@
                                                     </td>
                                                 </tr>
                                             {% endfor %}
+	<button type="submit" class="save btn btn-default">Save</button>
+</form>
                                         </tbody>
                                     </table>
                                 </div>

@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
@@ -6,6 +6,7 @@ from django.core.urlresolvers import reverse
 from integrations.models.twitter import TwitterPerson, TwitterPost
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
 from integrations.models.text_message import TextMessage, TextMessageCache, TextMessageMarkov
+from integrations.forms import PoolForm
 from integrations.helpers.utils import (
     scrape_twitter_person,
     apply_markov_chains_twitter,
@@ -127,6 +128,8 @@ def instagram_home(request):
 
 
 def twitter_person_detail(request, person_username):
+    if request.method == "POST":
+        print request
     author = None
     for person in TwitterPerson.objects.all():
         if person.username.strip() == person_username.strip():
@@ -134,6 +137,7 @@ def twitter_person_detail(request, person_username):
 
     pool = person.pool.all()
     pool_table_list = pool
+    pool_form = PoolForm()
     sentences = []
     markov_sentences = []
     person_type = ''
@@ -182,6 +186,7 @@ def twitter_person_detail(request, person_username):
 
     template = loader.get_template('integrations/twitter_person_detail.html')
     context = RequestContext(request, {
+        'pool_form': pool_form,
         'person': author,
         'person_type': person_type,
         'sentences': sentences_to_render,

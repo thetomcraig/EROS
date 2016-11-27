@@ -19,45 +19,22 @@
                                     <div class="btn-group">
                                         <input name='show_pool' type='submit' class='btn btn-default' value='Show Pool'>
                                     </div>
-                                    <div class="btn-group">
-                                        <input name='add_selected_to_pool' type='submit' class='btn btn-default' value='Add Selected To Pool'>
-                                    </div>
                                 </div>
                             </form>
 
-                            {% if pool_table_list %}
-                                <div class="table-container">
-                                    <table class="table table-filter">
-                                        <tbody>
+                            <div class="table-container">
+                                <table class="table table-filter">
+                                    <tbody>
 
+                                        <form method="POST" class="pool-form">
+                                            {% csrf_token %}
+                                            <button type="submit" class="save btn btn-default">Add Selected To Pool</button>
+                                            {{ pool_form.as_p }}
+                                        </form>
 
-<form method="POST" class="pool-form">
-	{% csrf_token %}
-	{{ pool_form.as_p }}
-
-                                            {% for pool_member in pool_table_list  %}
-                                                <tr data-status="pagado">
-                                                    <td>
-                                                        <div class="ckbox">
-                                                            <input type="checkbox" id={{ pool_member.id }}>
-                                                            <label for={{ pool_member.id }}></label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <h4 class="title">
-                                                            <span class="pull-right pagado">
-                                                                {{ pool_member.username }}
-                                                            </span>
-                                                        </h4>
-                                                    </td>
-                                                </tr>
-                                            {% endfor %}
-	<button type="submit" class="save btn btn-default">Save</button>
-</form>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response, render
+from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
@@ -129,25 +129,22 @@ def instagram_home(request):
 
 def twitter_person_detail(request, person_username):
     if request.method == "POST":
-        form = PoolForm(request.POST) 
+        form = PoolForm(request.POST)
 
         f = open('/Users/tcraig/a.out', 'a')
         f.write(str(request.__dict__))
         f.write(str(form))
 
+    all_people = TwitterPerson.objects.all()
     author = None
-    for person in TwitterPerson.objects.all():
+    for person in all_people:
         if person.username.strip() == person_username.strip():
             author = person
 
-    pool = person.pool.all()
-    pool_table_list = pool
-    json = {'a': 1,
-            'b': 2,
-            'c': 3,
-            'd': 4}
-    print pool_table_list
-    pool_form = PoolForm(initial={'data': json})
+    all_people_json = {x.username: x.real_name for x in all_people}
+    pool_json = {x.username: x.real_name for x in author.pool.all()}
+    pool_form = PoolForm(initial={'twitter_people': all_people_json})
+
     sentences = []
     markov_sentences = []
     person_type = ''
@@ -186,10 +183,10 @@ def twitter_person_detail(request, person_username):
         return HttpResponseRedirect('/integrations/twitter_person_detail/' + person_username)
 
     if(request.GET.get('show_pool')):
-        pool_table_list = pool
+        pool_form = PoolForm(initial={'twitter_people': pool_json})
 
     if(request.GET.get('show_all')):
-        pool_table_list = TwitterPerson.objects.all()
+        pool_form = PoolForm(initial={'twitter_people': all_people_json})
 
     if(request.GET.get('add_selected_to_pool')):
         pass
@@ -202,7 +199,6 @@ def twitter_person_detail(request, person_username):
         'sentences': sentences_to_render,
         'len_sentences': len(sentences),
         'len_markov_sentences': len(markov_sentences),
-        'pool_table_list': pool_table_list
     })
 
     return HttpResponse(template.render(context))

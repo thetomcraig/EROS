@@ -84,6 +84,12 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 }
+.ckbox label {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 .ckbox label:before {
 	content: '';
 	top: 1px;

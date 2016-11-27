@@ -1,13 +1,13 @@
 from django import forms
 from .models import TwitterPerson
-
+from django import forms
+from splitjson.widgets import SplitJSONWidget
 
 TITLE_CHOICES = (
     ('MR', 'Mr.'),
     ('MRS', 'Mrs.'),
     ('MS', 'Ms.'),
 )
-
 
 class PoolForm(forms.Form):
 
@@ -17,6 +17,5 @@ class PoolForm(forms.Form):
         widget=forms.Select(choices=TITLE_CHOICES),
     )
     birth_date = forms.DateField(required=False)
-
-    def init(self, choices):
-        self.choices = choices
+    attrs = {}
+    data = forms.CharField(widget=SplitJSONWidget(attrs=attrs, debug=True))

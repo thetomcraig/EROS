@@ -2,35 +2,35 @@
 {% block main %}
 
 <form action="#" method="get">
-	<input name="go_back_to_list" type="submit" class="btn btn-default" value="User List">
+    <input name="go_back_to_list" type="submit" class="btn btn-default" value="User List">
 </form>
 
 <div align="middle">
-	<div class="image-cropper">
-		<img src={{ person.avatar }} align="middle"/>
-	</div>
-	<h2>{{ person.real_name}}</h2>
-	
-	{% if 'TwitterPerson' in person_type %}
-		<h4>@{{ person.username }}</h2>
-		<h6>Sentences: {{ len_sentences }}</h6>
-		<h6>Markov Sentences: {{ len_markov_sentences }}</h6>
-	{% endif %}
+    <div class="image-cropper">
+        <img src={{ person.avatar }} align="middle"/>
+    </div>
+    <h2>{{ person.real_name}}</h2>
+    
+    {% if 'TwitterPerson' in person_type %}
+        <h4>@{{ person.username }}</h2>
+        <h6>Sentences: {{ len_sentences }}</h6>
+        <h6>Markov Sentences: {{ len_markov_sentences }}</h6>
+    {% endif %}
 
-	{% if 'LiteraturePerson' in person_type %}
-		<h6>Sentences: {{ len_sentences }}</h6>
-		<h6>Markov Sentences: {{ len_markov_sentences }}</h6>
-	{% endif %}
+    {% if 'LiteraturePerson' in person_type %}
+        <h6>Sentences: {{ len_sentences }}</h6>
+        <h6>Markov Sentences: {{ len_markov_sentences }}</h6>
+    {% endif %}
 
 
-	<form action="#" method="get">
-		<input name="scrape" type="submit" class="btn btn-success" value="Scrape">
-		<input name='generate_post' type='submit' class='btn btn-primary' value='Generate Post'>
-		<input name='clear_posts' type='submit' class='btn btn-danger' value='Clear All Posts'>
+    <form action="#" method="get">
+        <input name="scrape" type="submit" class="btn btn-success" value="Scrape">
+        <input name='generate_post' type='submit' class='btn btn-primary' value='Generate Post'>
+        <input name='clear_posts' type='submit' class='btn btn-danger' value='Clear All Posts'>
 
-		<input name='show_original' type='submit' class='btn btn-default' value='Show Original Sentences'>
-		<input name='show_markov' type='submit' class='btn btn-warning' value='Show Markov Sentences'>
-	</form>
+        <input name='show_original' type='submit' class='btn btn-default' value='Show Original Sentences'>
+        <input name='show_markov' type='submit' class='btn btn-warning' value='Show Markov Sentences'>
+    </form>
 </div>
 
 {% include "integrations/pool_table.html" with table_title='' pool=pool pool_form=pool_form %}

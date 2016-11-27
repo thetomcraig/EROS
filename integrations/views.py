@@ -129,7 +129,12 @@ def instagram_home(request):
 
 def twitter_person_detail(request, person_username):
     if request.method == "POST":
-        print request
+        form = PoolForm(request.POST) 
+
+        f = open('/Users/tcraig/a.out', 'a')
+        f.write(str(request.__dict__))
+        f.write(str(form))
+
     author = None
     for person in TwitterPerson.objects.all():
         if person.username.strip() == person_username.strip():
@@ -137,7 +142,12 @@ def twitter_person_detail(request, person_username):
 
     pool = person.pool.all()
     pool_table_list = pool
-    pool_form = PoolForm()
+    json = {'a': 1,
+            'b': 2,
+            'c': 3,
+            'd': 4}
+    print pool_table_list
+    pool_form = PoolForm(initial={'data': json})
     sentences = []
     markov_sentences = []
     person_type = ''

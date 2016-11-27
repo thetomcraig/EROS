@@ -8,6 +8,7 @@ beautifulsoup4==4.4.1
 bs4==0.0.1
 dj-database-url==0.4.1
 django-social-auth==0.7.28
+django-split-json-widget==1.15
 html2text==2016.9.19
 httplib2==0.9.2
 mechanize==0.2.5

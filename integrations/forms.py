@@ -13,19 +13,8 @@ class SplitJSONWidget(forms.Widget):
 
         return u"""
             <tr data-status="pagado">
-                <td>
-                    <div class="ckbox">
-                        <label for="%s"></label>
-                        <input%s />
-                    </div>
-                </td>
-                <td>
-                    <h4 class="tite">
-                        <span class="pull-right pagado">
-                            %s
-                        </span>
-                    </h4>
-                </td>
+                <td> <div class="ckbox"><label for="%s"></label><input%s /></div> </td>
+                <td> <h4 class="tite"><span class="pull-right pagado">%s</span></h4> </td>
             </tr>""" % (attrs['id'], flatatt(attrs), key)
 
     def _to_build(self, name, json_obj):
@@ -38,9 +27,6 @@ class SplitJSONWidget(forms.Widget):
         elif isinstance(json_obj, (basestring, int, float)):
             name, _, key = name.rpartition('_')
             inputs.append(self._as_text_field(name, key, json_obj))
-        elif json_obj is None:
-            name, _, key = name.rpartition('_')
-            inputs.append(self._as_text_field(name, key, ''))
 
         return inputs
 

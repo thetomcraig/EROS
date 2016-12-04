@@ -22,7 +22,8 @@ class SplitJSONWidget(forms.Widget):
         if isinstance(json_obj, dict):
             _l = ['']
             for key, value in json_obj.items():
-                _l.append(self._to_build("%s%s%s" % (name, '_', key), value))
+                new = self._to_build("%s%s%s" % (name, '_', key), value)
+                _l.append(new)
             inputs.extend([_l])
         elif isinstance(json_obj, (basestring, int, float)):
             name, _, key = name.rpartition('_')
@@ -32,6 +33,7 @@ class SplitJSONWidget(forms.Widget):
 
     def render(self, name, value, attrs=None):
         result = self._to_build(name, value or {})
+        print result
         return result
 
 

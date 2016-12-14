@@ -25,13 +25,8 @@
                             <div class="table-container">
                                 <table class="table table-filter">
                                     <tbody>
-
-                                        <form method="POST" class="pool-form">
-                                            {% csrf_token %}
-                                            <button type="submit" class="save btn btn-default">Add Selected To Pool</button>
-                                            {{ pool_form.as_p }}
-                                        </form>
-
+                                        <button type="submit" class="save btn btn-default">Add Selected To Pool</button>
+                                        {{ pool_form }}
                                     </tbody>
                                 </table>
                             </div>

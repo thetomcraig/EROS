@@ -131,10 +131,6 @@ def twitter_person_detail(request, person_username):
     if request.method == "POST":
         form = PoolForm(request.POST)
 
-        f = open('/Users/tcraig/a.out', 'a')
-        f.write(str(request.__dict__))
-        f.write(str(form))
-
     all_people = TwitterPerson.objects.all()
     author = None
     for person in all_people:

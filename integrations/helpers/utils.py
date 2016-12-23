@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 from django.conf import settings
 
-from integrations.models.twitter import TwitterPost
+from integrations.models.twitter import TwitterPost, TwitterPerson
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
 from integrations.models.text_message import TextMessagePerson, TextMessageCache
 from integrations.helpers.InstagramAPI.InstagramAPI import InstagramAPI
@@ -214,11 +214,7 @@ def clear_texts(author):
     [x.delete() for x in author.textmessagecache_set.all()]
 
 
-def scrape_top_twitter_people():
-    """
-    Fill db with metadata from top 50 users
-    Used to update avatars etc
-    """
+def get_top_twitter_users():
     t = TweepyScraper(
         settings.TWEEPY_CONSUMER_KEY,
         settings.TWEEPY_CONSUMER_SECRET,
@@ -228,6 +224,29 @@ def scrape_top_twitter_people():
     names_and_unames = t.scrape_top_users(50)
 
     return names_and_unames
+
+
+def update_top_twitter_people():
+    names_and_unames = get_top_twitter_users()
+
+    for entry in names_and_unames:
+        person = None
+        person = TwitterPerson.objects.get_or_create(username=entry['uname'])[0]
+
+        person.username = entry['uname']
+        person.real_name= entry['name']
+        person.avatar = entry['avatar']
+        person.save()
+
+    return True
+
+
+def scrape_top_twitter_people():
+    update_top_twitter_people()
+
+    all_twitter_people = TwitterPerson.objects.all()
+    for person in all_twitter_people:
+        scrape_twitter_person(person)
 
 
 def scrape_twitter_person(person):

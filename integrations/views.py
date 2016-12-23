@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
 
+
 from integrations.models.twitter import TwitterPerson, TwitterPost
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
 from integrations.models.text_message import TextMessage, TextMessageCache, TextMessageMarkov
@@ -18,6 +19,8 @@ from integrations.helpers.utils import (
     follow_my_instagram_followers,
     refresh_and_return_me_from_instagram,
     scrape_follower,
+    scrape_top_twitter_people,
+    update_top_twitter_people,
     clear_follower_posts,
     clear_set,
     generate_text,
@@ -82,7 +85,12 @@ def twitter_home(request):
         return HttpResponseRedirect(reverse('home'))
 
     if(request.GET.get('scrape_top_twitter_people')):
-        return HttpResponseRedirect('/scrapers/scrape_top_twitter_people/')
+        scrape_top_twitter_people()
+        return HttpResponseRedirect('twitter_home/')
+
+    if(request.GET.get('update_top_twitter_people')):
+        update_top_twitter_people()
+        return HttpResponseRedirect('twitter_home/')
 
     twitter_people = TwitterPerson.objects.all()
     template = loader.get_template('integrations/twitter_home.html')
@@ -129,7 +137,8 @@ def instagram_home(request):
 
 def twitter_person_detail(request, person_username):
     if request.method == "POST":
-        form = PoolForm(request.POST)
+        # form = PoolForm(request.POST)
+        pass
 
     all_people = TwitterPerson.objects.all()
     author = None

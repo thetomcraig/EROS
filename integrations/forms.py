@@ -18,9 +18,9 @@ class SplitJSONWidget(forms.Widget):
             </tr>""" % (attrs['id'], flatatt(attrs), key)
 
     def _build(self, name, json_obj):
-        inputs = []
+        inputs = ''
         for key, value in json_obj.items():
-            inputs.append(self._as_tr(name, key, value))
+            inputs = inputs + self._as_tr(name, key, value)
         return inputs
 
     def render(self, name, value, attrs=None):
@@ -30,4 +30,4 @@ class SplitJSONWidget(forms.Widget):
 
 class PoolForm(forms.Form):
     attrs = {}
-    twitter_people = forms.CharField(widget=SplitJSONWidget(attrs=attrs))
+    twitter_people = forms.CharField(label='', help_text='', widget=SplitJSONWidget(attrs=attrs))

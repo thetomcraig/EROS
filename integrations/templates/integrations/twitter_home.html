@@ -1,19 +1,20 @@
 {% extends 'integrations/base.html' %}
 
 {% block main %}
-    <div class="row small-buffer">
 
     <form action="#" method="get">
         <input name="go_back_to_home" type="submit" class="btn btn-default" value="Home">
     </form>
 
-    <div class="row small-buffer">
 
     <form action="#" method="get">
         <input name="scrape_top_twitter_people" type="submit" class="btn btn-default" value="Scrape All Twitter Users">
     </form>
 
-    <div class="row small-buffer">
+
+    <form action="#" method="get">
+        <input name="update_top_twitter_people" type="submit" class="btn btn-default" value="Update Twitter Users">
+    </form>
 
     {% if twitter_people %}
         <table align="center">

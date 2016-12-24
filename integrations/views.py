@@ -137,8 +137,10 @@ def instagram_home(request):
 
 def twitter_person_detail(request, person_username):
     if request.method == "POST":
-        # form = PoolForm(request.POST)
-        pass
+        form = PoolForm(request.POST)
+        print request.POST
+        print request.POST.get('twitter_people')
+        import pdb; pdb.set_trace()
 
     all_people = TwitterPerson.objects.all()
     author = None

@@ -8,33 +8,38 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-body">
+
                         <div class="table-container">
-                            <table class="table table-filter">
-                                <div class="row small-buffer"></div>
-                                <tbody>
 
-                                    <form action="#" method="get">
-                                        <div class="pull-left">
-                                            <div class="btn-group">
-                                                <input name='show_all' type='submit' class='btn btn-default' value='Show All'>
-                                            </div>
-                                            <div class="btn-group">
-                                                <input name='show_pool' type='submit' class='btn btn-default' value='Show Pool'>
-                                            </div>
-                                        </div>
-                                    </form>
+						<form action="#" method="get">
+							<div class="pull-left">
+								<div class="btn-group">
+									<input name='show_all' type='submit' class='btn btn-default' value='Show All'>
+								</div>
+								<div class="btn-group">
+									<input name='show_pool' type='submit' class='btn btn-default' value='Show Pool'>
+								</div>
+							</div>
+						</form>
 
-                                    <form method="POST" class="pool-form">
-                                        {% csrf_token %}
-                                        <div class="pull-right">
-                                            <div class="btn-group">
-                                                <button type="submit" class="save btn btn-default">Add Selected To Pool</button>
-                                            </div>
-                                        </div>
-                                        {{ pool_form }}
-                                    </form>
-                                </tbody>
-                            </table>
+						<form method="POST" class="pool-form">
+							{% csrf_token %}
+
+							<div class="pull-right">
+								<div class="btn-group">
+									<button type="submit" class="btn btn-default">
+										Go To Conversation 
+									</button>
+									<button type="submit" class="btn btn-default">
+										Add Selected To Pool
+									</button>
+								</div>
+							</div>
+
+							{{ pool_form }}
+
+						</form>
+
                         </div>
                     </div>
                 </div>

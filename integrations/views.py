@@ -136,14 +136,17 @@ def instagram_home(request):
 
 
 def twitter_person_detail(request, person_username):
-    if request.method == "POST":
+    if request.method == 'POST':
+        print 'PROCESSING FORM'
         form = PoolForm(request.POST)
-        print request.POST
-        print request.POST.get('twitter_people')
-        import pdb; pdb.set_trace()
+        if 'go_to_conversation' in request.POST.keys():
+            form.is_valid()
+            for key in request.POST.keys():
+                if key.startswith('twitter_people__'):
+                    # TODO - go to new page with conersation between two
+                    print request.POST[key]
 
     all_people = TwitterPerson.objects.all()
-    author = None
     for person in all_people:
         if person.username.strip() == person_username.strip():
             author = person

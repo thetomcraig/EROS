@@ -322,6 +322,24 @@ def create_post_cache(post, cache_set):
         cache_set.create(word1=word1, word2=word2, final_word=final_word, beginning=beginning)
 
 
+def add_to_twitter_conversation(person_username, partner_username):
+    person = TwitterPerson.objects.get(username=person_username)
+    partner = TwitterPerson.objects.get(username=partner_username)
+
+    if person.twitter_conversation_set.count() == 0:
+        person.twitter_conversation_set.create(partner=partner)
+
+    conversation = person.twitterconversation_set.first()
+    if conversation.twitterconversationpostpost_set.count() == 0:
+        conversation.twitterconversationpostpost_set.create(post_author=person, index=0)
+
+    last_post = conversation.twitterconversationpost_set.last()
+    last_poster = last_post.author
+    last_poster = last_post.index
+
+    print last.post
+
+
 def generate_text():
     me = get_text_message_me()
     all_caches = TextMessageCache.objects.all()

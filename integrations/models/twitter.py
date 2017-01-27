@@ -45,3 +45,15 @@ class TwitterMention(models.Model):
 
     def __str__(self):
         return self.content
+
+
+class TwitterConversation(models.Model):
+    author = models.ForeignKey(TwitterPerson, related_name='author')
+    partner = models.ForeignKey(TwitterPerson)
+
+
+class TwitterConversationPost(models.Model):
+    conversation = models.ForeignKey(TwitterConversation)
+    post = models.ForeignKey(TwitterPost)
+    post_author = models.ForeignKey(TwitterPerson)
+    index = models.IntegerField()

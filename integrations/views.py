@@ -137,15 +137,16 @@ def instagram_home(request):
 
 def twitter_person_detail(request, person_username):
     if request.method == 'POST':
-        print 'PROCESSING FORM'
         form = PoolForm(request.POST)
         if 'go_to_conversation' in request.POST.keys():
             form.is_valid()
             for key in request.POST.keys():
+                print key
                 if key.startswith('twitter_people__'):
-                    # TODO - go to new page with conersation between two
-                    print request.POST[key]
+                    print 'gamma'
+                    return twitter_conversation(request, person_username, request.POST[key])
 
+    author = None
     all_people = TwitterPerson.objects.all()
     for person in all_people:
         if person.username.strip() == person_username.strip():
@@ -212,6 +213,23 @@ def twitter_person_detail(request, person_username):
     })
 
     return HttpResponse(template.render(context))
+
+
+def twitter_conversation(request, person_username, partner_username):
+    print 'beta'
+    if(request.GET.get('go_back_to_list')):
+        return HttpResponseRedirect('/integrations/instagram_home')
+
+    if(request.GET.get('generate_conversation')):
+        print 'alpha'
+
+    template = loader.get_template('integrations/twitter_conversation.html')
+    context = RequestContext(request, {
+        'request': request,
+        'person_username': person_username,
+        'partner_username': partner_username,
+    })
+    return HttpResponse(template.render(context, request))
 
 
 def instagram_person_detail(request, person_username):

@@ -141,10 +141,10 @@ def twitter_person_detail(request, person_username):
         if 'go_to_conversation' in request.POST.keys():
             form.is_valid()
             for key in request.POST.keys():
-                print key
                 if key.startswith('twitter_people__'):
-                    print 'gamma'
-                    return twitter_conversation(request, person_username, request.POST[key])
+                    partner_username = key.replace('twitter_people__', '')
+                    return HttpResponseRedirect(reverse('twitter_conversation', 
+                           args=(person_username, partner_username)))
 
     author = None
     all_people = TwitterPerson.objects.all()
@@ -216,12 +216,8 @@ def twitter_person_detail(request, person_username):
 
 
 def twitter_conversation(request, person_username, partner_username):
-    print 'beta'
     if(request.GET.get('go_back_to_list')):
         return HttpResponseRedirect('/integrations/instagram_home')
-
-    if(request.GET.get('generate_conversation')):
-        print 'alpha'
 
     template = loader.get_template('integrations/twitter_conversation.html')
     context = RequestContext(request, {

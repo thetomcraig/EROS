@@ -1,6 +1,5 @@
 # EROS
-This project is where I test various ideas for natrual language processing and  
-teach myself new technologies.
+This project is where I test various ideas for natrual language processing and teach myself new technologies.
 
 Because I am interested in machine learning and natural languge processing, 
 I am writing a modular tool to scrape social media posts from the web, 

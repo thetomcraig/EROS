@@ -219,7 +219,7 @@ def twitter_person_detail(request, person_username):
 
 def twitter_conversation(request, person_username, partner_username):
     if(request.GET.get('go_back_to_list')):
-        return HttpResponseRedirect('/integrations/')
+        return HttpResponseRedirect('/integrations/twitter_home')
 
     if(request.GET.get('new_post')):
         add_to_twitter_conversation(person_username, partner_username)

@@ -230,12 +230,14 @@ def update_top_twitter_people():
     names_and_unames = get_top_twitter_users()
 
     for entry in names_and_unames:
+        print entry
         person = None
         person = TwitterPerson.objects.get_or_create(username=entry['uname'])[0]
 
         person.username = entry['uname']
         person.real_name= entry['name']
         person.avatar = entry['avatar']
+        print entry['avatar']
         person.save()
 
     return True

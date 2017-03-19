@@ -21,19 +21,26 @@ class SplitJSONWidget(forms.Widget):
         Widget.__init__(self, attrs)
 
     def _as_text_field(self, name, key, value, is_sub=False):
-        attrs = self.build_attrs(self.attrs, type='text',
-                                 name="%s%s%s" % (name, self.separator, key))
+        attrs = self.build_attrs(self.attrs, type='text', name="%s%s%s" % (name, self.separator, key))
         attrs['value'] = utils.encoding.force_unicode(value)
         attrs['id'] = attrs.get('name', None)
-
         return u"""
                 <tr data-status="pagado">
                     <td>
-                        <input type="checkbox" id="%s"></input>
-                        <label for="%s">%s</label>
+                        <div class="ckbox">
+                            <input type="checkbox" id="%s" name="%s"></input>
+                            <label for="%s"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <h4 calss="title">
+                            <span class="pull-right pagado">%s</span>
+                        </h4>
+                    </td>
+                        
                     </td>
                 </tr>
-                """ % (flatatt(attrs), attrs['id'], key)
+                """ % (attrs['name'], attrs['name'], attrs['id'], attrs['value'])
 
     def _to_build(self, name, json_obj):
         inputs = []

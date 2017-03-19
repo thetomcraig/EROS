@@ -143,6 +143,9 @@ def twitter_person_detail(request, person_username):
         if 'go_to_conversation' in request.POST.keys():
             form.is_valid()
             for key in request.POST.keys():
+
+                print 'key'
+                print key
                 if key.startswith('twitter_people__'):
                     partner_username = key.replace('twitter_people__', '')
                     return HttpResponseRedirect(reverse('twitter_conversation', 

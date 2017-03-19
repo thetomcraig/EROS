@@ -10,7 +10,9 @@ from integrations.models.text_message import TextMessage, TextMessageCache, Text
 from integrations.forms import PoolForm
 from integrations.helpers.utils import (
     scrape_twitter_person,
+    add_to_twitter_conversation,
     apply_markov_chains_twitter,
+    get_conversation,
     get_instagram_followers,
     get_text_message_me,
     get_me_from_instagram,
@@ -217,11 +219,20 @@ def twitter_person_detail(request, person_username):
 
 def twitter_conversation(request, person_username, partner_username):
     if(request.GET.get('go_back_to_list')):
-        return HttpResponseRedirect('/integrations/instagram_home')
+        return HttpResponseRedirect('/integrations/')
+
+    if(request.GET.get('generate_conversation')):
+        add_to_twitter_conversation(person_username, partner_username)
+        return HttpResponseRedirect('/integrations/twitter_conversation/%s/%s/' % (person_username, partner_username))
 
     template = loader.get_template('integrations/twitter_conversation.html')
+    person = TwitterPerson.objects.get(username=person_username)
+    partner = TwitterPerson.objects.get(username=partner_username)
+    conversation = person.twitterconversation_set.get_or_create(author=person, partner=partner)[0]
+    sentences = person.twitterconversationpost_set.filter(conversation__id=conversation.id)
     context = RequestContext(request, {
         'request': request,
+        'sentences': sentences,
         'person_username': person_username,
         'partner_username': partner_username,
     })

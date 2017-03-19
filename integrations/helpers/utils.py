@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 from django.conf import settings
 
-from integrations.models.twitter import TwitterPost, TwitterPerson
+from integrations.models.twitter import TwitterPost, TwitterPerson, TwitterConversation, TwitterConversationPost
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
 from integrations.models.text_message import TextMessagePerson, TextMessageCache
 from integrations.helpers.InstagramAPI.InstagramAPI import InstagramAPI
@@ -321,23 +321,36 @@ def create_post_cache(post, cache_set):
 
         cache_set.create(word1=word1, word2=word2, final_word=final_word, beginning=beginning)
 
+def get_conversation(person_username, partner_username):
+    person = TwitterPerson.objects.get(username=person_username)
+    partner = TwitterPerson.objects.get(username=partner_username)
+
+    conversation = person.twitter_conversation_set.first()
+
+    return conversation
+
 
 def add_to_twitter_conversation(person_username, partner_username):
     person = TwitterPerson.objects.get(username=person_username)
     partner = TwitterPerson.objects.get(username=partner_username)
 
-    if person.twitter_conversation_set.count() == 0:
-        person.twitter_conversation_set.create(partner=partner)
+    if person.twitterconversation_set.count() == 0:
+        person.twitterconversation_set.create(author=person, partner=partner)
 
-    conversation = person.twitterconversation_set.first()
-    if conversation.twitterconversationpostpost_set.count() == 0:
-        conversation.twitterconversationpostpost_set.create(post_author=person, index=0)
+    conversation = TwitterConversation.objects.get(author=person)
 
-    last_post = conversation.twitterconversationpost_set.last()
-    last_poster = last_post.author
-    last_poster = last_post.index
+    new_post = person.twitterpost_set.create(
+        content='1',
+    )
 
-    print last.post
+    TwitterConversationPost.objects.create(
+        content=new_post,
+        conversation=conversation,
+        post_author=person,
+        index=0
+    )
+
+
 
 
 def generate_text():

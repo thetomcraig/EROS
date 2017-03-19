@@ -338,18 +338,23 @@ def add_to_twitter_conversation(person_username, partner_username):
         person.twitterconversation_set.create(author=person, partner=partner)
 
     conversation = TwitterConversation.objects.get(author=person)
-
-    new_post = person.twitterpost_set.create(
-        content='1',
-    )
+    
+    new_content, new_index = generate_new_conversation_post(conversation)
+    new_post = person.twitterpost_set.create(content=new_content)
 
     TwitterConversationPost.objects.create(
         content=new_post,
         conversation=conversation,
         post_author=person,
-        index=0
+        index=new_index
     )
 
+def generate_new_conversation_post(current_conversation):
+    index = 0
+    for post in current_conversation.twitterconversationpost_set.all():
+        index = index + 1
+        print post
+    return 'TEST + %s' % str(datetime.now()), index
 
 
 

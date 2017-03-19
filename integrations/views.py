@@ -221,7 +221,7 @@ def twitter_conversation(request, person_username, partner_username):
     if(request.GET.get('go_back_to_list')):
         return HttpResponseRedirect('/integrations/')
 
-    if(request.GET.get('generate_conversation')):
+    if(request.GET.get('new_post')):
         add_to_twitter_conversation(person_username, partner_username)
         return HttpResponseRedirect('/integrations/twitter_conversation/%s/%s/' % (person_username, partner_username))
 
@@ -230,6 +230,7 @@ def twitter_conversation(request, person_username, partner_username):
     partner = TwitterPerson.objects.get(username=partner_username)
     conversation = person.twitterconversation_set.get_or_create(author=person, partner=partner)[0]
     sentences = person.twitterconversationpost_set.filter(conversation__id=conversation.id)
+
     context = RequestContext(request, {
         'request': request,
         'sentences': sentences,

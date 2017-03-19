@@ -15,10 +15,9 @@ else:
 
 class SplitJSONWidget(forms.Widget):
 
-    def __init__(self, attrs=None, newline='<br/>\n', sep='__', debug=False):
+    def __init__(self, attrs=None, newline='', sep='__'):
         self.newline = newline
         self.separator = sep
-        self.debug = debug
         Widget.__init__(self, attrs)
 
     def _as_text_field(self, name, key, value, is_sub=False):
@@ -38,24 +37,24 @@ class SplitJSONWidget(forms.Widget):
 
     def _to_build(self, name, json_obj):
         inputs = []
-        if isinstance(json_obj, list):
+        if isinstance(json_obj, dict):
+            title = name.rpartition(self.separator)[2]
+            _l = []
+            for key, value in json_obj.items():
+                _l.append(self._to_build("%s%s%s" % (name, self.separator, key), value))
+            inputs.extend([_l])
+
+        elif isinstance(json_obj, list):
             title = name.rpartition(self.separator)[2]
             _l = ['%s:%s' % (title, self.newline)]
             for key, value in enumerate(json_obj):
-                _l.append(self._to_build("%s%s%s" % (name,
-                                         self.separator, key), value))
+                _l.append(self._to_build("%s%s%s" % (name, self.separator, key), value))
             inputs.extend([_l])
-        elif isinstance(json_obj, dict):
-            title = name.rpartition(self.separator)[2]
-            _l = ['%s:%s' % (title, self.newline)]
-            for key, value in json_obj.items():
-                _l.append(self._to_build("%s%s%s" % (name,
-                                                     self.separator, key),
-                                         value))
-            inputs.extend([_l])
+
         elif isinstance(json_obj, (basestring, int, float)):
             name, _, key = name.rpartition(self.separator)
             inputs.append(self._as_text_field(name, key, json_obj))
+
         elif json_obj is None:
             name, _, key = name.rpartition(self.separator)
             inputs.append(self._as_text_field(name, key, ''))
@@ -72,13 +71,10 @@ class SplitJSONWidget(forms.Widget):
                     result += '%s' % self._prepare_as_ul(el)
                     result += '</ul>'
                 else:
-                    result += '<li>%s</li>' % el
+                    result += el
 
-            return u"""
-                    <table class="table table-filter">
-                        <tbody>%s</tbody>
-                    </table>
-                    """ % result
+            return result
+
         return ''
 
     def _to_pack_up(self, root_node, raw_data):
@@ -165,15 +161,17 @@ class SplitJSONWidget(forms.Widget):
         except (TypeError, KeyError):
             pass
         inputs = self._to_build(name, value or {})
-        result = self._prepare_as_ul(inputs)
-        if self.debug:
-            # render json as well
-            source_data = u'<hr/>Source data: <br/>%s<hr/>' % str(value)
-            result = '%s%s' % (result, source_data)
-            print result
+        ul_inputs = self._prepare_as_ul(inputs)
+        result = u"""
+                    <table class="table table-filter">
+                        <tbody>%s</tbody>
+                    </table>
+                    """ % ul_inputs
         return utils.safestring.mark_safe(result)
 
 
 class PoolForm(forms.Form):
+    class Meta:
+        exclude = ('twitter_people',)
     attrs = {}
     twitter_people = forms.CharField(label='', help_text='', required=False, widget=SplitJSONWidget(attrs=attrs))

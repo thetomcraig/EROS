@@ -6,8 +6,6 @@
 
 <div style="padding-left:3%; padding-right:3%">
     <div class="container">
-        <div class="row">
-
             <section class="content">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="panel panel-default">
@@ -19,32 +17,31 @@
                                 </div>
                             </div>
 
-                                <div class="table-container">
-                                    <table class="table table-filter">
-                                        <tbody>
-                                            {% for sentence in sentences %}
-                                                <tr data-status="pagado">
-                                                    <td>
-                                                        <div class="ckbox">
-                                                            <input type="checkbox" id={{ sentence.id }}>
-                                                            <label for={{ sentence.id }}></label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <h4 class="title">
-                                                            <span class="pull-right pagado">
-                                                                {{ sentence.content }}
-                                                            </span>
-                                                        </h4>
-                                                    </td>
-                                                </tr>
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <div class="table-container">
+                                <table class="table table-filter">
+                                    <tbody>
+                                        {% for sentence in sentences %}
+                                            <tr data-status="pagado">
+                                                <td>
+                                                    <div class="ckbox">
+                                                        <input type="checkbox" id={{ sentence.id }}>
+                                                        <label for={{ sentence.id }}></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h4 class="title">
+                                                        <span class="pull-right pagado">
+                                                            {{ sentence.content }}
+                                                        </span>
+                                                    </h4>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
 
                         </div>
-                    </div>
                 </div>
             </section>
             

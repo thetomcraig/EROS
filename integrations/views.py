@@ -11,6 +11,8 @@ from integrations.forms import PoolForm
 from integrations.helpers.utils import (
     scrape_twitter_person,
     add_to_twitter_conversation,
+    clear_conversation,
+    get_conversation_sentences,
     apply_markov_chains_twitter,
     get_conversation,
     get_instagram_followers,
@@ -228,11 +230,13 @@ def twitter_conversation(request, person_username, partner_username):
         add_to_twitter_conversation(person_username, partner_username)
         return HttpResponseRedirect('/integrations/twitter_conversation/%s/%s/' % (person_username, partner_username))
 
+    if(request.GET.get('clear_conversation')):
+        clear_conversation(person_username, partner_username)
+        return HttpResponseRedirect('/integrations/twitter_conversation/%s/%s/' % (person_username, partner_username))
+
     template = loader.get_template('integrations/twitter_conversation.html')
-    person = TwitterPerson.objects.get(username=person_username)
-    partner = TwitterPerson.objects.get(username=partner_username)
-    conversation = person.twitterconversation_set.get_or_create(author=person, partner=partner)[0]
-    sentences = person.twitterconversationpost_set.filter(conversation__id=conversation.id)
+    sentences = get_conversation_sentences(person_username, partner_username)
+    # print [x.author for x in sentences]
 
     context = RequestContext(request, {
         'request': request,

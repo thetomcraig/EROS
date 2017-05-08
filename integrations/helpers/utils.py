@@ -238,7 +238,7 @@ def update_top_twitter_people():
         person = TwitterPerson.objects.get_or_create(username=entry['uname'])[0]
 
         person.username = entry['uname']
-        person.real_name= entry['name']
+        person.real_name = entry['name']
         person.avatar = entry['avatar']
         print entry['avatar']
         person.save()
@@ -326,9 +326,9 @@ def create_post_cache(post, cache_set):
 
         cache_set.create(word1=word1, word2=word2, final_word=final_word, beginning=beginning)
 
+
 def get_conversation(person_username, partner_username):
     person = TwitterPerson.objects.get(username=person_username)
-    partner = TwitterPerson.objects.get(username=partner_username)
 
     conversation = person.twitter_conversation_set.first()
 
@@ -338,29 +338,60 @@ def get_conversation(person_username, partner_username):
 def add_to_twitter_conversation(person_username, partner_username):
     person = TwitterPerson.objects.get(username=person_username)
     partner = TwitterPerson.objects.get(username=partner_username)
+    # This list is for alternating between conversation partners
+    partners = [person, partner]
 
     if person.twitterconversation_set.count() == 0:
         person.twitterconversation_set.create(author=person, partner=partner)
-
     conversation = TwitterConversation.objects.get(author=person)
-    
-    new_content, new_index = generate_new_conversation_post(conversation)
-    new_post = person.twitterpost_set.create(content=new_content)
+
+    index = 0
+    content = ''
+    for post in conversation.twitterconversationpost_set.all():
+        index = index + 1
+
+    for post in partners[index % 2].twitterpost_set.all():
+        if 'you' in post.content:
+            if 'RT' in post.content:
+                print post.content.replace('<<user>>', person.username).encode('utf-8').strip()
+            else:
+                content = post.content.replace('<<user>>', partner.username).encode('utf-8').strip()
+
+    new_post = person.twitterpost_set.create(content=content)
 
     TwitterConversationPost.objects.create(
-        content=new_post,
+        post=new_post,
         conversation=conversation,
-        post_author=person,
-        index=new_index
+        author=partners[index % 2],
+        index=index
     )
+    return index
 
-def generate_new_conversation_post(current_conversation):
-    index = 0
-    for post in current_conversation.twitterconversationpost_set.all():
-        index = index + 1
-        print post
-    return 'TEST + %s' % str(datetime.now()), index
 
+def clear_conversation(person_username, partner_username):
+    person = TwitterPerson.objects.get(username=person_username)
+    partner = TwitterPerson.objects.get(username=partner_username)
+
+    if person.twitterconversation_set.count() > 0:
+        [x.delete() for x in person.twitterconversation_set.all()]
+
+    if person.twitterconversationpost_set.count() > 0:
+        [x.delete() for x in person.twitterconversationpost_set.all()]
+
+    if partner.twitterconversationpost_set.count() > 0:
+        [x.delete() for x in partner.twitterconversationpost_set.all()]
+
+
+def get_conversation_sentences(person_username, partner_username):
+    person = TwitterPerson.objects.get(username=person_username)
+    partner = TwitterPerson.objects.get(username=partner_username)
+    conversation = person.twitterconversation_set.get_or_create(author=person, partner=partner)[0]
+    posts = person.twitterconversationpost_set.filter(conversation__id=conversation.id)
+
+    for conversation_post in posts:
+        conversation_post.post.content = conversation_post.post.content.encode('utf-8').strip()
+
+    return posts
 
 
 def generate_text():

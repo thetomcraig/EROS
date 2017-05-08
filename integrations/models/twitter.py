@@ -54,6 +54,6 @@ class TwitterConversation(models.Model):
 
 class TwitterConversationPost(models.Model):
     conversation = models.ForeignKey(TwitterConversation)
-    content = models.ForeignKey(TwitterPost)
-    post_author = models.ForeignKey(TwitterPerson)
+    post = models.ForeignKey(TwitterPost)
+    author = models.ForeignKey(TwitterPerson)
     index = models.IntegerField()

@@ -7,13 +7,13 @@
 </form>
 
 <div align='middle'>
+    {% for graph in graphs %}
+        <div style="width:60em;height:46em">
+            {% autoescape off %}
+            {{ graph }}
+            {% endautoescape %}
+        </div>
+    {% endfor %}
 
-    {% if svg %}
-    <div style="width:60em;height:46em">
-        {% autoescape off %}
-        {{ svg }}
-        {% endautoescape %}
-    </div>
-    {% endif %}
 </div>
 {% endblock %}

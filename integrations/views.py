@@ -11,10 +11,9 @@ from integrations.forms import PoolForm
 from integrations.helpers.utils import (
     scrape_twitter_person,
     add_to_twitter_conversation,
-    clear_conversation,
-    get_conversation_sentences,
     apply_markov_chains_twitter,
     # get_conversation,
+    get_tinder_figures,
     get_instagram_followers,
     get_text_message_me,
     get_me_from_instagram,
@@ -146,25 +145,27 @@ def tinder_home(request):
     if(request.GET.get('go_back_to_home')):
         return HttpResponseRedirect(reverse('home'))
 
+
+
     from matplotlib.pyplot import Figure
     from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-    import pandas
-    fig = Figure()
-    ax = fig.add_subplot(111)
-    data_df = pandas.read_csv("./TINDER/logs/test.csv")
-    data_df = pandas.DataFrame(data_df)
-    data_df.plot(ax=ax)
-    canvas = FigureCanvas(fig)
-#    response = HttpResponse( content_type = 'image/png')
-#    canvas.print_png(response)
-#    return response
-    import six
 
+    import six
     tmp = six.StringIO()
-    fig.savefig(tmp, format='svg', bbox_inches='tight')
     template = loader.get_template('integrations/tinder_home.html')
-    c = { 'svg': tmp.getvalue() }
-    response = HttpResponse(template.render(c))
+
+    figures = get_tinder_figures()
+    for figure in figures:
+        # take advantage of this to put mulptple graphs on the canvas
+        pass
+
+    canvas = FigureCanvas(figure)
+    figure.savefig(tmp, format='svg', bbox_inches='tight')
+    six_graphs = [tmp]
+
+    graphs = [x.getvalue() for x in six_graphs]
+    content = {'graphs': graphs}
+    response = HttpResponse(template.render(content))
     canvas.print_png(response)
     return response
 
@@ -260,13 +261,11 @@ def twitter_conversation(request, person_username, partner_username):
         add_to_twitter_conversation(person_username, partner_username)
         return HttpResponseRedirect('/integrations/twitter_conversation/%s/%s/' % (person_username, partner_username))
 
-    if(request.GET.get('clear_conversation')):
-        clear_conversation(person_username, partner_username)
-        return HttpResponseRedirect('/integrations/twitter_conversation/%s/%s/' % (person_username, partner_username))
-
     template = loader.get_template('integrations/twitter_conversation.html')
-    sentences = get_conversation_sentences(person_username, partner_username)
-    # print [x.author for x in sentences]
+    person = TwitterPerson.objects.get(username=person_username)
+    partner = TwitterPerson.objects.get(username=partner_username)
+    conversation = person.twitterconversation_set.get_or_create(author=person, partner=partner)[0]
+    sentences = person.twitterconversationpost_set.filter(conversation__id=conversation.id)
 
     context = RequestContext(request, {
         'request': request,

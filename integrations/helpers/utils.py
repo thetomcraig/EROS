@@ -1,10 +1,13 @@
 import random
 import os
 import re
+import six
 
 import HTMLParser
 from datetime import datetime
 from bs4 import BeautifulSoup
+from matplotlib.pyplot import Figure
+import pandas
 
 from django.conf import settings
 
@@ -418,3 +421,13 @@ def replace_tokens(word_list_and_randomness, token, model_set):
                 print word_list[word_index]
 
     return (word_list, word_list_and_randomness[1])
+
+
+def get_tinder_figures():
+    fig = Figure()
+    ax = fig.add_subplot(111)
+    data_df = pandas.read_csv("./TINDER/logs/test.csv")
+    data_df = pandas.DataFrame(data_df)
+    data_df.plot(ax=ax)
+
+    return [fig]

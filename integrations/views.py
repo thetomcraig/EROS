@@ -12,7 +12,7 @@ from integrations.helpers.utils import (
     scrape_twitter_person,
     add_to_twitter_conversation,
     apply_markov_chains_twitter,
-    get_conversation,
+    # get_conversation,
     get_instagram_followers,
     get_text_message_me,
     get_me_from_instagram,
@@ -40,6 +40,9 @@ def home(request):
 
     if(request.GET.get('instagram_home')):
         return HttpResponseRedirect(reverse('instagram_home'))
+
+    if(request.GET.get('tinder_home')):
+        return HttpResponseRedirect(reverse('tinder_home'))
 
     context = RequestContext(request, {'request': request, 'user': request.user})
     return render_to_response('integrations/home.html', context_instance=context)
@@ -137,6 +140,33 @@ def instagram_home(request):
     return HttpResponse(template.render(context, request))
 
 
+def tinder_home(request):
+    if(request.GET.get('go_back_to_home')):
+        return HttpResponseRedirect(reverse('home'))
+
+    from matplotlib.pyplot import Figure
+    from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+    import pandas
+    fig = Figure()
+    ax = fig.add_subplot(111)
+    data_df = pandas.read_csv("./TINDER/logs/test.csv")
+    data_df = pandas.DataFrame(data_df)
+    data_df.plot(ax=ax)
+    canvas = FigureCanvas(fig)
+#    response = HttpResponse( content_type = 'image/png')
+#    canvas.print_png(response)
+#    return response
+    import six
+
+    tmp = six.StringIO()
+    fig.savefig(tmp, format='svg', bbox_inches='tight')
+    template = loader.get_template('integrations/tinder_home.html')
+    c = { 'svg': tmp.getvalue() }
+    response = HttpResponse(template.render(c))
+    canvas.print_png(response)
+    return response
+
+
 def twitter_person_detail(request, person_username):
     if request.method == 'POST':
         form = PoolForm(request.POST)
@@ -148,8 +178,8 @@ def twitter_person_detail(request, person_username):
                 print key
                 if key.startswith('twitter_people__'):
                     partner_username = key.replace('twitter_people__', '')
-                    return HttpResponseRedirect(reverse('twitter_conversation', 
-                           args=(person_username, partner_username)))
+                    return HttpResponseRedirect(reverse('twitter_conversation',
+                                                args=(person_username, partner_username)))
 
     author = None
     all_people = TwitterPerson.objects.all()

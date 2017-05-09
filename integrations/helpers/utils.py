@@ -1,5 +1,7 @@
+import csv
 import random
 import os
+import glob
 import re
 import six
 
@@ -16,6 +18,7 @@ from integrations.models.instagram import InstagramPerson, InstagramPost, Instag
 from integrations.models.text_message import TextMessagePerson, TextMessageCache
 from integrations.helpers.InstagramAPI.InstagramAPI import InstagramAPI
 from integrations.helpers.TweepyScraper import TweepyScraper
+from integrations.helpers.Tinder.auto_tinder import AutoTinder
 
 
 def read_raw_texts(iOSBackup_folder_location):
@@ -423,11 +426,43 @@ def replace_tokens(word_list_and_randomness, token, model_set):
     return (word_list, word_list_and_randomness[1])
 
 
-def get_tinder_figures():
+def get_tinder_figures_for_time_window(start, end):
+    a = AutoTinder(settings.FACEBOOK_ID, settings.FACEBOOK_AUTH_TOKEN, settings.TINDER_EXPERIMENT_NO)
+
+    x_experiment_numbers = [0, 1, 2]
+    y_experiment_matches = []
+    for i in x_experiment_numbers:
+        matches = a.get_matches_for_experiment_number(i)
+        y_experiment_matches.append(len(mathces))
+
     fig = Figure()
     ax = fig.add_subplot(111)
-    data_df = pandas.read_csv("./TINDER/logs/test.csv")
+    data_df = pandas.read_csv("./logs/tinder/test.csv")
     data_df = pandas.DataFrame(data_df)
     data_df.plot(ax=ax)
 
     return [fig]
+
+def get_tinder_figures_for_exp_no(exp_no):
+    logs_location = "./logs/tinder"
+    cwd = os.getcwd()
+    os.chdir(logs_location)
+    files = [x for x in glob.glob('*.{}'.format('csv'))] 
+    os.chdir(cwd)
+
+    matching_rows = []
+    for f in files:
+        full_path = '/'.join([logs_location, f])
+        with open (full_path) as csvfile:
+            reader = csv.reader(csvfile, delimiter=',')
+            for row in reader:
+# TODO, filter here, read the csv and grab rows with matchin exp no
+# then grab the ids from those and mathc with matches
+# return lenght of this
+
+    return str(files)
+
+
+def auto_tinder_like(people_number):
+    a = AutoTinder(settings.FACEBOOK_ID, settings.FACEBOOK_AUTH_TOKEN, settings.TINDER_EXPERIMENT_NO)
+    a.like_people(people_number)

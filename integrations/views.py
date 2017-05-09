@@ -1,3 +1,6 @@
+import datetime
+from eros import settings
+
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
@@ -12,8 +15,10 @@ from integrations.helpers.utils import (
     scrape_twitter_person,
     add_to_twitter_conversation,
     apply_markov_chains_twitter,
+    auto_tinder_like,
     # get_conversation,
-    get_tinder_figures,
+    get_tinder_figures_for_time_window,
+    get_tinder_figures_for_exp_no,
     get_instagram_followers,
     get_text_message_me,
     get_me_from_instagram,
@@ -145,28 +150,35 @@ def tinder_home(request):
     if(request.GET.get('go_back_to_home')):
         return HttpResponseRedirect(reverse('home'))
 
+    if(request.GET.get('auto_like')):
+        auto_tinder_like(1)
 
+    end = datetime.datetime.now()
+    start = end - datetime.timedelta(days=30)
+    figures = get_tinder_figures_for_exp_no(settings.TINDER_EXPERIMENT_NO)
+    print figures
 
-    from matplotlib.pyplot import Figure
-    from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-
-    import six
-    tmp = six.StringIO()
     template = loader.get_template('integrations/tinder_home.html')
-
-    figures = get_tinder_figures()
-    for figure in figures:
-        # take advantage of this to put mulptple graphs on the canvas
-        pass
-
-    canvas = FigureCanvas(figure)
-    figure.savefig(tmp, format='svg', bbox_inches='tight')
-    six_graphs = [tmp]
-
-    graphs = [x.getvalue() for x in six_graphs]
-    content = {'graphs': graphs}
+#
+#    from matplotlib.pyplot import Figure
+#    from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+#
+#    import six
+#    tmp = six.StringIO()
+#
+#    canvas = FigureCanvas(figures[0])
+#    for figure in figures:
+#        figure.savefig(tmp, format='svg', bbox_inches='tight')
+#
+#    six_graphs = [tmp]
+#
+#    graphs = [x.getvalue() for x in six_graphs]
+#    content = {'graphs': graphs}
+#    response = HttpResponse(template.render(content))
+#    canvas.print_png(response)
+#    return response
+    content = {}
     response = HttpResponse(template.render(content))
-    canvas.print_png(response)
     return response
 
 

@@ -129,6 +129,10 @@ TWEEPY_CONSUMER_SECRET = '26OYZDNj0hC17ei6JplHuerzoaxokQBpU9X2dsegkLLCShBK2y'
 TWEEPY_ACCESS_TOKEN = '14404065-baBGgZmVoCnZEU1L0hCVq6ed6qHDFXVrLSQpAKXcw'
 TWEEPY_ACCESS_TOKEN_SECRET = '3jbRjcgZV82OGLOsxv9Xg8G29h1oc9l9kqKTMXH4vEPNi'
 
+FACEBOOK_ID = '100007032789992'
+FACEBOOK_AUTH_TOKEN = "fbconnect://success#access_token=EAAGm0PX4ZCpsBAAfIxDnzU1C2xqSkLiZATuOaqfrqwtLJxZAeus9R7nvACUNuppCIpcaSqkHDXBZBZCyVgemSiO3dWglIMfmbfpQsijzbDplBOmlA8x9kMXaRrKbTPfTegbtpZBZCTkWdnzeZBpZBmPgq2qK5OIZB6VxztafKDAel4qD0MiHMf8TyTAlMwVgWTBh8ZD&expires_in=6824"
+
+
 USER_TOKEN = "<<user>>"
 LINK_TOKEN = "<<link>>"
 TAG_TOKEN = "<<tag>>"
@@ -136,3 +140,10 @@ TAG_TOKEN = "<<tag>>"
 INSTAGRAM_USERNAME = local_settings.instagram_username
 INSTAGRAM_PASSWORD = local_settings.instagram_password
 INSTAGRAM_ACCOUNT_USERNAME = local_settings.instagram_account_username
+
+TINDER_EXPERIMENT_NO = 0
+TINDER_EXPERIMENT_MAP = {
+    1: 'Beard, normal',
+    2: 'Stubble',
+    3: 'Clean Shaven',
+}

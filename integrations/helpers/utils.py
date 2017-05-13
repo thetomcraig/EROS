@@ -444,6 +444,19 @@ def get_tinder_figures_for_time_window(start, end):
     return [fig]
 
 def get_tinder_figures_for_exp_no(exp_no):
+    id_list = get_like_ids_for_exp_no(exp_no)
+    return id_list
+    # TODO, filter here, read the csv and grab rows with matchin exp no
+    # then grab the ids from those and mathc with matches
+    # return lenght of this
+
+    #return str(files)
+
+def get_like_ids_for_exp_no(exp_no):
+    """
+    Read the csv logs with all the likes in them
+    """
+    all_like_ids_for_exp_no = []
     logs_location = "./logs/tinder"
     cwd = os.getcwd()
     os.chdir(logs_location)
@@ -453,15 +466,20 @@ def get_tinder_figures_for_exp_no(exp_no):
     matching_rows = []
     for f in files:
         full_path = '/'.join([logs_location, f])
-        with open (full_path) as csvfile:
+        with open(full_path, 'rU') as csvfile:
             reader = csv.reader(csvfile, delimiter=',')
-            for row in reader:
-                pass
-    # TODO, filter here, read the csv and grab rows with matchin exp no
-    # then grab the ids from those and mathc with matches
-    # return lenght of this
-
-    return str(files)
+            rows = [x for x in reader]
+            # header is first row
+            # top row of data is second row
+            header = rows[0]
+            top_row = rows[1]
+            csv_exp_no = top_row[0]
+            if int(csv_exp_no) == int(exp_no):
+                # we transpose the rows to get all the likes in 1 row
+                # images will be in fourth row
+                transposed_rows = map(list, zip(*rows))
+                all_like_ids_for_exp_no.extend(transposed_rows[3])
+    return all_like_ids_for_exp_no
 
 
 def auto_tinder_like(people_number):

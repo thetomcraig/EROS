@@ -456,9 +456,10 @@ def get_tinder_figures_for_exp_no(exp_no):
         with open (full_path) as csvfile:
             reader = csv.reader(csvfile, delimiter=',')
             for row in reader:
-# TODO, filter here, read the csv and grab rows with matchin exp no
-# then grab the ids from those and mathc with matches
-# return lenght of this
+                pass
+    # TODO, filter here, read the csv and grab rows with matchin exp no
+    # then grab the ids from those and mathc with matches
+    # return lenght of this
 
     return str(files)
 

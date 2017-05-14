@@ -3,7 +3,6 @@ import random
 import os
 import glob
 import re
-import six
 
 import HTMLParser
 from datetime import datetime
@@ -11,8 +10,7 @@ from bs4 import BeautifulSoup
 from matplotlib.pyplot import Figure
 import pandas
 
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlib.figure import Figure
+import matplotlib.pyplot as plt
 
 from django.conf import settings
 
@@ -332,9 +330,10 @@ def create_post_cache(post, cache_set):
 
         cache_set.create(word1=word1, word2=word2, final_word=final_word, beginning=beginning)
 
+
 def get_conversation(person_username, partner_username):
     person = TwitterPerson.objects.get(username=person_username)
-    partner = TwitterPerson.objects.get(username=partner_username)
+    # partner = TwitterPerson.objects.get(username=partner_username)
 
     conversation = person.twitter_conversation_set.first()
 
@@ -349,7 +348,7 @@ def add_to_twitter_conversation(person_username, partner_username):
         person.twitterconversation_set.create(author=person, partner=partner)
 
     conversation = TwitterConversation.objects.get(author=person)
-    
+
     new_content, new_index = generate_new_conversation_post(conversation)
     new_post = person.twitterpost_set.create(content=new_content)
 
@@ -360,13 +359,13 @@ def add_to_twitter_conversation(person_username, partner_username):
         index=new_index
     )
 
+
 def generate_new_conversation_post(current_conversation):
     index = 0
     for post in current_conversation.twitterconversationpost_set.all():
         index = index + 1
         print post
     return 'TEST + %s' % str(datetime.now()), index
-
 
 
 def generate_text():
@@ -436,7 +435,7 @@ def get_tinder_figures_for_time_window(start, end):
     y_experiment_matches = []
     for i in x_experiment_numbers:
         matches = a.get_matches_for_time_window(start, end)
-        y_experiment_matches.append(len(mathces))
+        y_experiment_matches.append(len(matches))
 
     fig = Figure()
     ax = fig.add_subplot(111)
@@ -448,21 +447,16 @@ def get_tinder_figures_for_time_window(start, end):
 
 
 def get_all_tinder_figures():
-    import matplotlib.pyplot as plt
-
-
-
-
-    x_axis_exp_numbers = range(settings.TINDER_EXPERIMENT_NO) 
+    x_axis_exp_numbers = range(settings.TINDER_EXPERIMENT_NO)
     y_axis_match_numbers = []
     for i in range(settings.TINDER_EXPERIMENT_NO):
         match_number = get_match_number_for_exp_number(i)
         y_axis_match_numbers.append(match_number)
 
     fig = plt.figure()
-    bar1 = plt.bar(x_axis_exp_numbers,y_axis_match_numbers,width=1.0,bottom=0,color='Green',alpha=0.65,label='Legend')
-    plt.legend()
+    plt.plot(x_axis_exp_numbers, y_axis_match_numbers)
 
+    plt.legend()
 
     return [fig]
 
@@ -473,6 +467,7 @@ def get_match_number_for_exp_number(exp_no):
     matches = a.get_matches_in_id_list(id_list)
     return len(matches)
 
+
 def get_like_ids_for_exp_no(exp_no):
     """
     Read the csv logs with all the likes in them
@@ -481,10 +476,9 @@ def get_like_ids_for_exp_no(exp_no):
     logs_location = "./logs/tinder"
     cwd = os.getcwd()
     os.chdir(logs_location)
-    files = [x for x in glob.glob('*.{}'.format('csv'))] 
+    files = [x for x in glob.glob('*.{}'.format('csv'))]
     os.chdir(cwd)
 
-    matching_rows = []
     for f in files:
         full_path = '/'.join([logs_location, f])
         with open(full_path, 'rU') as csvfile:
@@ -492,7 +486,7 @@ def get_like_ids_for_exp_no(exp_no):
             rows = [x for x in reader]
             # header is first row
             # top row of data is second row
-            header = rows[0]
+            # header = rows[0]
             top_row = rows[1]
             csv_exp_no = top_row[0]
             if int(csv_exp_no) == int(exp_no):

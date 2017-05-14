@@ -10,16 +10,11 @@
     <input name='auto_like' type='submit' class='btn btn-warning' value='Auto Like!'>
 </form>
 
+<form action='#' method='get'>
+    <input name='refresh' type='submit' class='btn btn-info' value='Refresh Data!'>
+</form>
+
 <div align='middle'>
-    <img src="data:image/png;base64,{{graphic|safe}}">
-
-    {% for graph in graphs %}
-        <div style="width:60em;height:46em">
-            {% autoescape off %}
-            {{ graph }}
-            {% endautoescape %}
-        </div>
-    {% endfor %}
-
+    <img src="http://127.0.0.1:8000/integrations/tinder_graphs" />
 </div>
 {% endblock %}

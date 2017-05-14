@@ -1,6 +1,5 @@
 import datetime
 import itertools
-import json
 from random import randint
 import requests
 import re
@@ -11,7 +10,8 @@ import sys
 
 import pynder
 
-DEBUG = False 
+DEBUG = False
+
 
 class AutoTinder():
     session = False
@@ -67,7 +67,6 @@ class AutoTinder():
             file_writer = csv.writer(now_file_csv, delimiter=',')
             header = ['Experiment Number', 'Bio', 'Images', 'Likes - ID', 'Likes - Metadata']
             file_writer.writerow(header)
-            like_ids = []
 
             rows = itertools.izip_longest([self.exp_no], [self.session.profile.bio], self.session.profile.photos, like_log_ids, like_log)
             for row in rows:

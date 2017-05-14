@@ -1,11 +1,10 @@
-import datetime
-from eros import settings
-
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
 
+from matplotlib.backends.backend_agg import FigureCanvasAgg
+import matplotlib.pyplot
 
 from integrations.models.twitter import TwitterPerson, TwitterPost
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
@@ -16,8 +15,6 @@ from integrations.helpers.utils import (
     add_to_twitter_conversation,
     apply_markov_chains_twitter,
     auto_tinder_like,
-    # get_conversation,
-    get_tinder_figures_for_time_window,
     get_all_tinder_figures,
     get_instagram_followers,
     get_text_message_me,
@@ -153,26 +150,24 @@ def tinder_home(request):
     if(request.GET.get('auto_like')):
         auto_tinder_like(1)
 
-    from matplotlib.pyplot import Figure
-    from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-    import six
-    from matplotlib.backends.backend_agg import FigureCanvasAgg
+    template = loader.get_template('integrations/tinder_home.html')
 
-    import matplotlib.pyplot
-    import matplotlib.pyplot as plt
-    import numpy as np
-
-
-    figures = get_all_tinder_figures()
-    f = figures[0]
-
-    canvas = FigureCanvasAgg(f)    
-    response = HttpResponse(content_type='image/png')
-    canvas.print_png(response)
-    matplotlib.pyplot.close(f)   
+    response = HttpResponse(template.render({}))
     return response
 
 
+def tinder_graphs(request):
+    """
+    Serve up graphsbased on the data
+    """
+    figures = get_all_tinder_figures()
+    f = figures[0]
+
+    canvas = FigureCanvasAgg(f)
+    response = HttpResponse(content_type='image/png')
+    canvas.print_png(response)
+    matplotlib.pyplot.close(f)
+    return response
 
 
 def twitter_person_detail(request, person_username):

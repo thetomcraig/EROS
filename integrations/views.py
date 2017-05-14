@@ -148,7 +148,7 @@ def tinder_home(request):
         return HttpResponseRedirect(reverse('home'))
 
     if(request.GET.get('auto_like')):
-        auto_tinder_like(1)
+        auto_tinder_like(500)
 
     template = loader.get_template('integrations/tinder_home.html')
 

@@ -11,6 +11,9 @@ from bs4 import BeautifulSoup
 from matplotlib.pyplot import Figure
 import pandas
 
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+
 from django.conf import settings
 
 from integrations.models.twitter import TwitterPost, TwitterPerson, TwitterConversation, TwitterConversationPost
@@ -432,7 +435,7 @@ def get_tinder_figures_for_time_window(start, end):
     x_experiment_numbers = [0, 1, 2]
     y_experiment_matches = []
     for i in x_experiment_numbers:
-        matches = a.get_matches_for_experiment_number(i)
+        matches = a.get_matches_for_time_window(start, end)
         y_experiment_matches.append(len(mathces))
 
     fig = Figure()
@@ -443,14 +446,32 @@ def get_tinder_figures_for_time_window(start, end):
 
     return [fig]
 
-def get_tinder_figures_for_exp_no(exp_no):
-    id_list = get_like_ids_for_exp_no(exp_no)
-    return id_list
-    # TODO, filter here, read the csv and grab rows with matchin exp no
-    # then grab the ids from those and mathc with matches
-    # return lenght of this
 
-    #return str(files)
+def get_all_tinder_figures():
+    import matplotlib.pyplot as plt
+
+
+
+
+    x_axis_exp_numbers = range(settings.TINDER_EXPERIMENT_NO) 
+    y_axis_match_numbers = []
+    for i in range(settings.TINDER_EXPERIMENT_NO):
+        match_number = get_match_number_for_exp_number(i)
+        y_axis_match_numbers.append(match_number)
+
+    fig = plt.figure()
+    bar1 = plt.bar(x_axis_exp_numbers,y_axis_match_numbers,width=1.0,bottom=0,color='Green',alpha=0.65,label='Legend')
+    plt.legend()
+
+
+    return [fig]
+
+
+def get_match_number_for_exp_number(exp_no):
+    id_list = get_like_ids_for_exp_no(exp_no)
+    a = AutoTinder(settings.FACEBOOK_ID, settings.FACEBOOK_AUTH_TOKEN, settings.TINDER_EXPERIMENT_NO)
+    matches = a.get_matches_in_id_list(id_list)
+    return len(matches)
 
 def get_like_ids_for_exp_no(exp_no):
     """

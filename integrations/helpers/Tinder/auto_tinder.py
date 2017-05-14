@@ -87,13 +87,10 @@ class AutoTinder():
 
         return matches_in_time_window
 
-    def get_matches_for_experiment_number(self, exp_no):
-        matches_in_time_window = []
+    def get_matches_in_id_list(self, id_list):
+        matches = []
         for match in self.session._api.matches():
-            date = match['created_date']
-            date = date[:-5]
-            datetime_date = datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%S')
-            if from_time <= datetime_date <= until_time:
-                matches_in_time_window.append(match)
-
-        return matches_in_time_window
+            person = match['person']
+            if person['_id'] in id_list:
+                matches.append(match)
+        return matches

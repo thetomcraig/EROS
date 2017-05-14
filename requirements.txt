@@ -14,7 +14,7 @@ neovim==0.1.13
 numpy==1.12.1
 oauthlib==2.0.2
 pandas==0.20.1
-pynder==0.0.13
+pynder==0.0.11
 pyparsing==2.2.0
 python-dateutil==2.6.0
 pytz==2017.2

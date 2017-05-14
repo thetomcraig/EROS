@@ -4,4 +4,4 @@ eros/local_settings.py
 **/*.sw*
 tags
 iOS_backup/
-
+logs/*

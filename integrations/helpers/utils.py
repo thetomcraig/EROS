@@ -428,6 +428,18 @@ def replace_tokens(word_list_and_randomness, token, model_set):
     return (word_list, word_list_and_randomness[1])
 
 
+def get_tinder_experiment_data():
+    experiments = []
+    for i in range(settings.TINDER_EXPERIMENT_NO):
+        exp_i = {}
+        exp_i['exp_num'] = i
+        exp_i['exp_name'] = settings.TINDER_EXPERIMENT_NAMES.get(i)
+        exp_i['like_number'] = len(get_like_ids_for_exp_no(i))
+        exp_i['match_number'] = get_match_number_for_exp_number(i)
+        experiments.append(exp_i)
+    return experiments
+
+
 def get_tinder_figures_for_time_window(start, end):
     a = AutoTinder(settings.FACEBOOK_ID, settings.FACEBOOK_AUTH_TOKEN, settings.CURRENT_TINDER_EXPERIMENT_NO)
 
@@ -467,7 +479,6 @@ def get_match_number_for_exp_number(exp_no):
     a = AutoTinder(settings.FACEBOOK_ID, settings.FACEBOOK_AUTH_TOKEN, settings.CURRENT_TINDER_EXPERIMENT_NO)
     matches = a.get_matches_in_id_list(id_list)
     return len(matches)
-
 
 def get_like_ids_for_exp_no(exp_no):
     """

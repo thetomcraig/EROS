@@ -15,6 +15,7 @@ from integrations.helpers.utils import (
     add_to_twitter_conversation,
     apply_markov_chains_twitter,
     auto_tinder_like,
+    get_tinder_experiment_data,
     get_all_tinder_figures,
     get_instagram_followers,
     get_text_message_me,
@@ -152,8 +153,11 @@ def tinder_home(request):
 
     template = loader.get_template('integrations/tinder_home.html')
 
-    response = HttpResponse(template.render({}))
-    return response
+    experiment_data = get_tinder_experiment_data()
+    context = RequestContext(request, {
+        'experiment_data': experiment_data
+    })
+    return HttpResponse(template.render(context))
 
 
 def tinder_graphs(request):

@@ -1,4 +1,5 @@
 {% extends 'integrations/base.html' %}
+{% load apptags %} 
 
 {% block main %}
 
@@ -16,5 +17,58 @@
 
 <div align='middle'>
     <img src="http://127.0.0.1:8000/integrations/tinder_graphs" />
+</div>
+
+<div style="padding-left:3%; padding-right:3%">
+    <div class="container">
+            <section class="content">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-container">
+                                <table class="table table-filter">
+                                    <tbody>
+                                        {% for exp in experiment_data %}
+                                            <tr data-status="pagado">
+                                                <td>
+                                                    <h4 class="title">
+                                                        <span class="pull-right pagado">
+                                                            Experiment Number: {{ exp|get_item:'exp_num' }}
+                                                        </span>
+                                                    </h4>
+                                                </td>
+                                                <td>
+                                                    <h4 class="title">
+                                                        <span class="pull-right pagado">
+                                                            Experiemnt Name: {{ exp|get_item:'exp_name' }}
+                                                        </span>
+                                                    </h4>
+                                                </td>
+                                                <td>
+                                                    <h4 class="title">
+                                                        <span class="pull-right pagado">
+                                                            Matches: {{ exp|get_item:'match_number' }}
+                                                        </span>
+                                                    </h4>
+                                                </td>
+                                                <td>
+                                                    <h4 class="title">
+                                                        <span class="pull-right pagado">
+                                                            Total Likes: {{ exp|get_item:'like_number' }}
+                                                        </span>
+                                                    </h4>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                </div>
+            </section>
+            
+        </div>
+    </div>
 </div>
 {% endblock %}

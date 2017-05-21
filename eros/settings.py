@@ -123,19 +123,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-TWEEPY_CONSUMER_KEY = 'ZKx8Yg55evn1U65vRWQ0Zj7Jr'
-TWEEPY_CONSUMER_SECRET = '26OYZDNj0hC17ei6JplHuerzoaxokQBpU9X2dsegkLLCShBK2y'
-TWEEPY_ACCESS_TOKEN = '14404065-baBGgZmVoCnZEU1L0hCVq6ed6qHDFXVrLSQpAKXcw'
-TWEEPY_ACCESS_TOKEN_SECRET = '3jbRjcgZV82OGLOsxv9Xg8G29h1oc9l9kqKTMXH4vEPNi'
-
-FACEBOOK_ID = '100007032789992'
-FACEBOOK_AUTH_TOKEN = "fbconnect://success#access_token=EAAGm0PX4ZCpsBAKjgAKCYjpAILqfVUoiwUaUZBrmgloHETTXp4amVgZCkeNxjFp0xh7nzbb17l4u9ywjRtJCVLTFbvg1e9kR1EZBlPYRZCLbfjxTysc5DvHkHgUqTIOCBZC1QJNBUalUfyZA0UIw7fwsaZBWoFsZCSKWY5FHDO3z1lZC5Q4ix5fVyJioTAVkCpd6YZD&expires_in=4724"
-
-
 USER_TOKEN = "<<user>>"
 LINK_TOKEN = "<<link>>"
 TAG_TOKEN = "<<tag>>"
+
+TWEEPY_CONSUMER_KEY = local_settings.tweepy_consumer_key
+TWEEPY_CONSUMER_SECRET = local_settings.tweepy_consumer_secret
+TWEEPY_ACCESS_TOKEN = local_settings.tweepy_access_token
+TWEEPY_ACCESS_TOKEN_SECRET = local_settings.tweepy_access_token_secret
+
+FACEBOOK_ID = local_settings.facebook_id
+FACEBOOK_AUTH_TOKEN = local_settings.facebook_auth_token
 
 INSTAGRAM_USERNAME = local_settings.instagram_username
 INSTAGRAM_PASSWORD = local_settings.instagram_password
@@ -143,3 +141,7 @@ INSTAGRAM_ACCOUNT_USERNAME = local_settings.instagram_account_username
 
 CURRENT_TINDER_EXPERIMENT_NO = 0
 TINDER_EXPERIMENT_NO = 3
+TINDER_EXPERIMENT_NAMES = {
+    0: 'Beard',
+    1: 'Clean Shaven',
+}

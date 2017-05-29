@@ -10,6 +10,8 @@ import sys
 
 import pynder
 
+import settings
+
 DEBUG = False
 
 
@@ -60,7 +62,7 @@ class AutoTinder():
 
     def write_likes(self, like_log, like_log_ids):
         now = str(datetime.datetime.now())
-        now_file = 'logs/tinder/{0}.csv'.format(now)
+        now_file = settings.TINDER_LOGS_LOCATION + '{0}.csv'.format(now)
         subprocess.check_call(['touch', now_file])
 
         with open(now_file, 'wb') as now_file_csv:

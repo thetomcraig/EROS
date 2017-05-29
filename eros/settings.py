@@ -123,9 +123,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-USER_TOKEN = "<<user>>"
-LINK_TOKEN = "<<link>>"
-TAG_TOKEN = "<<tag>>"
+USER_TOKEN = '<<user>>'
+LINK_TOKEN = '<<link>>'
+TAG_TOKEN = '<<tag>>'
 
 TWEEPY_CONSUMER_KEY = local_settings.tweepy_consumer_key
 TWEEPY_CONSUMER_SECRET = local_settings.tweepy_consumer_secret
@@ -139,7 +139,8 @@ INSTAGRAM_USERNAME = local_settings.instagram_username
 INSTAGRAM_PASSWORD = local_settings.instagram_password
 INSTAGRAM_ACCOUNT_USERNAME = local_settings.instagram_account_username
 
-CURRENT_TINDER_EXPERIMENT_NO = 0
+TINDER_LOGS_LOCATION = './logs/tinder/test.csv'
+CURRENT_TINDER_EXPERIMENT_NO = 1
 TINDER_EXPERIMENT_NO = 3
 TINDER_EXPERIMENT_NAMES = {
     0: 'Beard',

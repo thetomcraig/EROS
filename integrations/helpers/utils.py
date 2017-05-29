@@ -451,7 +451,7 @@ def get_tinder_figures_for_time_window(start, end):
 
     fig = Figure()
     ax = fig.add_subplot(111)
-    data_df = pandas.read_csv("./logs/tinder/test.csv")
+    data_df = pandas.read_csv(settings.TINDER_LOGS_LOCATION + 'test.csv')
     data_df = pandas.DataFrame(data_df)
     data_df.plot(ax=ax)
 
@@ -485,7 +485,7 @@ def get_like_ids_for_exp_no(exp_no):
     Read the csv logs with all the likes in them
     """
     all_like_ids_for_exp_no = []
-    logs_location = "./logs/tinder"
+    logs_location = settings.TINDER_LOGS_LOCATION
     cwd = os.getcwd()
     os.chdir(logs_location)
     files = [x for x in glob.glob('*.{}'.format('csv'))]

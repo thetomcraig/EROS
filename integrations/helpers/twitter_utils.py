@@ -132,28 +132,30 @@ def clear_all_twitter_conversations(person_username):
         c.delete()
 
 
-def generate_new_conversation_post(current_conversation):
+def generate_new_conversation_post_text(current_conversation):
+    sorted_conversation = current_conversation.twitterconversationpost_set.order_by('index').all()
+    last_post = sorted_conversation.last()
+    last_speaker = last_post.post.author
+    next_speaker = current_conversation.author if current_conversation.author != last_speaker else current_conversation.partner
+
     index = 0
-    for post in current_conversation.twitterconversationpost_set.all():
-        index = index + 1
-        print post
-    return 'TEST + %s' % str(datetime.now()), index
+    for p in sorted_conversation:
+        index += 1
+        # fancy alg here
+        pass
+    return index, next_speaker, next_speaker.username + ' TEST + %s' % str(datetime.now())
 
 
 def add_to_twitter_conversation(person_username, partner_username):
-    person = TwitterPerson.objects.get(username=person_username)
     conversation = get_or_create_conversation(person_username, partner_username)
-    print conversation.id
 
-    new_content, new_index = generate_new_conversation_post(conversation)
-    print new_content
-    print new_index
-    new_post = person.twitterpost_set.create(content=new_content)
+    new_index, new_author, new_content = generate_new_conversation_post_text(conversation)
 
+    new_post = new_author.twitterpost_set.create(content=new_content)
     TwitterConversationPost.objects.create(
         post=new_post,
         conversation=conversation,
-        author=person,
+        author=new_author,
         index=new_index
     )
 

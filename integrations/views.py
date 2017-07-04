@@ -284,7 +284,8 @@ def twitter_conversation(request, person_username, partner_username):
 
     template = loader.get_template('integrations/twitter_conversation.html')
     conversation = get_or_create_conversation(partner_username, person_username)
-    sentences = conversation.twitterconversationpost_set.all()
+    conversation_posts = conversation.twitterconversationpost_set.all()
+    sentences = [x.post for x in conversation_posts]
 
     context = RequestContext(request, {
         'clear_text': 'clear_conversation',

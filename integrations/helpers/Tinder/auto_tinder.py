@@ -1,16 +1,12 @@
 import datetime
-import itertools
 from random import randint
 import requests
 import re
 from time import sleep
-import csv
-import subprocess
 import sys
 
 import pynder
 
-import settings
 
 DEBUG = False
 
@@ -57,23 +53,9 @@ class AutoTinder():
                 e = sys.exc_info()[0]
                 print str(e)
 
-        self.write_likes(like_log, like_log_ids)
-        return like_log
+        return like_log, like_log_ids
 
-    def write_likes(self, like_log, like_log_ids):
-        now = str(datetime.datetime.now())
-        now_file = settings.TINDER_LOGS_LOCATION + '{0}.csv'.format(now)
-        subprocess.check_call(['touch', now_file])
-
-        with open(now_file, 'wb') as now_file_csv:
-            file_writer = csv.writer(now_file_csv, delimiter=',')
-            header = ['Experiment Number', 'Bio', 'Images', 'Likes - ID', 'Likes - Metadata']
-            file_writer.writerow(header)
-
-            rows = itertools.izip_longest([self.exp_no], [self.session.profile.bio], self.session.profile.photos, like_log_ids, like_log)
-            for row in rows:
-                file_writer.writerow(row)
-
+    # TODO, move to utils
     def get_matches_for_time_window(self, from_time, until_time):
         """
         Match holds inforamtion on the person and meta data (when you matched, etc)
@@ -88,6 +70,7 @@ class AutoTinder():
 
         return matches_in_time_window
 
+    # TODO, move to utils
     def get_matches_in_id_list(self, id_list):
         matches = []
         for match in self.session._api.matches():
@@ -95,3 +78,6 @@ class AutoTinder():
             if person['_id'] in id_list:
                 matches.append(match)
         return matches
+
+    def get_all_matches(self):
+        return self.session._api.matches()

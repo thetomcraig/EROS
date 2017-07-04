@@ -139,7 +139,7 @@ INSTAGRAM_USERNAME = local_settings.instagram_username
 INSTAGRAM_PASSWORD = local_settings.instagram_password
 INSTAGRAM_ACCOUNT_USERNAME = local_settings.instagram_account_username
 
-TINDER_LOGS_LOCATION = './logs/tinder/test.csv'
+TINDER_LOGS_LOCATION = './logs/tinder/'
 CURRENT_TINDER_EXPERIMENT_NO = 1
 TINDER_EXPERIMENT_NO = 3
 TINDER_EXPERIMENT_NAMES = {

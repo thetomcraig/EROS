@@ -1,24 +1,21 @@
-import csv
-import random
-import os
-import glob
-import re
-
-import HTMLParser
-from datetime import datetime
 from bs4 import BeautifulSoup
+import csv
+from datetime import datetime
+import glob
+import itertools
 from matplotlib.pyplot import Figure
-import pandas
-
 import matplotlib.pyplot as plt
+import os
+import pandas
+import random
+import re
+import subprocess
 
 from django.conf import settings
 
-from integrations.models.twitter import TwitterPost, TwitterPerson, TwitterConversation, TwitterConversationPost
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
 from integrations.models.text_message import TextMessagePerson, TextMessageCache
 from integrations.helpers.InstagramAPI.InstagramAPI import InstagramAPI
-from integrations.helpers.TweepyScraper import TweepyScraper
 from integrations.helpers.Tinder.auto_tinder import AutoTinder
 
 
@@ -221,92 +218,6 @@ def clear_texts(author):
     [x.delete() for x in author.textmessagecache_set.all()]
 
 
-def get_top_twitter_users():
-    t = TweepyScraper(
-        settings.TWEEPY_CONSUMER_KEY,
-        settings.TWEEPY_CONSUMER_SECRET,
-        settings.TWEEPY_ACCESS_TOKEN,
-        settings.TWEEPY_ACCESS_TOKEN_SECRET)
-
-    names_and_unames = t.scrape_top_users(50)
-
-    return names_and_unames
-
-
-def update_top_twitter_people():
-    names_and_unames = get_top_twitter_users()
-
-    for entry in names_and_unames:
-        print entry
-        person = None
-        person = TwitterPerson.objects.get_or_create(username=entry['uname'])[0]
-
-        person.username = entry['uname']
-        person.real_name= entry['name']
-        person.avatar = entry['avatar']
-        print entry['avatar']
-        person.save()
-
-    return True
-
-
-def scrape_top_twitter_people():
-    update_top_twitter_people()
-
-    all_twitter_people = TwitterPerson.objects.all()
-    for person in all_twitter_people:
-        scrape_twitter_person(person)
-
-
-def scrape_twitter_person(person):
-    """
-    Scrape the given user with tweepy
-    take all of their tweets and
-    turn them into TwitterPost objects
-    strip out uncommon words (links, hashtags, users)
-    and save them seperately in instances, then
-    replace with dummy words.
-    """
-    t = TweepyScraper(
-        settings.TWEEPY_CONSUMER_KEY,
-        settings.TWEEPY_CONSUMER_SECRET,
-        settings.TWEEPY_ACCESS_TOKEN,
-        settings.TWEEPY_ACCESS_TOKEN_SECRET)
-
-    tweets = t.get_tweets_from_user(person.username, 100)
-    print "scraped %d new tweets" % len(tweets)
-    new_post_ids = []
-    for tweet in tweets:
-        words = tweet.split()
-
-        final_tweet = ""
-        for word in words:
-            if "@" in word:
-                person.twittermention_set.create(content=word)
-                word = settings.USER_TOKEN
-            if "http" in word:
-                person.twitterlink_set.create(content=word)
-                word = settings.LINK_TOKEN
-            if "#" in word:
-                person.twitterhashtag_set.create(content=word)
-                word = settings.TAG_TOKEN
-
-            final_tweet = final_tweet + word + " "
-        final_tweet = final_tweet[:-1]
-        print "final tweet:"
-        print final_tweet
-
-        h = HTMLParser.HTMLParser()
-        final_tweet = h.unescape(final_tweet.decode('utf-8'))
-
-        post = TwitterPost.objects.create(author=person, content=final_tweet)
-        new_post_ids.append(post.id)
-
-        create_post_cache(post, person.twitterpostcache_set)
-
-    return new_post_ids
-
-
 def create_post_cache(post, cache_set):
     """
     Create the postcache item from the new post
@@ -331,79 +242,11 @@ def create_post_cache(post, cache_set):
         cache_set.create(word1=word1, word2=word2, final_word=final_word, beginning=beginning)
 
 
-def get_conversation(person_username, partner_username):
-    person = TwitterPerson.objects.get(username=person_username)
-    # partner = TwitterPerson.objects.get(username=partner_username)
-
-    conversation = person.twitter_conversation_set.first()
-
-    return conversation
-
-
-def add_to_twitter_conversation(person_username, partner_username):
-    person = TwitterPerson.objects.get(username=person_username)
-    partner = TwitterPerson.objects.get(username=partner_username)
-
-    if person.twitterconversation_set.count() == 0:
-        person.twitterconversation_set.create(author=person, partner=partner)
-
-    conversation = TwitterConversation.objects.get(author=person)
-
-    new_content, new_index = generate_new_conversation_post(conversation)
-    new_post = person.twitterpost_set.create(content=new_content)
-
-    TwitterConversationPost.objects.create(
-        content=new_post,
-        conversation=conversation,
-        post_author=person,
-        index=new_index
-    )
-
-
-def generate_new_conversation_post(current_conversation):
-    index = 0
-    for post in current_conversation.twitterconversationpost_set.all():
-        index = index + 1
-        print post
-    return 'TEST + %s' % str(datetime.now()), index
-
-
 def generate_text():
     me = get_text_message_me()
     all_caches = TextMessageCache.objects.all()
     all_beginning_caches = all_caches.filter(beginning=True)
     print me.apply_markov_chains_inner(all_beginning_caches, all_caches)
-
-
-def apply_markov_chains_twitter(person):
-    """
-    Takes all the words from all the twittter
-    posts on the twitterperson.
-    Sticks them all into a giant
-    list and gives this to the markov calc.
-    Save this as a new twitterpostmarkov
-    """
-    print "Applying markov chains"
-    all_beginning_caches = person.twitterpostcache_set.filter(beginning=True)
-    all_caches = person.twitterpostcache_set.all()
-    new_markov_post = person.apply_markov_chains_inner(
-        all_beginning_caches, all_caches)
-
-    # Replace the tokens (twitter specific)
-    replace_tokens(new_markov_post, settings.USER_TOKEN,
-                   person.twittermention_set.all())
-    replace_tokens(new_markov_post, settings.LINK_TOKEN,
-                   person.twitterlink_set.all())
-    replace_tokens(new_markov_post, settings.TAG_TOKEN,
-                   person.twitterhashtag_set.all())
-
-    randomness = new_markov_post[1]
-    content = ""
-    for word in new_markov_post[0]:
-        content = content + word + " "
-
-    person.twitterpostmarkov_set.create(
-        content=content[:-1], randomness=randomness)
 
 
 def replace_tokens(word_list_and_randomness, token, model_set):
@@ -429,7 +272,12 @@ def replace_tokens(word_list_and_randomness, token, model_set):
 
 
 def get_tinder_experiment_data():
+    """
+    Get logged data
+    Change the functions to read logs/cached data
+    """
     experiments = []
+
     for i in range(settings.TINDER_EXPERIMENT_NO):
         exp_i = {}
         exp_i['exp_num'] = i
@@ -438,6 +286,40 @@ def get_tinder_experiment_data():
         exp_i['match_number'] = get_match_number_for_exp_number(i)
         experiments.append(exp_i)
     return experiments
+
+
+def refresh_tinder():
+    """
+    Use API to get matches
+    cross reference with the logs
+    """
+    # Get the matches
+    a = AutoTinder(settings.FACEBOOK_ID, settings.FACEBOOK_AUTH_TOKEN, settings.CURRENT_TINDER_EXPERIMENT_NO)
+    all_matches = a.get_all_matches()
+    matches = []
+
+    for i in range(settings.CURRENT_TINDER_EXPERIMENT_NO):
+        pass
+    # TODO - do all the below code, but put each id into a list for a corresponding exp no
+    # get this number from the swip csvs
+    for match in all_matches:
+        person = match['person']
+        if person['_id'] == settings.CURRENT_TINDER_EXPERIMENT_NO:
+            matches.append(match)
+
+    # Write the file
+    now = str(datetime.datetime.now())
+    now_file = settings.TINDER_LOGS_LOCATION + 'matches/{0}.csv'.format(now)
+    subprocess.check_call(['touch', now_file])
+
+    with open(now_file, 'wb') as now_file_csv:
+        file_writer = csv.writer(now_file_csv, delimiter=',')
+        header = ['Experiment Number', 'Match Number']
+        file_writer.writerow(header)
+
+        rows = itertools.izip_longest([settings.CURRENT_TINDER_EXPERIMENT_NO], [len(matches)])
+        for row in rows:
+            file_writer.writerow(row)
 
 
 def get_tinder_figures_for_time_window(start, end):
@@ -451,7 +333,7 @@ def get_tinder_figures_for_time_window(start, end):
 
     fig = Figure()
     ax = fig.add_subplot(111)
-    data_df = pandas.read_csv(settings.TINDER_LOGS_LOCATION + 'test.csv')
+    data_df = pandas.read_csv(settings.TINDER_LOGS_LOCATION + 'swipe_sessions/test.csv')
     data_df = pandas.DataFrame(data_df)
     data_df.plot(ax=ax)
 
@@ -468,24 +350,24 @@ def get_all_tinder_figures():
     fig = plt.figure()
     N = len(y_axis_match_numbers)
     x = range(N)
-    width = 1/1.5
+    width = 1 / 1.5
     plt.bar(x, y_axis_match_numbers, width, color="blue")
 
     return [fig]
 
 
 def get_match_number_for_exp_number(exp_no):
-    id_list = get_like_ids_for_exp_no(exp_no)
-    a = AutoTinder(settings.FACEBOOK_ID, settings.FACEBOOK_AUTH_TOKEN, settings.CURRENT_TINDER_EXPERIMENT_NO)
-    matches = a.get_matches_in_id_list(id_list)
+    # TODO - read from csv file here
+    matches = []
     return len(matches)
+
 
 def get_like_ids_for_exp_no(exp_no):
     """
     Read the csv logs with all the likes in them
     """
     all_like_ids_for_exp_no = []
-    logs_location = settings.TINDER_LOGS_LOCATION
+    logs_location = settings.TINDER_LOGS_LOCATION + '/swipe_sessions'
     cwd = os.getcwd()
     os.chdir(logs_location)
     files = [x for x in glob.glob('*.{}'.format('csv'))]
@@ -509,6 +391,22 @@ def get_like_ids_for_exp_no(exp_no):
     return all_like_ids_for_exp_no
 
 
+def write_likes(self, like_log, like_log_ids):
+    now = str(datetime.datetime.now())
+    now_file = settings.TINDER_LOGS_LOCATION + 'swipe_sessions/{0}.csv'.format(now)
+    subprocess.check_call(['touch', now_file])
+
+    with open(now_file, 'wb') as now_file_csv:
+        file_writer = csv.writer(now_file_csv, delimiter=',')
+        header = ['Experiment Number', 'Bio', 'Images', 'Likes - ID', 'Likes - Metadata']
+        file_writer.writerow(header)
+
+        rows = itertools.izip_longest([self.exp_no], [self.session.profile.bio], self.session.profile.photos, like_log_ids, like_log)
+        for row in rows:
+            file_writer.writerow(row)
+
+
 def auto_tinder_like(people_number):
     a = AutoTinder(settings.FACEBOOK_ID, settings.FACEBOOK_AUTH_TOKEN, settings.CURRENT_TINDER_EXPERIMENT_NO)
-    a.like_people(people_number)
+    like_log, like_log_ids = a.like_people(people_number)
+    write_likes(like_log, like_log_ids)

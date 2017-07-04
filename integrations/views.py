@@ -11,9 +11,6 @@ from integrations.models.instagram import InstagramPerson, InstagramPost, Instag
 from integrations.models.text_message import TextMessage, TextMessageCache, TextMessageMarkov
 from integrations.forms import PoolForm
 from integrations.helpers.utils import (
-    scrape_twitter_person,
-    add_to_twitter_conversation,
-    apply_markov_chains_twitter,
     auto_tinder_like,
     get_tinder_experiment_data,
     get_all_tinder_figures,
@@ -22,17 +19,27 @@ from integrations.helpers.utils import (
     get_me_from_instagram,
     scrape_all_followers,
     refresh_instagram_followers,
+    refresh_tinder,
     follow_my_instagram_followers,
     refresh_and_return_me_from_instagram,
     scrape_follower,
-    scrape_top_twitter_people,
-    update_top_twitter_people,
     clear_follower_posts,
     clear_set,
     generate_text,
     clear_texts,
     generate_instagram_post,
     read_raw_texts)
+
+from integrations.helpers.twitter_utils import (
+    clear_twitter_conversation,
+    clear_all_twitter_conversations,
+    scrape_twitter_person,
+    add_to_twitter_conversation,
+    apply_markov_chains_twitter,
+    scrape_top_twitter_people,
+    update_top_twitter_people,
+    get_or_create_conversation,
+)
 
 
 def home(request):
@@ -148,8 +155,13 @@ def tinder_home(request):
     if(request.GET.get('go_back_to_home')):
         return HttpResponseRedirect(reverse('home'))
 
+    if(request.GET.get('refresh')):
+        refresh_tinder()
+        return HttpResponseRedirect('tinder_home/')
+
     if(request.GET.get('auto_like')):
         auto_tinder_like(500)
+        return HttpResponseRedirect('tinder_home/')
 
     template = loader.get_template('integrations/tinder_home.html')
 
@@ -180,9 +192,6 @@ def twitter_person_detail(request, person_username):
         if 'go_to_conversation' in request.POST.keys():
             form.is_valid()
             for key in request.POST.keys():
-
-                print 'key'
-                print key
                 if key.startswith('twitter_people__'):
                     partner_username = key.replace('twitter_people__', '')
                     return HttpResponseRedirect(reverse('twitter_conversation',
@@ -217,6 +226,10 @@ def twitter_person_detail(request, person_username):
 
     if(request.GET.get('scrape')):
         scrape_twitter_person(author)
+        return HttpResponseRedirect('/integrations/twitter_person_detail/' + person_username)
+
+    if(request.GET.get('clear_all_conversations')):
+        clear_all_twitter_conversations(person_username)
         return HttpResponseRedirect('/integrations/twitter_person_detail/' + person_username)
 
     if(request.GET.get('show_original')):
@@ -265,13 +278,17 @@ def twitter_conversation(request, person_username, partner_username):
         add_to_twitter_conversation(person_username, partner_username)
         return HttpResponseRedirect('/integrations/twitter_conversation/%s/%s/' % (person_username, partner_username))
 
+    if(request.GET.get('clear_conversation')):
+        clear_twitter_conversation(person_username, partner_username)
+        return HttpResponseRedirect('/integrations/twitter_conversation/%s/%s/' % (person_username, partner_username))
+
     template = loader.get_template('integrations/twitter_conversation.html')
-    person = TwitterPerson.objects.get(username=person_username)
-    partner = TwitterPerson.objects.get(username=partner_username)
-    conversation = person.twitterconversation_set.get_or_create(author=person, partner=partner)[0]
-    sentences = person.twitterconversationpost_set.filter(conversation__id=conversation.id)
+    conversation = get_or_create_conversation(partner_username, person_username)
+    sentences = conversation.twitterconversationpost_set.all()
 
     context = RequestContext(request, {
+        'clear_text': 'clear_conversation',
+        'clear_text_human': 'Clear Conversation',
         'request': request,
         'sentences': sentences,
         'person_username': person_username,

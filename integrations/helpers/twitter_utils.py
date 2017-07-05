@@ -1,4 +1,5 @@
-from datetime import datetime
+import nltk
+from nltk.probability import FreqDist
 import random
 import HTMLParser
 
@@ -119,6 +120,7 @@ def get_or_create_conversation(person_username, partner_username):
 
 
 def clear_twitter_conversation(person_username, partner_username):
+    print 'alpha'
     conversation = get_or_create_conversation(person_username, partner_username)
     if conversation:
         conversation.twitterconversationpost_set.all().delete()
@@ -136,7 +138,7 @@ def clear_all_twitter_conversations(person_username):
 def generate_new_conversation_post_text(current_conversation):
     sorted_conversation = current_conversation.twitterconversationpost_set.order_by('index').all()
     last_post = sorted_conversation.last()
-    last_speaker = last_post.post.author
+    last_speaker = last_post.post.author if last_post else current_conversation.author
     next_speaker = \
         current_conversation.author if current_conversation.author != last_speaker else current_conversation.partner
 
@@ -148,16 +150,31 @@ def generate_new_conversation_post_text(current_conversation):
         pass
 
     # Pick something new to say in response
-    retweets = [x.content for x in next_speaker.twitterpost_set.all() if 'RT' in x.content]
-    # pick a random retweet to respond with
-    reply = retweets[random.randrange(0, len(retweets)) - 1]
-    # Remove multiple tags
-    reply.replace(settings.USER_TOKEN, '@' + last_speaker.username, 1)
-    reply.replace(settings.USER_TOKEN, '')
+    posts = [x.content for x in next_speaker.twitterpost_set.all()]
+    retweets = [x for x in posts if 'RT' in x and settings.LINK_TOKEN not in x]
 
+    reply_source = retweets if len(retweets) else posts
+    # pick a random retweet to respond with
+    reply = reply_source[random.randrange(0, len(reply_source)) - 1]
     # replace the user token tag with the user who is in the convo
-    updated_reply = reply.replace(settings.USER_TOKEN, "@" + last_speaker.username)
-    return index, next_speaker, updated_reply
+    reply = reply.replace(settings.USER_TOKEN, '@' + last_speaker.username, 1)
+    # Remove multiple tags
+    reply = reply.replace(settings.USER_TOKEN, '')
+    # replace the hashtag token with a random hashtag
+    hashtags = [x.content for x in next_speaker.twitterhashtag_set.all()]
+    random_hashtag = 'HASHTAG'
+    if len(hashtags):
+        random_hashtag = hashtags[random.randrange(0, len(hashtags) - 1)]
+    reply = reply.replace(settings.TAG_TOKEN, random_hashtag, 1)
+    # Remove multiple tags
+    reply = reply.replace(settings.TAG_TOKEN, '')
+
+    # Remove RT
+    reply = reply.replace('RT', '')
+    # Fix spacing
+    reply = reply.replace('  ', ' ')
+    print reply
+    return index, next_speaker, reply
 
 
 def add_to_twitter_conversation(person_username, partner_username):
@@ -203,3 +220,16 @@ def apply_markov_chains_twitter(person):
 
     person.twitterpostmarkov_set.create(
         content=content[:-1], randomness=randomness)
+
+
+def find_word_frequency_for_user(username):
+    words = FreqDist()
+
+    person = TwitterPerson.objects.get(username=username)
+    for post in person.twitterpost_set.all():
+        for word in nltk.tokenize.word_tokenize(post.content):
+            words[word] += 1
+
+    print words['and']
+    print words.freq('and')
+    print words.most_common()[-30:]

@@ -1,4 +1,5 @@
 from datetime import datetime
+import random
 import HTMLParser
 
 from django.conf import settings
@@ -136,22 +137,35 @@ def generate_new_conversation_post_text(current_conversation):
     sorted_conversation = current_conversation.twitterconversationpost_set.order_by('index').all()
     last_post = sorted_conversation.last()
     last_speaker = last_post.post.author
-    next_speaker = current_conversation.author if current_conversation.author != last_speaker else current_conversation.partner
+    next_speaker = \
+        current_conversation.author if current_conversation.author != last_speaker else current_conversation.partner
 
+    # Aanalyze what's been said
     index = 0
     for p in sorted_conversation:
         index += 1
         # fancy alg here
         pass
-    return index, next_speaker, next_speaker.username + ' TEST + %s' % str(datetime.now())
+
+    # Pick something new to say in response
+    retweets = [x.content for x in next_speaker.twitterpost_set.all() if 'RT' in x.content]
+    # pick a random retweet to respond with
+    reply = retweets[random.randrange(0, len(retweets)) - 1]
+    # Remove multiple tags
+    reply.replace(settings.USER_TOKEN, '@' + last_speaker.username, 1)
+    reply.replace(settings.USER_TOKEN, '')
+
+    # replace the user token tag with the user who is in the convo
+    updated_reply = reply.replace(settings.USER_TOKEN, "@" + last_speaker.username)
+    return index, next_speaker, updated_reply
 
 
 def add_to_twitter_conversation(person_username, partner_username):
     conversation = get_or_create_conversation(person_username, partner_username)
 
     new_index, new_author, new_content = generate_new_conversation_post_text(conversation)
-
     new_post = new_author.twitterpost_set.create(content=new_content)
+
     TwitterConversationPost.objects.create(
         post=new_post,
         conversation=conversation,

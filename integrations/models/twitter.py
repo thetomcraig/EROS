@@ -13,6 +13,7 @@ class TwitterPerson(base.Person):
 
 class TwitterPost(base.Sentence):
     author = models.ForeignKey(TwitterPerson, default=None, null=True)
+    fake = models.NullBooleanField(null=True)
 
 
 class TwitterPostCache(base.SentenceCache):

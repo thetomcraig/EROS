@@ -11,24 +11,8 @@ from integrations.models.instagram import InstagramPerson, InstagramPost, Instag
 from integrations.models.text_message import TextMessage, TextMessageCache, TextMessageMarkov
 from integrations.forms import PoolForm
 from integrations.helpers.utils import (
-    auto_tinder_like,
-    get_tinder_experiment_data,
-    get_all_tinder_figures,
-    get_instagram_followers,
-    get_text_message_me,
-    get_me_from_instagram,
-    scrape_all_followers,
-    refresh_instagram_followers,
-    refresh_tinder,
-    follow_my_instagram_followers,
-    refresh_and_return_me_from_instagram,
-    scrape_follower,
-    clear_follower_posts,
     clear_set,
-    generate_text,
-    clear_texts,
-    generate_instagram_post,
-    read_raw_texts)
+)
 
 from integrations.helpers.twitter_utils import (
     clear_twitter_conversation,
@@ -41,6 +25,31 @@ from integrations.helpers.twitter_utils import (
     get_or_create_conversation,
 )
 
+from integrations.helpers.instagram_utils import (
+    generate_instagram_post,
+    scrape_all_followers,
+    get_instagram_followers,
+    get_me_from_instagram,
+    refresh_instagram_followers,
+    follow_my_instagram_followers,
+    refresh_and_return_me_from_instagram,
+    scrape_follower,
+    clear_follower_posts,
+)
+
+from integrations.helpers.text_message_utils import (
+    get_text_message_me,
+    generate_text,
+    clear_texts,
+    read_raw_texts,
+)
+
+from integrations.helpers.tinder_utils import (
+    refresh_tinder,
+    auto_tinder_like,
+    get_tinder_experiment_data,
+    get_all_tinder_figures,
+)
 
 def home(request):
     if(request.GET.get('text_message_home')):

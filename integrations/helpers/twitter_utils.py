@@ -11,6 +11,7 @@ from integrations.helpers.TweepyScraper import TweepyScraper
 from .utils import (
     replace_tokens,
     create_post_cache,
+    Classifier,
 )
 
 
@@ -92,7 +93,7 @@ def scrape_twitter_person(person):
         h = HTMLParser.HTMLParser()
         final_tweet = h.unescape(final_tweet.decode('utf-8'))
 
-        post = TwitterPost.objects.create(author=person, content=final_tweet)
+        post = TwitterPost.objects.create(author=person, content=final_tweet, fake=False)
         new_post_ids.append(post.id)
 
         create_post_cache(post, person.twitterpostcache_set)
@@ -181,7 +182,7 @@ def add_to_twitter_conversation(person_username, partner_username):
     conversation = get_or_create_conversation(person_username, partner_username)
 
     new_index, new_author, new_content = generate_new_conversation_post_text(conversation)
-    new_post = new_author.twitterpost_set.create(content=new_content)
+    new_post = new_author.twitterpost_set.create(content=new_content, fake=True)
 
     TwitterConversationPost.objects.create(
         post=new_post,
@@ -233,3 +234,36 @@ def find_word_frequency_for_user(username):
     print words['and']
     print words.freq('and')
     print words.most_common()[-30:]
+
+def test(username):
+
+    classifier_metrics = {
+        'mention_percentage': -1,
+        'retweet_percentage': -1,
+        'link_percentage': -1,
+        'hash_percentage': -1,
+    }
+    person = TwitterPerson.objects.get(username=username)
+    real_posts = person.twitterpost_set.filter(fake=False)
+
+    mention_tweets = 0
+    retweet_tweets = 0
+    link_tweets = 0
+    hash_tweets = 0
+    for post in real_posts:
+        mention_tweets += 1 if settings.USER_TOKEN in post.content else 0
+        retweet_tweets += 1 if 'RT' in post.content else 0
+        link_tweets += 1 if settings.LINK_TOKEN in post.content else 0
+        hash_tweets += 1 if settings.TAG_TOKEN in post.content else 0
+
+    classifier_metrics['mention_percentage'] = mention_tweets/float(len(real_posts))
+    classifier_metrics['retweet_percentage'] = retweet_tweets/float(len(real_posts))
+    classifier_metrics['link_percentage'] = link_tweets/float(len(real_posts))
+    classifier_metrics['hash_percentage'] = hash_tweets/float(len(real_posts))
+    return classifier_metrics
+
+#    c = Classifier()
+#    c.train(d)
+#
+#    ex_tweet = ''
+#    c.classify(ex_tweet)

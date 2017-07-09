@@ -2,6 +2,7 @@ var React = require('react')
 var ReactDOM = require('react-dom')
 var Chart = require('react-d3-core').Chart;
 var LineChart = require('react-d3-basic').LineChart;
+var d3 = require('d3');
 
 var Hello = React.createClass ({
     render: function() {
@@ -18,7 +19,6 @@ ReactDOM.render(<Hello />, document.getElementById('container'));
 (function() {
 
   var chartData  = 
-
 [
 {"name":"Darron Weissnat IV","BMI":20.72,"age":39,"birthday":"2005-01-03T00:00:00.000Z","city":"East Russel","married":false,"index":0}
 ,
@@ -75,9 +75,9 @@ ReactDOM.render(<Hello />, document.getElementById('container'));
         name: 'Age',
         color: '#ff7f0e',
         style: {
-          "stroke-width": 2,
-          "stroke-opacity": .2,
-          "fill-opacity": .2
+          "strokeWidth": 2,
+          "strokeOpacity": .2,
+          "fillOpacity": .2
         }
       }
     ],
@@ -96,4 +96,3 @@ ReactDOM.render(<Hello />, document.getElementById('container'));
   , document.getElementById('chart')
   )
 })()
-

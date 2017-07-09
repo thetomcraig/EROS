@@ -242,6 +242,7 @@ def test(username):
         'retweet_percentage': -1,
         'link_percentage': -1,
         'hash_percentage': -1,
+        'verbosity': -1,
     }
     person = TwitterPerson.objects.get(username=username)
     real_posts = person.twitterpost_set.filter(fake=False)
@@ -250,16 +251,19 @@ def test(username):
     retweet_tweets = 0
     link_tweets = 0
     hash_tweets = 0
+    total_word_number = 0
     for post in real_posts:
         mention_tweets += 1 if settings.USER_TOKEN in post.content else 0
         retweet_tweets += 1 if 'RT' in post.content else 0
         link_tweets += 1 if settings.LINK_TOKEN in post.content else 0
         hash_tweets += 1 if settings.TAG_TOKEN in post.content else 0
+        total_word_number += len(post.content.split(' '))
 
     classifier_metrics['mention_percentage'] = mention_tweets/float(len(real_posts))
     classifier_metrics['retweet_percentage'] = retweet_tweets/float(len(real_posts))
     classifier_metrics['link_percentage'] = link_tweets/float(len(real_posts))
     classifier_metrics['hash_percentage'] = hash_tweets/float(len(real_posts))
+    classifier_metrics['verbosity'] = total_word_number/float(144*len(real_posts))
     return classifier_metrics
 
 #    c = Classifier()

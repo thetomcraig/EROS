@@ -235,6 +235,7 @@ def find_word_frequency_for_user(username):
     print words.freq('and')
     print words.most_common()[-30:]
 
+
 def test(username):
 
     classifier_metrics = {
@@ -259,11 +260,11 @@ def test(username):
         hash_tweets += 1 if settings.TAG_TOKEN in post.content else 0
         total_word_number += len(post.content.split(' '))
 
-    classifier_metrics['mention_percentage'] = mention_tweets/float(len(real_posts))
-    classifier_metrics['retweet_percentage'] = retweet_tweets/float(len(real_posts))
-    classifier_metrics['link_percentage'] = link_tweets/float(len(real_posts))
-    classifier_metrics['hash_percentage'] = hash_tweets/float(len(real_posts))
-    classifier_metrics['verbosity'] = total_word_number/float(144*len(real_posts))
+    classifier_metrics['mention_percentage'] = mention_tweets / float(len(real_posts))
+    classifier_metrics['retweet_percentage'] = retweet_tweets / float(len(real_posts))
+    classifier_metrics['link_percentage'] = link_tweets / float(len(real_posts))
+    classifier_metrics['hash_percentage'] = hash_tweets / float(len(real_posts))
+    classifier_metrics['verbosity'] = total_word_number / float(144 * len(real_posts))
     return classifier_metrics
 
 #    c = Classifier()

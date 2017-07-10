@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build",
+    "jsx": "jsx -x jsx src .",
+    "watch:jsx": "jsx -w -x jsx src ."
   },
   "author": "",
   "license": "ISC",

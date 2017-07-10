@@ -23,24 +23,23 @@ var Cog = React.createClass({displayName: "Cog",
     var points = this.props.data_points
     //convert to cartesian
     var percentage_multiplier = 50*Math.sqrt(2)/100
-    var a = {x: -points.mention_percentage*percentage_multiplier, 
-             y: points.mention_percentage*percentage_multiplier};
+    var a = {x: 0-points.mention_percentage*percentage_multiplier, 
+             y: points.mention_percentage*percentage_multiplier}
     var b = {x: points.retweet_percentage*percentage_multiplier, 
-             y: points.retweet_percentage*percentage_multiplier};
+             y: points.retweet_percentage*percentage_multiplier}
     var c = {x: points.link_percentage*percentage_multiplier, 
-             y: -points.link_percentage*percentage_multiplier};
-    var d = {x: -points.hash_percentage*percentage_multiplier, 
-             y: -points.hash_percentage*percentage_multiplier};
-
-    var pathData = [
-            'M', a.x+100, (100 - a.y),
-            'L', b.x+100, (100 - b.y),
-            'L', c.x+100, (100 - c.y),
-            'L', d.x+100, (100 - d.y),
-            'L', a.x+100, (100 - a.y),
-        ].join(' ')
+             y: 0-points.link_percentage*percentage_multiplier}
+    var d = {x: 0-points.hash_percentage*percentage_multiplier, 
+             y: 0-points.hash_percentage*percentage_multiplier}
 
     var viewBox = [0, 0, size, size].join(' ')
+
+    var pathData = [
+            'M', a.x+size, (size - a.y),
+            'L', b.x+size, (size - b.y),
+            'L', c.x+size, (size - c.y),
+            'L', d.x+size, (size - d.y),
+        ].join(' ')
 
     return (
         React.createElement("svg", {xmlns: "http://www.w3.org/svg/2000", 

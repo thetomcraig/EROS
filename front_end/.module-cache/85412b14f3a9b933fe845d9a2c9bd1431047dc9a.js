@@ -1,6 +1,6 @@
 var React = require('react')
 
-var Cog = React.createClass({
+var Cog = React.createClass({displayName: "Cog",
 
   getDefaultProps: function() {
     return {
@@ -22,7 +22,7 @@ var Cog = React.createClass({
     var fill = this.props.fill
     var points = this.props.data_points
     //convert to cartesian
-    var percentage_multiplier = 50*Math.sqrt(2)/100
+    var percentage_multiplier = 50*Math.sqrt(2)
     var a = {x: -points.mention_percentage*percentage_multiplier, 
              y: points.mention_percentage*percentage_multiplier};
     var b = {x: points.retweet_percentage*percentage_multiplier, 
@@ -33,23 +33,23 @@ var Cog = React.createClass({
              y: -points.hash_percentage*percentage_multiplier};
 
     var pathData = [
-            'M', a.x+100, (100 - a.y),
-            'L', b.x+100, (100 - b.y),
-            'L', c.x+100, (100 - c.y),
-            'L', d.x+100, (100 - d.y),
-            'L', a.x+100, (100 - a.y),
+            'M', a.x+size, (size - a.y),
+            'L', b.x+size, (size - b.y),
+            'L', c.x+size, (size - c.y),
+            'L', d.x+size, (size - d.y),
+            'L', a.x+size, (size - a.y),
         ].join(' ')
 
     var viewBox = [0, 0, size, size].join(' ')
 
     return (
-        <svg xmlns="http://www.w3.org/svg/2000"
-        viewBox={viewBox}
-        width={size}
-        height={size}
-        fill={fill}>
-        <path d={pathData} />
-        </svg>
+        React.createElement("svg", {xmlns: "http://www.w3.org/svg/2000", 
+        viewBox: viewBox, 
+        width: size, 
+        height: size, 
+        fill: fill}, 
+        React.createElement("path", {d: pathData})
+        )
       )
   }
 });

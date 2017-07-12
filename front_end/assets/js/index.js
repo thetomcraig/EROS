@@ -22,11 +22,39 @@ var c = {x: points.link_percentage*percentage_multiplier,
 var d = {x: -points.hash_percentage*percentage_multiplier, 
             y: -points.hash_percentage*percentage_multiplier};
 
-s.polygon( a.x+100, (100 - a.y),
-            b.x+100, (100 - b.y),
-            c.x+100, (100 - c.y),
-            d.x+100, (100 - d.y),
-         ).attr({ fill: "red", stroke: "blue" });
+
+var paper = Snap('svg');
+var start_points = [a.x+100, (100 - a.y),
+                    b.x+100, (100 - b.y),
+                    c.x+100, (100 - c.y),
+                    d.x+100, (100 - d.y),
+                   ];
+var end_points  = [0, 0,
+                   100, 0,
+                   100, 100,
+                   0, 100,
+                  ];
+var polygon = paper.polygon(start_points);
+polygon.attr({
+    id:"tri",
+    fill:"#555555"
+});
+
+
+var animating = true;
+function animationIn() {
+    if (animating) {
+        polygon.animate({"points":start_points}, 1000, mina.linear, animationOut);
+    };
+}
+function animationOut() {
+    polygon.animate({"points":end_points}, 1000, mina.linear, animationIn);
+}
+
+
+polygon.hover(function() {animating=true; animationIn() }, function() { animating=false });
+
+
 
 
 var Hello = React.createClass ({

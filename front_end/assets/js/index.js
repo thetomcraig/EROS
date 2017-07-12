@@ -1,61 +1,41 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-var d3 = require('d3');
-import { MorphReplace } from 'react-svg-morph';
+var Snap = require('snapsvg')
+var s = Snap(800, 800);
+
+var size = 100;
+var points = {
+    mention_percentage: 10,
+    retweet_percentage: 50,
+    link_percentage: 100,
+    hash_percentage: 90,
+    verbosity: 0,
+}
+//convert to cartesian
+var percentage_multiplier = 50*Math.sqrt(2)/100
+var a = {x: -points.mention_percentage*percentage_multiplier, 
+            y: points.mention_percentage*percentage_multiplier};
+var b = {x: points.retweet_percentage*percentage_multiplier, 
+            y: points.retweet_percentage*percentage_multiplier};
+var c = {x: points.link_percentage*percentage_multiplier, 
+            y: -points.link_percentage*percentage_multiplier};
+var d = {x: -points.hash_percentage*percentage_multiplier, 
+            y: -points.hash_percentage*percentage_multiplier};
+
+s.polygon( a.x+100, (100 - a.y),
+            b.x+100, (100 - b.y),
+            c.x+100, (100 - c.y),
+            d.x+100, (100 - d.y),
+         ).attr({ fill: "red", stroke: "blue" });
+
 
 var Hello = React.createClass ({
     render: function() {
         return (
             <h1>
-            Hello, React!
             </h1>
         )
     }
 })
 
 ReactDOM.render(<Hello />, document.getElementById('container'));
-
-
-
-class Checked extends React.Component {
-    render() {
-        return (
-            <svg width="24" fill="#00ea00" height="24" viewBox="0 0 24 24">
-                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-            </svg>
-        );
-    }
-}
-
-class CheckBox extends React.Component {
-    render() {
-        return (
-            <svg width="24" height="24" fill="#666666" viewBox="0 0 24 24">
-                <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
-            </svg>
-        );
-    }
-}
-
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            checked: false
-        };
-    }
-    toggleChecked() {
-        this.setState({checked: !this.state.checked});
-    }
-    render() {
-        return (
-            <div onClick={this.toggleChecked.bind(this)}>
-                <MorphReplace width={100} height={100}>
-                    {this.state.checked ? <Checked key="checked" /> : <CheckBox key="checkbox" />}
-                </MorphReplace>
-            </div>
-        );
-    }
-}
-
-ReactDOM.render(<App />, document.getElementById('container'));

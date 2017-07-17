@@ -1,4 +1,5 @@
 {% extends 'integrations/base.html' %}
+{% load render_bundle from webpack_loader %}
 {% block main %}
 
 <form action="#" method="get">
@@ -6,11 +7,18 @@
     <input name="clear_all_conversations" type="submit" class="btn btn-default" value="Clear All Conversations">
 </form>
 
+
+
 <div align="middle">
     <div class="image-cropper">
         <img src={{ person.avatar }} align="middle"/>
     </div>
     <h2>{{ person.real_name}}</h2>
+
+<div id="root"></div>
+<div id="container"></div>
+<svg id="svg"></svg>
+{% render_bundle 'main' %}
     
     {% if 'TwitterPerson' in person_type %}
         <h4>@{{ person.username }}</h2>

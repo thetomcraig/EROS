@@ -1,4 +1,5 @@
 {% extends 'integrations/base.html' %}
+{% load render_bundle from webpack_loader %}
 {% block main %}
 
 <form action="#" method="get">
@@ -6,23 +7,19 @@
     <input name="clear_all_conversations" type="submit" class="btn btn-default" value="Clear All Conversations">
 </form>
 
+
+
 <div align="middle">
     <div class="image-cropper">
         <img src={{ person.avatar }} align="middle"/>
     </div>
+
+    <svg id="svg"></svg>
+
     <h2>{{ person.real_name}}</h2>
-    
-    {% if 'TwitterPerson' in person_type %}
-        <h4>@{{ person.username }}</h2>
-        <h6>Sentences: {{ len_sentences }}</h6>
-        <h6>Markov Sentences: {{ len_markov_sentences }}</h6>
-    {% endif %}
-
-    {% if 'LiteraturePerson' in person_type %}
-        <h6>Sentences: {{ len_sentences }}</h6>
-        <h6>Markov Sentences: {{ len_markov_sentences }}</h6>
-    {% endif %}
-
+    <h4>@{{ person.username }}</h2>
+    <h6>Sentences: {{ len_sentences }}</h6>
+    <h6>Markov Sentences: {{ len_markov_sentences }}</h6>
 
     <form action="#" method="get">
         <input name="scrape" type="submit" class="btn btn-success" value="Scrape">
@@ -35,6 +32,8 @@
 </div>
 
 <div class="row small-buffer"></div>
+
+{% render_bundle 'main' %}
 
 {% include "integrations/pool_table.html" with table_title='' pool_form=pool_form %}
 {% include "integrations/sentence_list.html" with table_title='' sentences=sentences %}

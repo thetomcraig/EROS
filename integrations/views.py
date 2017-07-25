@@ -3,8 +3,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
 
-from matplotlib.backends.backend_agg import FigureCanvasAgg
-import matplotlib.pyplot
 
 from integrations.models.twitter import TwitterPerson, TwitterPost
 from integrations.models.instagram import InstagramPerson, InstagramPost, InstagramHashtag
@@ -181,18 +179,6 @@ def tinder_home(request):
     return HttpResponse(template.render(context))
 
 
-def tinder_graphs(request):
-    """
-    Serve up graphsbased on the data
-    """
-    figures = get_all_tinder_figures()
-    f = figures[0]
-
-    canvas = FigureCanvasAgg(f)
-    response = HttpResponse(content_type='image/png')
-    canvas.print_png(response)
-    matplotlib.pyplot.close(f)
-    return response
 
 
 def twitter_person_detail(request, person_username):

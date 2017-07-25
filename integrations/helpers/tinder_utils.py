@@ -2,8 +2,6 @@ import csv
 from datetime import datetime
 import glob
 import itertools
-from matplotlib.pyplot import Figure
-import matplotlib.pyplot as plt
 import os
 import pandas
 import subprocess

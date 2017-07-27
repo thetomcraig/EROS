@@ -22,8 +22,8 @@ var bottom_right  = {x: percentage_multiplier+translation, y: (translation + per
 var bottom_left = {x: -percentage_multiplier+translation, y: (translation + percentage_multiplier)}
 
 var points = {
-    mention_percentage: .75,
-    retweet_percentage: .70,
+    mention_percentage: .99,
+    retweet_percentage: .10,
     link_percentage: .80,
     hash_percentage: .50,
     verbosity: 0,

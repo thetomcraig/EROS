@@ -2,8 +2,6 @@ import csv
 from datetime import datetime
 import glob
 import itertools
-from matplotlib.pyplot import Figure
-import matplotlib.pyplot as plt
 import os
 import pandas
 import subprocess
@@ -62,41 +60,6 @@ def refresh_tinder():
         rows = itertools.izip_longest([settings.CURRENT_TINDER_EXPERIMENT_NO], [len(matches)])
         for row in rows:
             file_writer.writerow(row)
-
-
-def get_tinder_figures_for_time_window(start, end):
-    a = AutoTinder(settings.FACEBOOK_ID, settings.FACEBOOK_AUTH_TOKEN, settings.CURRENT_TINDER_EXPERIMENT_NO)
-
-    x_experiment_numbers = [0, 1, 2]
-    y_experiment_matches = []
-    for i in x_experiment_numbers:
-        matches = a.get_matches_for_time_window(start, end)
-        y_experiment_matches.append(len(matches))
-
-    fig = Figure()
-    ax = fig.add_subplot(111)
-    data_df = pandas.read_csv(settings.TINDER_LOGS_LOCATION + 'swipe_sessions/test.csv')
-    data_df = pandas.DataFrame(data_df)
-    data_df.plot(ax=ax)
-
-    return [fig]
-
-
-def get_all_tinder_figures():
-    y_axis_match_numbers = []
-
-    for i in range(settings.CURRENT_TINDER_EXPERIMENT_NO + 1):
-        match_number = get_match_number_for_exp_number(i)
-        y_axis_match_numbers.append(match_number)
-
-    fig = plt.figure()
-    N = len(y_axis_match_numbers)
-    x = range(N)
-    width = 1 / 1.5
-    plt.bar(x, y_axis_match_numbers, width, color="blue")
-
-    return [fig]
-
 
 def get_match_number_for_exp_number(exp_no):
     # TODO - read from csv file here

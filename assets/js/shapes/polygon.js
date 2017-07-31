@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
+var Snap = require('snapsvg');
 
 export default class Polygon extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            mention_percentage: .50,
-            retweet_percentage: .10,
+            mention_percentage: .90,
+            retweet_percentage: .20,
             link_percentage: .80,
             hash_percentage: .50,
             verbosity: 0
         };
     }
     setTriangles() {
-        var Snap = require('snapsvg')
         var svg_el = "#svg";
         var paper = Snap(svg_el);
 
@@ -96,25 +96,25 @@ export default class Polygon extends Component {
         this.state.triangle3.attr({
             fill: colors[0]
         });
+
+		function animationIn(t) {
+			t.state.triangle0.stop().animate({"points":t.state.triangle0_start_points}, 1000, mina.elastic, t.animationOut);
+			t.state.triangle1.stop().animate({"points":t.state.triangle1_start_points}, 1000, mina.elastic, t.animationOut);
+			t.state.triangle2.stop().animate({"points":t.state.triangle2_start_points}, 1000, mina.elastic, t.animationOut);
+			t.state.triangle3.stop().animate({"points":t.state.triangle3_start_points}, 1000, mina.elastic, t.animationOut);
+		}
+		function animationOut(t) {
+			t.state.triangle0.stop().animate({"points":t.state.triangle0_end_points}, 1000, mina.linear, t.animationIn);
+			t.state.triangle1.stop().animate({"points":t.state.triangle1_end_points}, 1000, mina.linear, t.animationIn);
+			t.state.triangle2.stop().animate({"points":t.state.triangle2_end_points}, 1000, mina.linear, t.animationIn);
+			t.state.triangle3.stop().animate({"points":t.state.triangle3_end_points}, 1000, mina.linear, t.animationIn);
+		}
+	animationIn(this);
     }
-    animationIn() {
-        this.state.triangle0.stop().animate({"points":this.state.triangle0_start_points}, 1000, mina.elastic, this.animationOut);
-        this.state.triangle1.stop().animate({"points":this.state.triangle1_start_points}, 1000, mina.elastic, this.animationOut);
-        this.state.triangle2.stop().animate({"points":this.state.triangle2_start_points}, 1000, mina.elastic, this.animationOut);
-        this.state.triangle3.stop().animate({"points":this.state.triangle3_start_points}, 1000, mina.elastic, this.animationOut);
-    }
-    animationOut() {
-        this.state.triangle0.stop().animate({"points":this.state.triangle0_end_points}, 1000, mina.linear, this.animationIn);
-        this.state.triangle1.stop().animate({"points":this.state.triangle1_end_points}, 1000, mina.linear, this.animationIn);
-        this.state.triangle2.stop().animate({"points":this.state.triangle2_end_points}, 1000, mina.linear, this.animationIn);
-        this.state.triangle3.stop().animate({"points":this.state.triangle3_end_points}, 1000, mina.linear, this.animationIn);
-    }
-    return
     render() {
         return (
-            <div id="svg">
-                {this.setTriangles()}  
-                {this.animationIn()}  
+            <div>
+                {this.setTriangles()}
             </div>
         )
     }

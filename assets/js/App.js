@@ -1,19 +1,19 @@
 import React from 'react';
 import ScrapeButton from './ScrapeButton';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Polygon from './shapes/Polygon';
 
-import {showPolygon} from './shapes/polygon.js'
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    showPolygon(.5);
   }
   render() {
     return (
     <div>
         <MuiThemeProvider>
-            <ScrapeButton />
+            <Polygon />
         </MuiThemeProvider>
      </div>
     );

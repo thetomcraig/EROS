@@ -13,7 +13,7 @@ export default class App extends React.Component {
     return (
     <div>
         <MuiThemeProvider>
-            <Polygon />
+            <Polygon data={document.getElementById('user-data')}/>
         </MuiThemeProvider>
      </div>
     );

@@ -56,6 +56,7 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'eros.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

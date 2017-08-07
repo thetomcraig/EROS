@@ -11,7 +11,6 @@ from integrations.helpers.TweepyScraper import TweepyScraper
 from .utils import (
     replace_tokens,
     create_post_cache,
-    Classifier,
 )
 
 
@@ -236,8 +235,7 @@ def find_word_frequency_for_user(username):
     print words.most_common()[-30:]
 
 
-def test(username):
-
+def get_person_attributes(username):
     classifier_metrics = {
         'mention_percentage': -1,
         'retweet_percentage': -1,
@@ -260,15 +258,13 @@ def test(username):
         hash_tweets += 1 if settings.TAG_TOKEN in post.content else 0
         total_word_number += len(post.content.split(' '))
 
-    classifier_metrics['mention_percentage'] = mention_tweets / float(len(real_posts))
-    classifier_metrics['retweet_percentage'] = retweet_tweets / float(len(real_posts))
-    classifier_metrics['link_percentage'] = link_tweets / float(len(real_posts))
-    classifier_metrics['hash_percentage'] = hash_tweets / float(len(real_posts))
-    classifier_metrics['verbosity'] = total_word_number / float(144 * len(real_posts))
-    return classifier_metrics
+    total_posts_len = 1.0
+    if len(real_posts) > 0:
+        total_posts_len = float(len(real_posts))
 
-#    c = Classifier()
-#    c.train(d)
-#
-#    ex_tweet = ''
-#    c.classify(ex_tweet)
+    classifier_metrics['mention_percentage'] = mention_tweets / total_posts_len
+    classifier_metrics['retweet_percentage'] = retweet_tweets / total_posts_len
+    classifier_metrics['link_percentage'] = link_tweets / total_posts_len
+    classifier_metrics['hash_percentage'] = hash_tweets / total_posts_len
+    classifier_metrics['verbosity'] = total_word_number / 144 * total_posts_len
+    return classifier_metrics

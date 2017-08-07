@@ -5,10 +5,10 @@ export default class Polygon extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            mention_percentage: .90,
-            retweet_percentage: .20,
-            link_percentage: .80,
-            hash_percentage: .50,
+            mention_percentage: props.data.getAttribute('mention_percentage'),
+            retweet_percentage: props.data.getAttribute('retweet_percentage'),
+            link_percentage: props.data.getAttribute('link_percentage'),
+            hash_percentage: props.data.getAttribute('hash_percentage'),
             verbosity: 0
         };
     }

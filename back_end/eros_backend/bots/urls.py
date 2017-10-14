@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from bots.views import api_views
+from bots import api_views
 
 urlpatterns = [
     url(r'^list_all_bots/', api_views.list_all_bots),

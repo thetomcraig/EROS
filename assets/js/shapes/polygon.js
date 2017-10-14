@@ -96,25 +96,21 @@ export default class Polygon extends Component {
         this.state.triangle3.attr({
             fill: colors[0]
         });
-
-		function animationIn(t) {
-			t.state.triangle0.stop().animate({"points":t.state.triangle0_start_points}, 1000, mina.elastic, t.animationOut);
-			t.state.triangle1.stop().animate({"points":t.state.triangle1_start_points}, 1000, mina.elastic, t.animationOut);
-			t.state.triangle2.stop().animate({"points":t.state.triangle2_start_points}, 1000, mina.elastic, t.animationOut);
-			t.state.triangle3.stop().animate({"points":t.state.triangle3_start_points}, 1000, mina.elastic, t.animationOut);
-		}
-		function animationOut(t) {
-			t.state.triangle0.stop().animate({"points":t.state.triangle0_end_points}, 1000, mina.linear, t.animationIn);
-			t.state.triangle1.stop().animate({"points":t.state.triangle1_end_points}, 1000, mina.linear, t.animationIn);
-			t.state.triangle2.stop().animate({"points":t.state.triangle2_end_points}, 1000, mina.linear, t.animationIn);
-			t.state.triangle3.stop().animate({"points":t.state.triangle3_end_points}, 1000, mina.linear, t.animationIn);
-		}
-	animationIn(this);
     }
+    grow () {
+        this.state.triangle0.animate({"points":this.state.triangle0_end_points}, 1000, mina.linear);
+        this.state.triangle1.animate({"points":this.state.triangle1_end_points}, 1000, mina.linear);
+        this.state.triangle2.animate({"points":this.state.triangle2_end_points}, 1000, mina.linear);
+        this.state.triangle3.animate({"points":this.state.triangle3_end_points}, 1000, mina.linear);
+    }
+    componentDidMount() {
+    }
+
     render() {
         return (
             <div>
                 {this.setTriangles()}
+                {this.grow()}
             </div>
         )
     }

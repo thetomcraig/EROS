@@ -1,0 +1,12 @@
+tweepy_consumer_key = 'ZKx8Yg55evn1U65vRWQ0Zj7Jr'
+tweepy_consumer_secret = '26OYZDNj0hC17ei6JplHuerzoaxokQBpU9X2dsegkLLCShBK2y'
+tweepy_access_token = '14404065-baBGgZmVoCnZEU1L0hCVq6ed6qHDFXVrLSQpAKXcw'
+tweepy_access_token_secret = '3jbRjcgZV82OGLOsxv9Xg8G29h1oc9l9kqKTMXH4vEPNi'
+
+instagram_username = 'thetomcraig@icloud.com'
+instagram_password = 'fac3b00k'
+instagram_account_username = 'zentomcraig'
+
+facebook_id = '100007032789992'
+facebook_auth_token = "fbconnect://success#access_token=EAAGm0PX4ZCpsBAM4h6fw8pMgTQx42YgZClTapO2LqPSH5PbdbSDsKpFH2cMhj25xnLtY1LVu3ZBKSUe7D6Mg8ZCs75JXuKItftQx5zcssUjlgHQvYLs8SPekxqhTyKMZB8JELEyC89WeOZCUPAWSneVeG5YnmXHcAOGDbDGbRLNr8ZC7Mh92ZBHZBZCfrNz82tiFAZD&expires_in=7156"
+

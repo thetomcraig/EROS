@@ -5,8 +5,8 @@ import HTMLParser
 
 from django.conf import settings
 
-from integrations.models.twitter import TwitterPost, TwitterBot, TwitterConversation, TwitterConversationPost
-from integrations.helpers.TweepyScraper import TweepyScraper
+from bots.models.twitter import TwitterPost, TwitterBot, TwitterConversation, TwitterConversationPost
+from bots.helpers.TweepyScraper import TweepyScraper
 
 from .utils import (
     replace_tokens,
@@ -14,40 +14,46 @@ from .utils import (
 )
 
 
-def get_top_twitter_users():
+def get_top_twitter_users(limit=50):
     t = TweepyScraper(
         settings.TWEEPY_CONSUMER_KEY,
         settings.TWEEPY_CONSUMER_SECRET,
         settings.TWEEPY_ACCESS_TOKEN,
         settings.TWEEPY_ACCESS_TOKEN_SECRET)
 
-    names_and_unames = t.scrape_top_users(50)
+    names_and_unames = t.scrape_top_users(limit)
 
     return names_and_unames
 
 
-def update_top_twitter_people():
+def get_top_twitter_bots(limit=50):
+    names_and_unames = get_top_twitter_users(limit)
+    unames = [x['uname'] for x in names_and_unames]
+    top_bots = TwitterBot.objects.filter(username__in=unames)
+    bot_data = {x.id: {'first_name': x.first_name, 'username': x.username} for x in top_bots}
+    return bot_data
+
+
+def update_top_twitter_bots():
     names_and_unames = get_top_twitter_users()
 
     for entry in names_and_unames:
-        print entry
         bot = None
         bot = TwitterBot.objects.get_or_create(username=entry['uname'])[0]
 
         bot.username = entry['uname']
         bot.real_name= entry['name']
         bot.avatar = entry['avatar']
-        print entry['avatar']
         bot.save()
 
     return True
 
 
-def scrape_top_twitter_people():
-    update_top_twitter_people()
+def scrape_top_twitter_bots():
+    update_top_twitter_bots()
 
-    all_twitter_people = TwitterBot.objects.all()
-    for bot in all_twitter_people:
+    all_twitter_bots = TwitterBot.objects.all()
+    for bot in all_twitter_bots:
         scrape_twitter_bot(bot)
 
 
@@ -171,7 +177,6 @@ def generate_new_conversation_post_text(current_conversation):
     reply = reply.replace('RT', '')
     # Fix spacing
     reply = reply.replace('  ', ' ')
-    print reply
     return index, next_speaker, reply
 
 
@@ -226,10 +231,6 @@ def find_word_frequency_for_user(username):
     for post in bot.twitterpost_set.all():
         for word in nltk.tokenize.word_tokenize(post.content):
             words[word] += 1
-
-    print words['and']
-    print words.freq('and')
-    print words.most_common()[-30:]
 
 
 def get_bot_attributes(username):

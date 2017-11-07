@@ -9,3 +9,4 @@ tinder_pics/
 node_modules/
 webpack-stats.json
 assets/bundles
+env/

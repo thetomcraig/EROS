@@ -1,3 +1,4 @@
+import json
 import nltk
 from nltk.probability import FreqDist
 import random
@@ -27,10 +28,35 @@ def get_top_twitter_users(limit=50):
 
 
 def get_top_twitter_bots(limit=50):
-    names_and_unames = get_top_twitter_users(limit)
-    unames = [x['uname'] for x in names_and_unames]
-    top_bots = TwitterBot.objects.filter(username__in=unames)
+    # TODO Use order_by
+    top_bots = TwitterBot.objects.all()
+    if limit:
+        top_bots = top_bots[:limit]
     bot_data = {x.id: {'first_name': x.first_name, 'username': x.username} for x in top_bots}
+    return bot_data
+
+
+def scrape(bot_id):
+    bot = TwitterBot.objects.get(id=bot_id)
+    scrape_response = scrape_twitter_bot(bot)
+    data = {'success': True, 'new tweets': scrape_response['new tweets'], 'tweets':
+    scrape_response['tweets']}
+    return data
+    
+
+def get_info(bot_id):
+    bot = TwitterBot.objects.get(id=bot_id)
+    fake_posts = {x.id: x.content for x in bot.twitterpost_set.filter(fake=True)}
+    real_posts = {x.id: x.content for x in bot.twitterpost_set.filter(fake=False)}
+    bot_data = {
+        'real_name': bot.real_name,
+        'first_name': bot.first_name,
+        'last_name': bot.last_name,
+        'username': bot.username,
+        'avatar': bot.avatar,
+        'real posts': real_posts,
+        'fake posts': fake_posts,
+    }
     return bot_data
 
 
@@ -66,6 +92,8 @@ def scrape_twitter_bot(bot):
     and save them seperately in instances, then
     replace with dummy words.
     """
+    response_data = {}
+
     t = TweepyScraper(
         settings.TWEEPY_CONSUMER_KEY,
         settings.TWEEPY_CONSUMER_SECRET,
@@ -73,9 +101,12 @@ def scrape_twitter_bot(bot):
         settings.TWEEPY_ACCESS_TOKEN_SECRET)
 
     tweets = t.get_tweets_from_user(bot.username, 100)
-    print "scraped %d new tweets" % len(tweets)
+
+    response_data['new tweets'] = len(tweets)
+    response_data['tweets'] = {}
+
     new_post_ids = []
-    for tweet in tweets:
+    for idx, tweet in enumerate(tweets):
         words = tweet.split()
 
         final_tweet = ""
@@ -92,18 +123,17 @@ def scrape_twitter_bot(bot):
 
             final_tweet = final_tweet + word + " "
         final_tweet = final_tweet[:-1]
-        print "final tweet:"
-        print final_tweet
+
+        response_data['tweets'][idx] = final_tweet
 
         h = HTMLParser.HTMLParser()
         final_tweet = h.unescape(final_tweet.decode('utf-8'))
 
         post = TwitterPost.objects.create(author=bot, content=final_tweet, fake=False)
-        new_post_ids.append(post.id)
 
         create_post_cache(post, bot.twitterpostcache_set)
 
-    return new_post_ids
+    return response_data 
 
 
 def get_or_create_conversation(bot_username, partner_username):

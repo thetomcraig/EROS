@@ -25,3 +25,19 @@ def scrape_bot(response, bot_id):
 
 def get_conversation(bot1_id, bot2_id):
     pass
+
+
+def create_post(bot_id):
+    pass
+
+
+def get_conversation(bot1_id, bot2_id):
+    pass
+
+
+def clear_conversation(bot1_id, bot2_id):
+    pass
+
+
+def clear_conversations(bot_id):
+    pass

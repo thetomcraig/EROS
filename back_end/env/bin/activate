@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/tom/Dropbox/TomCraig/Projects/EROS/env"
+VIRTUAL_ENV="/Users/tom/EROS/back_end/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

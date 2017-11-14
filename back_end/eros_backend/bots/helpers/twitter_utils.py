@@ -46,8 +46,8 @@ def scrape(bot_id):
 
 def get_info(bot_id):
     bot = TwitterBot.objects.get(id=bot_id)
-    fake_posts = {x.id: x.content for x in bot.twitterpost_set.filter(fake=True)}
-    real_posts = {x.id: x.content for x in bot.twitterpost_set.filter(fake=False)}
+    fake_posts = {x.id: x.content for x in bot.twitterpost_set.all()}
+    real_posts = {x.id: x.content for x in bot.twitterpostmarkov_set.all()}
     bot_data = {
         'real_name': bot.real_name,
         'first_name': bot.first_name,
@@ -224,18 +224,19 @@ def add_to_twitter_conversation(bot_username, partner_username):
     )
 
 
-def apply_markov_chains_twitter(bot):
+def create_markov_post(bot_id):
     """
-    Takes all the words from all the twittter
+    Takes all the words from all the twitter
     posts on the twitterbot.
     Sticks them all into a giant
     list and gives this to the markov calc.
     Save this as a new twitterpostmarkov
     """
+    bot = TwitterBot.objects.get(id=bot_id)
+
     all_beginning_caches = bot.twitterpostcache_set.filter(beginning=True)
     all_caches = bot.twitterpostcache_set.all()
-    new_markov_post = bot.apply_markov_chains_inner(
-        all_beginning_caches, all_caches)
+    new_markov_post = bot.apply_markov_chains_inner(all_beginning_caches, all_caches)
 
     # Replace the tokens (twitter specific)
     replace_tokens(new_markov_post, settings.USER_TOKEN,
@@ -246,12 +247,10 @@ def apply_markov_chains_twitter(bot):
                    bot.twitterhashtag_set.all())
 
     randomness = new_markov_post[1]
-    content = ""
-    for word in new_markov_post[0]:
-        content = content + word + " "
+    content = " ".join(new_markov_post[0])
 
-    bot.twitterpostmarkov_set.create(
-        content=content[:-1], randomness=randomness)
+    new_markov_post = bot.twitterpostmarkov_set.create(content=content, randomness=randomness)
+    return new_markov_post.content
 
 
 def find_word_frequency_for_user(username):

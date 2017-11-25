@@ -6,7 +6,7 @@ This project aims to automate my online dating life by swiping for me on tinder,
 Future work includes autoresponse.  
 
 Initial write up of an A/B experiment can be found here:  
-Writeup here: https://tomwritescode.wordpress.com/2017/05/21/tinder-ab-testing/
+https://tomwritescode.wordpress.com/2017/05/21/tinder-ab-testing/
 
 # Credits  
 ## Readme Notes:  

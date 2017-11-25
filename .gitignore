@@ -1,12 +1,5 @@
 **/*.pyc
-eros/local_settings.py
+**/env
 **/*.DS_Store
 **/*.sw*
 tags
-iOS_backup/
-logs/
-tinder_pics/
-node_modules/
-webpack-stats.json
-assets/bundles
-env/

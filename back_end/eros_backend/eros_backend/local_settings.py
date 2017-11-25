@@ -9,4 +9,3 @@ instagram_account_username = 'zentomcraig'
 
 facebook_id = '100007032789992'
 facebook_auth_token = "fbconnect://success#access_token=EAAGm0PX4ZCpsBAM4h6fw8pMgTQx42YgZClTapO2LqPSH5PbdbSDsKpFH2cMhj25xnLtY1LVu3ZBKSUe7D6Mg8ZCs75JXuKItftQx5zcssUjlgHQvYLs8SPekxqhTyKMZB8JELEyC89WeOZCUPAWSneVeG5YnmXHcAOGDbDGbRLNr8ZC7Mh92ZBHZBZCfrNz82tiFAZD&expires_in=7156"
-

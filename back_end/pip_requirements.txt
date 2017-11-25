@@ -3,6 +3,7 @@ bs4==0.0.1
 certifi==2017.11.5
 chardet==3.0.4
 Django==1.11.6
+flake8==3.5.0
 djangorestframework==3.7.0
 html5lib==0.999999999
 idna==2.6

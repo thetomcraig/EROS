@@ -1,4 +1,4 @@
-#!/Users/tom/EROS/back_end/env/bin/python
+#!/Users/tcraig/dev/EROS/back_end/env/bin/python
 from django.core import management
 
 if __name__ == "__main__":

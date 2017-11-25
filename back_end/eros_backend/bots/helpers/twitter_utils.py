@@ -1,4 +1,3 @@
-import json
 import nltk
 from nltk.probability import FreqDist
 import random
@@ -39,15 +38,16 @@ def get_top_twitter_bots(limit=50):
 def scrape(bot_id):
     bot = TwitterBot.objects.get(id=bot_id)
     scrape_response = scrape_twitter_bot(bot)
+    print scrape_response
     data = {'success': True, 'new tweets': scrape_response['new tweets'], 'tweets':
-    scrape_response['tweets']}
+            scrape_response['tweets']}
     return data
-    
+
 
 def get_info(bot_id):
     bot = TwitterBot.objects.get(id=bot_id)
-    fake_posts = {x.id: x.content for x in bot.twitterpost_set.all()}
-    real_posts = {x.id: x.content for x in bot.twitterpostmarkov_set.all()}
+    real_posts = {x.id: x.content for x in bot.twitterpost_set.all()}
+    fake_posts = {x.id: x.content for x in bot.twitterpostmarkov_set.all()}
     bot_data = {
         'real_name': bot.real_name,
         'first_name': bot.first_name,
@@ -68,7 +68,7 @@ def update_top_twitter_bots():
         bot = TwitterBot.objects.get_or_create(username=entry['uname'])[0]
 
         bot.username = entry['uname']
-        bot.real_name= entry['name']
+        bot.real_name = entry['name']
         bot.avatar = entry['avatar']
         bot.save()
 
@@ -129,16 +129,16 @@ def scrape_twitter_bot(bot):
         h = HTMLParser.HTMLParser()
         final_tweet = h.unescape(final_tweet.decode('utf-8'))
 
-        post = TwitterPost.objects.create(author=bot, content=final_tweet, fake=False)
+        post = TwitterPost.objects.create(author=bot, content=final_tweet)
 
         create_post_cache(post, bot.twitterpostcache_set)
 
-    return response_data 
+    return response_data
 
 
-def get_or_create_conversation(bot_username, partner_username):
-    bot = TwitterBot.objects.get(username=bot_username)
-    partner = TwitterBot.objects.get(username=partner_username)
+def get_or_create_conversation(bot1_id, bot2_id):
+    bot = TwitterBot.objects.get(id=bot1_id)
+    partner = TwitterBot.objects.get(id=bot2_id)
 
     conversation = None
     try:
@@ -150,8 +150,23 @@ def get_or_create_conversation(bot_username, partner_username):
             pass
     if not conversation:
         conversation = TwitterConversation.objects.create(author=bot, partner=partner)
-
     return conversation
+
+
+def get_or_create_conversation_json(bot1_id, bot2_id):
+    conversation = get_or_create_conversation(bot1_id, bot2_id)
+    conversation_json = {'id': conversation.id,
+                         'bot1': conversation.author.username,
+                         'bot2': conversation.partner.username,
+                         'posts': {}
+                         }
+    for idx, conv_post in enumerate(conversation.twitterconversationpost_set.all()):
+        # TODO - do we need idx?
+        idx = None
+        conversation_json['posts'][conv_post.index] = \
+            {conv_post.author.username + ": ": conv_post.post.content}
+
+    return conversation_json
 
 
 def clear_twitter_conversation(bot_username, partner_username):
@@ -189,7 +204,10 @@ def generate_new_conversation_post_text(current_conversation):
 
     reply_source = retweets if len(retweets) else posts
     # pick a random retweet to respond with
-    reply = reply_source[random.randrange(0, len(reply_source)) - 1]
+    if len(reply_source) > 1:
+        reply = reply_source[random.randrange(0, len(reply_source)) - 1]
+    reply = reply_source[0]
+    # TODO - checking/scraping here if there are no responsed to work with 
     # replace the user token tag with the user who is in the convo
     reply = reply.replace(settings.USER_TOKEN, '@' + last_speaker.username, 1)
     # Remove multiple tags
@@ -214,14 +232,19 @@ def add_to_twitter_conversation(bot_username, partner_username):
     conversation = get_or_create_conversation(bot_username, partner_username)
 
     new_index, new_author, new_content = generate_new_conversation_post_text(conversation)
-    new_post = new_author.twitterpost_set.create(content=new_content, fake=True)
+    new_post = new_author.twitterpost_set.create(content=new_content)
 
-    TwitterConversationPost.objects.create(
+    new_convo_post = TwitterConversationPost.objects.create(
         post=new_post,
         conversation=conversation,
         author=new_author,
         index=new_index
     )
+    new_post_json = {'author': new_convo_post.author.username,
+                     'index': new_convo_post.index,
+                     'conversation': new_convo_post.conversation.id,
+                     'content': new_convo_post.post.content}
+    return new_post_json
 
 
 def create_markov_post(bot_id):
@@ -271,7 +294,7 @@ def get_bot_attributes(username):
         'verbosity': -1,
     }
     bot = TwitterBot.objects.get(username=username)
-    real_posts = bot.twitterpost_set.filter(fake=False)
+    real_posts = bot.twitterpost_set.filter()
 
     mention_tweets = 0
     retweet_tweets = 0
